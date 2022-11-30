@@ -1,0 +1,412 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="NHST.Admin.AdminMaster" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Src="/Admin/AdminIncluding/ucMenu.ascx" TagName="ucMenu" TagPrefix="uc1" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Admin Dashboard Template" />
+    <meta name="keywords" content="admin,dashboard" />
+    <meta name="author" content="Steelcoders" />
+    <!-- Styles -->
+    <link rel="shortcut icon" href="/favicon.png">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet'
+        type='text/css'>
+    <link href="/App_Themes/NewUI/js/select2/select2.css" rel="stylesheet" />
+    <link href="/App_Themes/NewUI/css/pace-master/pace-theme-flash.css" rel="stylesheet"
+        type="text/css" />
+    <%--<link href="App_Themes/NewUI/css/uniform.default.min.css" rel="stylesheet" type="text/css" />--%>
+    <link href="/App_Themes/NewUI/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/NewUI/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/NewUI/css/simple-line-icons.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/NewUI/css/waves.min.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/NewUI/css/switchery.min.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/NewUI/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/NewUI/css/component.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/NewUI/css/bootstrap-editable.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/NewUI/css/datepicker3.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/NewUI/js/sweet/sweet-alert.css" rel="stylesheet" type="text/css" />
+    <!-- Theme Styles -->
+
+    <link href="/App_Themes/NewUI/css/modern.css" rel="stylesheet" type="text/css" />
+    <%--<link href="App_Themes/NewUI/css/modern.min.css" rel="stylesheet" type="text/css" />--%>
+    <link href="/App_Themes/NewUI/css/custom.css" rel="stylesheet" type="text/css" />
+    <script src="/App_Themes/NewUI/js/modernizr.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            .form-horizontal .form-group label.control-label {
+                padding-left: 15px !important;
+            }
+        }
+
+        .form-horizontal .form-group label.control-label {
+            text-align: right !important;
+        }
+
+        .semi-text {
+            color: #e84545;
+        }
+
+        .RadForm_MetroTouch.rfdCheckbox label, .RadForm_MetroTouch.rfdRadio label {
+            vertical-align: bottom !important;
+        }
+
+        .require {
+            color: red !important;
+        }
+
+        .rgHeader a, .rgHeader a:hover, .rgHeader a:active {
+            color: black !important;
+        }
+
+        .r-1 {
+            color: red !important;
+            font-weight: bold;
+        }
+
+        .r-2 {
+            color: #3e67e0 !important;
+            font-weight: bold;
+        }
+
+        .ab {
+            height: 150px;
+        }
+
+        .show-stat-s {
+            color: #8ABDE9 !important;
+            font-weight: bold;
+        }
+
+        .show-stat-w {
+            color: #ff0000 !important;
+            font-weight: bold;
+        }
+
+        .RadUpload {
+            width: 100% !important;
+        }
+
+            .RadUpload .ruInputs li {
+                width: 23% !important;
+                float: left !important;
+                margin-bottom: 20px !important;
+                margin-right: 2% !important;
+            }
+    </style>
+    <script src="/App_Themes/NewUI/js/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="page-header-fixed compact-menu page-horizontal-bar">
+    <form id="f" runat="server" novalidate="">
+        <asp:ScriptManager runat="server" ID="scr">
+        </asp:ScriptManager>
+
+        <telerik:RadFormDecorator ID="rsDefault" runat="server" Skin="MetroTouch" DecoratedControls="RadioButtons,CheckBoxes" />
+        <div class="overlay">
+        </div>
+        <main class="page-content content-wrap">
+            <div class="navbar">
+                <div class="navbar-inner container">
+                    <div class="sidebar-pusher">
+                        <a href="javascript:void(0);" class="waves-effect waves-button waves-classic push-sidebar">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="logo-box">
+                        <a class="logo-text" href="/admin/Home.aspx"><span style="color: #ff6138">NHẬP HÀNG SIÊU TỐC</span></a>
+                    </div>
+                    <!-- Logo Box -->
+                    <%--<div class="search-button">
+                        <a href="javascript:void(0);" class="waves-effect waves-button waves-classic show-search"><i class="fa fa-search"></i></a>
+                    </div>--%>
+                    <div class="topmenu-outer">
+                        <div class="top-menu">
+                            <ul class="nav navbar-nav navbar-left">
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect waves-button waves-classic sidebar-toggle"><i class="fa fa-bars"></i></a>
+                                </li>
+                                <%--  <li>
+                                    <a href="#cd-nav" class="waves-effect waves-button waves-classic cd-nav-trigger"><i class="fa fa-diamond"></i></a>
+                                </li>--%>
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect waves-button waves-classic toggle-fullscreen"><i class="fa fa-expand"></i></a>
+                                </li>
+
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown">
+                                        <span class="user-name">
+                                            <asp:Literal runat="server" ID="lUName" EnableViewState="False"></asp:Literal><i class="fa fa-angle-down"></i></span>
+
+                                        <%--<img class="img-circle avatar" src="/App_Themes/NewUI/images/avatar1.png" width="40" height="40" alt="">--%>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-list" role="menu">
+                                        <%--  <li role="presentation"><a href="#" onclick="alert('Updating')"><i class="fa fa-user"></i>Profile</a></li>
+                                        
+                                        <li role="presentation" class="divider"></li>--%>
+
+                                        <li role="presentation"><a href="/Logout.aspx"><i class="fa fa-sign-out m-r-xs"></i>Đăng xuất</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                            <!-- Nav -->
+                        </div>
+                        <!-- Top Menu -->
+                    </div>
+                </div>
+            </div>
+            <!-- Navbar -->
+            <div class="page-sidebar sidebar horizontal-bar">
+                <div class="page-sidebar-inner">
+
+                    <uc1:ucMenu ID="ucMenu1" runat="server" />
+                </div>
+                <!-- Page Sidebar Inner -->
+            </div>
+            <!-- Page Sidebar -->
+            <div id="topPage"></div>
+            <div class="page-inner">
+
+                <div class="page-title">
+                    <div class="container">
+                        <h3>
+                            <asp:ContentPlaceHolder ID="mainTit" runat="server"></asp:ContentPlaceHolder>
+                        </h3>
+                    </div>
+                    <telerik:RadAjaxLoadingPanel runat="server" ID="rxLoading" Transparency="100" EnableSkinTransparency="true"
+                        CssClass="loadingPanel" BackgroundPosition="Center" EnableViewState="False">
+                        <img alt="" src="/App_Themes/NewUI/images/loading.gif" style="margin: 150px auto" />
+                    </telerik:RadAjaxLoadingPanel>
+                </div>
+                <div id="main-wrapper" class="container">
+                    <asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
+                    <!-- Row -->
+                </div>
+                <!-- Main Wrapper -->
+                <div class="page-footer no-print">
+                    <div class="container">
+                        <p class="no-s">&copy; Nhaphangsieutoc.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Page Inner -->
+        </main>
+        <!-- Page Content -->
+        <nav class="cd-nav-container no-print" id="cd-nav">
+            <header>
+                <h3>Navigation</h3>
+                <a href="#0" class="cd-close-nav">Close</a>
+            </header>
+            <ul class="cd-nav list-unstyled">
+                <li class="cd-selected" data-menu="index"><a href="javsacript:void(0);"><span><i
+                    class="glyphicon glyphicon-home"></i></span>
+                    <p>
+                        Dashboard
+                    </p>
+                </a></li>
+                <li data-menu="profile"><a href="javsacript:void(0);"><span><i class="glyphicon glyphicon-user"></i></span>
+                    <p>
+                        Profile
+                    </p>
+                </a></li>
+                <li data-menu="#"><a href="javsacript:void(0);"><span><i class="glyphicon glyphicon-tasks"></i></span>
+                    <p>
+                        Tasks
+                    </p>
+                </a></li>
+                <li data-menu="#"><a href="javsacript:void(0);"><span><i class="glyphicon glyphicon-cog"></i></span>
+                    <p>
+                        Settings
+                    </p>
+                </a></li>
+            </ul>
+        </nav>
+        <div class="cd-overlay">
+        </div>
+        <asp:UpdatePanel runat="server">
+            <ContentTemplate>
+                <asp:Timer ID="timer1" runat="server" Interval="600000" OnTick="timer1_tick">
+                </asp:Timer>
+                <asp:Panel runat="server" ID="p">
+                    <div style="display: none !important; visibility: hidden">
+                        loading
+                    </div>
+                </asp:Panel>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </form>
+    <!-- Javascripts -->
+    <script src="/App_Themes/NewUI/js/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/pace-master/pace.min.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/sweet/sweet-alert.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/jquery-blockui/jquery.blockui.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/switchery/switchery.min.js" type="text/javascript"></script>
+    <%--<script src="App_Themes/NewUI/js/uniform/jquery.uniform.min.js" type="text/javascript"></script>--%>
+    <script src="/App_Themes/NewUI/js/classie.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/waves/waves.min.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/3d-bold-nav/main.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/jquery-mockjax-master/jquery.mockjax.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/moment/moment.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/jquery.bootstrap.wizard.min.js"></script>
+    <script src="/App_Themes/NewUI/js/jquery.validate.min.js"></script>
+    <script src="/App_Themes/NewUI/js/bootstrap-datepicker/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/select2/select2.min.js"></script>
+    <%--<script src="App_Themes/NewUI/js/modern.min.js" type="text/javascript"></script>--%>
+    <%--<script src="/App_Themes/NewUI/js/form-wizard.js"></script>--%>
+    <script src="/App_Themes/NewUI/js/modern.js" type="text/javascript"></script>
+    <script>
+        (function ($) {
+            $.fn.goTo = function () {
+                $('html, body').animate({
+                    scrollTop: $(this).offset().top + 'px'
+                }, 'slow');
+                return this;
+            }
+        })(jQuery);
+        function GotoEdit() {
+            $('#editP').goTo();
+        }
+        function Cancel() {
+            $('#topPage').goTo();
+
+        }
+        $(function () {
+
+            $('ul.menu-ui').removeClass("active open");
+            setActive(window.location.pathname);
+           
+        });
+        $(document).ready(function () {
+            LoadSelect();
+        });
+        function LoadSelect() {
+            $(".select2").select2({
+                templateResult: formatState,
+                templateSelection: formatState
+            });
+            function formatState(opt) {
+                if (!opt.id) {
+                    return opt.text;
+                }
+                var optimage = $(opt.element).data('image');
+                if (!optimage) {
+                    return opt.text;
+                } else {
+                    var $opt = $(
+                        '<span>' + opt.text + '</span>'
+                    );
+                    return $opt;
+                }
+
+            };
+        }
+
+        function showContent(id, that) {
+            $('.a-question a').removeClass('active-question');
+            $(that).addClass('active-question');
+            $('.q-conent-test .form-group').addClass('hidden');
+            $('.q-conent-test #q-' + id).removeClass('hidden');
+        }
+        function setActive(path) {
+            if (path.toLowerCase().indexOf('/ehome') != -1) {
+                $('.menu-ui li#home').addClass("active");
+            }
+            else if (path.toLowerCase().indexOf('/eregion') != -1) {
+                $('.menu-ui li#region').addClass("active");
+            }
+            else if (path.toLowerCase().indexOf('/esubject') != -1 ||
+                path.toLowerCase().indexOf('/esubjectchapter') != -1) {
+                $('.menu-ui li#subject').addClass("active open");
+            }
+            else if (path.toLowerCase().indexOf('/erole') != -1 ||
+                path.toLowerCase().indexOf('/erolelevel') != -1) {
+                $('.menu-ui li#role').addClass("active open");
+            }
+            else if (path.toLowerCase().indexOf('/erequestexam') != -1 ||
+                path.toLowerCase().indexOf('/eexams') != -1 ||
+                path.toLowerCase().indexOf('/emyexam') != -1) {
+                $('.menu-ui li#exam').addClass("active open");
+            }
+            else if (path.toLowerCase().indexOf('/estudent') != -1 ||
+                path.toLowerCase().indexOf('/eappuser') != -1) {
+                $('.menu-ui li#appuser').addClass("active open");
+            }
+        }
+
+
+        function OnClientFileSelected(sender, args) {
+            if ($telerik.isIE) return;
+            else {
+                truncateName(args);
+                //var file = args.get_fileInputField().files.item(args.get_rowIndex());
+                var file = args.get_fileInputField().files.item(0);
+                showThumbnail(file, args);
+            }
+        }
+
+
+        function truncateName(args) {
+            var $span = $(".ruUploadProgress", args.get_row());
+            var text = $span.text();
+            if (text.length > 23) {
+                var newString = text.substring(0, 23) + '...';
+                $span.text(newString);
+            }
+        }
+
+        function showThumbnail(file, args) {
+
+            var image = document.createElement("img");
+
+            image.file = file;
+            image.className = "ab img-responsive";
+
+            var $row = $(args.get_row());
+            $row.parent().className = "row ruInputs list-unstyled";
+            $row.append(image);
+
+
+            var reader = new FileReader();
+            reader.onload = (function (aImg) {
+                return function (e) {
+                    aImg.src = e.target.result;
+                };
+            }(image));
+            var ret = reader.readAsDataURL(file);
+            var canvas = document.createElement("canvas");
+
+            ctx = canvas.getContext("2d");
+            image.onload = function () {
+                ctx.drawImage(image, 100, 100);
+            };
+
+        }
+     
+    </script>
+    <style>
+        .panel .panel-body
+        {
+            display:block;
+        }
+    </style>
+</body>
+</html>

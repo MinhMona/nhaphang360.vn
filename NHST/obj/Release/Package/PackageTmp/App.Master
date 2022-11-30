@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="App.master.cs" Inherits="NHST.App" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <title>NHẬP HÀNG 360</title>
+
+    <link rel="stylesheet" href="/App_Themes/App/css/bootstrap-iso.css" media="all">
+    <link href="/App_Themes/NewUI/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/App_Themes/App/css/style.css" media="all">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link href="/App_Themes/NewUI/js/sweet/sweet-alert.css" rel="stylesheet" type="text/css" />
+    <script src="/App_Themes/UserNew/js/jquery-1.9.1.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" enctype="multipart/form-data">
+        <asp:ScriptManager runat="server" ID="scr">
+        </asp:ScriptManager>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+        <script src="/App_Themes/NewUI/js/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/App_Themes/NewUI/js/select2/select2.min.js"></script>
+        <script src="/App_Themes/App/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="/App_Themes/UserNew/js/jquery.counterup.min.js"></script>
+        <script src="/App_Themes/App/js/master.js"></script>
+        <script src="/App_Themes/NewUI/js/sweet/sweet-alert.js" type="text/javascript"></script>
+
+        <script src="/scripts/jquery.signalR-2.2.3.min.js"></script>
+        <script src="/signalr/hubs"></script>
+        <style>
+          
+        </style>
+        <script type="text/javascript">
+            function OnClientFileSelected(sender, args) {
+                if ($telerik.isIE) return;
+                else {
+                    truncateName(args);
+                    //var file = args.get_fileInputField().files.item(args.get_rowIndex());
+                    var file = args.get_fileInputField().files.item(0);
+                    showThumbnail(file, args);
+                }
+            }
+
+            function truncateName(args) {
+                var $span = $(".ruUploadProgress", args.get_row());
+                var text = $span.text();
+                if (text.length > 23) {
+                    var newString = text.substring(0, 23) + '...';
+                    $span.text(newString);
+                }
+            }
+
+            function showThumbnail(file, args) {
+
+                var image = document.createElement("img");
+
+                image.file = file;
+                image.className = "ab img-responsive";
+
+                var $row = $(args.get_row());
+                $row.parent().className = "row ruInputs list-unstyled";
+                $row.append(image);
+
+
+                var reader = new FileReader();
+                reader.onload = (function (aImg) {
+                    return function (e) {
+                        aImg.src = e.target.result;
+                    };
+                }(image));
+                var ret = reader.readAsDataURL(file);
+                var canvas = document.createElement("canvas");
+
+                ctx = canvas.getContext("2d");
+                image.onload = function () {
+                    ctx.drawImage(image, 100, 100);
+                };
+
+            }
+        </script>
+    </form>
+</body>
+</html>
+

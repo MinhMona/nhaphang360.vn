@@ -1,0 +1,350 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="nhaphangazMasterNew.master.cs" Inherits="NHST.nhaphangazMasterNew" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <title>NHẬP HÀNG 360</title>
+
+    <link rel="stylesheet" href="/App_Themes/ThuongHaiOrder/css/style.css" media="all">
+    <link rel="stylesheet" href="/App_Themes/ThuongHaiOrder/css/responsive.css" media="all">
+    <link rel="stylesheet" type="/App_Themes/ThuongHaiOrder/text/css" href="css/animate.css">
+    <script src="/App_Themes/ThuongHaiOrder/js/jquery-1.9.1.min.js"></script>
+
+    <%-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/App_Themes/NHAZ/css/style.css">
+    <link href="/App_Themes/NHAZ/js/sweet/sweet-alert.css" rel="stylesheet" type="text/css" />
+    <script src="/App_Themes/NHAZ/js/jquery-3.4.1.min.js"></script>--%>
+
+    <asp:Literal runat="server" ID="ltrHeader"></asp:Literal>
+    <asp:Literal ID="ltrSEO" runat="server"></asp:Literal>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Literal ID="ltr_infor" runat="server"></asp:Literal>
+        <%--header--%>
+        <header id="header">
+            <div class="hd-top">
+                <div class="all">
+                    <div class="hdt-left">
+                        <div class="hdt-item">
+                            <%--<a href="#"><span class="icon-circle"><i class="fa fa-usd"></i></span><span class="hidden-mobile">Tỷ giá: 1 = </span>3,450</a>--%>
+                            <asp:Literal runat="server" ID="ltrCurrency"></asp:Literal>
+                        </div>
+                        <div class="hdt-item">
+                            <%--<a href="#"><span class="icon-circle"><i class="fa fa-envelope"></i></span>admin@nhaphangsieutoc.com</a>--%>
+                            <asp:Literal runat="server" ID="ltrEmail"></asp:Literal>
+                        </div>
+                    </div>
+                    <div class="hdt-right">
+                        <!-- Trạng thái đăng xuất -->
+                        <div class="acc-info">
+                            <asp:Literal runat="server" ID="ltrLogin"></asp:Literal>
+                        </div>
+                        <!-- kết thúc trạng thái đăng xuất -->
+                    </div>
+                </div>
+            </div>
+            <div class="hd-bot">
+                <div class="all">
+                    <div class="logo">
+                        <asp:Literal runat="server" ID="ltrLogo"></asp:Literal>
+                        <%--<a href="#">
+                            <img src="/App_Themes/TrungVietOrder/images/logo.png">
+                        </a>--%>
+                    </div>
+                    <div class="contact-top">
+                        <div class="item-contact-top">
+                            <a href="#">
+                                <span class="icon"><i class="fa fa-phone"></i></span>
+                                <%--<asp:Literal runat="server" ID="ltrPhone"></asp:Literal>--%>
+                                <div class="info hidden-mobile">
+                                    <p class="name">HOTLINE</p>
+                                    <%--<p class="value">024.3856.7333</p>--%>
+                                    <asp:Literal runat="server" ID="ltrPhone"></asp:Literal>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-contact-top hidden-mobile">
+                            <a href="#">
+                                <span class="icon"><i class="fa fa-clock-o"></i></span>
+                                <div class="info">
+                                    <p class="name">GIỜ HOẠT ĐỘNG</p>
+                                    <%--<p class="value">08:00 am - 05:00 pm</p>--%>
+                                    <asp:Literal runat="server" ID="ltrTime"></asp:Literal>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main hd-main">
+                <div class="all">
+                    <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                    <nav class="nav-wrap left" id="main-nav">
+                        <div class="nav-overlay"></div>
+                        <%--<asp:Literal runat="server" ID="ltrMenu"></asp:Literal>--%>
+                        <ul class="nav-ul">
+                            <asp:Literal runat="server" ID="ltrMenu"></asp:Literal>
+                            <%--<li class="active"><a href="#">TRANG CHỦ</a></li>
+                            <li class="has-dropdown"><a href="#">GIỚI THIỆU</a>
+                                <span class="icon-down-angle"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                                <ul class="mn-dropdown-menu">
+                                    <li class="current-menu-item">
+                                        <a href="#">menu sub</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">menu sub</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">menu sub menu sub menu sub</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">menu sub</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">HƯỚNG DẪN</a></li>
+                            <li><a href="#">BIỂU PHÍ</a></li>
+                            <li><a href="#">CHÍNH SÁCH</a></li>
+                            <li><a href="#">CÔNG CỤ ĐẶT HÀNG</a></li>
+                            <li><a href="#">ĐẶT HÀNG MOBILE</a></li>--%>
+                            <a class="btn-setting-tool" href="https://chrome.google.com/webstore/detail/c%C3%B4ng-c%E1%BB%A5-%C4%91%E1%BA%B7t-h%C3%A0ng-c%E1%BB%A7a-bee/ifehddcalafgneefdkdmopfkplgcjjjd" target="_blank">CÀI ĐẶT CÔNG CỤ</a>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <%--footer--%>
+        <footer class="" id="footer">
+            <div class="footer-info sec">
+                <div class="all">
+                    <div class="item-footer">
+                        <%--<a href="#">
+                            <img src="/App_Themes/TrungVietOrder/images/logo.png">
+                        </a>--%>
+                        <asp:Literal runat="server" ID="ltrFooter"></asp:Literal>
+                        <p class="desc">Bee Order chúng tôi ra đời với sứ mệnh xóa tan khoảng cách, sự bất đồng ngôn ngữ để cung cấp dịch vụ tìm nguồn hàng hóa uy tín, chất lượng, đa dạng chủng loại, giá cả phải chăng đáp ứng mọi yêu cầu của khách hàng.</p>
+                    </div>
+                    <div class="item-footer menu">
+                        <h3 class="title-footer">MENU</h3>
+                        <ul class="list-menu-ft">
+                            <li>
+                                <a href="/Default.aspx">Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="/chuyen-muc/gioi-thieu">Giới thiệu</a>
+                            </li>
+                            <%-- <li>
+                                <a href="/chuyen-muc/huong-dan">Hướng dẫn</a>
+                            </li>--%>
+                            <li>
+                                <a href="/chuyen-muc/bang-gia">Bảng giá</a>
+                            </li>
+                            <li>
+                                <a href="/chuyen-muc/tin-tuc">Tin tức</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-footer menu">
+                        <h3 class="title-footer">DỊCH VỤ MUA HỘ</h3>
+                        <ul class="list-menu-ft">
+                            <%-- <li>
+                                <a href="#">Phí vận chuyển</a>
+                            </li>--%>
+                            <li>
+                                <a href="/chuyen-muc/huong-dan">Hướng dẫn</a>
+                            </li>
+                            <li>
+                                <a href="/chuyen-muc/chinh-sach">Chính sách </a>
+                            </li>
+                            <%--<li>
+                                <a href="#">Tiện ích</a>
+                            </li>
+                            <li>
+                                <a href="#">Kinh nghiệm</a>
+                            </li>--%>
+                        </ul>
+                    </div>
+                    <div class="item-footer">
+                        <div class="fb-page" data-href="https://www.facebook.com/trungvietlogistic.bee" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/trungvietlogistic.bee" class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/trungvietlogistic.bee">Bee Order - Nhập hàng Trung Quốc</a>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ft-sys">
+                <div class="all center-txt">
+                    © CopyRights by
+   
+                <a href="#" title="Mona Media">
+                    <strong>NHẬP HÀNG 360</strong>
+                </a>
+                </div>
+            </div>
+        </footer>
+
+
+        		<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+          window.fbAsyncInit = function () {
+              FB.init({
+                  xfbml: true,
+                  version: 'v8.0'
+              });
+          };
+
+          (function (d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+              fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="196021427414405"
+  logged_in_greeting="NHẬP HÀNG 360 chào bạn,"
+  logged_out_greeting="NHẬP HÀNG 360 chào bạn,">
+      </div>
+
+        <a href="javascript:;" class="scroll-top-link" id="scroll-top"><i class="fa fa-angle-up"></i></a>
+        <script src="/App_Themes/ThuongHaiOrder/js/master.js"></script>
+        <script type="text/javascript" src="/App_Themes/ThuongHaiOrder/js/slick/slick.min.js"></script>
+        <script type="text/javascript" src="/App_Themes/ThuongHaiOrder/js/wow.min.js"></script>
+
+        <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1916689885307106&autoLogAppEvents=1';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+        
+    </form>
+
+    <%--<form id="form1" runat="server">
+        <asp:Literal ID="ltr_infor" runat="server"></asp:Literal>
+        <header class="header">
+            <div class="top-header">
+                <div class="container">
+                    <ul class="top-hd-info">
+                        <asp:Literal runat="server" ID="ltrTop"></asp:Literal>
+                    </ul>
+                    <div class="user-box">
+                        <asp:Literal runat="server" ID="ltrLogin"></asp:Literal>
+                    </div>
+                </div>
+            </div>
+            <div class="main-header">
+                <div class="container">
+                    <asp:Literal runat="server" ID="ltrLogo"></asp:Literal>
+                    <div class="main-menu">
+                        <asp:Literal runat="server" ID="ltrMenu"></asp:Literal>
+                        <div class="main-menu-overlay"></div>
+                    </div>
+                    <div class="main-menu-btn hamburger-btn">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-header">
+                <div class="container">
+                    <div class="hd-intro-wrapper">
+                        <div class="columns">
+                            <div class="column">
+                                <div class="hd-intro-item">
+                                    <div class="hd-intro-icon">
+                                        <img src="/App_Themes/NHAZ/images/intro-1.png" alt="">
+                                    </div>
+                                    <div class="hd-intro-info"><span class="hl-color">DỄ DÀNG</span> TẠO VÀO QUẢN LÝ ĐƠN HÀNG, TÌM NGUỒN HÀNG, <span class="hl-color">TƯ VẤN MIỄN PHÍ</span></div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="hd-intro-item">
+                                    <div class="hd-intro-icon">
+                                        <img src="/App_Themes/NHAZ/images/intro-2.png" alt="">
+                                    </div>
+                                    <div class="hd-intro-info"><span class="hl-color">ĐẢM BẢO 100%</span> HÀNG HOÁ, ĐỀN BÙ KHI CÓ SAI SÓT. THẤT LẠC</div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="hd-intro-item">
+                                    <div class="hd-intro-icon">
+                                        <img src="/App_Themes/NHAZ/images/intro-3.png" alt="">
+                                    </div>
+                                    <div class="hd-intro-info">GIAO HÀNG TẬN NƠI, <span class="hl-color">NHANH CHÓNG</span> DÙ ĐƠN HÀNG <span class="hl-color">CHỈ CÓ 1 SẢN PHẨM</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer class="footer">
+            <div class="top-footer">
+                <div class="container">
+                    <div class="columns">
+                        <asp:Literal runat="server" ID="ltrFooter"></asp:Literal>
+                        <div class="column">
+                            <div class="ft-ext-wrapper">
+                                <p class="ft-title">TIỆN ÍCH MỞ RỘNG</p>
+                                <div class="ft-ext-btn">
+                                    <a href="#">
+                                        <img src="/App_Themes/NHAZ/images/chrome.png" alt=""></a>
+                                    <a href="#">
+                                        <img src="/App_Themes/NHAZ/images/coccoc.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="ft-social-wrapper">
+                                <p class="ft-title">LIÊN KẾT VỚI CHÚNG TÔI</p>
+                                <ul class="social-nav">
+                                    <asp:Literal runat="server" ID="ltrSocial"></asp:Literal>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container"><a href="https://mona.media/thiet-ke-website-tai-hcm/">Thiết kế website</a> bời <a href="https://mona.media">Mona Media</a></div>
+            </div>
+        </footer>
+        <asp:Literal runat="server" ID="ltrFooterScript"></asp:Literal>
+        <span class="scroll-top"><i class="fa fa-angle-up"></i></span>
+        <script src="/App_Themes/NHAZ/js/jquery-1.12.4.min.js"></script>
+        <script src="/App_Themes/NHAZ/js/slick-1.8.1/slick.min.js"></script>
+        <script src="/App_Themes/NHAZ/js/WOW-master/wow.min.js"></script>
+        <script src="/App_Themes/NHAZ/js/main.js"></script>
+        <script src="/App_Themes/NHAZ/js/sweet/sweet-alert.js" type="text/javascript"></script>
+        <script>
+            new WOW().init();
+            function isEmpty(str) {
+                return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
+            }
+        </script>
+    </form>--%>
+</body>
+</html>

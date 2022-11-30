@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a8175352d3b445a7a7929b39d1556bcc" Name="Diagram1" ZoomLevel="49">
+        <EntityTypeShape EntityType="NHSTModel.tbl_Account" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_AccountantOutStockPayment" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_AccountInfo" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_AdminSendUserWallet" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_AppPushNoti" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Bank" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Banner" Width="1.5" PointX="6.75" PointY="5.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Benefits" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_BigPackage" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_BigPackage1" Width="1.5" PointX="8.75" PointY="8.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_BigPackageHistory" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_ChinaSite" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Commitment" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Complain" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Configuration" Width="1.5" PointX="4.75" PointY="10.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Contact" Width="1.5" PointX="10.75" PointY="9.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_CustomerBenefits" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_DeviceBrowser" Width="1.5" PointX="12.75" PointY="5.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_DeviceToken" Width="1.5" PointX="12.75" PointY="9.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_ExportRequestTurn" Width="1.5" PointX="6.75" PointY="13.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_FeeBuyPro" Width="1.5" PointX="8.75" PointY="13.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_FeeCheckProduct" Width="1.5" PointX="10.75" PointY="13.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Feedback" Width="1.5" PointX="12.75" PointY="13.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_FeePackaged" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_FeeSupport" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_FeeWeightTQVN" Width="1.5" PointX="14.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Footer" Width="1.5" PointX="14.75" PointY="8.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_HistoryAutoBanking" Width="1.5" PointX="14.75" PointY="11.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_HistoryOrderChange" Width="1.5" PointX="14.75" PointY="15.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_HistoryPayWallet" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_HistoryPayWalletCYN" Width="1.5" PointX="16.75" PointY="5.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_HistoryScanPackage" Width="1.5" PointX="16.75" PointY="9.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_HistoryServices" Width="1.5" PointX="16.75" PointY="12.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_InWareHousePrice" Width="1.5" PointX="16.75" PointY="16.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_LinkMarquee" Width="1.5" PointX="8.75" PointY="17.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_MainOder" Width="1.5" PointX="10.75" PointY="17.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_MainOrderCode" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Menu" Width="1.5" PointX="0.75" PointY="18.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Message" Width="1.5" PointX="18.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Node" Width="1.5" PointX="18.75" PointY="7.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Notification" Width="1.5" PointX="18.75" PointY="11.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Notifications" Width="1.5" PointX="18.75" PointY="16.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Order" Width="1.5" PointX="12.75" PointY="19.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_OrderComment" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_OrderShopTemp" Width="1.5" PointX="20.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_OrderTemp" Width="1.5" PointX="20.75" PointY="13.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_OTP" Width="1.5" PointX="14.75" PointY="20.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_OutStockSession" Width="1.5" PointX="6.75" PointY="21.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_OutStockSessionPackage" Width="1.5" PointX="16.75" PointY="21.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Page" Width="1.5" PointX="22.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_PageSEO" Width="1.5" PointX="22.75" PointY="7.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_PageType" Width="1.5" PointX="22.75" PointY="12.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Partners" Width="1.5" PointX="22.75" PointY="19.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_PayAllOrderHistory" Width="1.5" PointX="0.75" PointY="23.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_PayHelp" Width="1.5" PointX="18.75" PointY="23.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_PayhelpDetail" Width="1.5" PointX="20.75" PointY="23.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_PayHelpTemp" Width="1.5" PointX="22.75" PointY="23.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_PayOrderHistory" Width="1.5" PointX="24.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Present" Width="1.5" PointX="24.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_PriceChange" Width="1.5" PointX="24.75" PointY="8.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_ProductCategory" Width="1.5" PointX="24.75" PointY="14.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_ProductLink" Width="1.5" PointX="24.75" PointY="18.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Products" Width="1.5" PointX="24.75" PointY="22.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Refund" Width="1.5" PointX="26.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_RequestOutStock" Width="1.5" PointX="2.75" PointY="26.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_RequestShip" Width="1.5" PointX="26.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Role" Width="1.5" PointX="4.75" PointY="26.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_SendNotiEmail" Width="1.5" PointX="6.75" PointY="26.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Service" Width="1.5" PointX="26.75" PointY="8.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_ShippingTypeToWareHouse" Width="1.5" PointX="26.75" PointY="12.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_ShippingTypeVN" Width="1.5" PointX="14.75" PointY="26.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_SmallPackage" Width="1.5" PointX="26.75" PointY="16.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_SmallPackage1" Width="1.5" PointX="20.75" PointY="27.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_SmallPackageAuto" Width="1.5" PointX="22.75" PointY="27.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_SocialSupport" Width="1.5" PointX="28.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_StaffIncome" Width="1.5" PointX="28.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Step" Width="1.5" PointX="28.75" PointY="9.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Support" Width="1.5" PointX="28.75" PointY="14.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_SupportBuyProduct" Width="1.5" PointX="28.75" PointY="18.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_TokenForgotPass" Width="1.5" PointX="28.75" PointY="22.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_TransportaionOrderDetail" Width="1.5" PointX="28.75" PointY="26.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_TransportationOrder" Width="1.5" PointX="4.75" PointY="29.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_TransportationOrderNew" Width="1.5" PointX="6.75" PointY="29.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_UserLevel" Width="1.5" PointX="16.75" PointY="29.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Volume" Width="1.5" PointX="30.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Warehouse" Width="1.5" PointX="30.75" PointY="5.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_WarehouseFee" Width="1.5" PointX="30.75" PointY="10.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_WarehouseFrom" Width="1.5" PointX="30.75" PointY="15.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_WebChina" Width="1.5" PointX="30.75" PointY="20.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Weight" Width="1.5" PointX="30.75" PointY="24.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Withdraw" Width="1.5" PointX="24.75" PointY="30.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_YCG" Width="1.5" PointX="30.75" PointY="29.75" />
+        <EntityTypeShape EntityType="NHSTModel.View_OrderList" Width="1.5" PointX="0.75" PointY="31.75" />
+        <EntityTypeShape EntityType="NHSTModel.View_OrderListDamuahang" Width="1.5" PointX="32.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.View_OrderListFilter" Width="1.5" PointX="32.75" PointY="5.75" />
+        <EntityTypeShape EntityType="NHSTModel.View_OrderListFilterWithStatusString" Width="1.5" PointX="32.75" PointY="11.75" />
+        <EntityTypeShape EntityType="NHSTModel.View_OrderListFilterYCGiao" Width="1.5" PointX="32.75" PointY="17.75" />
+        <EntityTypeShape EntityType="NHSTModel.View_OrderListKhoTQ" Width="1.5" PointX="32.75" PointY="22.75" />
+        <EntityTypeShape EntityType="NHSTModel.View_OrderListKhoVN" Width="1.5" PointX="26.75" PointY="32.75" />
+        <EntityTypeShape EntityType="NHSTModel.View_Orderlistwithstatus" Width="1.5" PointX="32.75" PointY="27.75" />
+        <EntityTypeShape EntityType="NHSTModel.View_UserList" Width="1.5" PointX="32.75" PointY="32.75" />
+        <EntityTypeShape EntityType="NHSTModel.View_UserListExcel" Width="1.5" PointX="14.75" PointY="33.75" />
+        <EntityTypeShape EntityType="NHSTModel.View_UserListWithWallet" Width="1.5" PointX="16.75" PointY="33.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

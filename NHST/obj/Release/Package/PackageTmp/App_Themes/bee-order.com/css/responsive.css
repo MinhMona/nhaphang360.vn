@@ -1,0 +1,260 @@
+@media screen and (max-width:1200px){
+
+}
+@media screen and (max-width: 980px){
+	.hidden-desktop{
+		display: none;
+	}
+	body.profilein {
+        margin-left: 0;
+        margin-right: 270px;
+        height: 100vh;
+        width: 100vw
+    }
+    body.profilein.ios {
+        position: fixed;
+        left: 0;
+        right: 0
+    }
+	.acc-info{
+		display: block;
+	}
+	.nav-wrap .nav-ul > li.active > a,.nav-wrap .nav-ul > li:hover > a{
+		color: #fff;
+	}
+	#header.sticky .acc-info > a .icon{
+		top: 10px;
+	}
+	.acc-info > a .icon{
+		font-size: 25px;
+		position: fixed;
+		top: 50px;
+		right: 10px;
+		z-index: 9999;
+	}
+	#header.sticky .hdt-right .h1 .icon{
+		position: fixed;
+		top: 25px;
+		transform: translateY(-50%);
+		right: 0
+	}
+	#header.sticky .hd-bot{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 9;
+	}
+	#header.sticky .navbar-toggle{
+		position: fixed;
+		top: 25px;
+		transform: translateY(-50%);
+		z-index: 1;
+	}
+	.item-contact-top:not(:last-child){
+		margin-right: 0px;
+	}
+	.contact-top{
+		padding: 5px 0
+	}
+	.hd-main{
+		height: unset;
+	}
+	.hd-bot{
+		height: 50px;
+		padding: 5px 0;
+	}
+	.hd-bot .logo{
+		padding-top: 5px;
+	}
+	.hd-bot .logo img{
+		height: 30px;
+	}
+	.banner-entry .hd{
+		width: 100%;
+	}
+	.hdt-left{
+		width: 100%;
+	}
+	.btn-setting-tool{
+		margin-top: 20px;
+		float: left;
+		margin-left: 10px;
+	}
+	.hd-main #main-nav{
+		padding: 0;
+	}
+	.menu-profile{
+		display: block;
+		background-color: #0000006a;
+	}
+	.status{
+		display: none!important;
+	}
+	#header .nav-ul li.has-dropdown .icon-down-angle{
+		color: #fff;
+		right: 20px;
+	}
+	.mn-dropdown-menu >li{
+		border-color: #e1e1e14a;
+	}
+	.mn-dropdown-menu > li > a{
+		color: #fff;
+	}
+	#header .nav-ul .mn-dropdown-menu{
+		left: 10px;
+		transform: none;
+		background-color: #000;
+		position: static;
+		padding: 0 10px 15px;
+	}
+	#header .nav-ul .icon-close-mnsub{
+		position: absolute;
+		top: 5px;
+		right: 10px;
+		font-size: 14px;
+		color: #000;
+		font-weight: bold;
+	}
+	.navbar-toggle{
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		transform: translateY(-120%);
+	}
+	.hidden-mobile{
+		display: none !important;
+	}
+}
+@media screen and (max-width:1024px){
+
+}
+@media screen and (max-width:768px){
+	ul.list-bot-banner li:nth-child(2) .item-issue-banner{
+		transform: translateX(0);
+		margin-left: 0;
+	}
+	ul.list-bot-banner li:nth-child(3) .item-issue-banner{
+		float: unset;
+	}
+	.item-issue-banner .img{
+		width: 40px;
+		display: block;
+		float: unset;
+		margin: auto;
+	}
+	.item-issue-banner .info{
+		text-align: center;
+	}
+	.item-issue-banner .info h3{
+		font-size: 18px;
+	}
+	.item-issue-banner .info p{
+		font-size: 12px;
+		margin-top: 10px;
+	}
+	.banner, .group-banner{
+		height: 100vh
+	}
+	.banner-entry .hd{
+		font-size: 36px;
+	}
+}
+@media screen and (max-width: 650px){
+	.contact-bot-map .item-bot-map:not(:last-child){
+		border-right: 0;
+		border-bottom: 1px dotted #e1e1e1
+	}
+	ul.list-right-cus{
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+	.contact-bot-map .item-bot-map{
+		width: 100%;
+		padding: 15px 0;
+	}
+	.item-footer{
+		width: 100%;
+	}
+	.item-footer:not(:last-child){
+		margin-bottom: 30px
+	}
+	.search-form {
+	}
+
+	.search-form .input-form {
+		width: 100%;
+	}
+
+	.search-form .input-form .fcontrol {
+		margin: 10px 0
+	}
+
+	.search-form .submit-form {
+		width: 100%;
+		display: block;
+	}
+	.search-form{
+		float: left;
+		padding: 20px 0;
+		width: 100%;
+		display: unset;
+	}
+	.search-form .select-form{
+		width: 100%;
+		float: left;
+	}
+	.messgae-title{
+		font-size: 14px;
+	}
+	.title-sec{
+		font-size: 16px;
+	}
+	.tree-title{
+		height: 25px;
+		margin: 0 5px;
+	}
+	.list-services li{
+		width: 100%;
+	}
+	.services .list-services li{
+		border-left: 0px!important;
+		border-right: 0px !important;
+	}
+	.services .list-services li:not(:last-child){
+		border-bottom: 1px dotted #e1e1e1;
+	}
+	.guide-ct .item-ct, .guide-ct .img{
+		width: 100%;
+		border:0px;
+	}
+	.guide-ct .item-ct{
+		text-align: center;
+	}
+	.item-ct .mn-btn{
+		float: unset;
+	}
+	ul.list-right-cus li{
+		padding: 10px 10px 50px;
+		width: 100%;
+	}
+	ul.list-right-cus li:not(:last-child){
+		border-right: 0px;
+		border-bottom: 1px dotted #e1e1e1;
+	}
+	.list-guide-nav li{
+		padding: 10px 0;
+		width: 33.33%;
+	}
+	.list-guide-nav li a{
+		font-size: 12px;
+	}
+	.list-guide-nav li a img{
+		width: 30px;
+	}
+	.guide-ct .item-ct{
+		padding: 30px 0;
+	}
+}

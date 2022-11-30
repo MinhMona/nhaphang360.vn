@@ -1,0 +1,395 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMasterNew.master.cs" Inherits="NHST.UserMasterNew" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <title>Quản trị</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- BEGIN: VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="/App_Themes/UserNew45/assets/vendors/vendors.min.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/App_Themes/UserNew45/assets/vendors/animate-css/animate.css">
+    <!-- END: VENDOR CSS-->
+    <!-- BEGIN: Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="/App_Themes/UserNew45/assets/css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="/App_Themes/UserNew45/assets/css/style.css">
+    <link href="/App_Themes/NewUI/js/sweet/sweet-alert.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/App_Themes/UserNew45/assets/css/layouts/style-horizontal.css">
+     <link rel="stylesheet" type="text/css" href="/App_Themes/UserNew45/assets/datepicker/jquery.datetimepicker.css" />
+    <!-- END: Page Level CSS-->
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/App_Themes/UserNew45/assets/css/custom/custom.css">
+     <link rel="stylesheet" type="text/css" href="/App_Themes/UserNew45/assets/css/custom/style-new.css">
+    <!-- END: Custom CSS-->
+    <script src="/App_Themes/NewUI/js/jquery-1.9.1.min.js"></script>
+
+    <style>
+         .ldajax {
+            width: 100%;#header .brand-logo img
+            height: 100%;
+            z-index: 99999;
+            position: fixed;
+            display: none;
+            opacity: 0.8;
+            background: #fff;
+        }
+
+        .img-loading {
+            width: 100%;
+            text-align: center;
+        }
+
+            .img-loading img {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+            }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="horizontal-layout page-header-light horizontal-menu 2-columns  " data-open="click" data-menu="horizontal-menu" data-col="2-columns">
+    <form id="form1" runat="server" enctype="multipart/form-data" novalidate>
+         <div id="loadingajax" class="ldajax">
+            <div class="img-loading">
+                <img src="../App_Themes/NewUI/images/loading.gif" />
+            </div>
+        </div>
+        <asp:ScriptManager runat="server" ID="scr">
+        </asp:ScriptManager>
+        <!-- BEGIN: Header-->
+        <header class="page-topbar" id="header">
+            <div class="navbar">
+                <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-dark bg-dark-gradient">
+                    <div class="nav-wrapper">
+                        <ul class="left">
+                            <li>
+                                <h1 class="logo-wrapper"><a class="brand-logo darken-1" href="/">
+                                    <img src="/App_Themes/UserNew45/assets/images/logo/logo-icon.png" alt="materialize logo"><span class="logo-text hide-on-med-and-down">NHẬP HÀNG 360</span></a></h1>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar-list right">
+                            <asp:Literal runat="server" ID="ltrHeaderLeft"></asp:Literal>
+                          </ul>                     
+                        <ul class="dropdown-content" id="profile-dropdown">
+                            <li><a class="grey-text text-darken-1" href="/thong-tin-nguoi-dung"><i class="material-icons">person_outline</i> Thông tin của bạn</a></li>
+
+                            <li><a class="grey-text text-darken-1" href="/dang-xuat"><i class="material-icons">keyboard_tab</i> Đăng xuất</a></li>
+                        </ul>
+                 
+                </nav>
+                <!-- BEGIN: Horizontal nav start-->
+                <nav class="white hide-on-med-and-down" id="horizontal-nav">
+                    <div class="nav-wrapper">
+                        <ul class="left hide-on-med-and-down" id="ul-horizontal-nav" data-menu="menu-navigation">
+                            <li>
+                                <a href="/dashboard"><i class="material-icons">dashboard</i><span>Dashboard</span></a>
+                            </li>
+                            <li>
+                                <a href="/gio-hang"><i class="material-icons">shopping_cart</i><span>Giỏ hàng
+                                    <asp:Literal runat="server" ID="ltrCountCart"></asp:Literal></span></a>
+                            </li>
+
+                             <li>
+                                <a href="/danh-sach-don-hang"><i class="material-icons">nature_people</i><span>Danh sách đơn hàng</span></a>
+                            </li>
+                       
+                            <%--<li><a class="dropdown-menu" href="#" data-target="ShippingAsign"><i class="material-icons">next_week</i><span>Vận chuyển ký gửi<i class="material-icons right">keyboard_arrow_down</i></span></a>
+                                <ul class="dropdown-content dropdown-horizontal-list" id="ShippingAsign">
+                                   
+                                    <li data-menu=""><a href="/tao-ma-van-don-ky-gui">Tạo đơn hàng ký gửi</a>
+                                    </li>
+                                     <li data-menu=""><a href="/danh-sach-kien-yeu-cau-ky-gui">Danh sách đơn ký gửi</a>
+                                    </li>
+                                     <li data-menu=""><a href="/thong-ke-cuoc-ky-gui">Thống kê cước ký gửi</a>
+                                    </li>
+                                </ul>
+                            </li>--%>
+
+<%--                            <li><a class="dropdown-menu" href="#" data-target="CheckoutHelp"><i class="material-icons">payment</i><span>Thanh toán hộ<i class="material-icons right">keyboard_arrow_down</i></span></a>
+                                <ul class="dropdown-content dropdown-horizontal-list" id="CheckoutHelp">
+                                    <li data-menu=""><a href="/danh-sach-thanh-toan-ho">Danh sách yêu cầu</a>
+                                    </li>
+                                    <li data-menu=""><a href="/tao-don-thanh-toan-ho">Tạo yêu cầu thanh toán hộ</a>
+                                    </li>
+                                </ul>
+                            </li>--%>
+                            <li><a class="dropdown-menu" href="#" data-target="FinanceManage"><i class="material-icons">monetization_on</i><span>Quản lý tài chính<i class="material-icons right">keyboard_arrow_down</i></span></a>
+                                <ul class="dropdown-content dropdown-horizontal-list" id="FinanceManage">
+                                    <li data-menu=""><a href="/lich-su-giao-dich">Lịch sử giao dịch</a>
+                                    </li>
+                                   <%-- <li data-menu=""><a href="/lich-su-giao-dich-tien-te">Lịch sử giao dịch (tệ)</a>
+                                    </li>--%>
+                                    <li data-menu=""><a href="/nap-tien">Nạp tiền</a>
+                                    </li>                                    
+                                    <%--<li data-menu=""><a href="/nap-tien-te">Nạp tiền (tệ)</a>
+                                    </li>--%>
+                                    <li data-menu=""><a href="/rut-tien">Rút tiền</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                             <li>
+                                <a href="/ConvertLink"><i class="material-icons">library_books</i><span>Chuyển link</span></a>
+
+                            </li>
+
+                            <li>
+                                <a href="/khieu-nai"><i class="material-icons">report</i><span>Khiếu nại</span></a>
+
+                            </li>
+                            <li>
+                                <a href="/tracking-mvd"><i class="material-icons">local_shipping</i><span>Tracking</span></a>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END: Horizontal nav start-->
+                </nav>
+            </div>
+        </header>
+        <!-- END: Header-->
+
+
+        <!-- BEGIN: SideNav-->
+        <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-fixed hide-on-large-only">
+            <div class="brand-sidebar sidenav-light"></div>
+            <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed hide-on-large-only menu-shadow"
+                id="slide-out" data-menu="menu-navigation" data-collapsible="menu-accordion">
+                <li class="navigation-header"><a class="navigation-header-text">NHẬP HÀNG 360</a>
+                </li>
+                <li class="bold"><a class="waves-effect waves-cyan " href="/"><i class="material-icons">dashboard</i><span
+                    class="menu-title" data-i18n="">Dashboard</span></a>
+                </li>
+                <li class="bold"><a class="waves-effect waves-cyan " href="/gio-hang"><i
+                    class="material-icons">shopping_cart</i><span class="menu-title" data-i18n="">Giỏ
+                       hàng
+                        <asp:Literal runat="server" ID="ltrCountCart2"></asp:Literal></span></a>
+                </li>
+                 <li class="bold"><a class="waves-effect waves-cyan " href="/danh-sach-don-hang"><i class="material-icons">nature_people</i><span
+                    class="menu-title" data-i18n="">Danh sách đơn hàng</span></a>
+                </li>
+                
+                <%--<li class="bold"><a class="collapsible-header waves-effect waves-cyan " href="javascript:;"><i
+                    class="material-icons">next_week</i><span class="menu-title" data-i18n="">Vận chuyển ký
+                       gửi</span></a>
+                    <div class="collapsible-body">
+                        <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                            <li><a class="collapsible-body" href="/danh-sach-don-van-chuyen-ho" data-i18n=""><i
+                                class="material-icons">radio_button_unchecked</i><span>Danh sách đơn ký
+                                   gửi</span></a>
+                            </li>
+                            <li><a class="collapsible-body" href="/tao-ma-van-don-ky-gui" data-i18n=""><i
+                                class="material-icons">radio_button_unchecked</i><span>Tạo đơn hàng ký
+                                   gửi</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>        --%>        
+                <li class="bold"><a class="collapsible-header waves-effect waves-cyan " href="javascript:;"><i
+                    class="material-icons">monetization_on</i><span class="menu-title" data-i18n="">Quản lý tài chính</span></a>
+                    <div class="collapsible-body">
+                        <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                            <li><a class="collapsible-body" href="/lich-su-giao-dich" data-i18n=""><i
+                                class="material-icons">radio_button_unchecked</i><span>Lịch sử giao dịch</span></a>
+                            </li>                          
+                            <li><a class="collapsible-body" href="/nap-tien" data-i18n=""><i
+                                class="material-icons">radio_button_unchecked</i><span>Nạp tiền</span></a>
+                            </li>                           
+                            <li><a class="collapsible-body" href="/rut-tien" data-i18n=""><i
+                                class="material-icons">radio_button_unchecked</i><span>Rút tiền</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                  <li class="bold"><a class="waves-effect waves-cyan " href="/ConvertLink"><i
+                    class="material-icons">report</i><span class="menu-title"
+                        data-i18n="">Chuyển link</span></a>
+                </li>
+                <li class="bold"><a class="waves-effect waves-cyan " href="/khieu-nai"><i
+                    class="material-icons">report</i><span class="menu-title"
+                        data-i18n="">Khiếu nại</span></a>
+                </li>
+                <li class="bold"><a class="waves-effect waves-cyan " href="/tracking-mvd"><i
+                    class="material-icons">local_shipping</i><span class="menu-title" data-i18n="">Tracking</span></a>
+                </li>
+
+            </ul>
+            <div class="navigation-background"></div>
+            <a
+                class="sidenav-trigger btn-floating btn-medium waves-effect waves-light hide-on-large-only" href="#"
+                data-target="slide-out"><i class="material-icons">menu</i></a>
+        </aside>
+        <!-- END: SideNav-->
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+          <asp:HiddenField runat="server" ID="hdfMainLoginID" />
+        <asp:HiddenField runat="server" ID="hdfMainLoginStatus" />
+        <asp:HiddenField runat="server" ID="hdfShowExtension" Value="0" />
+    </form>    
+    <footer
+        class="page-footer footer footer-static footer-dark  bg-dark-gradient gradient-shadow navbar-border navbar-shadow">
+        <div class="footer-copyright">
+            <div class="container">
+                <span>&copy; 2021 <a href="#" target="_blank">NHẬP HÀNG 360</a>
+                    All
+               rights reserved.</span><span class="right hide-on-small-only">NHẬP HÀNG 360
+               <a href="#">Version: 4.5</a></span>
+            </div>
+        </div>
+    </footer>
+    <a href="javascript:;" id="return-to-top"><i class="material-icons">arrow_upward</i></a>
+    <!-- END: Footer-->
+    <!-- BEGIN VENDOR JS-->
+
+    <script src="/App_Themes/UserNew45/assets/js/vendors.min.js" type="text/javascript"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+
+
+    <script src="/App_Themes/UserNew45/assets/vendors/formatter/jquery.formatter.min.js" type="text/javascript"></script>
+    <!-- END PAGE VENDOR JS-->
+
+    <!-- BEGIN THEME  JS-->
+    <script src="/App_Themes/UserNew45/assets/js/plugins.js" type="text/javascript"></script>
+
+    <script src="/App_Themes/UserNew45/assets/js/custom/custom-script.js" type="text/javascript"></script>
+    <script src="/App_Themes/NewUI/js/sweet/sweet-alert.js" type="text/javascript"></script>
+    <!-- END THEME  JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="/scripts/jquery.signalR-2.2.3.min.js"></script>
+    <script src="/signalr/hubs"></script>
+     <script src="/App_Themes/UserNew45/assets/datepicker/jquery.datetimepicker.full.js"></script>
+     <script src="/App_Themes/AdminNew45/assets/pushdesktop/CreateDevice.js"></script>
+    <!-- END PAGE LEVEL JS-->
+
+     <script>
+        $(function () {
+            // Declare a proxy to reference the hub. 
+            var chat = $.connection.chatHub;
+            // Create a function that the hub can call to broadcast messages.
+            chat.client.broadcastLogin = function (id, loginStatus) {
+                if (id == $('#<%=hdfMainLoginID.ClientID%>').val()) {
+                        if (loginStatus != $('#<%=hdfMainLoginStatus.ClientID%>').val()) {
+                        swal({
+                            title: "Thông báo!",
+                            text: "Tài khoản của bạn đã được đăng nhập ở nơi khác!",
+                            type: "warning",
+                            showCancelButton: false,
+                            confirmButtonClass: "btn-danger",
+                            confirmButtonText: "Ok",
+                            closeOnConfirm: true
+                        },
+                            function () {
+                                location.reload();
+                            });
+                    }
+                    else {
+                        swal("Thông báo!", "Tài khoản của bạn đã được đăng nhập ở nơi khác!", "warning");
+                    }
+                }
+            };
+            // Start the connection.
+            $.connection.hub.start().done(function () {
+
+            });
+        });
+    </script>
+    
+    <script type="text/javascript">
+
+        function OnClientFileSelected(sender, args) {
+            if ($telerik.isIE) return;
+            else {
+                truncateName(args);
+                //var file = args.get_fileInputField().files.item(args.get_rowIndex());
+                var file = args.get_fileInputField().files.item(0);
+                showThumbnail(file, args);
+            }
+        }
+
+        $(document).ready(function () {
+            if ($("#<%=hdfShowExtension.ClientID%>").val() == 1) {
+                $(".fixed-download").removeClass('open');
+            }
+        })
+
+        function truncateName(args) {
+            var $span = $(".ruUploadProgress", args.get_row());
+            var text = $span.text();
+            if (text.length > 23) {
+                var newString = text.substring(0, 23) + '...';
+                $span.text(newString);
+            }
+        }
+
+        function showThumbnail(file, args) {
+
+            var image = document.createElement("img");
+
+            image.file = file;
+            image.className = "ab img-responsive";
+
+            var $row = $(args.get_row());
+            $row.parent().className = "row ruInputs list-unstyled";
+            $row.append(image);
+
+
+            var reader = new FileReader();
+            reader.onload = (function (aImg) {
+                return function (e) {
+                    aImg.src = e.target.result;
+                };
+            }(image));
+            var ret = reader.readAsDataURL(file);
+            var canvas = document.createElement("canvas");
+
+            ctx = canvas.getContext("2d");
+            image.onload = function () {
+                ctx.drawImage(image, 100, 100);
+            };
+
+        }
+
+        function notshow() {
+             var value = $("#<%=hdfShowExtension.ClientID%>").val();
+            $.ajax({
+                type: "POST",
+                url: "/dashboard.aspx/Notshow",
+                data: "{data:'" + value + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    if (value = "0") {
+                        $("#<%=hdfShowExtension.ClientID%>").val(1);
+                    }
+                    else {
+                        $("#<%=hdfShowExtension.ClientID%>").val(0);
+                    }
+                    
+                },
+                error: function (xmlhttprequest, textstatus, errorthrow) {
+                    alert('lỗi');
+                }
+            });
+
+        }
+
+    </script>
+</body>
+</html>

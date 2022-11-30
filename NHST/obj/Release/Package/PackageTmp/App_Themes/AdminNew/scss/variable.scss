@@ -1,0 +1,93 @@
+@charset "utf-8";
+//
+//VARIABLE :: BEGIN
+//
+$main-w : 1170;
+$sp-w : 700;
+
+$primary-color: #0086da;
+$primary-dark: #2d4059;
+$primary-txt-color: #000;
+
+$font-p: 'PoppinsVN', sans-serif;
+$font-h: 'PoppinsVN', sans-serif;
+$font-alt: 'PoppinsVN';
+//
+//VARIABLE :: END
+//
+
+
+//
+//MIXIN :: BEGIN
+//
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+          box-shadow: $shadow;
+}
+@mixin coverbg($url){
+    background: url($url) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+}
+@mixin transition($s){
+        -webkit-transition: all $s ease-in-out;
+    -moz-transition: all $s ease-in-out;
+    -o-transition: all $s ease-in-out;
+    -ms-transition: all $s ease-in-out;
+    transition: all $s ease-in-out;
+}
+@mixin border-radius($r){
+    -webkit-border-radius: $r;
+    -moz-border-radius: $r;
+    -o-border-radius: $r;
+    -ms-border-radius: $r;
+    border-radius: $r;
+}
+
+@mixin media($point) {
+  @media screen and (max-width: $point)  { @content; }
+}  
+
+  
+//
+//MIXIN :: END
+//
+
+//media template
+// @include media(1199px){
+//    width: 970px;   
+//}
+//@include media(1199px){
+//    width: 970px;   
+//}
+//@include media(991px){
+//    width: 750px;   
+//}
+//@include media(767px){
+//    width: 100%;   
+//}
+%clear {
+    &:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+    &:before{
+        display: table;
+        content: " ";
+    }
+}
+
+%gradient{
+    background: #30e3cb;
+    background: -moz-linear-gradient(left, #30e3cb 0%, #11999e 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #30e3cb), color-stop(100%, #11999e));
+    background: -webkit-linear-gradient(left, #30e3cb 0%, #11999e 100%);
+    background: -o-linear-gradient(left, #30e3cb 0%, #11999e 100%);
+    background: -ms-linear-gradient(left, #30e3cb 0%, #11999e 100%);
+    background: linear-gradient(to right, #30e3cb 0%, #11999e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30e3cb', endColorstr='#11999e', GradientType=1 );
+}

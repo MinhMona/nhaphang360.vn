@@ -1,0 +1,284 @@
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+  
+  @media screen and (min-width: $min-vw) {  
+    
+    @each $property in $properties {
+      $value-prop: null;
+      @for $i from 1 through length($min-value) {
+        @if (strip-unit(nth($min-value, $i)) == 0 and strip-unit(nth($max-value, $i)) == 0) {
+          $value-prop: append($value-prop, 0);
+        }
+
+        @else if (unit(nth($min-value, $i)) == 'rem') {
+          $value: calc(#{nth($min-value, $i)} + #{strip-unit(nth($max-value, $i) - nth($min-value, $i)) * 10 } * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+          $value-prop: append($value-prop, $value);
+        }
+        @else {
+          $value: calc(#{nth($min-value, $i)} + #{strip-unit(nth($max-value, $i) - nth($min-value, $i))} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+          $value-prop: append($value-prop, $value);
+        }   
+      }
+      #{$property}: $value-prop;
+    }  
+  }
+
+  @media screen and (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function ends-with($string, $find) {
+  @if (str-slice($string, (str-length($string) - str-length($find) + 1)) == $find) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+// Media Queries
+// 1. Name and define our breakpoints. Name the map something sensical
+// 2. Write a comma separated list of key: value, pairs that we will use later
+$breakpoints: (
+   small: 34em,
+	large: 60em,
+);
+
+// if selector is wider than the screensize we are calling
+@mixin bp($screen-size) {
+	// and if our map that we named $breakpoints includes values (we called them $screen-size)
+	@if map-has-key($breakpoints, $screen-size) {
+		// then write out a nested Media Query that will target that value as our min-width
+		@media (min-width: map-get($breakpoints, $screen-size)) {
+	  		// write CSS within this mixin that would apply to only this breakpoint or above
+				@content;
+		}
+	// if the screen-size we are requesting doesn't exist, then tell me when it is compiled
+	} @else {
+        // Debugging
+        @warn "'#{$screen-size}' has not been declared as a breakpoint.";
+    }
+}
+
+///////////////////////// ============================
+
+//AUTH HOVER
+/* @mixin auth-hover() {
+
+  .status-wrap {
+    display: none;
+    position: absolute;
+    bottom: -398px;
+    right: 0;
+    z-index: 1;
+    
+    &:hover,
+    &:focus {
+      display: block;
+    }
+
+    .status {
+      position: relative;
+      left: 0;
+      top: 30px;
+      width: 300px;
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: 500;
+      color: black;
+      background-color: white;
+
+
+      header {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        h4 {
+          color: white;
+          font-size: 24px;
+          z-index: 1;
+        }
+        
+        &::before {
+          content: '';
+          bottom: 0;
+          left: 0;
+          background-image: url('../images/hover-acc_03.png');
+          @include coverbg();
+          position: absolute;
+          width: 100%;
+          height: calc(100% + 23px);
+        }
+      }
+
+      main {
+
+        > *:not(.links) {
+          padding: 10px 20px;
+        }
+
+        section:nth-child(odd) {
+          background-color: #f8f8f8;
+        }
+
+        .level {
+
+          .level__info {
+            @include flex(row, space-between);
+
+            .rank {
+              font-weight: bold;
+            }
+          }
+
+          .process {
+            background: #ebebeb;
+            border-radius: 12px;
+            height: 20px;
+            width: 100%;
+            padding: 2px;
+            margin: 5px 0;
+            overflow: hidden;
+
+            > span {
+              display: block;
+              height: 100%;
+              max-width: 100%;
+              border-radius: 9px;
+              background-color: #3ab1c8;
+              background-image: repeating-linear-gradient(
+                                  -45deg,
+                                  transparent 0px,  
+                                  transparent 7px, 
+                                  rgba(black, .1) 7px,
+                                  rgba(black, .1) 9px
+                                );
+              background-size: 50px 50px;
+              background-position: 0 0;
+              overflow: hidden;
+              animation: move 4s linear infinite;
+              @keyframes move {
+                0% {
+                  background-position: 0 0;
+                }
+                100% {
+                  background-position: 50px 50px;
+                }
+              }
+            }
+          }
+        }
+
+        .balance {
+          @include flex(row, normal);
+
+          .balance__number {
+            margin-left: 10px;
+            font-weight: bold;
+            .vnd {
+              color: #2772db;
+            }
+
+            .cny {
+              color: #3ab1c8;
+            }
+          }
+        }
+
+        .links {
+          > a {
+            padding: 10px 20px;
+            display: block;
+            text-align: start;
+            i {
+              float: right;
+              line-height: 2;
+              color: #2772db;
+            }
+
+            &:hover {
+              background-color: #2772db;
+              color: white;
+
+              > i {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+
+      footer {
+        .btn {
+          width: 100%;
+          border-radius: unset;
+          background-color: #ec4126;
+          color: white;
+
+          &:hover {
+            background-color: darken(#ec4126, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+ */
+
+
+ @mixin slider() {
+  .slick-prev:before, .slick-next:before {
+    content: none;
+  }
+
+  .slick-slide {
+    outline: none;
+  }
+
+  .slick-prev, .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 99;
+    &:hover {
+      .slick-icon {
+        background-color: $color-main;
+      }
+    }
+  }
+
+  // .slick-next {
+  //   right: 20px;
+  // }
+  // .slick-prev {
+  //   left: unset;
+  //   right: 62px; 
+  // }
+  
+  .slick-icon {
+    display: inline-block;
+    border-radius: 2px;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    > a {
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      color: white;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+    }  
+  }
+
+}

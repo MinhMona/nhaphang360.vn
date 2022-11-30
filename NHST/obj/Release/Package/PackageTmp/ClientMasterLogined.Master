@@ -1,0 +1,506 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ClientMasterLogined.master.cs" Inherits="NHST.ClientMasterLogined" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Vận chuyển đa quốc gia</title>
+    <link rel="stylesheet" href="/App_Themes/NHST/css/style.css" media="all">
+    <link rel="stylesheet" href="/App_Themes/NHST/css/responsive.css" media="all">
+    <link href="/App_Themes/NewUI/js/select2/select2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/App_Themes/NHST/css/style-custom.css" media="all">
+    <link rel="stylesheet" href="/App_Themes/NHST/css/mon.css" media="all">
+    <script src="/App_Themes/NHST/js/jquery-1.9.1.min.js"></script>
+    <link href="/App_Themes/NewUI/js/sweet/sweet-alert.css" rel="stylesheet" type="text/css" />
+    <!--Start of Tawk.to Script
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/58929eeb14438909fa06b3bb/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>-->
+    <!--End of Tawk.to Script-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+	<div id="fb-root"></div>
+    <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <style>
+        #cfacebook {
+            position: fixed;
+            bottom: 0px;
+            right: 20px;
+            z-index: 999999999999999;
+            width: 250px;
+            height: auto;
+            box-shadow: 6px 6px 6px 10px rgba(0,0,0,0.2);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            overflow: hidden;
+        }
+
+            #cfacebook .fchat {
+                float: left;
+                width: 100%;
+                height: 270px;
+                overflow: hidden;
+                display: none;
+                background-color: #fff;
+            }
+
+                #cfacebook .fchat .fb-page {
+                    margin-top: -130px;
+                    float: left;
+                }
+
+            #cfacebook a.chat_fb {
+                float: left;
+                padding: 0 25px;
+                width: 250px;
+                color: #fff;
+                text-decoration: none;
+                height: 40px;
+                line-height: 40px;
+                text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAMAAABFoMFOAAAAWlBMV…8/UxBxQDQuFwlpqgBZBq6+P+unVY1GnDgwqbD2zGz5e1lBdwvGGPE6OgAAAABJRU5ErkJggg==);
+                background-repeat: repeat-x;
+                background-size: auto;
+                background-position: 0 0;
+                background-color: #3a5795;
+                border: 0;
+                border-bottom: 1px solid #133783;
+                z-index: 9999999;
+                margin-right: 12px;
+                font-size: 18px;
+            }
+
+                #cfacebook a.chat_fb:hover {
+                    color: yellow;
+                    text-decoration: none;
+                }
+    </style>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery(".chat_fb").click(function () {
+                jQuery('.fchat').toggle('slow');
+            });
+        });
+    </script>
+    <div id="cfacebook">
+        <a href="javascript:;" class="chat_fb" onclick="return:false;"><i class="fa fa-facebook-square"></i> Phản hồi của bạn</a>
+        <div class="fchat">
+            <div class="fb-page" data-tabs="messages" data-href="https://www.facebook.com/nhaphang1688taobao"
+                data-width="250" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+                data-show-facepile="true" data-show-posts="false">
+            </div>
+        </div>
+    </div>
+    <form id="form1" runat="server">
+        <telerik:RadScriptManager ID="rsm" runat="server" EnablePageMethods="true" EnablePartialRendering="true">
+        </telerik:RadScriptManager>
+        <asp:Literal ID="ltr_infor" runat="server"></asp:Literal>
+        <header id="header">
+            <div class="top-hd">
+                <div class="all full-width-no-limit">
+                    <div class="main">
+                        <div class="left">
+                            <asp:Literal ID="ltrEmailSupportHotlineCurrency" runat="server"></asp:Literal>
+                            <%--<a href="#" class="contact-link"><i class="fa fa-envelope"></i>Support@mona-media.com</a>
+                            <a href="#" class="contact-link"><i class="fa fa-phone"></i>0908 - 555 - 555</a>--%>
+                        </div>
+                        <div class="right">
+                            <ul class="sns-ul">
+                                <asp:Literal ID="ltr_login" runat="server"></asp:Literal>
+                                <asp:Literal ID="ltr_Social" runat="server" Visible="false"></asp:Literal>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-hd">
+                <div class="all">
+                    <div class="main">
+                        <div class="logo">
+                            <a href="/trang-chu">
+                                <img src="/App_Themes/NHST/images/logo.png" alt=""></a>
+                        </div>
+                        <div class="activity-info">
+                            <div class="activity-thumb">
+                                <div class="thumb-img">
+                                    <div class="circle"><i class="fa fa-phone"></i></div>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title">Hotline</h4>
+                                    <%--<asp:Literal ID="ltr_EmailContact" runat="server"></asp:Literal>--%>
+                                    <asp:Literal ID="ltr_Hotline" runat="server"></asp:Literal>
+                                </div>
+                            </div>
+                            <div class="activity-thumb">
+                                <div class="thumb-img">
+                                    <div class="circle"><i class="fa fa-clock-o"></i></div>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title">Giờ hoạt động</h4>
+                                    <asp:Literal ID="ltr_Timework" runat="server"></asp:Literal>
+
+                                </div>
+                            </div>
+                            <asp:Literal ID="ltr_user" runat="server"></asp:Literal>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="" id="main-nav">
+            <div class="all">
+                <div class="main">
+                    <div class="inner">
+                        <a class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+                        <ul class="main-nav nav-ul">
+                            <li class="giohang"><a href="/gio-hang">Giỏ hàng</a></li>
+                            <li class="donhang"><a href="/danh-sach-don-hang">Đơn hàng</a></li>
+                            <li class="taichinh"><a href="/lich-su-giao-dich">Tài chính</a>
+                                <ul class="sub-menu">
+                                    <li><a href="/lich-su-giao-dich">Lịch sử giao dịch</a></li>
+                                    <li><a href="/nap-tien">Nạp tiền</a></li>
+                                    <li><a href="/rut-tien">Rút tiền</a></li>
+                                    <li><a href="/bang-tich-luy-diem">Điểm tích lũy</a></li>
+                                </ul>
+                            </li>
+                            <li class="khieunai"><a href="/khieu-nai">Khiếu nại</a></li>
+                            <li class="quanlytaikhoan"><a href="/thong-tin-nguoi-dung">Quản lý tài khoản</a></li>
+                            <li class="hotro"><a href="/ho-tro">Hỗ trợ</a></li>
+                            <%--<li class="trangchu"><a href="/trang-chu">TRANG CHỦ</a></li>
+                            <li class="gioithieu"><a href="/gioi-thieu-4/ve-chung-toi-12">GIỚI THIỆU</a></li>
+                            <asp:Literal ID="ltrhd" runat="server"></asp:Literal>
+                            <asp:Literal ID="ltrbg" runat="server"></asp:Literal>
+                            <asp:Literal ID="ltrcs" runat="server"></asp:Literal>
+                            <li class="chinhsach"><a href="/chinh-sach-5/chinh-sach-mua-hang-14">chính sách</a></li>
+                            <li class="huongdan"><a href="/huong-dan">HƯỚNG DẪN</a></li>
+                            <li class="banggia"><a href="/bang-gia">BẢNG GIÁ</a></li>
+                            <li class="chinhsach"><a href="/chinh-sach">CHÍNH SÁCH</a></li>
+                            <li class="congcudathang"><a href="/cong-cu">CÔNG CỤ ĐẶT HÀNG</a></li>
+                            <li class="dathangnhanh"><a href="/dat-hang-nhanh">ĐẶT HÀNG NHANH</a></li>--%>
+                        </ul>
+                        <div class="right">
+                            <asp:Literal ID="ltr_noti" runat="server"></asp:Literal>
+                            <%-- <span class="dropdown  noti-user">
+                                <a href="#" class="flex-btn"><span class="badge">10</span> <i class="fa fa-bell"></i></a>
+                                <div class="sub-menu-wrap">
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Giỏ hàng</a></li>
+                                        <li><a href="#">Danh sách đơn hàng</a></li>
+                                        <li><a href="#">Giao dịch</a></li>
+                                        <li><a href="#">Hỗ trợ</a></li>
+                                        <li><a href="#">Tài khoản</a></li>
+                                        <li><a href="#">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </span>
+                            <a href="#" class="flex-btn  cart-user"><span class="badge">20</span> <i class="fa fa-shopping-basket"></i></a>--%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <footer id="footer">
+            <div class="all">
+                <div class="main">
+                    <div class="inner">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="/App_Themes/NHST/images/logo-footer.png" alt=""></a>
+                        </div>
+                        <div class="ft-widgets">
+                            <div class="widget div5">
+                                <div class="widget-tt">Công ty</div>
+                                <ul class="ft-list">
+                                    <li class="width100">
+                                        <a href="/gioi-thieu-4/ve-chung-toi-12">Về Chúng tôi</a>
+                                    </li>
+                                    <li class="width100">
+                                        <a href="/chinh-sach-5/dieu-khoan-dat-hang-15">Điều khoản</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="widget div5">
+                                <div class="widget-tt">NGÀNH HÀNG</div>
+                                <ul class="ft-list">
+                                    <li class="width100">
+                                        <a href="https://www.taobao.com/markets/nvzhuang/taobaonvzhuang?spm=a21bo.50862.201867-main.2.Xif9GL" target="_blank">Thời trang nữ</a>
+                                    </li>
+                                    <li class="width100">
+                                        <a href="https://www.taobao.com/markets/nanzhuang/index2016?spm=a21bo.50862.201867-main.3.Xif9GL" target="_blank">Thời trang nam </a>
+                                    </li>
+                                    <li class="width100">
+                                        <a href="https://www.taobao.com/markets/qbb/index?spm=a21bo.50862.201867-links-2.1.Xif9GL" target="_blank">Đồ dùng cho bé </a>
+                                    </li>
+                                    <li class="width100">
+                                        <a href="https://www.taobao.com/markets/coolcity/coolcityHome?spm=a21bo.50862.201867-links-6.32.Xif9GL" target="_blank">Đồ Phượt </a>
+                                    </li>
+                                    <li class="width100">
+                                        <a href="https://s.taobao.com/list?spm=a21bo.50862.201867-links-11.1.Xif9GL&source=youjia&q=%E5%AE%B6%E5%85%B7" target="_blank">Nội thất </a>
+                                    </li>
+                                    <li class="width100">
+                                        <a href="https://www.taobao.com/market/3c/home.php?spm=a219r.lm872.0.0.I68wZi" target="_blank">Điện tử </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="widget div5">
+                                <div class="widget-tt">HỖ TRỢ</div>
+                                <ul class="ft-list">
+                                    <li class="width100">
+                                        <a href="/huong-dan-3/huong-dan-13">Hướng dẫn</a>
+                                    </li>
+                                    <li class="width100">
+                                        <a href="/huong-dan-3/nap-tien-va-rut-tien-25">Nạp tiền</a>
+                                    </li>
+                                    <li class="width100">
+                                        <a href="/huong-dan-3/mot-so-thac-mac-khi-moi-dat-hang-28">Câu hỏi thường gặp</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="widget div5">
+                                <div class="widget-tt">Liên hệ</div>
+                                <ul class="ft-list">
+                                    <asp:Literal ID="ltrContact" runat="server"></asp:Literal>
+                                    <%--<li class="width100">
+                                        <a href="javascript:;">Hotline: 190019990</a>
+                                    </li>
+                                    <li class="width100">
+                                        <a href="javascript:;">Email: email@gmail.com</a>
+                                    </li>
+                                    <li class="width100">
+                                        <a href="javascript:;">Địa chỉ: trường chinh</a>
+                                    </li>--%>
+                                </ul>
+                            </div>
+                            <div class="widget div5">
+                                <div class="widget-tt">MẠNG XÃ HỘI</div>
+                                <ul class="ft-list">
+                                    <asp:Literal ID="ltr_Social1" runat="server"></asp:Literal>
+                                    <%-- <li class="width100">
+                                        <a href="javascript:;">Hotline: 190019990</a>
+                                    </li>
+                                    <li class="width100">
+                                        <a href="javascript:;">Email: email@gmail.com</a>
+                                    </li>
+                                    <li class="width100">
+                                        <a href="javascript:;">Địa chỉ: trường chinh</a>
+                                    </li>--%>
+                                </ul>
+                                <%--<span class="copyright">&copy; Copyright alivietnam</span>--%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sys-txt">
+                <strong>&copy; Copyright alivietnam</strong>
+                <%--<a href="https://mona-media.com/dich-vu/thiet-ke-website-chuyen-nghiep/" title="Công ty thiế kế website chuyên nghiệp">Thiết kế website</a>&nbsp;<img src="http://mona-media.com/logo.png" style="width: 20px; vertical-align: sub" alt="MonaMedia">
+                <strong>Mona Media</strong>--%>
+            </div>
+        </footer>
+        <script src="/App_Themes/NewUI/js/sweet/sweet-alert.js" type="text/javascript"></script>
+        <script src="/App_Themes/NHST/js/SmoothScroll.js"></script>
+        <script src="/App_Themes/NHST/js/slick/slick.min.js"></script>
+        <script src="/App_Themes/NHST/js/wow.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_roqaeKE7ULRUNw5wG0i8TqvWRsSJ2JY"></script>
+        <script src="/App_Themes/NHST/js/master.js"></script>
+        <script src="/App_Themes/NewUI/js/select2/select2.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                new WOW().init();
+                LoadSelect();
+                setActiveMenu(window.location.pathname);
+            });
+            function LoadSelect() {
+                $(".select2").select2({});
+                setActive();
+            }
+            function setActive() {
+                $('body').addClass('child-page');
+            }
+            function setActiveMenu(path) {
+
+                if (path.toLowerCase().indexOf('/danh-sach-don-hang') != -1) {
+                    $('.main-nav li.donhang').addClass("active");
+                }
+                else if (path.toLowerCase().indexOf('/gio-hang') != -1) {
+                    $('.main-nav li.giohang').addClass("active");
+                }
+                else if (path.toLowerCase().indexOf('/lich-su-giao-dich') != -1) {
+                    $('.main-nav li.taichinh').addClass("active");
+                }
+                else if (path.toLowerCase().indexOf('/nap-tien') != -1) {
+                    $('.main-nav li.taichinh').addClass("active");
+                }
+                else if (path.toLowerCase().indexOf('/rut-tien') != -1) {
+                    $('.main-nav li.taichinh').addClass("active");
+                }
+                else if (path.toLowerCase().indexOf('/bang-tich-luy-diem') != -1) {
+                    $('.main-nav li.taichinh').addClass("active");
+                }
+                else if (path.toLowerCase().indexOf('/khieu-nai') != -1) {
+                    $('.main-nav li.khieunai').addClass("active");
+                }
+                else if (path.toLowerCase().indexOf('/thong-tin-nguoi-dung') != -1) {
+                    $('.main-nav li.quanlytaikhoan').addClass("active");
+                }
+                else if (path.toLowerCase().indexOf('/ho-tro') != -1) {
+                    $('.main-nav li.hotro').addClass("active");              
+                }
+            }
+            function updatestatusnoti(id, username, orderid) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Default.aspx/UpdateNotification",
+                    data: "{ID:'" + id + "',UserName:'" + username + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        if (msg.d == "ok") {
+                            window.location.href = "/chi-tiet-don-hang/" + orderid;
+                        }
+                    },
+                    error: function (xmlhttprequest, textstatus, errorthrow) {
+                        alert('lỗi');
+                    }
+                });
+            }
+            function closewebinfo()
+            {
+                $.ajax({
+                    type: "POST",
+                    url: "/Default.aspx/closewebinfo",
+                    //data: "{ID:'" + id + "',UserName:'" + username + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        if (msg.d == "ok") {
+                            $(".webinfo").remove();
+                        }
+                    },
+                    error: function (xmlhttprequest, textstatus, errorthrow) {
+                        alert('lỗi');
+                    }
+                });
+            }
+            function OnClientFileSelected(sender, args) {
+                if ($telerik.isIE) return;
+                else {
+                    truncateName(args);
+                    //var file = args.get_fileInputField().files.item(args.get_rowIndex());
+                    var file = args.get_fileInputField().files.item(0);
+                    showThumbnail(file, args);
+                }
+            }
+
+
+            function truncateName(args) {
+                var $span = $(".ruUploadProgress", args.get_row());
+                var text = $span.text();
+                if (text.length > 23) {
+                    var newString = text.substring(0, 23) + '...';
+                    $span.text(newString);
+                }
+            }
+
+            function showThumbnail(file, args) {
+
+                var image = document.createElement("img");
+
+                image.file = file;
+                image.className = "ab img-responsive";
+
+                var $row = $(args.get_row());
+                $row.parent().className = "row ruInputs list-unstyled";
+                $row.append(image);
+
+
+                var reader = new FileReader();
+                reader.onload = (function (aImg) {
+                    return function (e) {
+                        aImg.src = e.target.result;
+                    };
+                }(image));
+                var ret = reader.readAsDataURL(file);
+                var canvas = document.createElement("canvas");
+
+                ctx = canvas.getContext("2d");
+                image.onload = function () {
+                    ctx.drawImage(image, 100, 100);
+                };
+
+            }
+            function setfullisread() {
+                $.ajax({
+                    type: "POST",
+                    url: "/Default.aspx/setIsread",
+                    //data: "{ID:'" + id + "',UserName:'" + username + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        if (msg.d == "ok") {
+                            $(".notifications").html("(0)");
+                            //window.location.href = "/thong-bao-cua-ban";
+                        }
+                    },
+                    error: function (xmlhttprequest, textstatus, errorthrow) {
+                        alert('lỗi');
+                    }
+                });
+            }
+            $('.dropdown-custom').click(function () {
+                var parent = $(this);
+                if (parent.hasClass('open')) {
+                    parent.children('.sub-menu-wrap').stop().slideUp(300, function () {
+                        parent.removeClass('open');
+                    });
+                }
+                else {
+                    parent.find('.sub-menu-wrap').stop().slideDown(300, function () {
+                        parent.addClass('open');
+                    });
+                }
+            });
+            $("html").click(function () {
+                var parent = $('.dropdown-custom');
+                if (parent.hasClass('open')) {
+                    parent.children('.sub-menu-wrap').stop().slideUp(300, function () {
+                        parent.removeClass('open');
+                    });
+                }
+            });
+        </script>
+        <style>
+            .dropdown-custom
+            {
+                position:relative;
+            }
+        </style>
+    </form>
+</body>
+</html>

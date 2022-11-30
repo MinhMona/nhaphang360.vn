@@ -1,0 +1,42 @@
+/*----------------------------------------
+    Login Page
+------------------------------------------*/
+
+@import 'variables.scss';
+
+.login-bg{
+	background-image: url("../../images/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+    height: 100vh;
+}
+#login-page{
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 0 -2rem;
+	height: 100vh;
+	.login-card{
+		max-width: 450px;
+		height: 100%;
+		position:relative;
+		background-color: rgba(255,255,255,1);
+	}
+	.login-form{
+		position: absolute;
+		left: 1rem;
+		right: 1rem;
+		top: 1rem;
+	}
+	.card-panel.border-radius-6.login-card{
+		margin-left: 0 !important;
+	}
+}
+.logo-login{
+    display: block;
+	img{
+		width:100%;
+	}
+}

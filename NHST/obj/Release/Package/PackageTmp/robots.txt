@@ -1,0 +1,16 @@
+User-agent: *
+Disallow: /Admin/
+Disallow: /manager/
+Disallow: /search?q=*
+Disallow: *?replytocom
+Disallow: */Uploads/*
+Disallow: /App_Themes/
+Disallow: /App_Code/
+Disallow: /App_Data/
+Disallow: /bin/
+User-agent: Swiftbot
+Disallow: /tag/
+Disallow: /author/
+Disallow: /category/
+Disallow: /*?lang*
+Sitemap: https://vuasieutoc.com/sitemap.xml

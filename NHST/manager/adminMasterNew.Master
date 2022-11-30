@@ -1,0 +1,286 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminMasterNew.Master.cs" Inherits="NHST.manager.adminMasterNew" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="ThemeSelect">
+    <title>Quản trị</title>
+  <%--  <link rel="apple-touch-icon" href="/App_Themes/AdminNew45/assets/images/favicon/apple-touch-icon-152x152.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/App_Themes/AdminNew45/assets/images/favicon/favicon-32x32.png">--%>
+    <link href="/App_Themes/AdminNew45/assets/fonts/material-design-icons/icon.css" rel="stylesheet">
+    <!-- BEGIN: VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="/App_Themes/AdminNew45/assets/vendors/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/App_Themes/AdminNew45/assets/vendors/animate-css/animate.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- END: VENDOR CSS-->
+    <!-- BEGIN: Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="/App_Themes/AdminNew45/assets/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/App_Themes/AdminNew45/assets/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/App_Themes/AdminNew45/assets/datepicker/jquery.datetimepicker.css" />
+
+    <!-- END: Page Level CSS-->
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/App_Themes/AdminNew45/assets/css/custom/custom.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/App_Themes/AdminNew45/assets/css/custom/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/App_Themes/AdminNew45/assets/css/print.css" media="print">
+    <link href="/App_Themes/NewUI/css/jstree.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/NewUI/js/sweet/sweet-alert.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/AdminNew45/assets/js/select2/select2-materialize.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/AdminNew45/assets/js/select2/select2.min.css" rel="stylesheet" type="text/css" />
+
+     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="/App_Themes/AdminNew/js/jquery-1.9.1.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+       .ldajax {
+            width: 100%;
+            height: 100%;
+            z-index: 99999;
+            position: fixed;
+            display: none;
+            opacity: 0.8;
+            background: #fff;
+        }
+
+        .img-loading {
+            width: 100%;
+            text-align: center;
+        }
+
+            .img-loading img {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+            }
+    </style>
+</head>
+<body class="vertical-layout vertical-menu-collapsible page-header-dark vertical-modern-menu 2-columns  "
+    data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
+    <div id="loadingajax" class="ldajax">
+        <div class="img-loading">
+            <%--<img src="../App_Themes/NewUI/images/loading.gif" />--%>
+           <img src="../App_Themes/NewUI/images/loading1.gif" />
+        </div>
+    </div>
+    <form id="form1" runat="server" enctype="multipart/form-data" novalidate>
+        <asp:ScriptManager runat="server" ID="scr">
+        </asp:ScriptManager>
+        <header class="page-topbar" id="header">
+            <div class="navbar navbar-fixed">
+                <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-dark  bg-dark-gradient no-shadow">
+                    <div class="nav-wrapper">
+                        <ul class="navbar-list right">
+                            <li><a class="waves-effect waves-block waves-light" href="/dashboard">User</a>
+                            </li>
+                            <asp:Literal runat="server" ID="ltrinfo"></asp:Literal>
+
+
+                        </ul>
+
+                        <!-- notifications-dropdown-->
+
+                        <ul class="dropdown-content" id="notifications-dropdown">
+                            <asp:Literal runat="server" ID="ltrNoti"></asp:Literal>
+                        </ul>
+
+
+                        <!-- profile-dropdown-->
+                        <ul class="dropdown-content" id="profile-dropdown">
+                            <li><a class="grey-text text-darken-1" href="/thong-tin-nguoi-dung"><i
+                                class="material-icons">person_outline</i> Thông tin của bạn</a></li>
+                            <li><a class="grey-text text-darken-1" href="/dang-xuat"><i
+                                class="material-icons">keyboard_tab</i> Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                    <%-- <nav class="display-none search-sm">
+                        <div class="nav-wrapper">
+
+                            <div class="input-field">
+                                <input class="search-box-sm" type="search" required="">
+                                <label class="label-icon" for="search">
+                                    <i
+                                        class="material-icons search-sm-icon">search</i></label><i
+                                            class="material-icons search-sm-close">close</i>
+                            </div>
+
+                        </div>
+                    </nav>--%>
+                </nav>
+            </div>
+        </header>
+
+        <aside class="sidenav-main nav-collapsed nav-collapsible sidenav-light sidenav-active-square ">
+            <div class="brand-sidebar">
+                <h1 class="logo-wrapper"><a class="brand-logo darken-1">
+                    <img
+                        src="/App_Themes/AdminNew45/assets/images/logo/logo-icon.png" alt="" /><span
+                            class="logo-text hide-on-med-and-down" style="font-size:18px;"><b>NHẬP HÀNG 360</b></span></a><a class="navbar-toggler"
+                                href="#"><i class="material-icons">radio_button_unchecked</i></a></h1>
+            </div>
+            <asp:Literal runat="server" ID="ltrMenu"></asp:Literal>
+            <div class="navigation-background"></div>
+            <a
+                class="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only"
+                href="#" data-target="slide-out"><i class="material-icons">menu</i></a>
+        </aside>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer
+            class="page-footer footer footer-static footer-dark  bg-dark-gradient gradient-shadow navbar-border navbar-shadow">
+            <div class="footer-copyright">
+                <div class="container">
+                    <span>&copy; 2021 <a href="#" target="_blank">NHẬP HÀNG 360</a>  
+                     All rights reserved.</span><span class="right hide-on-small-only">NHẬP HÀNG 360
+                <a href="#">Version: 4.5</a></span>
+                </div>
+            </div>
+        </footer>
+        <a href="javascript:;" id="return-to-top"><i class="material-icons">arrow_upward</i></a>
+        <asp:HiddenField runat="server" ID="hdfMainLoginID" />
+        <asp:HiddenField runat="server" ID="hdfMainLoginStatus" />
+        <!-- END: Footer-->
+
+        <!-- END: Footer-->
+        <!-- BEGIN VENDOR JS-->
+        <script src="/App_Themes/NewUI/js/sweet/sweet-alert.js" type="text/javascript"></script>
+        <script src="/App_Themes/AdminNew45/assets/js/vendors.min.js" type="text/javascript"></script>
+        <!-- BEGIN VENDOR JS-->
+        <!-- BEGIN PAGE VENDOR JS-->
+        <script src="/App_Themes/AdminNew45/assets/vendors/formatter/jquery.formatter.min.js" type="text/javascript"></script>
+        <!-- END PAGE VENDOR JS-->
+        <!-- BEGIN THEME  JS-->
+        <script src="/App_Themes/AdminNew45/assets/js/plugins.js" type="text/javascript"></script>
+        <script src="/App_Themes/AdminNew45/assets/js/custom/custom-script.js" type="text/javascript"></script>
+
+        <script src="/App_Themes/NewUI/js/app.js"></script>
+        <script src="/App_Themes/NewUI/js/jstree.min.js"></script>
+        <script src="/App_Themes/NewUI/js/ui-tree.js"></script>
+
+        <script src="/scripts/jquery.signalR-2.2.3.min.js"></script>
+        <script src="/signalr/hubs"></script>
+        <script src="/App_Themes/AdminNew45/assets/vendors/chartjs/chart.min.js"></script>
+        <%--   <script src="/App_Themes/AdminNew45/assets/vendors/chartjs/chartjs-plugin-datalabels.min.js"></script>--%>
+        <script src="/App_Themes/AdminNew45/assets/datepicker/jquery.datetimepicker.full.js"></script>
+        <script src="/App_Themes/AdminNew45/assets/pushdesktop/CreateDevice.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+        <script>
+            $(function () {
+                // Declare a proxy to reference the hub. 
+                var chat = $.connection.chatHub;
+                // Create a function that the hub can call to broadcast messages.
+                chat.client.broadcastLogin = function (id, loginStatus) {
+                    if (id == $('#<%=hdfMainLoginID.ClientID%>').val()) {
+                        if (loginStatus != $('#<%=hdfMainLoginStatus.ClientID%>').val()) {
+                            swal({
+                                title: "Thông báo!",
+                                text: "Tài khoản của bạn đã được đăng nhập ở nơi khác!",
+                                type: "warning",
+                                showCancelButton: false,
+                                confirmButtonClass: "btn-danger",
+                                confirmButtonText: "Ok",
+                                closeOnConfirm: true
+                            },
+                                function () {
+                                    location.reload();
+                                });
+                        }
+                        else {
+                            swal("Thông báo!", "Tài khoản của bạn đã được đăng nhập ở nơi khác!", "warning");
+                        }
+                    }
+                };
+                // Start the connection.
+                $.connection.hub.start().done(function () {
+
+                });
+            });
+
+              function addLoading() {
+                $("#loadingajax").show();
+            }
+            function removeLoading() {
+                $("#loadingajax").hide();
+            }
+
+            function checkisRead(id, link) {
+                //alert(link);
+                $.ajax({
+                    type: "POST",
+                    url: "/manager/home.aspx/checkisreadnoti",
+                    data: "{ID:'" + id + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        if (msg.d == "ok") {
+                            window.location.assign(link);
+                        }
+                    },
+                    error: function (xmlhttprequest, textstatus, errorthrow) {
+                        alert('lỗi');
+                    }
+                });
+            }
+
+        </script>
+
+        <script type="text/javascript">
+            function OnClientFileSelected(sender, args) {
+                if ($telerik.isIE) return;
+                else {
+                    truncateName(args);
+                    //var file = args.get_fileInputField().files.item(args.get_rowIndex());
+                    var file = args.get_fileInputField().files.item(0);
+                    showThumbnail(file, args);
+                }
+            }
+
+
+            function truncateName(args) {
+                var $span = $(".ruUploadProgress", args.get_row());
+                var text = $span.text();
+                if (text.length > 23) {
+                    var newString = text.substring(0, 23) + '...';
+                    $span.text(newString);
+                }
+            }
+
+            function showThumbnail(file, args) {
+
+                var image = document.createElement("img");
+
+                image.file = file;
+                image.className = "ab img-responsive";
+
+                var $row = $(args.get_row());
+                $row.parent().className = "row ruInputs list-unstyled";
+                $row.append(image);
+
+
+                var reader = new FileReader();
+                reader.onload = (function (aImg) {
+                    return function (e) {
+                        aImg.src = e.target.result;
+                    };
+                }(image));
+                var ret = reader.readAsDataURL(file);
+                var canvas = document.createElement("canvas");
+
+                ctx = canvas.getContext("2d");
+                image.onload = function () {
+                    ctx.drawImage(image, 100, 100);
+                };
+
+            }
+        </script>
+    </form>
+</body>
+</html>

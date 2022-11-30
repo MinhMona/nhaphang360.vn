@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'fester';
+    src: url('iCielFesterSemiCondensed-Bold.eot');
+    src: url('iCielFesterSemiCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+         url('iCielFesterSemiCondensed-Bold.woff') format('woff'),
+         url('iCielFesterSemiCondensed-Bold.ttf') format('truetype'),
+         url('iCielFesterSemiCondensed-Bold.svg#FontName') format('svg');
+    font-style: normal;
+    font-weight: bold;
+}

@@ -1,0 +1,219 @@
+/**
+ * Print stylesheet for nhaphang45
+* @version         1.0
+* @lastmodified    11.06.2019
+*/
+/** Setting margins */
+@page {
+  margin: 2cm 1cm 4cm; }
+body {
+  font: 13pt "Times New Roman", Times, serif;
+  line-height: 1.3;
+  background: #fff !important;
+  color: #000; }
+
+h1 {
+  font-size: 24pt; }
+
+h2,
+h3,
+h4 {
+  font-size: 14pt;
+  margin-top: 25px; }
+
+/* Defining all page breaks */
+a {
+  page-break-inside: avoid; }
+
+blockquote {
+  page-break-inside: avoid; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  page-break-after: avoid;
+  page-break-inside: avoid; }
+
+img {
+  page-break-inside: avoid;
+  page-break-after: avoid; }
+
+table,
+pre {
+  page-break-inside: avoid; }
+
+thead {
+  display: table-row-group; }
+
+ul,
+ol,
+dl {
+  page-break-before: avoid; }
+
+tr {
+  page-break-inside: avoid;
+  page-break-after: always; }
+
+/* Displaying link color and link behaviour */
+a:link,
+a:visited,
+a {
+  background: transparent;
+  color: #520;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: left; }
+
+a {
+  page-break-inside: avoid; }
+
+a[href^="http"]:after {
+  content: " < " attr(href) "> "; }
+
+a:after > img {
+  content: ""; }
+
+article a[href^="#"]:after {
+  content: ""; }
+
+a:not(:local-link):after {
+  content: " < " attr(href) "> "; }
+
+/**
+ * Making intergated videos disappear, and removing the iframes' whitespace to zero. 
+ */
+.hide-on-print {
+  display: none !important; }
+
+.sidenav-main,
+header,
+footer,
+.page-title,
+.content-wrapper-before,
+#return-to-top,
+#right-sidebar-nav,
+#export-all .action-wrap,
+.list-draw-money,
+.list-donate-money,
+#customer-export {
+  display: none !important; }
+
+.package-item .owner {
+  border: 0;
+  padding-left: 0; }
+
+.card-panel {
+  padding: 0;
+  margin: 0;
+  box-shadow: none; }
+
+.package-item .table tr td,
+.package-item .table tr th {
+  color: #000; }
+.package-item .table span.badge {
+  color: #000 !important; }
+.package-item .table .red-text {
+  color: #000 !important; }
+
+.row {
+  margin: 0 !important; }
+  .row .col {
+    padding: 0; }
+
+#export-all .input-field {
+  display: flex;
+  align-items: center;
+  margin: 0; }
+  #export-all .input-field input {
+    border: 0;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    order: 1; }
+  #export-all .input-field label {
+    position: static;
+    transform: none;
+    padding: 0; }
+    #export-all .input-field label:after {
+      display: inline-block;
+      opacity: 1;
+      content: ":";
+      position: static;
+      padding-right: 2pt; }
+#export-all .package-item .owner {
+  padding-left: 0;
+  font-weight: bold; }
+
+.package-item:last-child {
+  padding-bottom: 5%; }
+
+.print-header {
+  position: relative; }
+  .print-header .barcode {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .print-header .barcode img {
+      width: 100px;
+      height: 100px; }
+  .print-header p {
+    margin: 0;
+    font-size: 10pt; }
+  .print-header .hd-left {
+    max-width: 150px; }
+  .print-header .hd-right {
+    float: right;
+    max-width: 200px;
+    text-align: right; }
+    .print-header .hd-right .content {
+      text-align: center; }
+  .print-header .print-title {
+    text-align: center;
+    margin-bottom: 30px; }
+    .print-header .print-title h1 {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-family: "Times New Roman", Times, serif; }
+
+.print-footer {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  page-break-inside: avoid; }
+  .print-footer .signature {
+    display: flex;
+    justify-content: space-around; }
+    .print-footer .signature .col {
+      text-align: center; }
+      .print-footer .signature .col p {
+        margin: 0; }
+
+.print-header,
+.print-footer,
+.print-content {
+  display: block; }
+
+.row-dots p {
+  border-bottom: 1px dotted #000;
+  padding-bottom: 3px; }
+  .row-dots p span {
+    font-weight: 500; }
+.row-dots .seperate {
+  display: flex; }
+  .row-dots .seperate > p {
+    width: 50%; }
+
+.package-item {
+  padding-bottom: 30px; }
+  .package-item .table {
+    page-break-inside: auto; }
+    .package-item .table tr {
+      page-break-inside: avoid; }
+    .package-item .table img {
+      max-width: 75px;
+      height: auto; }
+
+/*# sourceMappingURL=print.css.map */

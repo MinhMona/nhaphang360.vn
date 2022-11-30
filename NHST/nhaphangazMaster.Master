@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="nhaphangazMaster.master.cs" Inherits="NHST.nhaphangazMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <title>NHẬP HÀNG 360</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/App_Themes/NHAZ/css/style.css">
+    <link href="/App_Themes/NHAZ/js/sweet/sweet-alert.css" rel="stylesheet" type="text/css" />
+    <script src="/App_Themes/NHAZ/js/jquery-3.4.1.min.js"></script>
+
+    <asp:Literal runat="server" ID="ltrHeader"></asp:Literal>
+    <asp:Literal ID="ltrSEO" runat="server"></asp:Literal>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Literal ID="ltr_infor" runat="server"></asp:Literal>       
+        <header class="header">
+            <div class="top-header">
+                <div class="container">
+                    <ul class="top-hd-info">
+                        <asp:Literal runat="server" ID="ltrTop"></asp:Literal>
+                    </ul>
+                    <div class="user-box">
+                        <asp:Literal runat="server" ID="ltrLogin"></asp:Literal>
+                    </div>
+                </div>
+            </div>
+            <div class="main-header">
+                <div class="container">
+                    <asp:Literal runat="server" ID="ltrLogo"></asp:Literal>
+                    <div class="main-menu">
+                        <asp:Literal runat="server" ID="ltrMenu"></asp:Literal>
+                        <div class="main-menu-overlay"></div>
+                    </div>
+                    <div class="main-menu-btn hamburger-btn">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-header">
+                <div class="container">
+                    <div class="hd-intro-wrapper">
+                        <div class="columns">
+                            <div class="column">
+                                <div class="hd-intro-item">
+                                    <div class="hd-intro-icon">
+                                        <img src="/App_Themes/NHAZ/images/intro-1.png" alt="">
+                                    </div>
+                                    <div class="hd-intro-info"><span class="hl-color">DỄ DÀNG</span> TẠO VÀO QUẢN LÝ ĐƠN HÀNG, TÌM NGUỒN HÀNG, <span class="hl-color">TƯ VẤN MIỄN PHÍ</span></div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="hd-intro-item">
+                                    <div class="hd-intro-icon">
+                                        <img src="/App_Themes/NHAZ/images/intro-2.png" alt="">
+                                    </div>
+                                    <div class="hd-intro-info"><span class="hl-color">ĐẢM BẢO 100%</span> HÀNG HOÁ, ĐỀN BÙ KHI CÓ SAI SÓT. THẤT LẠC</div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="hd-intro-item">
+                                    <div class="hd-intro-icon">
+                                        <img src="/App_Themes/NHAZ/images/intro-3.png" alt="">
+                                    </div>
+                                    <div class="hd-intro-info">GIAO HÀNG TẬN NƠI, <span class="hl-color">NHANH CHÓNG</span> DÙ ĐƠN HÀNG <span class="hl-color">CHỈ CÓ 1 SẢN PHẨM</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer class="footer">
+            <div class="top-footer">
+                <div class="container">
+                    <div class="columns">
+                        <asp:Literal runat="server" ID="ltrFooter"></asp:Literal>
+                        <div class="column">
+                            <div class="ft-ext-wrapper">
+                                <p class="ft-title">TIỆN ÍCH MỞ RỘNG</p>
+                                <div class="ft-ext-btn">
+                                    <a href="#">
+                                        <img src="/App_Themes/NHAZ/images/chrome.png" alt=""></a>
+                                    <a href="#">
+                                        <img src="/App_Themes/NHAZ/images/coccoc.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="ft-social-wrapper">
+                                <p class="ft-title">LIÊN KẾT VỚI CHÚNG TÔI</p>
+                                <ul class="social-nav">
+                                    <asp:Literal runat="server" ID="ltrSocial"></asp:Literal>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container"><a href="https://mona.media/thiet-ke-website-tai-hcm/">Thiết kế website</a> bời <a href="https://mona.media">Mona Media</a></div>
+            </div>
+        </footer>
+        <asp:Literal runat="server" ID="ltrFooterScript"></asp:Literal>
+        <span class="scroll-top"><i class="fa fa-angle-up"></i></span>
+        <script src="/App_Themes/NHAZ/js/jquery-1.12.4.min.js"></script>
+        <script src="/App_Themes/NHAZ/js/slick-1.8.1/slick.min.js"></script>
+        <script src="/App_Themes/NHAZ/js/WOW-master/wow.min.js"></script>
+        <script src="/App_Themes/NHAZ/js/main.js"></script>
+        <script src="/App_Themes/NHAZ/js/sweet/sweet-alert.js" type="text/javascript"></script>
+        <script>
+            new WOW().init();
+            function isEmpty(str) {
+                return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
+            }
+        </script>
+
+    </form>
+</body>
+</html>

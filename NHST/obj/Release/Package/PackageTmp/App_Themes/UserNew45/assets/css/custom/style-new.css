@@ -1,0 +1,187 @@
+﻿.table .action-table {
+    white-space: nowrap;
+    display: inline-grid;
+}
+
+    .table .action-table > a {
+        margin: 5px 3px;
+        width: 120px;
+    }
+
+        .table .action-table > a:hover {
+            color: #fff;
+        }
+
+.list-order .order-wrap .remove-order {
+    right: -11px;
+}
+
+.user-title {
+    font-weight: bold;
+}
+
+.map-container .view-info-wrap .info-bottom .arrival-info .arrival-date .time {
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 991px) {
+    .user-box .acc-info:hover .status-desktop, .user-box .acc-info:focus .status-desktop {
+        display: none;
+    }
+}
+
+.status-desktop {
+    display: none;
+    position: absolute;
+    top: 90%;
+    right: 0;
+    z-index: 99;
+    width: 300px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+}
+
+    .status-desktop .status-wrap {
+        position: relative;
+        left: 0;
+        top: 30px;
+        width: 300px;
+        line-height: 30px;
+        background-color: white;
+    }
+
+    .status-desktop .status__header {
+        height: 48px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: relative;
+    }
+
+        .status-desktop .status__header::before {
+            content: "";
+            bottom: 0;
+            left: 0;
+            background-repeat: no-repeat;
+            background-image: url(/App_Themes/NHAZ/images/favicon/status-header-bg.png);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            width: 100%;
+            height: calc(100% + 23px);
+        }
+
+        .status-desktop .status__header h4 {
+            color: white;
+            font-size: 24px;
+            z-index: 1;
+        }
+
+    .status-desktop .status__body > *:not(.links) {
+        padding: 10px 20px;
+    }
+
+    .status-desktop .status__body > div:nth-child(odd) {
+        background-color: #f8f8f8;
+    }
+
+    .status-desktop .status__body .level__info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+        .status-desktop .status__body .level__info .rank {
+            font-weight: bold;
+        }
+
+    .status-desktop .status__body .level__process {
+        background: #ebebeb;
+        border-radius: 12px;
+        height: 20px;
+        width: 100%;
+        padding: 2px;
+        margin: 5px 0;
+        overflow: hidden;
+    }
+
+        .status-desktop .status__body .level__process span {
+            display: block;
+            height: 100%;
+            max-width: 100%;
+            border-radius: 9px;
+            background-color: #F64302;
+            background-image: -webkit-repeating-linear-gradient(135deg, transparent 0px, transparent 7px, rgba(0, 0, 0, 0.1) 7px, rgba(0, 0, 0, 0.1) 9px);
+            background-image: repeating-linear-gradient(-45deg, transparent 0px, transparent 7px, rgba(0, 0, 0, 0.1) 7px, rgba(0, 0, 0, 0.1) 9px);
+            background-size: 50px 50px;
+            background-position: 0 0;
+            overflow: hidden;
+            -webkit-animation: move 4s linear infinite;
+            animation: move 4s linear infinite;
+        }
+
+    .status-desktop .status__body .balance {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .status-desktop .status__body .balance__number {
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+        .status-desktop .status__body .balance__number .vnd {
+            color: #F64302;
+        }
+
+    .status-desktop .status__body .links > a {
+        padding: 10px 20px;
+        display: block;
+        text-align: start;
+        color: black;
+    }
+
+        .status-desktop .status__body .links > a i {
+            float: right;
+            line-height: 2;
+            color: #F64302;
+        }
+
+        .status-desktop .status__body .links > a:hover {
+            color: #F64302;
+        }
+
+    .status-desktop .status__footer .ft-btn {
+        font-size: 13px;
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        border-radius: unset;
+        background-color: #F64302;
+        color: white;
+        text-align: center;
+    }
+
+.user-box:hover .status-desktop {
+    display: block;
+}

@@ -1,0 +1,156 @@
+<root>
+	<modules>
+		<module name="RadEditorStatistics" dockingZone="Bottom" enabled="true" visible="true" dockable="true" />
+		<module name="RadEditorDomInspector" dockingZone="Module" enabled="true" visible="true" dockable="true" />
+		<module name="RadEditorNodeInspector" dockingZone="Module" enabled="true" visible="true" dockable="true" />
+		<module name="RadEditorHtmlInspector" dockingZone="Module" enabled="true" visible="false" dockable="true" />
+	</modules>
+  <tools name="MainToolbar">
+	<tool name="XhtmlValidator" />
+	<tool name="PageProperties" />
+	<tool name="StyleBuilder" />
+	<tool name="TrackChangesDialog" />
+	<tool name="FormatCodeBlock" />
+	<tool separator="true"/>
+	<tool name="InsertImage" />
+	<tool name="InsertLink" />
+	<tool name="InsertTableLight" />
+	<tool separator="true"/>
+	<tool name="InsertFormElement" />
+	<tool name="InsertFormForm" />
+	<tool name="InsertFormButton" />
+	<tool name="InsertFormCheckbox" />
+	<tool name="InsertFormHidden" />
+	<tool name="InsertFormPassword" />
+	<tool name="InsertFormRadio" />
+	<tool name="InsertFormReset" />
+	<tool name="InsertFormSelect" />
+	<tool name="InsertFormSubmit" />
+	<tool name="InsertFormTextarea" />
+	<tool name="InsertFormText" />
+	<tool separator="true"/>
+	<tool name="StripAll" />
+	<tool name="StripCss" />
+	<tool name="StripFont" />
+	<tool name="StripSpan" />
+	<tool name="StripWord" />
+	<tool name="FormatStripper" />
+  </tools>
+  <tools name="InsertToolbar" >
+	<tool name="AjaxSpellCheck"/>
+	<tool name="ImageManager" shortcut="CTRL+M"/>
+	<tool name="SetImageProperties" />
+	<tool name="ImageMapDialog"/>
+	<tool separator="true"/>
+	<tool name="FlashManager" />
+	<tool name="MediaManager" />
+	<tool name="InsertExternalVideo" />
+	<tool separator="true"/>
+	<tool name="DocumentManager" />
+	<tool name="TemplateManager" />
+	<tool separator="true"/>
+	<tool name="InsertTable" />
+	<tool name="InsertRowAbove" />
+	<tool name="InsertRowBelow" />
+	<tool name="DeleteRow" />
+	<tool name="InsertColumnLeft" />
+	<tool name="InsertColumnRight" />
+	<tool name="DeleteColumn" />
+	<tool separator="true"/>
+	<tool name="MergeColumns" />
+	<tool name="MergeRows" />
+	<tool separator="true"/>
+	<tool name="SplitCell" />
+	<tool name="SplitCellHorizontal" />
+	<tool name="DeleteCell" />
+	<tool name="SetCellProperties" />
+	<tool name="SetTableProperties" />
+	<tool separator="true"/>
+	<tool name="InsertSymbol" />
+  </tools>
+  <tools>
+	<tool name="Undo" />
+	<tool name="Redo" />
+	<tool separator="true"/>
+	<tool name="Cut" />
+	<tool name="Copy" />
+	<tool name="Paste" shortcut="CTRL+!"/>
+	<tool name="PasteMarkdown" />
+	<tool separator="true"/>
+	<tool name="PasteFromWord" />
+	<tool name="PasteFromWordNoFontsNoSizes" />
+	<tool name="PastePlainText" />
+	<tool name="PasteAsHtml"  />
+	<tool name="PasteHtml"  />
+	<tool separator="true"/>
+	<tool name="Print" />
+	<tool name="FindAndReplace" />
+	<tool name="SelectAll" />
+	<tool separator="true"/>
+	<tool name="InsertGroupbox" />
+	<tool name="InsertParagraph" />
+	<tool name="InsertHorizontalRule" />
+	<tool name="InsertSnippet" />
+	<tool separator="true"/>
+	<tool name="InsertDate" />
+	<tool name="InsertTime" />
+	
+  </tools>
+  <tools>
+	<tool name="Bold" />
+	<tool name="Italic" />
+	<tool name="Underline" />
+	<tool name="StrikeThrough" />
+	<tool name="ForeColor" />
+	<tool name="BackColor"/>
+	<tool name="FormatPainter" />
+	<tool separator="true"/>
+	<tool name="JustifyLeft" />
+	<tool name="JustifyCenter" />
+	<tool name="JustifyRight" />
+	<tool name="JustifyFull" />
+	<tool name="JustifyNone" />
+	<tool separator="true"/>
+	<tool name="Superscript" />
+	<tool name="Subscript" />
+	<tool separator="true"/>
+	<tool name="ConvertToLower" />
+	<tool name="ConvertToUpper" />
+	<tool name="Indent" />
+	<tool name="Outdent" />
+	<tool name="InsertOrderedList" />
+	<tool name="InsertUnorderedList"/>
+	<tool name="AbsolutePosition" />
+	<tool name="LinkManager" />
+	<tool name="Unlink" />
+	<tool name="SetLinkProperties" />
+	<tool name="ToggleTableBorder" />
+  </tools>
+  <tools name="DropdownToolbar" >
+	<tool name="FontName"/>
+	<!--<tool name="FontSize"/>-->
+	<tool name="RealFontSize"/>
+	<tool name="ApplyClass"/>
+	<!--<tool name="InsertCustomLink"/>-->
+	<tool name="FormatBlock"/>
+	<tool name="FormatSets"/>
+	<tool name="Zoom" />
+  </tools>
+	
+	<symbols>
+	</symbols>
+	<fontNames>
+	</fontNames>
+	<fontSizes>
+	</fontSizes>
+	<colors>
+	</colors>
+	<classes>
+	</classes>
+	<paragraphs>
+	</paragraphs>
+	<dialogParameters>
+	</dialogParameters>
+	<languages>
+	</languages>
+</root>

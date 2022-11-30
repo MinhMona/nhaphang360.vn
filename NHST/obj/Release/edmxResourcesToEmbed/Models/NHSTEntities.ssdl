@@ -1,0 +1,2546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NHSTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_Account">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="LevelID" Type="int" />
+    <Property Name="Wallet" Type="float" />
+    <Property Name="Status" Type="int" />
+    <Property Name="SaleID" Type="int" />
+    <Property Name="DathangID" Type="int" />
+    <Property Name="VIPLevel" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="WalletCYN" Type="float" />
+    <Property Name="WarehouseFrom" Type="int" />
+    <Property Name="WarehouseTo" Type="int" />
+    <Property Name="Currency" Type="float" />
+    <Property Name="FeeBuyPro" Type="nvarchar(max)" />
+    <Property Name="FeeTQVNPerWeight" Type="nvarchar(max)" />
+    <Property Name="Deposit" Type="float" />
+    <Property Name="ShippingType" Type="int" />
+    <Property Name="LoginStatus" Type="nvarchar(max)" />
+    <Property Name="WareHouseTQ" Type="int" />
+    <Property Name="WareHouseVN" Type="int" />
+    <Property Name="Token" Type="nvarchar(max)" />
+    <Property Name="FeeTQVNPerVolume" Type="nvarchar(max)" />
+    <Property Name="TienTichLuy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_AccountantOutStockPayment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OutStockSessionID" Type="int" />
+    <Property Name="TotalPrice" Type="float" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_AccountInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="MobilePhonePrefix" Type="nvarchar(max)" />
+    <Property Name="MobilePhone" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Latitude" Type="nvarchar(max)" />
+    <Property Name="Longitude" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="BirthDay" Type="datetime" />
+    <Property Name="Gender" Type="int" />
+    <Property Name="IMGUser" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_AdminSendUserWallet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="BankID" Type="int" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="Status" Type="int" />
+    <Property Name="TradeContent" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="IsLoan" Type="bit" />
+    <Property Name="IsPayLoan" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_AppPushNoti">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppNotiTitle" Type="nvarchar(max)" />
+    <Property Name="AppNotiMessage" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="IsPush" Type="bit" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Type" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Bank">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BankName" Type="nvarchar(max)" />
+    <Property Name="AccountHolder" Type="nvarchar(max)" />
+    <Property Name="BankNumber" Type="nvarchar(max)" />
+    <Property Name="Branch" Type="nvarchar(max)" />
+    <Property Name="IMG" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Banner">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BannerIMG" Type="nvarchar(max)" />
+    <Property Name="BannerLink" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Benefits">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BenefitName" Type="nvarchar(max)" />
+    <Property Name="BenefitDescription" Type="nvarchar(max)" />
+    <Property Name="BenefitIndex" Type="int" />
+    <Property Name="BenefitSide" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_BigPackage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PackageCode" Type="nvarchar(max)" />
+    <Property Name="Weight" Type="float" />
+    <Property Name="Volume" Type="float" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_BigPackage1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SendDate" Type="date" />
+    <Property Name="ArrivedDate" Type="date" />
+    <Property Name="PackageCode" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Place" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="IsSlow" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="AdditionFee" Type="float" />
+  </EntityType>
+  <EntityType Name="tbl_BigPackageHistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PackageID" Type="int" />
+    <Property Name="ColumnChange" Type="nvarchar(max)" />
+    <Property Name="FromValue" Type="nvarchar(max)" />
+    <Property Name="ToValue" Type="nvarchar(max)" />
+    <Property Name="Type" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_ChinaSite">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sitename" Type="nvarchar(max)" />
+    <Property Name="SiteLogo" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Commitment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommitmentName" Type="nvarchar(max)" />
+    <Property Name="CommitmentDescription" Type="nvarchar(max)" />
+    <Property Name="CommitmentIndex" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Complain">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="Amount" Type="nvarchar(max)" />
+    <Property Name="IMG" Type="nvarchar(max)" />
+    <Property Name="ComplainText" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="OrderCode" Type="nvarchar(max)" />
+    <Property Name="OrderShopCode" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Configuration">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Websitename" Type="nvarchar(max)" />
+    <Property Name="LogoIMG" Type="nvarchar(max)" />
+    <Property Name="BannerIMG" Type="nvarchar(max)" />
+    <Property Name="BannerText" Type="nvarchar(max)" />
+    <Property Name="ChromeExtensionLink" Type="nvarchar(max)" />
+    <Property Name="CocCocExtensionLink" Type="nvarchar(max)" />
+    <Property Name="AboutText" Type="nvarchar(max)" />
+    <Property Name="EmailSupport" Type="nvarchar(max)" />
+    <Property Name="EmailContact" Type="nvarchar(max)" />
+    <Property Name="Hotline" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Address2" Type="nvarchar(max)" />
+    <Property Name="Address3" Type="nvarchar(max)" />
+    <Property Name="Facebook" Type="nvarchar(max)" />
+    <Property Name="Twitter" Type="nvarchar(max)" />
+    <Property Name="GooglePlus" Type="nvarchar(max)" />
+    <Property Name="Instagram" Type="nvarchar(max)" />
+    <Property Name="Skype" Type="nvarchar(max)" />
+    <Property Name="TimeWork" Type="nvarchar(max)" />
+    <Property Name="Currency" Type="nvarchar(max)" />
+    <Property Name="InfoContent" Type="nvarchar(max)" />
+    <Property Name="FooterLeft" Type="nvarchar(max)" />
+    <Property Name="FooterRight" Type="nvarchar(max)" />
+    <Property Name="WeightPrice" Type="nvarchar(max)" />
+    <Property Name="PercentOrder" Type="nvarchar(max)" />
+    <Property Name="PricePayHelpDefault" Type="nvarchar(max)" />
+    <Property Name="PriceSendDefaultHN" Type="nvarchar(max)" />
+    <Property Name="PriceSendDefaultSG" Type="nvarchar(max)" />
+    <Property Name="CurrencyIncome" Type="nvarchar(max)" />
+    <Property Name="SalePercent" Type="nvarchar(max)" />
+    <Property Name="SalePercentAfter3Month" Type="nvarchar(max)" />
+    <Property Name="DathangPercent" Type="nvarchar(max)" />
+    <Property Name="HotlineSupport" Type="nvarchar(max)" />
+    <Property Name="HotlineFeedback" Type="nvarchar(max)" />
+    <Property Name="Pinterest" Type="nvarchar(max)" />
+    <Property Name="NotiPopup" Type="nvarchar(max)" />
+    <Property Name="NotiPopupTitle" Type="nvarchar(max)" />
+    <Property Name="NotiPopupEmail" Type="nvarchar(max)" />
+    <Property Name="LinkedIn" Type="nvarchar(max)" />
+    <Property Name="YoutubeLink" Type="nvarchar(max)" />
+    <Property Name="ZaloLink" Type="nvarchar(max)" />
+    <Property Name="WechatLink" Type="nvarchar(max)" />
+    <Property Name="MetaTitle" Type="nvarchar(max)" />
+    <Property Name="MetaKeyword" Type="nvarchar(max)" />
+    <Property Name="MetaDescription" Type="nvarchar(max)" />
+    <Property Name="OGUrl" Type="nvarchar(max)" />
+    <Property Name="OGTitle" Type="nvarchar(max)" />
+    <Property Name="OGDescription" Type="nvarchar(max)" />
+    <Property Name="OGImage" Type="nvarchar(max)" />
+    <Property Name="OGFBTitle" Type="nvarchar(max)" />
+    <Property Name="OGFBDescription" Type="nvarchar(max)" />
+    <Property Name="OGFBImage" Type="nvarchar(max)" />
+    <Property Name="OGTwitterTitle" Type="nvarchar(max)" />
+    <Property Name="OGTwitterDescription" Type="nvarchar(max)" />
+    <Property Name="OGTwitterImage" Type="nvarchar(max)" />
+    <Property Name="GoogleAnalytics" Type="nvarchar(max)" />
+    <Property Name="WebmasterTools" Type="nvarchar(max)" />
+    <Property Name="NumberLinkOfOrder" Type="int" />
+    <Property Name="ChietKhauPercent" Type="nvarchar(max)" />
+    <Property Name="InsurancePercent" Type="nvarchar(max)" />
+    <Property Name="HeaderScriptCode" Type="nvarchar(max)" />
+    <Property Name="FooterScriptCode" Type="nvarchar(max)" />
+    <Property Name="CompanyShortName" Type="nvarchar(max)" />
+    <Property Name="CompanyLongName" Type="nvarchar(max)" />
+    <Property Name="CompanyName" Type="nvarchar(max)" />
+    <Property Name="TaxCode" Type="nvarchar(max)" />
+    <Property Name="AgentCurrency" Type="nvarchar(max)" />
+    <Property Name="PriceCheckOutWareDefault" Type="nvarchar(max)" />
+    <Property Name="ZaloLink2" Type="nvarchar(max)" />
+    <Property Name="ZaloLink3" Type="nvarchar(max)" />
+    <Property Name="ZaloLink4" Type="nvarchar(max)" />
+    <Property Name="ZaloLink5" Type="nvarchar(max)" />
+    <Property Name="CurrencyReal" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fullname" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="ContactContent" Type="nvarchar(max)" />
+    <Property Name="IsRead" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_CustomerBenefits">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Icon" Type="nvarchar(max)" />
+    <Property Name="CustomerBenefitName" Type="nvarchar(max)" />
+    <Property Name="CustomerBenefitDescription" Type="nvarchar(max)" />
+    <Property Name="CustomerBenefitLink" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="Position" Type="int" />
+    <Property Name="ItemType" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_DeviceBrowser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="PushEndpoint" Type="nvarchar(max)" />
+    <Property Name="PushP256DH" Type="nvarchar(max)" />
+    <Property Name="PushAuth" Type="nvarchar(max)" />
+    <Property Name="isHide" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_DeviceToken">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="TypeName" Type="nvarchar(max)" />
+    <Property Name="Device" Type="nvarchar(max)" />
+    <Property Name="isHide" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="UserToken" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_ExportRequestTurn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="TransportationOrderNewID" Type="int" />
+    <Property Name="DateExport" Type="datetime" />
+    <Property Name="TotalPriceVND" Type="float" />
+    <Property Name="TotalPriceCYN" Type="float" />
+    <Property Name="TotalWeight" Type="float" />
+    <Property Name="TotalPackage" Type="int" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="ShippingTypeInVNID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="StaffNote" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="StatusExport" Type="int" />
+    <Property Name="OutStockDate" Type="datetime" />
+    <Property Name="TotalVolume" Type="float" />
+    <Property Name="FeeVolume" Type="float" />
+  </EntityType>
+  <EntityType Name="tbl_FeeBuyPro">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AmountFrom" Type="float" />
+    <Property Name="AmountTo" Type="float" />
+    <Property Name="FeePercent" Type="float" />
+    <Property Name="FeeMoney" Type="float" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_FeeCheckProduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AmountFrom" Type="float" />
+    <Property Name="AmountTo" Type="float" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Type" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Feedback">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FeedbackContent" Type="nvarchar(max)" />
+    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="AuthorName" Type="nvarchar(max)" />
+    <Property Name="Position" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_FeePackaged">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstKg" Type="float" />
+    <Property Name="NextKg" Type="float" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_FeeSupport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="SupportName" Type="nvarchar(max)" />
+    <Property Name="SupportInfoVND" Type="nvarchar(max)" />
+    <Property Name="SupportInfoCYN" Type="nvarchar(max)" />
+    <Property Name="IsHide" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_FeeWeightTQVN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReceivePlace" Type="nvarchar(max)" />
+    <Property Name="WeightFrom" Type="float" />
+    <Property Name="WeightTo" Type="float" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Footer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FooterHTML" Type="nvarchar(max)" />
+    <Property Name="LinkFanpage" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_HistoryAutoBanking">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="IsHide" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_HistoryOrderChange">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="HistoryContent" Type="nvarchar(max)" />
+    <Property Name="Type" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_HistoryPayWallet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="HContent" Type="nvarchar(max)" />
+    <Property Name="MoneyLeft" Type="float" />
+    <Property Name="Type" Type="int" />
+    <Property Name="TradeType" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="DateSend" Type="date" />
+    <Property Name="TransportationOrderID" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_HistoryPayWalletCYN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="MoneyLeft" Type="float" />
+    <Property Name="Type" Type="int" />
+    <Property Name="TradeType" Type="int" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="DateSend" Type="date" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_HistoryScanPackage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SmallPackageID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="WareHouseName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_HistoryServices">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PostID" Type="int" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="OldStatus" Type="int" />
+    <Property Name="OldeStatusText" Type="nvarchar(max)" />
+    <Property Name="NewStatus" Type="int" />
+    <Property Name="NewStatusText" Type="nvarchar(max)" />
+    <Property Name="Type" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_InWareHousePrice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WeightFrom" Type="float" />
+    <Property Name="WeightTo" Type="float" />
+    <Property Name="MaxDay" Type="float" />
+    <Property Name="PricePay" Type="float" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_LinkMarquee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LinkName" Type="nvarchar(max)" />
+    <Property Name="LinkURL" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_MainOder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="ShopID" Type="nvarchar(max)" />
+    <Property Name="ShopName" Type="nvarchar(max)" />
+    <Property Name="Site" Type="nvarchar(max)" />
+    <Property Name="IsForward" Type="bit" />
+    <Property Name="IsForwardPrice" Type="nvarchar(max)" />
+    <Property Name="IsFastDelivery" Type="bit" />
+    <Property Name="IsFastDeliveryPrice" Type="nvarchar(max)" />
+    <Property Name="IsCheckProduct" Type="bit" />
+    <Property Name="IsCheckProductPrice" Type="nvarchar(max)" />
+    <Property Name="IsPacked" Type="bit" />
+    <Property Name="IsPackedPrice" Type="nvarchar(max)" />
+    <Property Name="IsFast" Type="bit" />
+    <Property Name="IsFastPrice" Type="nvarchar(max)" />
+    <Property Name="PriceVND" Type="nvarchar(max)" />
+    <Property Name="PriceCNY" Type="nvarchar(max)" />
+    <Property Name="FeeShipCN" Type="nvarchar(max)" />
+    <Property Name="FeeBuyPro" Type="nvarchar(max)" />
+    <Property Name="FeeBuyProCK" Type="nvarchar(max)" />
+    <Property Name="FeeWeight" Type="nvarchar(max)" />
+    <Property Name="FeeWeightCK" Type="nvarchar(max)" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Deposit" Type="nvarchar(max)" />
+    <Property Name="CurrentCNYVN" Type="nvarchar(max)" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="SalerID" Type="int" />
+    <Property Name="DathangID" Type="int" />
+    <Property Name="KhoTQID" Type="int" />
+    <Property Name="KhoVNID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="DepostiDate" Type="datetime" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="AmountDeposit" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode2" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode3" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode4" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode5" Type="nvarchar(max)" />
+    <Property Name="FeeShipCNToVN" Type="nvarchar(max)" />
+    <Property Name="OrderWeight" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCodeWeight" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCodeWeight2" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCodeWeight3" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCodeWeight4" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCodeWeight5" Type="nvarchar(max)" />
+    <Property Name="ReceivePlace" Type="nvarchar(max)" />
+    <Property Name="TQVNWeight" Type="nvarchar(max)" />
+    <Property Name="IsGiaohang" Type="bit" />
+    <Property Name="TotalPriceReal" Type="nvarchar(max)" />
+    <Property Name="TotalPriceRealCYN" Type="nvarchar(max)" />
+    <Property Name="MainOrderCode" Type="nvarchar(max)" />
+    <Property Name="AdditionFeeForSensorProduct" Type="nvarchar(max)" />
+    <Property Name="AdditionFeeForFuel" Type="nvarchar(max)" />
+    <Property Name="ShippingType" Type="int" />
+    <Property Name="OrderType" Type="int" />
+    <Property Name="IsCheckNotiPrice" Type="bit" />
+    <Property Name="FromPlace" Type="int" />
+    <Property Name="FeeInWareHouse" Type="float" />
+    <Property Name="IsDoneSmallPackage" Type="bit" />
+    <Property Name="IsUpdatePrice" Type="bit" />
+    <Property Name="PayDate" Type="datetime" />
+    <Property Name="TotalFeeSupport" Type="nvarchar(max)" />
+    <Property Name="DateBuy" Type="datetime" />
+    <Property Name="DateVN" Type="datetime" />
+    <Property Name="DateTQ" Type="datetime" />
+    <Property Name="CompleteDate" Type="datetime" />
+    <Property Name="IsInsurrance" Type="bit" />
+    <Property Name="InsuranceMoney" Type="nvarchar(max)" />
+    <Property Name="InsurancePercent" Type="nvarchar(max)" />
+    <Property Name="ExpectedDate" Type="datetime" />
+    <Property Name="IsFlow" Type="bit" />
+    <Property Name="StatusPackage" Type="int" />
+    <Property Name="TimeLine" Type="nvarchar(max)" />
+    <Property Name="FeeVolume" Type="nvarchar(max)" />
+    <Property Name="FeeVolumeCK" Type="nvarchar(max)" />
+    <Property Name="OrderVolume" Type="nvarchar(max)" />
+    <Property Name="TQVNVolume" Type="nvarchar(max)" />
+    <Property Name="BarCode" Type="nvarchar(max)" />
+    <Property Name="QuantityMVD" Type="int" />
+    <Property Name="QuantityMDH" Type="int" />
+    <Property Name="FeeBuyProUser" Type="nvarchar(max)" />
+    <Property Name="DateSite" Type="datetime" />
+    <Property Name="CurrencyReal" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_MainOrderCode">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="MainOrderCode" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Menu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuName" Type="nvarchar(max)" />
+    <Property Name="MenuLink" Type="nvarchar(max)" />
+    <Property Name="MenuClass" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Parent" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="Position" Type="int" />
+    <Property Name="Target" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_Message">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Message" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Node">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NodeName" Type="nvarchar(max)" />
+    <Property Name="NodeAliasPath" Type="nvarchar(max)" />
+    <Property Name="TypeID" Type="int" />
+    <Property Name="TypeName" Type="nvarchar(max)" />
+    <Property Name="ParentNodeID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Notification">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReceivedID" Type="int" />
+    <Property Name="ReceivedUsername" Type="nvarchar(max)" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="Message" Type="nvarchar(max)" />
+    <Property Name="NotifType" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="PushNotiApp" Type="bit" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Notifications">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SenderID" Type="int" />
+    <Property Name="SenderUsername" Type="nvarchar(max)" />
+    <Property Name="ReceivedID" Type="int" />
+    <Property Name="ReceivedUsername" Type="nvarchar(max)" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="Message" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="NotifType" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="PushNotiApp" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="title_origin" Type="nvarchar(max)" />
+    <Property Name="title_translated" Type="nvarchar(max)" />
+    <Property Name="price_origin" Type="nvarchar(max)" />
+    <Property Name="price_promotion" Type="nvarchar(max)" />
+    <Property Name="property_translated" Type="nvarchar(max)" />
+    <Property Name="property" Type="nvarchar(max)" />
+    <Property Name="data_value" Type="nvarchar(max)" />
+    <Property Name="image_model" Type="nvarchar(max)" />
+    <Property Name="image_origin" Type="nvarchar(max)" />
+    <Property Name="shop_id" Type="nvarchar(max)" />
+    <Property Name="shop_name" Type="nvarchar(max)" />
+    <Property Name="seller_id" Type="nvarchar(max)" />
+    <Property Name="wangwang" Type="nvarchar(max)" />
+    <Property Name="quantity" Type="nvarchar(max)" />
+    <Property Name="stock" Type="nvarchar(max)" />
+    <Property Name="location_sale" Type="nvarchar(max)" />
+    <Property Name="site" Type="nvarchar(max)" />
+    <Property Name="comment" Type="nvarchar(max)" />
+    <Property Name="item_id" Type="nvarchar(max)" />
+    <Property Name="link_origin" Type="nvarchar(max)" />
+    <Property Name="outer_id" Type="nvarchar(max)" />
+    <Property Name="error" Type="nvarchar(max)" />
+    <Property Name="weight" Type="nvarchar(max)" />
+    <Property Name="step" Type="nvarchar(max)" />
+    <Property Name="brand" Type="nvarchar(max)" />
+    <Property Name="category_name" Type="nvarchar(max)" />
+    <Property Name="category_id" Type="nvarchar(max)" />
+    <Property Name="tool" Type="nvarchar(max)" />
+    <Property Name="version" Type="nvarchar(max)" />
+    <Property Name="is_translate" Type="bit" />
+    <Property Name="IsForward" Type="bit" />
+    <Property Name="IsForwardPrice" Type="nvarchar(max)" />
+    <Property Name="IsFastDelivery" Type="bit" />
+    <Property Name="IsFastDeliveryPrice" Type="nvarchar(max)" />
+    <Property Name="IsCheckProduct" Type="bit" />
+    <Property Name="IsCheckProductPrice" Type="nvarchar(max)" />
+    <Property Name="IsPacked" Type="bit" />
+    <Property Name="IsPackedPrice" Type="nvarchar(max)" />
+    <Property Name="IsFast" Type="bit" />
+    <Property Name="IsFastPrice" Type="nvarchar(max)" />
+    <Property Name="PriceVND" Type="nvarchar(max)" />
+    <Property Name="PriceCNY" Type="nvarchar(max)" />
+    <Property Name="FeeShipCN" Type="nvarchar(max)" />
+    <Property Name="FeeBuyPro" Type="nvarchar(max)" />
+    <Property Name="FeeWeight" Type="nvarchar(max)" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Deposit" Type="nvarchar(max)" />
+    <Property Name="CurrentCNYVN" Type="nvarchar(max)" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="PriceChange" Type="nvarchar(max)" />
+    <Property Name="RealPrice" Type="nvarchar(max)" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="ProductNote" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ProductStatus" Type="int" />
+    <Property Name="stepprice" Type="nvarchar(max)" />
+    <Property Name="OrderShopCode" Type="nvarchar(max)" />
+    <Property Name="IsBuy" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_OrderComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Type" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="TypeContent" Type="int" />
+    <Property Name="Link" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_OrderShopTemp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="ShopID" Type="nvarchar(max)" />
+    <Property Name="ShopName" Type="nvarchar(max)" />
+    <Property Name="Site" Type="nvarchar(max)" />
+    <Property Name="IsForward" Type="bit" />
+    <Property Name="IsForwardPrice" Type="nvarchar(max)" />
+    <Property Name="IsFastDelivery" Type="bit" />
+    <Property Name="IsFastDeliveryPrice" Type="nvarchar(max)" />
+    <Property Name="IsCheckProduct" Type="bit" />
+    <Property Name="IsCheckProductPrice" Type="nvarchar(max)" />
+    <Property Name="IsPacked" Type="bit" />
+    <Property Name="IsPackedPrice" Type="nvarchar(max)" />
+    <Property Name="IsFast" Type="bit" />
+    <Property Name="IsFastPrice" Type="nvarchar(max)" />
+    <Property Name="PriceVND" Type="nvarchar(max)" />
+    <Property Name="PriceCNY" Type="nvarchar(max)" />
+    <Property Name="FeeShipCN" Type="nvarchar(max)" />
+    <Property Name="FeeBuyPro" Type="nvarchar(max)" />
+    <Property Name="FeeWeight" Type="nvarchar(max)" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Deposit" Type="nvarchar(max)" />
+    <Property Name="CurrentCNYVN" Type="nvarchar(max)" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="IsInsurrance" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_OrderTemp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="OrderShopTempID" Type="int" />
+    <Property Name="title_origin" Type="nvarchar(max)" />
+    <Property Name="title_translated" Type="nvarchar(max)" />
+    <Property Name="price_origin" Type="nvarchar(max)" />
+    <Property Name="price_promotion" Type="nvarchar(max)" />
+    <Property Name="property_translated" Type="nvarchar(max)" />
+    <Property Name="property" Type="nvarchar(max)" />
+    <Property Name="data_value" Type="nvarchar(max)" />
+    <Property Name="image_model" Type="nvarchar(max)" />
+    <Property Name="image_origin" Type="nvarchar(max)" />
+    <Property Name="shop_id" Type="nvarchar(max)" />
+    <Property Name="shop_name" Type="nvarchar(max)" />
+    <Property Name="seller_id" Type="nvarchar(max)" />
+    <Property Name="wangwang" Type="nvarchar(max)" />
+    <Property Name="quantity" Type="nvarchar(max)" />
+    <Property Name="stock" Type="nvarchar(max)" />
+    <Property Name="location_sale" Type="nvarchar(max)" />
+    <Property Name="site" Type="nvarchar(max)" />
+    <Property Name="comment" Type="nvarchar(max)" />
+    <Property Name="item_id" Type="nvarchar(max)" />
+    <Property Name="link_origin" Type="nvarchar(max)" />
+    <Property Name="outer_id" Type="nvarchar(max)" />
+    <Property Name="error" Type="nvarchar(max)" />
+    <Property Name="weight" Type="nvarchar(max)" />
+    <Property Name="step" Type="nvarchar(max)" />
+    <Property Name="brand" Type="nvarchar(max)" />
+    <Property Name="category_name" Type="nvarchar(max)" />
+    <Property Name="category_id" Type="nvarchar(max)" />
+    <Property Name="tool" Type="nvarchar(max)" />
+    <Property Name="version" Type="nvarchar(max)" />
+    <Property Name="is_translate" Type="bit" />
+    <Property Name="IsForward" Type="bit" />
+    <Property Name="IsFastDelivery" Type="bit" />
+    <Property Name="IsCheckProduct" Type="bit" />
+    <Property Name="IsPacked" Type="bit" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="IsFast" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="stepprice" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_OTP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Value" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Prefix" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserPhone" Type="nvarchar" MaxLength="250" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_OutStockSession">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="TotalPay" Type="float" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="MainOrderID" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_OutStockSessionPackage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OutStockSessionID" Type="int" />
+    <Property Name="SmallPackageID" Type="int" />
+    <Property Name="OrderTransactionCode" Type="nvarchar(max)" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="TransportationID" Type="int" />
+    <Property Name="DateOutStock" Type="datetime" />
+    <Property Name="DayInWarehouse" Type="float" />
+    <Property Name="FeeWarehouse" Type="float" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Page">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="250" />
+    <Property Name="Summary" Type="nvarchar(max)" />
+    <Property Name="PageContent" Type="nvarchar(max)" />
+    <Property Name="PageTypeID" Type="int" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="IMG" Type="nvarchar(max)" />
+    <Property Name="NodeID" Type="int" />
+    <Property Name="NodeAliasPath" Type="nvarchar(max)" />
+    <Property Name="ogurl" Type="nvarchar(max)" />
+    <Property Name="ogtitle" Type="nvarchar(max)" />
+    <Property Name="ogdescription" Type="nvarchar(max)" />
+    <Property Name="ogimage" Type="nvarchar(max)" />
+    <Property Name="metatitle" Type="nvarchar(max)" />
+    <Property Name="metadescription" Type="nvarchar(max)" />
+    <Property Name="metakeyword" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="OGFacebookTitle" Type="nvarchar(max)" />
+    <Property Name="OGFacebookDescription" Type="nvarchar(max)" />
+    <Property Name="OGFacebookIMG" Type="nvarchar(max)" />
+    <Property Name="OGTwitterTitle" Type="nvarchar(max)" />
+    <Property Name="OGTwitterDescription" Type="nvarchar(max)" />
+    <Property Name="OGTwitterIMG" Type="nvarchar(max)" />
+    <Property Name="SideBar" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_PageSEO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pagename" Type="nvarchar(max)" />
+    <Property Name="ogurl" Type="nvarchar(max)" />
+    <Property Name="ogtitle" Type="nvarchar(max)" />
+    <Property Name="ogdescription" Type="nvarchar(max)" />
+    <Property Name="ogimage" Type="nvarchar(max)" />
+    <Property Name="metatitle" Type="nvarchar(max)" />
+    <Property Name="metadescription" Type="nvarchar(max)" />
+    <Property Name="metakeyword" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tbl_PageType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PageTypeName" Type="nvarchar(max)" />
+    <Property Name="PageTypeDescription" Type="nvarchar(max)" />
+    <Property Name="IndexPos" Type="int" />
+    <Property Name="NodeID" Type="int" />
+    <Property Name="NodeAliasPath" Type="nvarchar(max)" />
+    <Property Name="ogurl" Type="nvarchar(max)" />
+    <Property Name="ogtitle" Type="nvarchar(max)" />
+    <Property Name="ogdescription" Type="nvarchar(max)" />
+    <Property Name="ogimage" Type="nvarchar(max)" />
+    <Property Name="metatitle" Type="nvarchar(max)" />
+    <Property Name="metadescription" Type="nvarchar(max)" />
+    <Property Name="metakeyword" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="OGFacebookTitle" Type="nvarchar(max)" />
+    <Property Name="OGFacebookDescription" Type="nvarchar(max)" />
+    <Property Name="OGFacebookIMG" Type="nvarchar(max)" />
+    <Property Name="OGTwitterTitle" Type="nvarchar(max)" />
+    <Property Name="OGTwitterDescription" Type="nvarchar(max)" />
+    <Property Name="OGTwitterIMG" Type="nvarchar(max)" />
+    <Property Name="SideBar" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_Partners">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PartnerName" Type="nvarchar(max)" />
+    <Property Name="PartnerIMG" Type="nvarchar(max)" />
+    <Property Name="PartnerLink" Type="nvarchar(max)" />
+    <Property Name="PartnerIndex" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_PayAllOrderHistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar" MaxLength="250" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="Type" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tbl_PayHelp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="TotalPrice" Type="nvarchar(max)" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="Currency" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="CurrencyGiagoc" Type="nvarchar(max)" />
+    <Property Name="TotalPriceVNDGiagoc" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="IsNotComplete" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="realPriceCYN" Type="nvarchar(max)" />
+    <Property Name="realCurrency" Type="nvarchar(max)" />
+    <Property Name="RealTotalPrice" Type="nvarchar(max)" />
+    <Property Name="FinalPayPrice" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_PayhelpDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PayhelpID" Type="int" />
+    <Property Name="Desc1" Type="nvarchar(max)" />
+    <Property Name="Desc2" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="OrderID" Type="nvarchar(max)" />
+    <Property Name="Customer" Type="nvarchar(max)" />
+    <Property Name="FriendsAccount" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_PayHelpTemp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="OrderID" Type="nvarchar(max)" />
+    <Property Name="Desc1" Type="nvarchar(max)" />
+    <Property Name="Desc2" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="Customer" Type="nvarchar(max)" />
+    <Property Name="FriendsAccount" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_PayOrderHistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="Type" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tbl_Present">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Experience" Type="int" />
+    <Property Name="QuantityCustomer" Type="int" />
+    <Property Name="QuantityOrder" Type="int" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_PriceChange">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PriceFromCYN" Type="float" />
+    <Property Name="PriceToCYN" Type="float" />
+    <Property Name="PriveVND" Type="float" />
+    <Property Name="Vip0" Type="float" />
+    <Property Name="Vip1" Type="float" />
+    <Property Name="Vip2" Type="float" />
+    <Property Name="Vip3" Type="float" />
+    <Property Name="Vip4" Type="float" />
+    <Property Name="Vip5" Type="float" />
+    <Property Name="Vip6" Type="float" />
+    <Property Name="Vip7" Type="float" />
+    <Property Name="Vip8" Type="float" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_ProductCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChinasiteID" Type="int" />
+    <Property Name="CategoryName" Type="nvarchar(max)" />
+    <Property Name="CategoryIMG" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_ProductLink">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductCategoryID" Type="int" />
+    <Property Name="ProductName" Type="nvarchar(max)" />
+    <Property Name="ProductLink" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Products">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WebName" Type="nvarchar(max)" />
+    <Property Name="ProductIMG" Type="nvarchar(max)" />
+    <Property Name="Productname" Type="nvarchar(max)" />
+    <Property Name="WebLink" Type="nvarchar(max)" />
+    <Property Name="IsHot" Type="bit" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Refund">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar" MaxLength="250" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tbl_RequestOutStock">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SmallPackageID" Type="int" />
+    <Property Name="SmallPackageCode" Type="nvarchar(max)" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="MainOrderCode" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="TransportationID" Type="int" />
+    <Property Name="ExportRequestTurnID" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_RequestShip">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="ListOrderCode" Type="nvarchar(max)" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="250" />
+    <Property Name="RoleDescription" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tbl_SendNotiEmail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NotiName" Type="nvarchar(max)" />
+    <Property Name="IsSentNotiAdmin" Type="bit" />
+    <Property Name="IsSentNotiUser" Type="bit" />
+    <Property Name="IsSentEmailAdmin" Type="bit" />
+    <Property Name="IsSendEmailUser" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceName" Type="nvarchar(max)" />
+    <Property Name="ServiceContent" Type="nvarchar(max)" />
+    <Property Name="ServiceLink" Type="nvarchar(max)" />
+    <Property Name="ServiceIMG" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="Position" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_ShippingTypeToWareHouse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShippingTypeName" Type="nvarchar(max)" />
+    <Property Name="ShippintTypeDescription" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_ShippingTypeVN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShippingTypeVNName" Type="nvarchar(max)" />
+    <Property Name="ShippingTypeVNDescription" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_SmallPackage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="BigPackageID" Type="int" />
+    <Property Name="OrderTransactionCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="ProductType" Type="nvarchar" MaxLength="500" />
+    <Property Name="FeeShip" Type="float" />
+    <Property Name="Weight" Type="float" />
+    <Property Name="Volume" Type="float" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsTemp" Type="bit" />
+    <Property Name="DateInLasteWareHouse" Type="datetime" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="IsLost" Type="bit" />
+    <Property Name="PackageCodeTemp" Type="nvarchar(max)" />
+    <Property Name="IsHelpMoving" Type="bit" />
+    <Property Name="TransportationOrderID" Type="int" />
+    <Property Name="WarehouseFee" Type="float" />
+    <Property Name="IMGPackage" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="DateOutWarehouse" Type="datetime" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Length" Type="float" />
+    <Property Name="Height" Type="float" />
+    <Property Name="Width" Type="float" />
+    <Property Name="TotalPrice" Type="float" />
+    <Property Name="ListIMG" Type="nvarchar(max)" />
+    <Property Name="DateInTQWarehouse" Type="datetime" />
+    <Property Name="StaffTQWarehouse" Type="nvarchar(max)" />
+    <Property Name="StaffVNWarehouse" Type="nvarchar(max)" />
+    <Property Name="StaffVNOutWarehouse" Type="nvarchar(max)" />
+    <Property Name="IsCheckProduct" Type="bit" />
+    <Property Name="IsPackaged" Type="bit" />
+    <Property Name="IsInsurrance" Type="bit" />
+    <Property Name="CODTQCYN" Type="nvarchar(max)" />
+    <Property Name="CODTQVND" Type="nvarchar(max)" />
+    <Property Name="UserNote" Type="nvarchar(max)" />
+    <Property Name="StaffNoteCheck" Type="nvarchar(max)" />
+    <Property Name="ProductQuantity" Type="nvarchar(max)" />
+    <Property Name="StaffCancel" Type="nvarchar(max)" />
+    <Property Name="CancelDate" Type="datetime" />
+    <Property Name="CurrentPlace" Type="nvarchar(max)" />
+    <Property Name="CurrentPlaceID" Type="int" />
+    <Property Name="MainOrderCodeID" Type="int" />
+    <Property Name="SendDate" Type="date" />
+    <Property Name="UserPhone" Type="nvarchar(max)" />
+    <Property Name="IsUser" Type="bit" />
+    <Property Name="MainOrderCode" Type="nvarchar(max)" />
+    <Property Name="WareHouseFromID" Type="int" />
+    <Property Name="WareHouseID" Type="int" />
+    <Property Name="ShippingTypeID" Type="int" />
+    <Property Name="StatusPayment" Type="int" />
+    <Property Name="StatusReceivePackage" Type="int" />
+    <Property Name="IsCheck" Type="bit" />
+    <Property Name="IsPackage" Type="bit" />
+    <Property Name="ReceiveDate" Type="date" />
+    <Property Name="Flow" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_SmallPackage1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BigPackageID" Type="int" />
+    <Property Name="SendDate" Type="date" />
+    <Property Name="PackageCode" Type="nvarchar(max)" />
+    <Property Name="BarcodeURL" Type="nvarchar(max)" />
+    <Property Name="UID" Type="int" />
+    <Property Name="UserPhone" Type="nvarchar(max)" />
+    <Property Name="Weight" Type="float" />
+    <Property Name="Place" Type="int" />
+    <Property Name="StatusReceivePackage" Type="int" />
+    <Property Name="StatusPayment" Type="int" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="NoteCustomer" Type="nvarchar(max)" />
+    <Property Name="IsPayCash" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_SmallPackageAuto">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainOrderCode" Type="nvarchar(max)" />
+    <Property Name="Value" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_SocialSupport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SocialName" Type="nvarchar(max)" />
+    <Property Name="SocialLink" Type="nvarchar(max)" />
+    <Property Name="SocialIMG" Type="nvarchar(max)" />
+    <Property Name="SocialPlace" Type="int" />
+    <Property Name="SocialIndex" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_StaffIncome">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="OrderTotalPrice" Type="nvarchar(max)" />
+    <Property Name="PercentReceive" Type="nvarchar(max)" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="TotalPriceReceive" Type="nvarchar(max)" />
+    <Property Name="OrderCreatedDate" Type="datetime" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Step">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StepName" Type="nvarchar(max)" />
+    <Property Name="StepIMG" Type="nvarchar(max)" />
+    <Property Name="StepIndex" Type="int" />
+    <Property Name="StepLink" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="StepContent" Type="nvarchar(max)" />
+    <Property Name="ClassIcon" Type="nvarchar(max)" />
+    <Property Name="Icon" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_Support">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="HContent" Type="nvarchar(max)" />
+    <Property Name="FileIMG" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_SupportBuyProduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupportName" Type="nvarchar(max)" />
+    <Property Name="SupportPhone" Type="nvarchar(max)" />
+    <Property Name="SupportEmail" Type="nvarchar(max)" />
+    <Property Name="SupportPlace" Type="int" />
+    <Property Name="SupportIndex" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_TokenForgotPass">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Token" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_TransportaionOrderDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransportationOrderID" Type="int" />
+    <Property Name="TransportationOrderCode" Type="nvarchar(max)" />
+    <Property Name="Weight" Type="float" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="ProductType" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsCheckProduct" Type="bit" />
+    <Property Name="IsPackaged" Type="bit" />
+    <Property Name="IsInsurrance" Type="bit" />
+    <Property Name="CODTQCYN" Type="nvarchar(max)" />
+    <Property Name="CODTQVND" Type="nvarchar(max)" />
+    <Property Name="UserNote" Type="nvarchar(max)" />
+    <Property Name="StaffNoteCheck" Type="nvarchar(max)" />
+    <Property Name="ProductQuantity" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_TransportationOrder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="WarehouseFromID" Type="int" />
+    <Property Name="WarehouseID" Type="int" />
+    <Property Name="ShippingTypeID" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="TotalWeight" Type="float" />
+    <Property Name="Currency" Type="float" />
+    <Property Name="TotalPrice" Type="float" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Deposited" Type="float" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="WarehouseFee" Type="float" />
+    <Property Name="CheckProductFee" Type="float" />
+    <Property Name="PackagedFee" Type="float" />
+    <Property Name="TotalCODTQCYN" Type="float" />
+    <Property Name="TotalCODTQVND" Type="float" />
+    <Property Name="InsurranceFee" Type="float" />
+    <Property Name="TotalVolume" Type="float" />
+  </EntityType>
+  <EntityType Name="tbl_TransportationOrderNew">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Weight" Type="nvarchar(max)" />
+    <Property Name="Currency" Type="nvarchar(max)" />
+    <Property Name="AdditionFeeCYN" Type="nvarchar(max)" />
+    <Property Name="AdditionFeeVND" Type="nvarchar(max)" />
+    <Property Name="FeeWarehouseOutCYN" Type="nvarchar(max)" />
+    <Property Name="FeeWarehouseOutVND" Type="nvarchar(max)" />
+    <Property Name="FeeWarehouseWeightCYN" Type="nvarchar(max)" />
+    <Property Name="FeeWarehouseWeightVND" Type="nvarchar(max)" />
+    <Property Name="SensorFeeCYN" Type="nvarchar(max)" />
+    <Property Name="SensorFeeeVND" Type="nvarchar(max)" />
+    <Property Name="SmallPackageID" Type="int" />
+    <Property Name="BarCode" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="StaffNote" Type="nvarchar(max)" />
+    <Property Name="TotalPriceCYN" Type="nvarchar(max)" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="ExportRequestNote" Type="nvarchar(max)" />
+    <Property Name="DateExportRequest" Type="datetime" />
+    <Property Name="DateExport" Type="datetime" />
+    <Property Name="ShippingTypeVN" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="CancelReason" Type="nvarchar(max)" />
+    <Property Name="DateInVNWareHouse" Type="datetime" />
+    <Property Name="WareHouseFromID" Type="int" />
+    <Property Name="WareHouseID" Type="int" />
+    <Property Name="ShippingTypeID" Type="int" />
+    <Property Name="IsExportRequest" Type="bit" />
+    <Property Name="MainOrderCode" Type="nvarchar(max)" />
+    <Property Name="Volume" Type="nvarchar(max)" />
+    <Property Name="FeeVolumeVND" Type="nvarchar(max)" />
+    <Property Name="FeeVolumeCYN" Type="nvarchar(max)" />
+    <Property Name="FeeWeightPerKg" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_UserLevel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LevelName" Type="nvarchar" MaxLength="250" />
+    <Property Name="FeeBuyPro" Type="float" />
+    <Property Name="FeeWeight" Type="float" />
+    <Property Name="LessDeposit" Type="float" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="FeeVolume" Type="float" />
+  </EntityType>
+  <EntityType Name="tbl_Volume">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WarehouseFromID" Type="int" />
+    <Property Name="WarehouseToID" Type="int" />
+    <Property Name="VolumeFrom" Type="float" />
+    <Property Name="VolumeTo" Type="float" />
+    <Property Name="ValueVolume" Type="float" />
+    <Property Name="ShippingTypeToWareHouseID" Type="int" />
+    <Property Name="ShippingType" Type="int" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="IsHelpMoving" Type="bit" />
+    <Property Name="CreatedDate" Type="nchar" MaxLength="10" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Warehouse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WareHouseName" Type="nvarchar(max)" />
+    <Property Name="AdditionFee" Type="float" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Latitude" Type="nvarchar(max)" />
+    <Property Name="Longitude" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="ExpectedDate" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_WarehouseFee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WarehouseFromID" Type="int" />
+    <Property Name="WarehouseID" Type="int" />
+    <Property Name="WeightFrom" Type="float" />
+    <Property Name="WeightTo" Type="float" />
+    <Property Name="Price" Type="float" />
+    <Property Name="ShippingTypeToWareHouseID" Type="int" />
+    <Property Name="ShippingType" Type="int" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="IsHelpMoving" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_WarehouseFrom">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WareHouseName" Type="nvarchar(max)" />
+    <Property Name="AdditionFee" Type="float" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Latitude" Type="nvarchar(max)" />
+    <Property Name="Longitude" Type="nvarchar(max)" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_WebChina">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Logo" Type="nvarchar(max)" />
+    <Property Name="WebName" Type="nvarchar(max)" />
+    <Property Name="WebDescript" Type="nvarchar(max)" />
+    <Property Name="IndexPosition" Type="int" />
+    <Property Name="WebLink" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Weight">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WeightFrom" Type="float" />
+    <Property Name="WeightTo" Type="float" />
+    <Property Name="Place" Type="int" />
+    <Property Name="PricePerWeight" Type="float" />
+    <Property Name="TypeFastSlow" Type="int" />
+    <Property Name="Vip1" Type="float" />
+    <Property Name="Vip2" Type="float" />
+    <Property Name="Vip3" Type="float" />
+    <Property Name="Vip4" Type="float" />
+    <Property Name="Vip5" Type="float" />
+    <Property Name="Vip6" Type="float" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Withdraw">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="Username" Type="nvarchar" MaxLength="250" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="Type" Type="int" />
+    <Property Name="AcceptBy" Type="nvarchar(max)" />
+    <Property Name="AcceptDate" Type="datetime" />
+    <Property Name="CancelBy" Type="nvarchar(max)" />
+    <Property Name="CancelDate" Type="datetime" />
+    <Property Name="BankAddress" Type="nvarchar(max)" />
+    <Property Name="BankNumber" Type="nvarchar(max)" />
+    <Property Name="Beneficiary" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_YCG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="MainOrderID" Type="int" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhaphang360_vn.dbo.View_OrderList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_OrderList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UID" Type="int" />
+    <Property Name="ShopID" Type="nvarchar(max)" />
+    <Property Name="ShopName" Type="nvarchar(max)" />
+    <Property Name="Site" Type="nvarchar(max)" />
+    <Property Name="IsForward" Type="bit" />
+    <Property Name="IsForwardPrice" Type="nvarchar(max)" />
+    <Property Name="IsFastDelivery" Type="bit" />
+    <Property Name="IsFastDeliveryPrice" Type="nvarchar(max)" />
+    <Property Name="IsCheckProduct" Type="bit" />
+    <Property Name="IsCheckProductPrice" Type="nvarchar(max)" />
+    <Property Name="IsPacked" Type="bit" />
+    <Property Name="IsPackedPrice" Type="nvarchar(max)" />
+    <Property Name="IsFast" Type="bit" />
+    <Property Name="IsFastPrice" Type="nvarchar(max)" />
+    <Property Name="PriceVND" Type="nvarchar(max)" />
+    <Property Name="PriceCNY" Type="nvarchar(max)" />
+    <Property Name="FeeShipCN" Type="nvarchar(max)" />
+    <Property Name="FeeBuyPro" Type="nvarchar(max)" />
+    <Property Name="FeeBuyProCK" Type="nvarchar(max)" />
+    <Property Name="FeeWeight" Type="nvarchar(max)" />
+    <Property Name="FeeWeightCK" Type="nvarchar(max)" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Deposit" Type="nvarchar(max)" />
+    <Property Name="CurrentCNYVN" Type="nvarchar(max)" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="SalerID" Type="int" />
+    <Property Name="DathangID" Type="int" />
+    <Property Name="KhoTQID" Type="int" />
+    <Property Name="KhoVNID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="DepostiDate" Type="datetime" />
+    <Property Name="IsHidden" Type="bit" />
+    <Property Name="AmountDeposit" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode2" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode3" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode4" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode5" Type="nvarchar(max)" />
+    <Property Name="FeeShipCNToVN" Type="nvarchar(max)" />
+    <Property Name="OrderWeight" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCodeWeight" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCodeWeight2" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCodeWeight3" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCodeWeight4" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCodeWeight5" Type="nvarchar(max)" />
+    <Property Name="ReceivePlace" Type="nvarchar(max)" />
+    <Property Name="TQVNWeight" Type="nvarchar(max)" />
+    <Property Name="Uname" Type="nvarchar(max)" />
+    <Property Name="saler" Type="nvarchar(max)" />
+    <Property Name="dathang" Type="nvarchar(max)" />
+    <Property Name="khotq" Type="nvarchar(max)" />
+    <Property Name="khoVN" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhaphang360_vn.dbo.View_OrderListDamuahang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_OrderListDamuahang">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="Deposit" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="DathangID" Type="int" />
+    <Property Name="SalerID" Type="int" />
+    <Property Name="OrderTransactionCode" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode2" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode3" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode4" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode5" Type="nvarchar(max)" />
+    <Property Name="Uname" Type="nvarchar(max)" />
+    <Property Name="saler" Type="nvarchar(max)" />
+    <Property Name="dathang" Type="nvarchar(max)" />
+    <Property Name="anhsanpham" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhaphang360_vn.dbo.View_OrderListFilter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_OrderListFilter">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="Deposit" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="DathangID" Type="int" />
+    <Property Name="SalerID" Type="int" />
+    <Property Name="OrderTransactionCode" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode2" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode3" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode4" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode5" Type="nvarchar(max)" />
+    <Property Name="Uname" Type="nvarchar(max)" />
+    <Property Name="saler" Type="nvarchar(max)" />
+    <Property Name="dathang" Type="nvarchar(max)" />
+    <Property Name="anhsanpham" Type="nvarchar(max)" />
+    <Property Name="TotalPriceReal" Type="nvarchar(max)" />
+    <Property Name="CurrentCNYVN" Type="nvarchar(max)" />
+    <Property Name="FeeBuyPro" Type="nvarchar(max)" />
+    <Property Name="MainOrderCode" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhaphang360_vn.dbo.View_OrderListFilterWithStatusString' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_OrderListFilterWithStatusString">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="statusstring" />
+      <PropertyRef Name="hasSmallpackage" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="Deposit" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="OrderType" Type="int" />
+    <Property Name="IsCheckNotiPrice" Type="bit" />
+    <Property Name="MainOrderCode" Type="nvarchar(max)" />
+    <Property Name="statusstring" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DathangID" Type="int" />
+    <Property Name="SalerID" Type="int" />
+    <Property Name="OrderTransactionCode" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode2" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode3" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode4" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode5" Type="nvarchar(max)" />
+    <Property Name="Uname" Type="nvarchar(max)" />
+    <Property Name="saler" Type="nvarchar(max)" />
+    <Property Name="dathang" Type="nvarchar(max)" />
+    <Property Name="anhsanpham" Type="nvarchar(max)" />
+    <Property Name="countrow" Type="int" />
+    <Property Name="hasSmallpackage" Type="nvarchar" MaxLength="37" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhaphang360_vn.dbo.View_OrderListFilterYCGiao' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_OrderListFilterYCGiao">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="Deposit" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="DathangID" Type="int" />
+    <Property Name="SalerID" Type="int" />
+    <Property Name="OrderTransactionCode" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode2" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode3" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode4" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode5" Type="nvarchar(max)" />
+    <Property Name="Uname" Type="nvarchar(max)" />
+    <Property Name="saler" Type="nvarchar(max)" />
+    <Property Name="dathang" Type="nvarchar(max)" />
+    <Property Name="anhsanpham" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhaphang360_vn.dbo.View_OrderListKhoTQ' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_OrderListKhoTQ">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="Deposit" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="DathangID" Type="int" />
+    <Property Name="SalerID" Type="int" />
+    <Property Name="OrderTransactionCode" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode2" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode3" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode4" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode5" Type="nvarchar(max)" />
+    <Property Name="Uname" Type="nvarchar(max)" />
+    <Property Name="saler" Type="nvarchar(max)" />
+    <Property Name="dathang" Type="nvarchar(max)" />
+    <Property Name="anhsanpham" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhaphang360_vn.dbo.View_OrderListKhoVN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_OrderListKhoVN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="Deposit" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="DathangID" Type="int" />
+    <Property Name="SalerID" Type="int" />
+    <Property Name="OrderTransactionCode" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode2" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode3" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode4" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode5" Type="nvarchar(max)" />
+    <Property Name="Uname" Type="nvarchar(max)" />
+    <Property Name="saler" Type="nvarchar(max)" />
+    <Property Name="dathang" Type="nvarchar(max)" />
+    <Property Name="anhsanpham" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhaphang360_vn.dbo.View_Orderlistwithstatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_Orderlistwithstatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TotalPriceVND" Type="nvarchar(max)" />
+    <Property Name="Deposit" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="DathangID" Type="int" />
+    <Property Name="SalerID" Type="int" />
+    <Property Name="OrderTransactionCode" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode2" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode3" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode4" Type="nvarchar(max)" />
+    <Property Name="OrderTransactionCode5" Type="nvarchar(max)" />
+    <Property Name="Uname" Type="nvarchar(max)" />
+    <Property Name="saler" Type="nvarchar(max)" />
+    <Property Name="dathang" Type="nvarchar(max)" />
+    <Property Name="anhsanpham" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhaphang360_vn.dbo.View_UserList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_UserList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Wallet" Type="float" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="500" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="MobilePhonePrefix" Type="nvarchar(max)" />
+    <Property Name="MobilePhone" Type="nvarchar(max)" />
+    <Property Name="saler" Type="nvarchar(max)" />
+    <Property Name="dathang" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="SaleID" Type="int" />
+    <Property Name="DathangID" Type="int" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="WalletCYN" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhaphang360_vn.dbo.View_UserListExcel' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_UserListExcel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Wallet" Type="float" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="LevelName" Type="nvarchar" MaxLength="250" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="250" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="MobilePhonePrefix" Type="nvarchar(max)" />
+    <Property Name="MobilePhone" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="saler" Type="nvarchar(max)" />
+    <Property Name="dathang" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'nhaphang360_vn.dbo.View_UserListWithWallet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_UserListWithWallet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Wallet" Type="float" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="250" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="MobilePhonePrefix" Type="nvarchar(max)" />
+    <Property Name="MobilePhone" Type="nvarchar(max)" />
+    <Property Name="saler" Type="nvarchar(max)" />
+    <Property Name="dathang" Type="nvarchar(max)" />
+  </EntityType>
+  <Function Name="ReportOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stype" Type="int" Mode="In" />
+    <Parameter Name="search" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fromdate" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="todate" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pageSize" Type="int" Mode="In" />
+    <Parameter Name="pageindex" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ReportOrderExcel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stype" Type="int" Mode="In" />
+    <Parameter Name="search" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fromdate" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="todate" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="NHSTModelStoreContainer">
+    <EntitySet Name="tbl_Account" EntityType="Self.tbl_Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_AccountantOutStockPayment" EntityType="Self.tbl_AccountantOutStockPayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_AccountInfo" EntityType="Self.tbl_AccountInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_AdminSendUserWallet" EntityType="Self.tbl_AdminSendUserWallet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_AppPushNoti" EntityType="Self.tbl_AppPushNoti" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Bank" EntityType="Self.tbl_Bank" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Banner" EntityType="Self.tbl_Banner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Benefits" EntityType="Self.tbl_Benefits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_BigPackage" EntityType="Self.tbl_BigPackage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_BigPackage1" EntityType="Self.tbl_BigPackage1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_BigPackageHistory" EntityType="Self.tbl_BigPackageHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ChinaSite" EntityType="Self.tbl_ChinaSite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Commitment" EntityType="Self.tbl_Commitment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Complain" EntityType="Self.tbl_Complain" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Configuration" EntityType="Self.tbl_Configuration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Contact" EntityType="Self.tbl_Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_CustomerBenefits" EntityType="Self.tbl_CustomerBenefits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_DeviceBrowser" EntityType="Self.tbl_DeviceBrowser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_DeviceToken" EntityType="Self.tbl_DeviceToken" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ExportRequestTurn" EntityType="Self.tbl_ExportRequestTurn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_FeeBuyPro" EntityType="Self.tbl_FeeBuyPro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_FeeCheckProduct" EntityType="Self.tbl_FeeCheckProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Feedback" EntityType="Self.tbl_Feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_FeePackaged" EntityType="Self.tbl_FeePackaged" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_FeeSupport" EntityType="Self.tbl_FeeSupport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_FeeWeightTQVN" EntityType="Self.tbl_FeeWeightTQVN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Footer" EntityType="Self.tbl_Footer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_HistoryAutoBanking" EntityType="Self.tbl_HistoryAutoBanking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_HistoryOrderChange" EntityType="Self.tbl_HistoryOrderChange" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_HistoryPayWallet" EntityType="Self.tbl_HistoryPayWallet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_HistoryPayWalletCYN" EntityType="Self.tbl_HistoryPayWalletCYN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_HistoryScanPackage" EntityType="Self.tbl_HistoryScanPackage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_HistoryServices" EntityType="Self.tbl_HistoryServices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_InWareHousePrice" EntityType="Self.tbl_InWareHousePrice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_LinkMarquee" EntityType="Self.tbl_LinkMarquee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_MainOder" EntityType="Self.tbl_MainOder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_MainOrderCode" EntityType="Self.tbl_MainOrderCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Menu" EntityType="Self.tbl_Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Message" EntityType="Self.tbl_Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Node" EntityType="Self.tbl_Node" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Notification" EntityType="Self.tbl_Notification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Notifications" EntityType="Self.tbl_Notifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Order" EntityType="Self.tbl_Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OrderComment" EntityType="Self.tbl_OrderComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OrderShopTemp" EntityType="Self.tbl_OrderShopTemp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OrderTemp" EntityType="Self.tbl_OrderTemp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OTP" EntityType="Self.tbl_OTP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OutStockSession" EntityType="Self.tbl_OutStockSession" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OutStockSessionPackage" EntityType="Self.tbl_OutStockSessionPackage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Page" EntityType="Self.tbl_Page" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PageSEO" EntityType="Self.tbl_PageSEO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PageType" EntityType="Self.tbl_PageType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Partners" EntityType="Self.tbl_Partners" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PayAllOrderHistory" EntityType="Self.tbl_PayAllOrderHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PayHelp" EntityType="Self.tbl_PayHelp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PayhelpDetail" EntityType="Self.tbl_PayhelpDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PayHelpTemp" EntityType="Self.tbl_PayHelpTemp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PayOrderHistory" EntityType="Self.tbl_PayOrderHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Present" EntityType="Self.tbl_Present" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PriceChange" EntityType="Self.tbl_PriceChange" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ProductCategory" EntityType="Self.tbl_ProductCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ProductLink" EntityType="Self.tbl_ProductLink" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Products" EntityType="Self.tbl_Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Refund" EntityType="Self.tbl_Refund" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_RequestOutStock" EntityType="Self.tbl_RequestOutStock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_RequestShip" EntityType="Self.tbl_RequestShip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Role" EntityType="Self.tbl_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SendNotiEmail" EntityType="Self.tbl_SendNotiEmail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Service" EntityType="Self.tbl_Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ShippingTypeToWareHouse" EntityType="Self.tbl_ShippingTypeToWareHouse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ShippingTypeVN" EntityType="Self.tbl_ShippingTypeVN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SmallPackage" EntityType="Self.tbl_SmallPackage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SmallPackage1" EntityType="Self.tbl_SmallPackage1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SmallPackageAuto" EntityType="Self.tbl_SmallPackageAuto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SocialSupport" EntityType="Self.tbl_SocialSupport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_StaffIncome" EntityType="Self.tbl_StaffIncome" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Step" EntityType="Self.tbl_Step" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Support" EntityType="Self.tbl_Support" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SupportBuyProduct" EntityType="Self.tbl_SupportBuyProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_TokenForgotPass" EntityType="Self.tbl_TokenForgotPass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_TransportaionOrderDetail" EntityType="Self.tbl_TransportaionOrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_TransportationOrder" EntityType="Self.tbl_TransportationOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_TransportationOrderNew" EntityType="Self.tbl_TransportationOrderNew" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_UserLevel" EntityType="Self.tbl_UserLevel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Volume" EntityType="Self.tbl_Volume" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Warehouse" EntityType="Self.tbl_Warehouse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_WarehouseFee" EntityType="Self.tbl_WarehouseFee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_WarehouseFrom" EntityType="Self.tbl_WarehouseFrom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_WebChina" EntityType="Self.tbl_WebChina" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Weight" EntityType="Self.tbl_Weight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Withdraw" EntityType="Self.tbl_Withdraw" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_YCG" EntityType="Self.tbl_YCG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="View_OrderList" EntityType="Self.View_OrderList" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_OrderList].[ID] AS [ID], 
+    [View_OrderList].[UID] AS [UID], 
+    [View_OrderList].[ShopID] AS [ShopID], 
+    [View_OrderList].[ShopName] AS [ShopName], 
+    [View_OrderList].[Site] AS [Site], 
+    [View_OrderList].[IsForward] AS [IsForward], 
+    [View_OrderList].[IsForwardPrice] AS [IsForwardPrice], 
+    [View_OrderList].[IsFastDelivery] AS [IsFastDelivery], 
+    [View_OrderList].[IsFastDeliveryPrice] AS [IsFastDeliveryPrice], 
+    [View_OrderList].[IsCheckProduct] AS [IsCheckProduct], 
+    [View_OrderList].[IsCheckProductPrice] AS [IsCheckProductPrice], 
+    [View_OrderList].[IsPacked] AS [IsPacked], 
+    [View_OrderList].[IsPackedPrice] AS [IsPackedPrice], 
+    [View_OrderList].[IsFast] AS [IsFast], 
+    [View_OrderList].[IsFastPrice] AS [IsFastPrice], 
+    [View_OrderList].[PriceVND] AS [PriceVND], 
+    [View_OrderList].[PriceCNY] AS [PriceCNY], 
+    [View_OrderList].[FeeShipCN] AS [FeeShipCN], 
+    [View_OrderList].[FeeBuyPro] AS [FeeBuyPro], 
+    [View_OrderList].[FeeBuyProCK] AS [FeeBuyProCK], 
+    [View_OrderList].[FeeWeight] AS [FeeWeight], 
+    [View_OrderList].[FeeWeightCK] AS [FeeWeightCK], 
+    [View_OrderList].[Note] AS [Note], 
+    [View_OrderList].[FullName] AS [FullName], 
+    [View_OrderList].[Address] AS [Address], 
+    [View_OrderList].[Email] AS [Email], 
+    [View_OrderList].[Phone] AS [Phone], 
+    [View_OrderList].[Status] AS [Status], 
+    [View_OrderList].[Deposit] AS [Deposit], 
+    [View_OrderList].[CurrentCNYVN] AS [CurrentCNYVN], 
+    [View_OrderList].[TotalPriceVND] AS [TotalPriceVND], 
+    [View_OrderList].[SalerID] AS [SalerID], 
+    [View_OrderList].[DathangID] AS [DathangID], 
+    [View_OrderList].[KhoTQID] AS [KhoTQID], 
+    [View_OrderList].[KhoVNID] AS [KhoVNID], 
+    [View_OrderList].[CreatedDate] AS [CreatedDate], 
+    [View_OrderList].[CreatedBy] AS [CreatedBy], 
+    [View_OrderList].[ModifiedDate] AS [ModifiedDate], 
+    [View_OrderList].[ModifiedBy] AS [ModifiedBy], 
+    [View_OrderList].[DepostiDate] AS [DepostiDate], 
+    [View_OrderList].[IsHidden] AS [IsHidden], 
+    [View_OrderList].[AmountDeposit] AS [AmountDeposit], 
+    [View_OrderList].[OrderTransactionCode] AS [OrderTransactionCode], 
+    [View_OrderList].[OrderTransactionCode2] AS [OrderTransactionCode2], 
+    [View_OrderList].[OrderTransactionCode3] AS [OrderTransactionCode3], 
+    [View_OrderList].[OrderTransactionCode4] AS [OrderTransactionCode4], 
+    [View_OrderList].[OrderTransactionCode5] AS [OrderTransactionCode5], 
+    [View_OrderList].[FeeShipCNToVN] AS [FeeShipCNToVN], 
+    [View_OrderList].[OrderWeight] AS [OrderWeight], 
+    [View_OrderList].[OrderTransactionCodeWeight] AS [OrderTransactionCodeWeight], 
+    [View_OrderList].[OrderTransactionCodeWeight2] AS [OrderTransactionCodeWeight2], 
+    [View_OrderList].[OrderTransactionCodeWeight3] AS [OrderTransactionCodeWeight3], 
+    [View_OrderList].[OrderTransactionCodeWeight4] AS [OrderTransactionCodeWeight4], 
+    [View_OrderList].[OrderTransactionCodeWeight5] AS [OrderTransactionCodeWeight5], 
+    [View_OrderList].[ReceivePlace] AS [ReceivePlace], 
+    [View_OrderList].[TQVNWeight] AS [TQVNWeight], 
+    [View_OrderList].[Uname] AS [Uname], 
+    [View_OrderList].[saler] AS [saler], 
+    [View_OrderList].[dathang] AS [dathang], 
+    [View_OrderList].[khotq] AS [khotq], 
+    [View_OrderList].[khoVN] AS [khoVN]
+    FROM [dbo].[View_OrderList] AS [View_OrderList]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_OrderListDamuahang" EntityType="Self.View_OrderListDamuahang" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_OrderListDamuahang].[ID] AS [ID], 
+    [View_OrderListDamuahang].[TotalPriceVND] AS [TotalPriceVND], 
+    [View_OrderListDamuahang].[Deposit] AS [Deposit], 
+    [View_OrderListDamuahang].[CreatedDate] AS [CreatedDate], 
+    [View_OrderListDamuahang].[Status] AS [Status], 
+    [View_OrderListDamuahang].[DathangID] AS [DathangID], 
+    [View_OrderListDamuahang].[SalerID] AS [SalerID], 
+    [View_OrderListDamuahang].[OrderTransactionCode] AS [OrderTransactionCode], 
+    [View_OrderListDamuahang].[OrderTransactionCode2] AS [OrderTransactionCode2], 
+    [View_OrderListDamuahang].[OrderTransactionCode3] AS [OrderTransactionCode3], 
+    [View_OrderListDamuahang].[OrderTransactionCode4] AS [OrderTransactionCode4], 
+    [View_OrderListDamuahang].[OrderTransactionCode5] AS [OrderTransactionCode5], 
+    [View_OrderListDamuahang].[Uname] AS [Uname], 
+    [View_OrderListDamuahang].[saler] AS [saler], 
+    [View_OrderListDamuahang].[dathang] AS [dathang], 
+    [View_OrderListDamuahang].[anhsanpham] AS [anhsanpham]
+    FROM [dbo].[View_OrderListDamuahang] AS [View_OrderListDamuahang]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_OrderListFilter" EntityType="Self.View_OrderListFilter" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_OrderListFilter].[ID] AS [ID], 
+    [View_OrderListFilter].[TotalPriceVND] AS [TotalPriceVND], 
+    [View_OrderListFilter].[Deposit] AS [Deposit], 
+    [View_OrderListFilter].[CreatedDate] AS [CreatedDate], 
+    [View_OrderListFilter].[Status] AS [Status], 
+    [View_OrderListFilter].[DathangID] AS [DathangID], 
+    [View_OrderListFilter].[SalerID] AS [SalerID], 
+    [View_OrderListFilter].[OrderTransactionCode] AS [OrderTransactionCode], 
+    [View_OrderListFilter].[OrderTransactionCode2] AS [OrderTransactionCode2], 
+    [View_OrderListFilter].[OrderTransactionCode3] AS [OrderTransactionCode3], 
+    [View_OrderListFilter].[OrderTransactionCode4] AS [OrderTransactionCode4], 
+    [View_OrderListFilter].[OrderTransactionCode5] AS [OrderTransactionCode5], 
+    [View_OrderListFilter].[Uname] AS [Uname], 
+    [View_OrderListFilter].[saler] AS [saler], 
+    [View_OrderListFilter].[dathang] AS [dathang], 
+    [View_OrderListFilter].[anhsanpham] AS [anhsanpham], 
+    [View_OrderListFilter].[TotalPriceReal] AS [TotalPriceReal], 
+    [View_OrderListFilter].[CurrentCNYVN] AS [CurrentCNYVN], 
+    [View_OrderListFilter].[FeeBuyPro] AS [FeeBuyPro], 
+    [View_OrderListFilter].[MainOrderCode] AS [MainOrderCode]
+    FROM [dbo].[View_OrderListFilter] AS [View_OrderListFilter]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_OrderListFilterWithStatusString" EntityType="Self.View_OrderListFilterWithStatusString" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_OrderListFilterWithStatusString].[ID] AS [ID], 
+    [View_OrderListFilterWithStatusString].[TotalPriceVND] AS [TotalPriceVND], 
+    [View_OrderListFilterWithStatusString].[Deposit] AS [Deposit], 
+    [View_OrderListFilterWithStatusString].[CreatedDate] AS [CreatedDate], 
+    [View_OrderListFilterWithStatusString].[Status] AS [Status], 
+    [View_OrderListFilterWithStatusString].[OrderType] AS [OrderType], 
+    [View_OrderListFilterWithStatusString].[IsCheckNotiPrice] AS [IsCheckNotiPrice], 
+    [View_OrderListFilterWithStatusString].[MainOrderCode] AS [MainOrderCode], 
+    [View_OrderListFilterWithStatusString].[statusstring] AS [statusstring], 
+    [View_OrderListFilterWithStatusString].[DathangID] AS [DathangID], 
+    [View_OrderListFilterWithStatusString].[SalerID] AS [SalerID], 
+    [View_OrderListFilterWithStatusString].[OrderTransactionCode] AS [OrderTransactionCode], 
+    [View_OrderListFilterWithStatusString].[OrderTransactionCode2] AS [OrderTransactionCode2], 
+    [View_OrderListFilterWithStatusString].[OrderTransactionCode3] AS [OrderTransactionCode3], 
+    [View_OrderListFilterWithStatusString].[OrderTransactionCode4] AS [OrderTransactionCode4], 
+    [View_OrderListFilterWithStatusString].[OrderTransactionCode5] AS [OrderTransactionCode5], 
+    [View_OrderListFilterWithStatusString].[Uname] AS [Uname], 
+    [View_OrderListFilterWithStatusString].[saler] AS [saler], 
+    [View_OrderListFilterWithStatusString].[dathang] AS [dathang], 
+    [View_OrderListFilterWithStatusString].[anhsanpham] AS [anhsanpham], 
+    [View_OrderListFilterWithStatusString].[countrow] AS [countrow], 
+    [View_OrderListFilterWithStatusString].[hasSmallpackage] AS [hasSmallpackage]
+    FROM [dbo].[View_OrderListFilterWithStatusString] AS [View_OrderListFilterWithStatusString]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_OrderListFilterYCGiao" EntityType="Self.View_OrderListFilterYCGiao" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_OrderListFilterYCGiao].[ID] AS [ID], 
+    [View_OrderListFilterYCGiao].[TotalPriceVND] AS [TotalPriceVND], 
+    [View_OrderListFilterYCGiao].[Deposit] AS [Deposit], 
+    [View_OrderListFilterYCGiao].[CreatedDate] AS [CreatedDate], 
+    [View_OrderListFilterYCGiao].[Status] AS [Status], 
+    [View_OrderListFilterYCGiao].[DathangID] AS [DathangID], 
+    [View_OrderListFilterYCGiao].[SalerID] AS [SalerID], 
+    [View_OrderListFilterYCGiao].[OrderTransactionCode] AS [OrderTransactionCode], 
+    [View_OrderListFilterYCGiao].[OrderTransactionCode2] AS [OrderTransactionCode2], 
+    [View_OrderListFilterYCGiao].[OrderTransactionCode3] AS [OrderTransactionCode3], 
+    [View_OrderListFilterYCGiao].[OrderTransactionCode4] AS [OrderTransactionCode4], 
+    [View_OrderListFilterYCGiao].[OrderTransactionCode5] AS [OrderTransactionCode5], 
+    [View_OrderListFilterYCGiao].[Uname] AS [Uname], 
+    [View_OrderListFilterYCGiao].[saler] AS [saler], 
+    [View_OrderListFilterYCGiao].[dathang] AS [dathang], 
+    [View_OrderListFilterYCGiao].[anhsanpham] AS [anhsanpham]
+    FROM [dbo].[View_OrderListFilterYCGiao] AS [View_OrderListFilterYCGiao]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_OrderListKhoTQ" EntityType="Self.View_OrderListKhoTQ" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_OrderListKhoTQ].[ID] AS [ID], 
+    [View_OrderListKhoTQ].[TotalPriceVND] AS [TotalPriceVND], 
+    [View_OrderListKhoTQ].[Deposit] AS [Deposit], 
+    [View_OrderListKhoTQ].[CreatedDate] AS [CreatedDate], 
+    [View_OrderListKhoTQ].[Status] AS [Status], 
+    [View_OrderListKhoTQ].[DathangID] AS [DathangID], 
+    [View_OrderListKhoTQ].[SalerID] AS [SalerID], 
+    [View_OrderListKhoTQ].[OrderTransactionCode] AS [OrderTransactionCode], 
+    [View_OrderListKhoTQ].[OrderTransactionCode2] AS [OrderTransactionCode2], 
+    [View_OrderListKhoTQ].[OrderTransactionCode3] AS [OrderTransactionCode3], 
+    [View_OrderListKhoTQ].[OrderTransactionCode4] AS [OrderTransactionCode4], 
+    [View_OrderListKhoTQ].[OrderTransactionCode5] AS [OrderTransactionCode5], 
+    [View_OrderListKhoTQ].[Uname] AS [Uname], 
+    [View_OrderListKhoTQ].[saler] AS [saler], 
+    [View_OrderListKhoTQ].[dathang] AS [dathang], 
+    [View_OrderListKhoTQ].[anhsanpham] AS [anhsanpham]
+    FROM [dbo].[View_OrderListKhoTQ] AS [View_OrderListKhoTQ]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_OrderListKhoVN" EntityType="Self.View_OrderListKhoVN" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_OrderListKhoVN].[ID] AS [ID], 
+    [View_OrderListKhoVN].[TotalPriceVND] AS [TotalPriceVND], 
+    [View_OrderListKhoVN].[Deposit] AS [Deposit], 
+    [View_OrderListKhoVN].[CreatedDate] AS [CreatedDate], 
+    [View_OrderListKhoVN].[Status] AS [Status], 
+    [View_OrderListKhoVN].[DathangID] AS [DathangID], 
+    [View_OrderListKhoVN].[SalerID] AS [SalerID], 
+    [View_OrderListKhoVN].[OrderTransactionCode] AS [OrderTransactionCode], 
+    [View_OrderListKhoVN].[OrderTransactionCode2] AS [OrderTransactionCode2], 
+    [View_OrderListKhoVN].[OrderTransactionCode3] AS [OrderTransactionCode3], 
+    [View_OrderListKhoVN].[OrderTransactionCode4] AS [OrderTransactionCode4], 
+    [View_OrderListKhoVN].[OrderTransactionCode5] AS [OrderTransactionCode5], 
+    [View_OrderListKhoVN].[Uname] AS [Uname], 
+    [View_OrderListKhoVN].[saler] AS [saler], 
+    [View_OrderListKhoVN].[dathang] AS [dathang], 
+    [View_OrderListKhoVN].[anhsanpham] AS [anhsanpham]
+    FROM [dbo].[View_OrderListKhoVN] AS [View_OrderListKhoVN]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_Orderlistwithstatus" EntityType="Self.View_Orderlistwithstatus" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_Orderlistwithstatus].[ID] AS [ID], 
+    [View_Orderlistwithstatus].[TotalPriceVND] AS [TotalPriceVND], 
+    [View_Orderlistwithstatus].[Deposit] AS [Deposit], 
+    [View_Orderlistwithstatus].[CreatedDate] AS [CreatedDate], 
+    [View_Orderlistwithstatus].[Status] AS [Status], 
+    [View_Orderlistwithstatus].[DathangID] AS [DathangID], 
+    [View_Orderlistwithstatus].[SalerID] AS [SalerID], 
+    [View_Orderlistwithstatus].[OrderTransactionCode] AS [OrderTransactionCode], 
+    [View_Orderlistwithstatus].[OrderTransactionCode2] AS [OrderTransactionCode2], 
+    [View_Orderlistwithstatus].[OrderTransactionCode3] AS [OrderTransactionCode3], 
+    [View_Orderlistwithstatus].[OrderTransactionCode4] AS [OrderTransactionCode4], 
+    [View_Orderlistwithstatus].[OrderTransactionCode5] AS [OrderTransactionCode5], 
+    [View_Orderlistwithstatus].[Uname] AS [Uname], 
+    [View_Orderlistwithstatus].[saler] AS [saler], 
+    [View_Orderlistwithstatus].[dathang] AS [dathang], 
+    [View_Orderlistwithstatus].[anhsanpham] AS [anhsanpham]
+    FROM [dbo].[View_Orderlistwithstatus] AS [View_Orderlistwithstatus]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_UserList" EntityType="Self.View_UserList" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_UserList].[ID] AS [ID], 
+    [View_UserList].[Username] AS [Username], 
+    [View_UserList].[Wallet] AS [Wallet], 
+    [View_UserList].[Status] AS [Status], 
+    [View_UserList].[CreatedDate] AS [CreatedDate], 
+    [View_UserList].[RoleID] AS [RoleID], 
+    [View_UserList].[RoleName] AS [RoleName], 
+    [View_UserList].[FirstName] AS [FirstName], 
+    [View_UserList].[LastName] AS [LastName], 
+    [View_UserList].[MobilePhonePrefix] AS [MobilePhonePrefix], 
+    [View_UserList].[MobilePhone] AS [MobilePhone], 
+    [View_UserList].[saler] AS [saler], 
+    [View_UserList].[dathang] AS [dathang], 
+    [View_UserList].[Phone] AS [Phone], 
+    [View_UserList].[SaleID] AS [SaleID], 
+    [View_UserList].[DathangID] AS [DathangID], 
+    [View_UserList].[Email] AS [Email], 
+    [View_UserList].[Address] AS [Address], 
+    [View_UserList].[WalletCYN] AS [WalletCYN]
+    FROM [dbo].[View_UserList] AS [View_UserList]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_UserListExcel" EntityType="Self.View_UserListExcel" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_UserListExcel].[ID] AS [ID], 
+    [View_UserListExcel].[Username] AS [Username], 
+    [View_UserListExcel].[Wallet] AS [Wallet], 
+    [View_UserListExcel].[Status] AS [Status], 
+    [View_UserListExcel].[CreatedDate] AS [CreatedDate], 
+    [View_UserListExcel].[RoleID] AS [RoleID], 
+    [View_UserListExcel].[Email] AS [Email], 
+    [View_UserListExcel].[LevelName] AS [LevelName], 
+    [View_UserListExcel].[RoleName] AS [RoleName], 
+    [View_UserListExcel].[FirstName] AS [FirstName], 
+    [View_UserListExcel].[LastName] AS [LastName], 
+    [View_UserListExcel].[MobilePhonePrefix] AS [MobilePhonePrefix], 
+    [View_UserListExcel].[MobilePhone] AS [MobilePhone], 
+    [View_UserListExcel].[Address] AS [Address], 
+    [View_UserListExcel].[saler] AS [saler], 
+    [View_UserListExcel].[dathang] AS [dathang]
+    FROM [dbo].[View_UserListExcel] AS [View_UserListExcel]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_UserListWithWallet" EntityType="Self.View_UserListWithWallet" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_UserListWithWallet].[ID] AS [ID], 
+    [View_UserListWithWallet].[Username] AS [Username], 
+    [View_UserListWithWallet].[Wallet] AS [Wallet], 
+    [View_UserListWithWallet].[Status] AS [Status], 
+    [View_UserListWithWallet].[CreatedDate] AS [CreatedDate], 
+    [View_UserListWithWallet].[RoleID] AS [RoleID], 
+    [View_UserListWithWallet].[RoleName] AS [RoleName], 
+    [View_UserListWithWallet].[FirstName] AS [FirstName], 
+    [View_UserListWithWallet].[LastName] AS [LastName], 
+    [View_UserListWithWallet].[MobilePhonePrefix] AS [MobilePhonePrefix], 
+    [View_UserListWithWallet].[MobilePhone] AS [MobilePhone], 
+    [View_UserListWithWallet].[saler] AS [saler], 
+    [View_UserListWithWallet].[dathang] AS [dathang]
+    FROM [dbo].[View_UserListWithWallet] AS [View_UserListWithWallet]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

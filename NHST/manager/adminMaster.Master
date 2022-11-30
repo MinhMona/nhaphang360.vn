@@ -1,0 +1,622 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminMaster.master.cs" Inherits="NHST.manager.adminMaster" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <title>Quản trị</title>
+    <link rel="canonical" href="https://namninhexpress.vn/" />
+    <link rel="stylesheet" href="/App_Themes/AdminNew/css/bootstrap.css" media="all">
+    <link href="/App_Themes/NewUI/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/App_Themes/AdminNew/css/style.css" media="all">
+
+    <link href="/App_Themes/NewUI/js/sweet/sweet-alert.css" rel="stylesheet" type="text/css" />
+    <script src="/App_Themes/AdminNew/js/jquery-1.9.1.min.js"></script>
+    <link href="/App_Themes/AdminNew/css/component.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/AdminNew/css/modern.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/AdminNew/css/custom.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/App_Themes/AdminNew/css/style-p.css" media="all">
+    <link href="/App_Themes/NewUI/css/jstree.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .rgSortAsc, .rgSortDesc {
+            display: none;
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            .form-horizontal .form-group label.control-label {
+                padding-left: 15px !important;
+            }
+        }
+
+        .form-horizontal .form-group label.control-label {
+            text-align: right !important;
+        }
+
+        .semi-text {
+            color: #e84545;
+        }
+
+        .RadForm_MetroTouch.rfdCheckbox label, .RadForm_MetroTouch.rfdRadio label {
+            vertical-align: bottom !important;
+        }
+
+        .require {
+            color: red !important;
+        }
+
+        /*.rgHeader a, .rgHeader a:hover, .rgHeader a:active {
+            color: black !important;
+        }*/
+
+        .r-1 {
+            color: red !important;
+            font-weight: bold;
+        }
+
+        .r-2 {
+            color: #3e67e0 !important;
+            font-weight: bold;
+        }
+
+        .ab {
+            height: 150px;
+        }
+
+        .show-stat-s {
+            color: #8ABDE9 !important;
+            font-weight: bold;
+        }
+
+        .show-stat-w {
+            color: #ff0000 !important;
+            font-weight: bold;
+        }
+
+        .RadUpload {
+            width: 100% !important;
+        }
+
+            .RadUpload .ruInputs li {
+                width: 23% !important;
+                float: left !important;
+                margin-bottom: 20px !important;
+                margin-right: 2% !important;
+            }
+    </style>
+</head>
+<body class="menuin ">
+    <form id="form1" runat="server" enctype="multipart/form-data">
+        <asp:ScriptManager runat="server" ID="scr">
+        </asp:ScriptManager>
+        <header id="header">
+            <div class="logo">
+                <a href="/">
+                    <img src="/App_Themes/AdminNew/images/logo.png" alt=""></a>
+            </div>
+            <a href="javascript:;" class="nav-toggle open"><i class="fa fa-bars"></i></a>
+            <div class="" id="main-nav">
+                <asp:Literal ID="ltrMenu" runat="server"></asp:Literal>
+                <%--<ul class="nav-ul">
+                    <li class="active"><a href="#" class="sub-toggle"><span class="nav-i home"></span>Cài đặt <i class="caret"></i></a>
+                        <ul class="side-sub">
+                            <li><a href="/manager/configuration.aspx">Cấu hình hệ thống</a></li>                            
+                            <li><a href="/manager/Tariff-TQVN.aspx">TL phí TQ-VN</a></li>
+                            <li><a href="/manager/Tariff-Buypro">TL phí dịch vụ mua hàng</a></li>
+                            <li><a href="/manager/User-Level.aspx">TL người dùng</a></li>
+                            <li><a href="#">TL vận chuyển</a></li>
+                            <li><a href="#">TL Phí thanh toán hộ</a></li>
+                            <li><a href="#">TL phí vận chuyển hộ</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="#" class="sub-toggle"><span class="nav-i user"></span>Nhân viên <i class="caret"></i></a>
+                        <ul class="side-sub">                            
+                            <li><a href="/manager/stafflist">Danh sách</a></li>
+                            <li><a href="/manager/admin-staff-income">Hoa hồng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="sub-toggle"><span class="nav-i users"></span>Khách Hàng <i class="caret"></i></a>
+                        <ul class="side-sub">
+                            <li><a href="/manager/userlist">Danh sách</a></li>
+                            <li><a href="/manager/HistorySendWallet">Lịch sử nạp</a></li>
+                            <li><a href="/manager/Withdraw-List">Lịch sử rút</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/manager/orderlist"><span class="nav-i panelList"></span>Đơn hàng</a></li>
+                    <li><a href="#" class="sub-toggle"><span class="nav-i paper"></span>Bài viết <i class="caret"></i></a>
+                        <ul class="side-sub">
+                            <li><a href="/manager/Page-Type-List">Danh mục</a></li>
+                            <li><a href="/manager/PageList">Danh sách trang</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="sub-toggle"><span class="nav-i cube"></span>Kho <i class="caret"></i></a>
+                        <ul class="side-sub">
+                            <li><a href="/manager/TQWareHouse">Kiểm hàng TQ</a></li>
+                            <li><a href="/manager/VNWarehouse">Kiểm hàng VN</a></li>
+                            <li><a href="/manager/OutStock">Xuất kho</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="sub-toggle"><span class="nav-i grid"></span>Thống kê <i class="caret"></i></a>
+                        <ul class="side-sub">
+                            <li><a href="#">TK doanh thu</a></li>
+                            <li><a href="#">TK đơn hàng</a></li>
+                            <li><a href="#">TK tiền nạp</a></li>
+                            <li><a href="#">TK số dư</a></li>
+                            <li><a href="#">TK đơn hàng mua, kho TQ, kho đích</a></li>
+                            <li><a href="#">TK giao dịch</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/dang-xuat"><span class="fa fa-sign-out"></span>Sign out</a></li>
+                </ul>--%>
+
+                <div class="version" style="display:block">
+                    Hệ thống đặt hàng Trung Quốc<br>
+                    Gói: Chuyên Nghiệp<br>
+                    Version: 3.5<br>
+                    Dự án: NHẬP HÀNG 360<br>
+                    Ngày phát hành: 12/03/2019<br>
+                    &copy; CopyRights: Mona Media
+                </div>
+            </div>
+            <div class="hd-left">
+            </div>
+            <div class="hd-right">
+                <asp:Literal ID="ltrinfo" runat="server"></asp:Literal>
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <footer id="footer">
+        </footer>
+        <a href="javascript:;" class="scroll-top-link" id="scroll-top"><i class="fa fa-angle-up"></i></a>
+        <%--<script src="/App_Themes/NewUI/js/jstree.min.js"></script>
+        <script src="/App_Themes/NewUI/js/ui-tree.js"></script>
+        <script src="/App_Themes/NewUI/js/app.js"></script>--%>
+   <%--     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>--%>
+            <script src="/App_Themes/NewUI/js/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+
+        <script src="/App_Themes/NewUI/js/sweet/sweet-alert.js" type="text/javascript"></script>
+        <script src="/App_Themes/NewUI/js/select2/select2.min.js"></script>
+        <script src="/App_Themes/AdminNew/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="/App_Themes/AdminNew/js/jquery.counterup.min.js"></script>
+        <script src="/App_Themes/AdminNew/js/master.js"></script>
+
+
+        <script>
+            jQuery(document).ready(function () {
+
+                 $(".right-it.noti").on("mouseover", function () {
+                    var topPos = $(this).offset().top;
+                    var leftPos = $(this).offset().left;
+                    var elementHeight = $(this).outerHeight(true);
+                    $(".notification_wrap").css({
+                        display: "inline-block",
+                        position: "fixed",
+                        top: elementHeight + 15,
+                        left:
+                          leftPos -
+                          $(".notification_wrap").outerWidth(true) +
+                          $(this).outerWidth(true)
+                    });
+                });
+
+
+                $('#filter-form-toggle').on('click', function () {
+                    $('#filter-form').stop().slideToggle();
+                });
+                $('#toggleAdvance').on('click', function () {
+                    $('#advance-search').stop().slideToggle();
+                });
+                $('.gallery-it').magnificPopup({
+                    type: 'image',
+                    tLoading: 'Loading image #%curr%...',
+                    gallery: {
+                        enabled: true
+                    }
+
+                });
+                $(document).on('click', '.toggle-detail-row', function () {
+                    $(this).closest('tr').toggleClass('info-in');
+                });
+                var lastScrollTop = 0;
+                $(window).scroll(function (event) {
+                    var st = $(this).scrollTop();
+                    if (st > lastScrollTop) {
+                        // downscroll code
+
+                    } else {
+                        // upscroll code
+
+                    }
+                    lastScrollTop = st;
+                    stickySide('#right-col-wrap .waypoint-trigger', '#main-col-wrap', 85);
+                });
+                stickySide('#right-col-wrap .waypoint-trigger', '#main-col-wrap', 85);
+
+                function stickySide(idString, closest, offset) {
+                    if (!$(idString).length)
+                        return;
+                    if (!$(closest).length)
+                        return;
+                    if (!$(offset))
+                        offset = 0;
+                    var fw = $(idString).width();
+                    var winTop = $(window).scrollTop();
+                    var mainHeight = $(closest).height();
+                    var mainHeightOff = $(closest).offset().top;
+                    if (winTop + offset >= mainHeightOff && winTop + offset + $(idString).height() <= mainHeightOff + mainHeight) {
+
+                        $(idString).css({
+                            position: 'fixed',
+                            width: fw + 'px',
+                            top: offset + 'px',
+                            //                top : offset+winTop-mainHeightOff+'px'
+                        });
+                    } else {
+                        if (winTop + offset < mainHeightOff) {
+                            $(idString).attr('style', '');
+                        }
+                        if (winTop + offset + $(idString).height() > mainHeightOff + mainHeight) {
+                            if (mainHeight > $(idString).height()) {
+                                $(idString).css({
+                                    top: mainHeight - $(idString).height() + 'px',
+                                    position: 'relative',
+                                });
+                            } else {
+                                $(idString).attr('style', '')
+                            }
+
+                        }
+                        // $(idString).attr('style','');
+                    }
+
+                }
+
+            });
+
+            (function ($) {
+                $.fn.goTo = function () {
+                    $('html, body').animate({
+                        scrollTop: $(this).offset().top + 'px'
+                    }, 'slow');
+                    return this;
+                }
+            })(jQuery);
+            function GotoEdit() {
+                $('#editP').goTo();
+            }
+            function Cancel() {
+                $('#topPage').goTo();
+
+            }
+            $(function () {
+
+                $('ul.menu-ui').removeClass("active open");
+                setActive(window.location.pathname);
+
+            });
+            $(document).ready(function () {
+                LoadSelect();
+            });
+            function LoadSelect() {
+                $(".select2").select2({
+                    templateResult: formatState,
+                    templateSelection: formatState
+                });
+                function formatState(opt) {
+                    if (!opt.id) {
+                        return opt.text;
+                    }
+                    var optimage = $(opt.element).data('image');
+                    if (!optimage) {
+                        return opt.text;
+                    } else {
+                        var $opt = $(
+                            '<span>' + opt.text + '</span>'
+                        );
+                        return $opt;
+                    }
+
+                };
+            }
+
+            function showContent(id, that) {
+                $('.a-question a').removeClass('active-question');
+                $(that).addClass('active-question');
+                $('.q-conent-test .form-group').addClass('hidden');
+                $('.q-conent-test #q-' + id).removeClass('hidden');
+            }
+            function setActive(path) {
+                if (path.toLowerCase().indexOf('/ehome') != -1) {
+                    $('.menu-ui li#home').addClass("active");
+                }
+                else if (path.toLowerCase().indexOf('/eregion') != -1) {
+                    $('.menu-ui li#region').addClass("active");
+                }
+                else if (path.toLowerCase().indexOf('/esubject') != -1 ||
+                    path.toLowerCase().indexOf('/esubjectchapter') != -1) {
+                    $('.menu-ui li#subject').addClass("active open");
+                }
+                else if (path.toLowerCase().indexOf('/erole') != -1 ||
+                    path.toLowerCase().indexOf('/erolelevel') != -1) {
+                    $('.menu-ui li#role').addClass("active open");
+                }
+                else if (path.toLowerCase().indexOf('/erequestexam') != -1 ||
+                    path.toLowerCase().indexOf('/eexams') != -1 ||
+                    path.toLowerCase().indexOf('/emyexam') != -1) {
+                    $('.menu-ui li#exam').addClass("active open");
+                }
+                else if (path.toLowerCase().indexOf('/estudent') != -1 ||
+                    path.toLowerCase().indexOf('/eappuser') != -1) {
+                    $('.menu-ui li#appuser').addClass("active open");
+                }
+            }
+
+
+            function OnClientFileSelected(sender, args) {
+                if ($telerik.isIE) return;
+                else {
+                    truncateName(args);
+                    //var file = args.get_fileInputField().files.item(args.get_rowIndex());
+                    var file = args.get_fileInputField().files.item(0);
+                    showThumbnail(file, args);
+                }
+            }
+
+
+            function truncateName(args) {
+                var $span = $(".ruUploadProgress", args.get_row());
+                var text = $span.text();
+                if (text.length > 23) {
+                    var newString = text.substring(0, 23) + '...';
+                    $span.text(newString);
+                }
+            }
+
+            function showThumbnail(file, args) {
+
+                var image = document.createElement("img");
+
+                image.file = file;
+                image.className = "ab img-responsive";
+
+                var $row = $(args.get_row());
+                $row.parent().className = "row ruInputs list-unstyled";
+                $row.append(image);
+
+
+                var reader = new FileReader();
+                reader.onload = (function (aImg) {
+                    return function (e) {
+                        aImg.src = e.target.result;
+                    };
+                }(image));
+                var ret = reader.readAsDataURL(file);
+                var canvas = document.createElement("canvas");
+
+                ctx = canvas.getContext("2d");
+                image.onload = function () {
+                    ctx.drawImage(image, 100, 100);
+                };
+
+            }
+            function acceptdaxem(id, ordershopcode, type) {
+                $.ajax({
+                    type: "POST",
+                    url: "/admin/home.aspx/checkisread",
+                    data: "{ID:'" + id + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        var data = msg.d;
+                        if (data == "ok") {
+                            if (type == "1")
+                                window.location.href = "/manager/OrderDetail.aspx?id=" + ordershopcode;
+                            else if (type == "2")
+                                window.location.href = "/manager/HistorySendWallet.aspx";
+                            else if (type == "3")
+                                window.location.href = "/manager/Withdraw-List.aspx";
+                            else if (type == "4")
+                                window.location.href = "/manager/OrderDetail.aspx?id=" + ordershopcode;
+                            else if (type == "5")
+                                window.location.href = "/manager/ComplainList.aspx";
+                            else if (type == "6")
+                                window.location.href = "/manager/UserList.aspx";
+                            else
+                                window.location.href = "/manager/OrderDetail.aspx?id=" + ordershopcode;
+                        }
+                    },
+                    error: function (xmlhttprequest, textstatus, errorthrow) {
+                        alert('lỗi checkend');
+                    }
+                });
+            }
+
+            function isEmpty(str) {
+                return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
+            }
+
+        </script>
+        <style>
+            .panel .panel-body {
+                display: block;
+            }
+
+            .rgMasterTable {
+                table-layout: fixed;
+            }
+
+            .rgFilterBox {
+                width: 100% !important;
+            }
+        </style>
+        <script src="/scripts/jquery.signalR-2.2.3.min.js"></script>
+        <script src="/signalr/hubs"></script>
+        <script>
+            $(function () {
+                var chat = $.connection.chatHub;
+                chat.client.addNewMessageToPage = function (name, message) {
+                    var count = parseFloat($("#notis-count").html());
+                    var total = 0;
+                    if (count == 0) {
+                        //$("#notis-count").html(1);
+                        total = 1;
+
+                    }
+                    else {
+                        total = count + 1;
+                        //$("#notis-count").html(total);
+                    }
+                    $.ajax({
+                        type: "POST",
+                        url: "/manager/home.aspx/gettotal",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (msg) {
+                            var data = JSON.parse(msg.d);
+                            if (data != "0") {
+                                var count1 = data["count"];
+                                var liststring = data["listNotification"];
+                                $("#no-notis").remove();
+                                $("#notis-count").html(count1);
+                                $(".notification-total").addClass("c-button--blink");
+                                setTimeout(function () { $(".notification-total").removeClass("c-button--blink") }, 1000);
+                                $(".notifi").empty().append(liststring);
+                            }
+                        },
+                        error: function (xmlhttprequest, textstatus, errorthrow) {
+                            //alert('lỗi post comment');
+                        }
+                    });
+
+
+                };
+
+                $.connection.hub.start().done(function () {
+                });
+            });
+            jQuery(document).ready(function () {
+                $(document).on('click', '.toggle-detail-row', function () {
+                    $(this).closest('tr').addClass('info-in');
+                });
+                $(document).on('click', '.info-in .toggle-detail-row ', function () {
+                    $(this).closest('tr').removeClass('info-in');
+                });
+                var lastScrollTop = $(window).scrollTop();
+                $(window).scroll(function (event) {
+                    var st = $(this).scrollTop();
+                    if (st > lastScrollTop) {
+                        // downscroll code
+
+                    } else {
+                        // upscroll code
+
+                    }
+                    lastScrollTop = st;
+                    stickySide('#right-col-wrap .waypoint-trigger', '#main-col-wrap', 85);
+                });
+                stickySide('#right-col-wrap .waypoint-trigger', '#main-col-wrap', 85);
+
+                function stickySide(idString, closest, offset) {
+                    if (!$(idString).length)
+                        return;
+                    if (!$(closest).length)
+                        return;
+                    if (!$(offset))
+                        offset = 0;
+                    var fw = $(idString).width();
+                    var winTop = $(window).scrollTop();
+                    var mainHeight = $(closest).height();
+                    var mainHeightOff = $(closest).offset().top;
+                    if (winTop + offset >= mainHeightOff && winTop + offset + $(idString).height() <= mainHeightOff + mainHeight) {
+
+                        $(idString).css({
+                            position: 'fixed',
+                            width: fw + 'px',
+                            top: offset + 'px',
+                            //                top : offset+winTop-mainHeightOff+'px'
+                        });
+                    } else {
+                        if (winTop + offset < mainHeightOff) {
+                            $(idString).attr('style', '');
+                        }
+                        if (winTop + offset + $(idString).height() > mainHeightOff + mainHeight) {
+                            if (mainHeight > $(idString).height()) {
+                                $(idString).css({
+                                    top: mainHeight - $(idString).height() + 'px',
+                                    position: 'relative',
+                                });
+                            } else {
+                                $(idString).attr('style', '')
+                            }
+
+                        }
+                        // $(idString).attr('style','');
+                    }
+
+                }
+
+            });
+        </script>
+        <style>
+            .c-button--blink {
+                animation: blink .2s infinite;
+                animation-timing-function: ease-in-out;
+                color: #fff;
+            }
+
+            @keyframes blink {
+                0% {
+                    background-color: red;
+                    color: #fff;
+                }
+
+                30% {
+                    background-color: red;
+                    color: #fff;
+                }
+
+                100% {
+                    background-secondary: #600C90;
+                }
+            }
+
+            html body .riSingle .riTextBox[type="text"] {
+                line-height: 40px;
+                height: 40px;
+                border: solid 1px #ddd;
+                font-size: 15px;
+            }
+
+            select.form-control {
+                background: #fff url(/App_Themes/AdminNew/images/icon-select.png) right 15px center no-repeat;
+            }
+
+            P {
+                margin: 0px;
+            }
+
+            blockquote {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        </style>
+    </form>
+</body>
+</html>

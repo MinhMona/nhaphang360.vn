@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a8175352d3b445a7a7929b39d1556bcc" Name="Diagram1">
+        <EntityTypeShape EntityType="NHSTModel.tbl_Account" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_AccountInfo" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_AdminSendUserWallet" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_BigPackage" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_BigPackageHistory" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Configuration" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_FeeBuyPro" Width="1.5" PointX="6.75" PointY="5.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_FeeWeightTQVN" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_HistoryOrderChange" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_HistoryPayWallet" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_MainOder" Width="1.5" PointX="8.75" PointY="8.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Message" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Notifications" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Order" Width="1.5" PointX="10.75" PointY="5.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_OrderComment" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_OrderShopTemp" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_OrderTemp" Width="1.5" PointX="2.75" PointY="12.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_OTP" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Page" Width="1.5" PointX="4.75" PointY="12.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_PageType" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_PayAllOrderHistory" Width="1.5" PointX="12.75" PointY="12.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_PayOrderHistory" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Role" Width="1.5" PointX="14.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_SmallPackage" Width="1.5" PointX="14.75" PointY="7.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_UserLevel" Width="1.5" PointX="14.75" PointY="12.75" />
+        <EntityTypeShape EntityType="NHSTModel.tbl_Withdraw" Width="1.5" PointX="16.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

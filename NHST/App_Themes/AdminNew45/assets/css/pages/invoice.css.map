@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKA,cAAe,CACd,WAAW,CAAE,IAAI,CAElB,aAAc,CACb,OAAO,CAAE,MAAM,CAEhB,eAAgB,CACf,SAAS,CAAE,IAAI,CAEhB,eAAe,CACd,YAAY,CAAC,iBAAiB,CAM5B,iBAAE,CACD,KAAK,CCgSO,OAAO",
+"sources": ["../../sass/pages/invoice.scss","../../sass/components/_color-variables.scss"],
+"names": [],
+"file": "invoice.css"
+}

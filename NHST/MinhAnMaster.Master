@@ -1,0 +1,294 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MinhAnMaster.master.cs" Inherits="NHST.MinhAnMaster" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <title>NHẬP HÀNG 360</title>
+    <link rel="shortcut icon" href="/App_Themes/MinhAn/images//favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/App_Themes/MinhAn/fonts/Roboto/font.css">
+    <link rel="stylesheet" href="/App_Themes/MinhAn/js/Slick-Js/slick-theme.css">
+    <link rel="stylesheet" href="/App_Themes/MinhAn/js/WOW-master/animate.css">
+    <link rel="stylesheet" href="/App_Themes/MinhAn/js/Slick-Js/slick.css">
+    <link rel="stylesheet" href="/App_Themes/MinhAn/js/Font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/App_Themes/MinhAn/css/style.css">
+    <script src="/App_Themes/MinhAn/js/jquery-3.4.1.min.js"></script>
+
+    <asp:Literal runat="server" ID="ltrHeader"></asp:Literal>
+
+    <asp:Literal ID="ltrSEO" runat="server"></asp:Literal>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Literal ID="ltr_infor" runat="server"></asp:Literal>
+        <telerik:RadScriptManager ID="rsm" runat="server" EnablePageMethods="true" EnablePartialRendering="true">
+        </telerik:RadScriptManager>
+        <header class="header">
+            <div class="top-header">
+                <div class="container">
+                    <div class="top-info-nav">
+                        <ul>
+                            <asp:Literal runat="server" ID="ltrTopLeft"></asp:Literal>
+                        </ul>
+                    </div>
+                    <div class="social-nav">
+                        <ul>
+                            <asp:Literal runat="server" ID="ltrSocial"></asp:Literal>
+                        </ul>
+                    </div>
+                    <div class="user-box">
+                        <asp:Literal runat="server" ID="ltrLogin"></asp:Literal>
+                    </div>
+                </div>
+            </div>
+            <div class="main-header">
+                <div class="container">
+                    <div class="hd-info hd-info-left">
+                        <div class="icon">
+                            <img src="/App_Themes/MinhAn/images/hotline.png" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="title">Hotline</p>
+                            <asp:Literal runat="server" ID="ltrPhone"></asp:Literal>
+                        </div>
+                    </div>
+                    <div class="hd-logo">
+                        <asp:Literal runat="server" ID="ltrLogo"></asp:Literal>
+                    </div>
+                    <div class="hd-info hd-info-right">
+                        <div class="icon">
+                            <img src="/App_Themes/MinhAn/images/hotline.png" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="title">Giờ làm việc</p>
+                            <asp:Literal runat="server" ID="ltrTimeWork"></asp:Literal>
+                        </div>
+                    </div>
+                    <div class="hamburger-btn main-menu-btn">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-menu">
+                <asp:Literal runat="server" ID="ltrMenu"></asp:Literal>
+                <div class="main-menu-overlay"></div>
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer class="footer wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+            <div class="top-footer">
+                <div class="container">
+                    <div class="columns">
+                        <asp:Literal runat="server" ID="ltrFooter"></asp:Literal>
+                        <%--    <div class="column">
+                            <div class="ft-logo">
+                                <a href="#">
+                                    <img src="/App_Themes/MinhAn/images/ft-logo.png" alt="">
+                                </a>
+                            </div>
+                            <div class="ft-intro">
+                                Successful businesses have many things in common, today we’ll look at the big ‘R’of
+                            recognition and how a digital advertising network may help.
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ft-menu">
+                                <p class="ft-menu-title">Menu</p>
+                                <ul>
+                                    <li><a href="#">Trang chủ</a></li>
+                                    <li><a href="#">Giới thiệu</a></li>
+                                    <li><a href="#">Sản phẩm</a></li>
+                                    <li><a href="#">Tin tức</a></li>
+                                    <li><a href="#">Liên hệ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="fanpage">
+                                <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/thietkewebsitemonamedia/"
+                                    data-tabs="timeline" data-small-header="true" data-adapt-container-width="true"
+                                    data-hide-cover="true" data-show-facepile="true" fb-xfbml-state="rendered"
+                                    fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1916689885307106&amp;container_width=293&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Fthietkewebsitemonamedia%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true&amp;tabs=timeline">
+                                    <span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;">
+                                        <iframe
+                                            name="f27701494e21e84" frameborder="0"
+                                            allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                                            title="fb:page Facebook Social Plugin"
+                                            src="https://www.facebook.com/v3.2/plugins/page.php?adapt_container_width=true&amp;app_id=1916689885307106&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fvy-MhgbfL4v.js%3Fversion%3D44%23cb%3Df1932ab48bc2d68%26domain%3D%26origin%3Dfile%253A%252F%252F%252Ff3109b65c732ecc%26relation%3Dparent.parent&amp;container_width=293&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Fthietkewebsitemonamedia%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true&amp;tabs=timeline"
+                                            style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>--%>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>Designed and developed by <a href="https://mona.media" target="_blank">Mona Media</a></p>
+                </div>
+            </div>
+        </footer>
+        <span class="scroll-top"><i class="fa fa-angle-up"></i></span>
+
+        <script src="/App_Themes/MinhAn/js/Slick-Js/slick.min.js"></script>
+        <script src="/App_Themes/MinhAn/js/WOW-master/wow.min.js"></script>
+        <script src="/App_Themes/MinhAn/js/main.js"></script>
+        <asp:Literal runat="server" ID="ltrFooterScript"></asp:Literal>
+        <script>
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1916689885307106&autoLogAppEvents=1';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+            new WOW().init();
+
+            function isEmpty(str) {
+                return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
+            }
+            function closewebinfo() {
+                $.ajax({
+                    type: "POST",
+                    url: "/Default.aspx/closewebinfo",
+                    //data: "{ID:'" + id + "',UserName:'" + username + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        if (msg.d == "ok") {
+                            $(".webinfo").remove();
+                        }
+                    },
+                    error: function (xmlhttprequest, textstatus, errorthrow) {
+                        alert('lỗi');
+                    }
+                });
+            }
+
+        </script>
+        <style>
+            .slick-dots li button {
+                display: none;
+            }
+
+            .webinfo {
+                background: #ff5017;
+                color: #fff;
+                padding: 20px 0;
+                float: left;
+                width: 100%;
+                clear: both;
+                display: block;
+            }
+
+                .webinfo .textcontent {
+                    float: left;
+                    width: 100%;
+                    position: relative;
+                }
+
+            .icon-close-info {
+                position: absolute;
+                right: 0;
+                top: 0px;
+                width: 25px;
+                height: 25px;
+                color: #fff;
+                font-size: 16px;
+            }
+
+                .icon-close-info:hover {
+                    color: #ffcd38;
+                    font-size: 16px;
+                }
+
+            .all-info {
+                width: 100%;
+            }
+
+            .main-info {
+                float: left;
+                width: 100%;
+                padding: 0 15px;
+            }
+        </style>
+        <style>
+            #cfacebook {
+                position: fixed;
+                bottom: 0px;
+                right: 20px;
+                z-index: 999999999999999;
+                width: 250px;
+                height: auto;
+                box-shadow: 6px 6px 6px 10px rgba(0,0,0,0.2);
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                overflow: hidden;
+            }
+
+                #cfacebook .fchat {
+                    float: left;
+                    width: 100%;
+                    height: 270px;
+                    overflow: hidden;
+                    display: none;
+                    background-color: #fff;
+                }
+
+                    #cfacebook .fchat .fb-page {
+                        margin-top: -130px;
+                        float: left;
+                    }
+
+                #cfacebook a.chat_fb {
+                    float: left;
+                    padding: 0 25px;
+                    width: 250px;
+                    color: #fff;
+                    text-decoration: none;
+                    height: 40px;
+                    line-height: 40px;
+                    text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+                    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAMAAABFoMFOAAAAWlBMV…8/UxBxQDQuFwlpqgBZBq6+P+unVY1GnDgwqbD2zGz5e1lBdwvGGPE6OgAAAABJRU5ErkJggg==);
+                    background-repeat: repeat-x;
+                    background-size: auto;
+                    background-position: 0 0;
+                    background-color: #3a5795;
+                    border: 0;
+                    border-bottom: 1px solid #133783;
+                    z-index: 9999999;
+                    margin-right: 12px;
+                    font-size: 18px;
+                }
+
+                    #cfacebook a.chat_fb:hover {
+                        color: yellow;
+                        text-decoration: none;
+                    }
+
+            .zalo-icon {
+                width: auto !important;
+                height: auto !important;
+            }
+        </style>
+    </form>
+</body>
+</html>

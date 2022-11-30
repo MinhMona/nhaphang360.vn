@@ -1,0 +1,400 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NHAPHANG360.master.cs" Inherits="NHST.NHAPHANG360" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="/App_Themes/NH360/js/WOW-master/animate.css">
+    <link rel="stylesheet" href="/App_Themes/NH360/js/Magnific-Popup-master/magnific-popup.css">
+    <link rel="stylesheet" href="/App_Themes/NH360/js/Font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/App_Themes/NH360/css/style.css">
+
+    <title>NHẬP HÀNG 360</title>
+
+    <script src="/App_Themes/ThuongHaiOrder/js/jquery-3.4.1.min.js"></script>
+    <link href="App_Themes/NewUI/js/sweet/sweet-alert.css" rel="stylesheet" />
+    <asp:Literal runat="server" ID="ltrHeader"></asp:Literal>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="header">
+            <div class="top-header">
+                <div class="container isner">
+                    <div class="top-info-nav">
+                        <ul class="list-nav-top">
+                            <asp:Literal runat="server" ID="ltrTop"></asp:Literal>
+                            <li class="acount">
+                                <div class="user-box">
+                                    <div class="acc-info">
+                                        <asp:Literal runat="server" ID="ltrLogin"></asp:Literal>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main-header">
+                <div class="container isner">
+                    <div class="main-logo">
+                        <asp:Literal runat="server" ID="ltrLogo"></asp:Literal>
+                    </div>
+                    <div class="main-menu">
+                        <asp:Literal runat="server" ID="ltrMenu"></asp:Literal>
+                        <div class="main-menu-overlay"></div>
+                    </div>
+                    <div class="hamburger-btn main-menu-btn">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <%-- <div id="cfacebook">
+            <a href="javascript:;" class="chat_fb" onclick="return:false;"><i class="fa fa-facebook-square"></i> Liên hệ NH360</a>
+            <div class="fchat">
+                <div class="fb-page" data-tabs="messages" data-href="https://www.facebook.com/https://www.facebook.com/Nh%E1%BA%ADp-h%C3%A0ng-360-107347411444716" data-width="250" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"></div>
+            </div>
+        </div>--%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer class="footer">
+            <div class="container">
+                <div class="table-footer">
+                    <div class="colums row">
+                        <div class="colum col col-4 col-m-12">
+                            <div class="content">
+                                <div class="box-logo">
+                                    <a href="/">
+                                        <img src="/App_Themes/NH360/images/logo.png" alt=""></a>
+                                </div>
+                                <%--<p class="desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in sagittis risus. Nam id
+                                </p>--%>
+                                <p class="design">
+                                    Designed and developed by <span class="color-yellow">NHẬP HÀNG 360</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="colum col col-1 col-m-0"></div>
+                        <div class="colum col col-3 col-m-12">
+                            <div class="content">
+                                <h3 class="txt">Menu
+                                </h3>
+                                <ul class="list-menu">
+                                    <li>
+                                        <a href="#">Trang chủ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Giới thiệu</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sản phẩm</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tin tức</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Liên hệ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="colum col col-1 col-m-0"></div>
+                        <div class="colum col col-3 col-m-12">
+                            <div class="content other">
+                                <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/Nh%E1%BA%ADp-h%C3%A0ng-360-107347411444716"
+                                    data-tabs="timeline" data-small-header="true" data-adapt-container-width="true"
+                                    data-hide-cover="true" data-show-facepile="true" fb-xfbml-state="rendered"
+                                    fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1916689885307106&amp;container_width=293&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Fthietkewebsitemonamedia%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true&amp;tabs=timeline">
+                                    <span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;">
+                                        <iframe
+                                            name="f27701494e21e84" frameborder="0"
+                                            allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                                            title="fb:page Facebook Social Plugin"
+                                            src="https://www.facebook.com/v3.2/plugins/page.php?adapt_container_width=true&amp;app_id=1916689885307106&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fvy-MhgbfL4v.js%3Fversion%3D44%23cb%3Df1932ab48bc2d68%26domain%3D%26origin%3Dfile%253A%252F%252F%252Ff3109b65c732ecc%26relation%3Dparent.parent&amp;container_width=293&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Fthietkewebsitemonamedia%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true&amp;tabs=timeline"
+                                            style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script>
+            window.fbAsyncInit = function () {
+                FB.init({
+                    xfbml: true,
+                    version: 'v10.0'
+                });
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <!-- Your Chat Plugin code -->
+        <div class="fb-customerchat"
+            attribution="setup_tool"
+            page_id="107347411444716"
+            logged_in_greeting="Nhập Hàng 360 Xin chào!"
+            logged_out_greeting="Nhập Hàng 360 Xin chào!">
+        </div>
+
+        <ul class="fixed-nav">
+
+            <%-- <li class="rel-zalo">
+                <div class="info-zalo">
+                    <p>Mr: Trung</p>
+                    <span>CSKH</span>
+                </div>
+                <div class="ic-zalo">
+                    <a href="">
+                        <img src="/App_Themes/NH360/images/zalo.png" alt="">
+                    </a>
+                </div>
+            </li>
+            <li class="rel-zalo">
+                <div class="info-zalo">
+                    <p>Mr: Trung</p>
+                    <span>Giám đốc âm nhạc</span>
+                </div>
+                <div class="ic-zalo">
+                    <a href="">
+                        <img src="/App_Themes/NH360/images/zalo.png" alt="">
+                    </a>
+                </div>
+            </li>
+            <li class="rel-zalo">
+                <div class="info-zalo">
+                    <p>Mr: Trung</p>
+                    <span>Giám đốc âm nhạc</span>
+                </div>
+                <div class="ic-zalo">
+                    <a href="">
+                        <img src="/App_Themes/NH360/images/zalo.png" alt="">
+                    </a>
+                </div>
+            </li>
+            <li class="rel-zalo">
+                <div class="info-zalo">
+                    <p>Mr: Trung</p>
+                    <span>Giám đốc âm nhạc</span>
+                </div>
+                <div class="ic-zalo">
+                    <a href="">
+                        <img src="/App_Themes/NH360/images/zalo.png" alt="">
+                    </a>
+                </div>
+            </li>--%>
+
+            <asp:Literal runat="server" ID="ltrZalo1"></asp:Literal>
+            <asp:Literal runat="server" ID="ltrZalo2"></asp:Literal>
+            <asp:Literal runat="server" ID="ltrZalo3"></asp:Literal>
+            <asp:Literal runat="server" ID="ltrZalo4"></asp:Literal>
+            <asp:Literal runat="server" ID="ltrZalo5"></asp:Literal>
+        </ul>
+        <div class="m-backtotop" aria-hidden="true">
+            <div class="arrow">
+                <i class="fa fa-caret-up" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+                Back to top
+            </div>
+        </div>
+        <div id="test-popup" class="white-popup mfp-hide">
+            <iframe class="embed-responsive-item" width="auto" height="auto" src="https://www.youtube.com/embed/qN3OueBm9F4?autoplay=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <script src="/App_Themes/NH360/js/jquery-3.4.1.min.js"></script>
+        <script src="/App_Themes/NH360/js/WOW-master/wow.min.js"></script>
+        <script src="/App_Themes/NH360/js/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
+        <script src="/App_Themes/NH360/js/main.js"></script>
+        <script src="/App_Themes/NHAZ/js/sweet/sweet-alert.js" type="text/javascript"></script>
+        <script src="/App_Themes/NH360/js/search.js"></script>
+        <script>
+            new WOW().init();
+            function isEmpty(str) {
+                return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
+            }
+
+            //jQuery(document).ready(function () {
+            //    jQuery(".chat_fb").click(function () {
+            //        jQuery('.fchat').toggle('slow');
+            //    });
+            //});
+
+            //(function (d, s, id) {
+            //    var js, fjs = d.getElementsByTagName(s)[0];
+            //    if (d.getElementById(id)) return;
+            //    js = d.createElement(s); js.id = id;
+            //    js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1916689885307106&autoLogAppEvents=1';
+            //    fjs.parentNode.insertBefore(js, fjs);
+            //}(document, 'script', 'facebook-jssdk'));
+        </script>
+        <style>
+            #cfacebook {
+                position: fixed;
+                bottom: 0px;
+                right: 20px;
+                z-index: 999999999999999;
+                width: 250px;
+                height: auto;
+                box-shadow: 6px 6px 6px 10px rgba(0,0,0,0.2);
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                overflow: hidden;
+            }
+
+                #cfacebook .fchat {
+                    float: left;
+                    width: 100%;
+                    height: 270px;
+                    overflow: hidden;
+                    display: none;
+                    background-color: #fff;
+                }
+
+                    #cfacebook .fchat .fb-page {
+                        margin-top: -130px;
+                        float: left;
+                    }
+
+                #cfacebook a.chat_fb {
+                    float: left;
+                    padding: 0 25px;
+                    width: 250px;
+                    color: #fff;
+                    text-decoration: none;
+                    height: 40px;
+                    line-height: 40px;
+                    text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+                    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAMAAABFoMFOAAAAWlBMV…8/UxBxQDQuFwlpqgBZBq6+P+unVY1GnDgwqbD2zGz5e1lBdwvGGPE6OgAAAABJRU5ErkJggg==);
+                    background-repeat: repeat-x;
+                    background-size: auto;
+                    background-position: 0 0;
+                    background-color: #3a5795;
+                    border: 0;
+                    border-bottom: 1px solid #133783;
+                    z-index: 9999999;
+                    margin-right: 12px;
+                    font-size: 18px;
+                }
+
+                    #cfacebook a.chat_fb:hover {
+                        color: yellow;
+                        text-decoration: none;
+                    }
+
+            .zalo-icon {
+                width: auto !important;
+                height: auto !important;
+            }
+
+            .fixed-contact {
+                position: fixed;
+                right: 15px;
+                top: 30%;
+                z-index: 99999;
+                display: inline-block;
+            }
+
+                .fixed-contact img {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                }
+
+            .fixed-nav {
+                position: fixed;
+                bottom: 50%;
+                right: 1%;
+                list-style-type: none;
+                z-index: 999;
+                transform: translateY(50%);
+            }
+
+                .fixed-nav li {
+                    margin-bottom: 15px;
+                }
+
+
+                    .fixed-nav li a {
+                        display: block;
+                        width: 100%;
+                    }
+
+                        .fixed-nav li a img {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+
+            @media screen and (max-width: 768px) {
+                .fixed-nav {
+                    width: 50px;
+                }
+            }
+
+            .rel-zalo {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                background-color: rgba(0,0,0,.6);
+                padding: 7.5px 7.5px;
+                align-items: center;
+                border-radius: 30px;
+
+            }
+
+            .fixed-nav li a img {
+                width: 80%;
+            }
+
+            .info-zalo {
+                text-align: right;
+                white-space: nowrap;
+                padding: 0 10px;
+            }
+
+                .info-zalo p {
+                    color: #7bb062;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+                .info-zalo span {
+                    font-style: italic;
+                    width: 150px;
+                    color: white;
+                }
+
+                .ic-phone-extra img{
+                    width: 50px !important;
+                    margin-right: 15px;
+                }
+
+        </style>
+    </form>
+</body>
+</html>

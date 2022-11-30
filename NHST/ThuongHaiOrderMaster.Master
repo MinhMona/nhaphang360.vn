@@ -1,0 +1,294 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ThuongHaiOrderMaster.master.cs" Inherits="NHST.ThuongHaiOrderMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="/App_Themes/ThuongHaiOrder/js/WOW-master/animate.css">
+    <link rel="stylesheet" href="/App_Themes/ThuongHaiOrder/js/Magnific-Popup-master/magnific-popup.css">
+    <link rel="stylesheet" href="/App_Themes/ThuongHaiOrder/js/Font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/App_Themes/ThuongHaiOrder/css/style.css">
+    <title>Thương Hải Order</title>
+
+    <script src="/App_Themes/ThuongHaiOrder/js/jquery-3.4.1.min.js"></script>
+    <link href="App_Themes/NewUI/js/sweet/sweet-alert.css" rel="stylesheet" />
+    <asp:Literal runat="server" ID="ltrHeader"></asp:Literal>
+    <asp:Literal ID="ltrSEO" runat="server"></asp:Literal>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Literal ID="ltr_infor" runat="server"></asp:Literal>
+        <%--header--%>
+        <header class="header">
+            <div class="top-header">
+                <div class="container isner">
+                    <div class="top-info-nav">
+                        <ul class="list-nav-top">
+                            <asp:Literal runat="server" ID="ltrTop"></asp:Literal>
+                            <li class="acount">
+                                <div class="user-box">
+                                    <div class="acc-info">
+                                        <asp:Literal runat="server" ID="ltrLogin"></asp:Literal>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main-header">
+                <div class="container isner">
+                    <div class="main-logo">
+                        <a href="#">
+                            <asp:Literal runat="server" ID="ltrLogo"></asp:Literal>
+                        </a>
+                    </div>
+                    <div class="main-menu">
+                        <ul class="main-menu-nav">
+                            <asp:Literal runat="server" ID="ltrMenu"></asp:Literal>
+                        </ul>
+                        <div class="main-menu-overlay"></div>
+                    </div>
+                    <div class="hamburger-btn main-menu-btn">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <%--footer--%>
+        <footer class="footer">
+            <div class="container">
+                <div class="table-footer">
+                    <div class="columns">
+                        <div class="colum">
+                            <div class="content">
+                                <div class="box-logo">
+                                    <a href="#">
+                                        <img src="/App_Themes/ThuongHaiOrder/images/logo-ft.png" alt=""></a>
+                                </div>
+                                <p class="desc">
+                                </p>
+                                <p class="design">
+                                    Designed and developed by <span class="color-yellow">ThuongHai Logistics</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="colum">
+                            <div class="content">
+                                <h3 class="txt">Menu
+                                </h3>
+                                <ul class="list-menu">
+                                    <li>
+                                        <a href="/Default.aspx">Trang chủ</a>
+                                    </li>
+                                    <li>
+                                        <a href="/chuyen-muc/gioi-thieu">Giới thiệu</a>
+                                    </li>
+                                    <li>
+                                        <a href="/chuyen-muc/huong-dan">Hướng Dẫn</a>
+                                    </li>
+                                    <li>
+                                        <a href="/chuyen-muc/tin-tuc">Tin tức</a>
+                                    </li>
+                                    <li>
+                                        <a href="/chuyen-muc/huong-dan">Liên hệ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="colum">
+                            <div class="content">
+                                <div class="box-img">
+                                    <img src="/App_Themes/ThuongHaiOrder/images/capcha.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="colum">
+                            <div class="content">
+                                <div class="item-footer">
+                                    <div class="fb-page" data-href="https://www.facebook.com/thuonghailogistics" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
+                                        <blockquote cite="https://www.facebook.com/thuonghailogistics" class="fb-xfbml-parse-ignore">
+                                            <a href="https://www.facebook.com/thuonghailogistics">NHẬP HÀNG 360</a>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+      <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+          window.fbAsyncInit = function () {
+              FB.init({
+                  xfbml: true,
+                  version: 'v9.0'
+              });
+          };
+
+          (function (d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+              fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="112145696934075"
+  theme_color="#ffc300"
+  logged_in_greeting="NHẬP HÀNG 360 Xin chào!"
+  logged_out_greeting="NHẬP HÀNG 360 Xin chào!">
+      </div>
+
+
+
+
+
+           <div class="btn-fixed-social">
+          <%--  <asp:Literal runat="server" ID="ltrHotPhone"></asp:Literal>--%>
+            <asp:Literal runat="server" ID="ltrZalo"></asp:Literal>
+        </div>
+        <div class="zalo-chat-widget" data-oaid="1276774031163099086" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>
+        <div class="m-backtotop" aria-hidden="true">
+            <div class="arrow">
+                <i class="fa fa-caret-up" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+                Back to top
+            </div>
+        </div>
+        <div id="test-popup" class="white-popup mfp-hide">
+            <iframe class="embed-responsive-item" width="auto" height="auto" src="https://www.youtube.com/embed/qN3OueBm9F4?autoplay=1?muted" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <script src="/App_Themes/ThuongHaiOrder/js/WOW-master/wow.min.js"></script>
+        <script src="/App_Themes/ThuongHaiOrder/js/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
+        <script src="/App_Themes/ThuongHaiOrder/js/main.js"></script>
+        <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+
+        <script>
+            new WOW().init();
+            function isEmpty(str) {
+                return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
+            }
+            function closewebinfo() {
+                $.ajax({
+                    type: "POST",
+                    url: "/Default.aspx/closewebinfo",
+                    //data: "{ID:'" + id + "',UserName:'" + username + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        if (msg.d == "ok") {
+                            $(".webinfo").remove();
+                        }
+                    },
+                    error: function (xmlhttprequest, textstatus, errorthrow) {
+                        alert('lỗi');
+                    }
+                });
+            }
+        </script>
+
+
+       
+     
+
+
+
+      <%--  <script>
+            window.fbAsyncInit = function () {
+                FB.init({
+                    xfbml: true,
+                    version: 'v8.0'
+                });
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+        <!-- Your Chat Plugin code -->
+        <div class="fb-customerchat"
+            attribution="setup_tool"
+            page_id="196021427414405"
+            logged_in_greeting="NHẬP HÀNG 360 chào bạn,"
+            logged_out_greeting="NHẬP HÀNG 360 chào bạn,">
+        </div>
+
+        <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1916689885307106&autoLogAppEvents=1';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>--%>
+
+         <style>
+        .btn-fixed-social .icon-dt {
+            width: 70px;
+            height: 70px;
+            display: block;
+            position: absolute;
+            bottom: 62px;
+            right: -6px;
+        }
+
+        .btn-fixed-social .icon-zalo {
+            width: 60px;
+            height: 60px;
+            display: block;
+        }
+
+        .btn-fixed-social {
+            position: fixed;
+            bottom: 86px;
+            right: 20px;
+        }
+
+        .scroll-top-link {
+            position: fixed;
+            right: 19px;
+            bottom: 222px;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            line-height: 38px;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 6px;
+            text-align: center;
+            background-color: #cfd4dd;
+            border: rgba(41, 170, 225, 0.5) 5px solid;
+        }
+    </style>
+    </form>
+</body>
+</html>
+

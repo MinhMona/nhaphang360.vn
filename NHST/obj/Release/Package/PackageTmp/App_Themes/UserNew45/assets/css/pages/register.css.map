@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAMA,YAAY,CACX,gBAAgB,CAAE,uCAAuC,CACzD,iBAAiB,CAAE,SAAS,CAC5B,eAAe,CAAE,KAAK,CAGvB,cAAc,CACb,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,KAAK,CAEb,wDAAyC,CACxC,WAAW,CAAE,YAAY",
+"sources": ["../../sass/pages/register.scss"],
+"names": [],
+"file": "register.css"
+}

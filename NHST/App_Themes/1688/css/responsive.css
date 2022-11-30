@@ -1,0 +1,259 @@
+@media screen and (min-width: 1400px) {
+  .chungtoicamket .wrap {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 1190px) {}
+
+@media screen and (max-width: 1060px) {}
+
+@media screen and (max-width: 930px) {
+  .scroll-top-link {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+  }
+  .scroll-top-link>i {
+    -webkit-transform: translate(0, -4px);
+    -ms-transform: translate(0, -4px);
+    transform: translate(0, -4px);
+  }
+  body {
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+  }
+  body.menuin {
+    margin-left: 270px;
+    margin-right: -270px;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw
+  }
+  #header .nav-ul>li .dropdown-menu li {
+    padding-left: 5px;
+  }
+  #header .hd-main .main-right {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  #header .hd-main .main-right .search {
+    margin: 0 10px;
+  }
+  .banner__top {
+    height: 450px;
+  }
+  .chinhsach .wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .chinhsach .wrap .child {
+    width: 50%;
+  }
+  .quytrinhdathang .list-step {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .quytrinhdathang .list-step::before {
+    content: none;
+  }
+  .quytrinhdathang .list-step li {
+    width: 33%;
+    margin: 15px 0;
+    padding: 0 15px;
+    text-align: center;
+  }
+  .quytrinhdathang .list-step li .img {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .chungtoicamket .wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .chungtoicamket .sec-title {
+    margin-bottom: 20px
+  }
+  .chungtoicamket .wrap .content {
+    width: 100%;
+  }
+  .chungtoicamket .wrap .img {
+    max-width: 350px;
+  }
+  .chungtoicamket .wrap .img img {
+    height: 220px;
+    width: 100%;
+  }
+  .chinhsach .wrap .child:not(:last-child),
+  .quyenloi .wrap .child:not(:last-child),
+  .contact .wrap .child:not(:last-child),
+  .quytrinhdathang .list-step li:not(:last-child) {
+    margin-right: unset;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #header .hd-top {
+    padding: 5px 0;
+  }
+  .banner_bot .wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 25px 0;
+  }
+  .banner_bot .title {
+    padding-bottom: 5px;
+  }
+  .brand .wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .brand .wrap .child {
+    width: 80%;
+    padding: 15px 30px;
+  }
+  .quyenloi .wrap,
+  .contact .wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .contact {
+    padding-bottom: 40px;
+  }
+  .connect .contact-map {
+    height: auto;
+  }
+  .connect .contact-map .google-map {
+    position: static;
+  }
+  .quyenloi .wrap .child,
+  .contact .wrap .child {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .banner_bot .button {
+    font-size: 24px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .banner_bot .button .btn {
+    width: 200px;
+    height: 50px;
+    margin: 5px;
+  }
+  .banner_bot .button .btn i {
+    font-size: 30px;
+    padding-right: 10px;
+  }
+  .chungtoicamket .wrap .content .child {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {}
+
+@media screen and (max-width: 500px) {
+  #header .search-box {
+    height: auto;
+    padding: 5px 0;
+  }
+  #header .search-box .wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  #header .search-box .wrap .select {
+    background-color: #fff;
+    margin-bottom: 5px;
+  }
+  #header .search-box .wrap .select .form-control {
+    height: 40px;
+  }
+  #header .search-box .wrap .input {
+    border: unset;
+  }
+  #header .search-box .wrap .input .form-control {
+    height: 40px;
+  }
+  .banner__top {
+    height: 350px;
+  }
+  .brand .wrap .child {
+    width: 100%;
+  }
+  .quyenloi .wrap .child,
+  .contact .wrap .child,
+  .chinhsach .wrap .child {
+    width: 100%;
+    padding: 15px 20px;
+  }
+  .chungtoicamket .wrap .content .child {
+    width: 100%;
+  }
+  .quytrinhdathang .list-step li {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  body.menuin {
+    margin-left: 200px;
+    margin-right: -200px;
+  }
+  #header .nav-wrap .nav-ul {
+    width: 200px;
+  }
+  #header .nav-wrap .dropdown-menu {
+    padding-left: unset;
+  }
+  #header .hd-top .top-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  #header .hd-top .top__left {
+    width: 100%
+  }
+  #header .hd-top .top__left .tygia {
+    display: none;
+  }
+  #header .hd-top .top__right {
+    padding: 5px 0;
+  }
+  #header .hd-main .logo img {
+    width: 130px;
+  }
+  #header .hd-main .main-right .btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {}
+
+/* ========================== CHILD PAGE ========================== */

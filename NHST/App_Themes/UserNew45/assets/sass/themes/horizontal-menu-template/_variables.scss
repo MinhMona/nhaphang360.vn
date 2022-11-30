@@ -1,0 +1,71 @@
+// ==========================================================================
+// Materialize variables
+// Extended from : components/variables.scss
+// ==========================================================================
+@import '../../components/color-variables';
+
+// 1. Colors
+// ==========================================================================
+$primary-color: #F64302;
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
+
+$secondary-color: #F64302;
+$success-color: #02820c;
+$error-color: color("red", "accent-4");
+$link-color: color("teal", "darken-4");
+
+// 3. Buttons
+// ==========================================================================
+$button-font-size: 1rem;
+$button-padding: 0 1rem;
+$button-radius: 0;
+$button-raised-background:#F64302;
+// Large buttons
+$button-large-font-size: 1rem;
+$button-floating-large-size: 4rem;
+
+// Small buttons
+$button-small-font-size: 1rem;
+
+// 4. Cards
+// ==========================================================================
+$card-link-color: color("indigo", "darken-1");
+$card-padding: 15px;
+// 10. Forms
+// ==========================================================================
+
+// Text Inputs + Textarea
+$input-font-size: 1rem;
+$input-margin-bottom: 20px;
+$input-focus-color:$primary-color;
+
+// 14. Side Navigation
+// ==========================================================================
+$sidenav-width: 260px;
+
+// Table
+
+$table-striped-color: rgba(239, 239, 239, 0.14) !default;
+
+//Tab
+$tabs-text-color: $link-color;
+
+//Form element input field
+$placeholder-text-color: #515151;
+
+//button
+$button-font-size: 0.85rem;
+
+$button-raised-background:$primary-color;
+
+//font
+$h1-fontsize: 3.5rem !default;
+$h2-fontsize: 2.56rem !default;
+$h3-fontsize: 1.92rem !default;
+$h4-fontsize: 1.64rem !default;
+$h5-fontsize: 1.28rem !default;
+$h6-fontsize: 1.15rem !default;
+
+//link
+$link-color:#3e3e3e;

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKI,6BAAkB,CACd,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,eAAe,CAAE,aAAa",
+"sources": ["../../sass/pages/badges.scss"],
+"names": [],
+"file": "badges.css"
+}

@@ -1,0 +1,16 @@
+﻿.table .action-table {
+    white-space: nowrap;
+    display: inline-flex;
+}
+
+    .table .action-table > a {
+        margin: 5px 3px;
+    }
+
+        .table .action-table > a:hover {
+            color: #fff;
+        }
+
+input:disabled, select:disabled {
+    background: rgb(235, 235, 228);
+}

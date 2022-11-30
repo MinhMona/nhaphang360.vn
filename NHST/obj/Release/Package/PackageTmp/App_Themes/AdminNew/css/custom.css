@@ -1,0 +1,835 @@
+/* ---------------------------------------------------------------------- */
+/*  Tables
+/* ---------------------------------------------------------------------- */
+.table {
+    border-collapse: separate;
+}
+
+    .table > thead > tr > th {
+        border-top: none;
+    }
+
+.table-bordered.table > thead > tr > th {
+    border-bottom: 1px solid #ddd;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-bottom: 1px solid #e2e2e4;
+    color: #5b5b60 !important;
+    border-top: none;
+}
+
+.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
+    background-color: #e7e7e9;
+}
+
+.table > tbody > tr.active > td, .table > tbody > tr.active > th {
+    background-color: #e7e7e9 !important;
+    color: #5b5b60 !important;
+}
+
+.table > tbody > tr.active:hover > td, .table > tbody > tr.active:hover > th {
+    background-color: #dddcdf !important;
+    color: #5b5b60 !important;
+}
+
+th.center, td.center {
+    text-align: center;
+}
+
+    td.center .dropdown-menu {
+        text-align: left;
+    }
+
+td.small-width {
+    width: 15%;
+}
+
+.table thead tr {
+    color: #707070;
+    font-weight: normal;
+}
+
+.table.table-bordered {
+    border-right: none;
+    border-bottom: none;
+}
+
+    .table.table-bordered thead tr th {
+        vertical-align: middle;
+    }
+
+    .table.table-bordered > thead > tr > th, .table.table-bordered > tbody > tr > th, .table.table-bordered > tfoot > tr > th, .table.table-bordered > thead > tr > td, .table.table-bordered > tbody > tr > td, .table.table-bordered > tfoot > tr > td {
+        border-top: none;
+        border-left: none;
+    }
+
+    .table.table-bordered > thead > tr > th, .table.table-bordered > tbody > tr > th, .table.table-bordered > tfoot > tr > th, .table.table-bordered > thead > tr > td, .table.table-bordered > tbody > tr > td, .table.table-bordered > tfoot > tr > td {
+        border-top: none;
+        border-left: none;
+    }
+
+.table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
+    vertical-align: middle;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) {
+    background-color: #efeff0;
+}
+
+.table-detail tr td {
+    background: rgba(147, 200, 216, 0.17) !important;
+}
+
+.editable-element {
+    border-bottom: 1px dashed #0088CC;
+    text-decoration: none;
+    opacity: 0.5;
+    display: inline;
+}
+
+.ng-table th {
+    text-align: left !important;
+}
+
+.ng-table .plus, .ng-table .minus {
+    font-weight: bold;
+    padding-left: 18px;
+    position: relative;
+}
+
+    .ng-table .plus:before, .ng-table .minus:before {
+        content: "";
+        border-width: 4px;
+        border-style: solid;
+        left: 8px;
+        top: 50%;
+        position: absolute;
+        margin-top: -2px;
+    }
+
+.ng-table .plus {
+    color: green;
+}
+
+    .ng-table .plus:before {
+        border-color: green;
+        border-top: none;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+    }
+
+.ng-table .minus {
+    color: red;
+}
+
+    .ng-table .minus:before {
+        border-color: red;
+        border-bottom: none;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+    }
+
+.odd {
+    background: #EFEFF0;
+}
+
+.even {
+    background: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .ng-table-pager {
+        text-align: center;
+    }
+
+        .ng-table-pager .ng-table-counts {
+            float: none !important;
+        }
+
+        .ng-table-pager .pagination {
+            display: block;
+        }
+
+            .ng-table-pager .pagination li {
+                display: inline-block;
+            }
+}
+/*LEO*/
+.loadingPanel {
+    background-color: #fff;
+    opacity: 0.7 !important;
+    background-position: initial;
+    background-repeat: inherit;
+    z-index: 9999999;
+}
+/*Grid Page Custom CSS*/
+/* default*/
+.RadGrid td.rgPagerCell {
+    border: 0;
+    padding: 5px 0 4px;
+    float: right;
+}
+
+.RadGrid .rgWrap {
+    float: left;
+    padding: 0 10px;
+    line-height: 22px;
+    white-space: nowrap;
+}
+
+.RadGrid .rgPageFirst, .RadGrid .rgPagePrev {
+    margin-right: 1px;
+}
+
+.RadGrid .rgPageFirst, .RadGrid .rgPagePrev, .RadGrid .rgPageNext, .RadGrid .rgPageLast {
+    width: 22px;
+    height: 22px;
+    vertical-align: top;
+}
+
+.RadGrid .rgPagePrev, .RadGrid .rgPageNext, .RadGrid .rgPageFirst, .RadGrid .rgPageLast, .RadGrid .rgSortAsc, .RadGrid .rgSortDesc, .RadGrid .rgUpdate, .RadGrid .rgCancel {
+    width: 16px;
+    height: 16px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    font-size: 1px;
+    cursor: pointer;
+}
+
+.RadGrid .rgNumPart a.rgCurrentPage:hover, .RadGrid .rgNumPart a.rgCurrentPage span, .RadGrid .rgNumPart a.rgCurrentPage:hover span {
+    cursor: default;
+    text-decoration: none;
+}
+
+.RadGrid .rgNumPart a {
+    float: left;
+    line-height: 22px;
+    margin: 0;
+    padding: 0 5px 0 0;
+    margin-top: -1px;
+    text-decoration: none;
+}
+/*custom*/
+.rgAdvPart {
+    display: none !important;
+}
+
+.rgArrPart1 input[type=button], .rgArrPart2 input[type=button] {
+    width: 0 !important;
+}
+
+.rgArrPart1, .rgArrPart2 {
+    color: #797979;
+    background: #fff;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    float: left;
+    margin: 0 1px;
+    border: 1px solid #ddd;
+    padding: 2px 10px !important;
+    text-decoration: none;
+}
+
+.rgNumPart a {
+    margin-right: 5px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+    padding: 1px 10px !important;
+}
+
+    .rgNumPart a:last-child {
+        margin-right: 0px !important;
+    }
+
+    .rgNumPart a span {
+        padding-left: 0px !important;
+    }
+
+.rgCurrentPage {
+    color: #797979;
+    background: #eee;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+@media screen and (max-width:401px) {
+
+    .RadGrid .rgWrap {
+        padding: 2px 4px !important;
+    }
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.rd-db label {
+    vertical-align: bottom !important;
+    padding-right: 20px;
+}
+
+@media print {
+    .navbar, .sidebar, .no-print {
+        visibility: hidden;
+        display: none;
+    }
+}
+/**/
+.aspNetDisabled {
+    cursor: not-allowed;
+    opacity: 1;
+    background: #f7f7f7;
+    border-color: #d2d7db;
+}
+
+.Ans-right {
+    color: #3BD47F !important;
+}
+
+.Ans-wrong {
+    color: #E20F0F !important;
+}
+
+.rcbSlide {
+    z-index: 99999999 !important;
+}
+/* new page **/
+.rgArrPart1 .rgPageFirst, .rgArrPart1 .rgPagePrev {
+    display: none !important;
+}
+
+.rgArrPart2 .rgPageNext, .rgArrPart2 .rgPageLast {
+    display: none !important;
+}
+
+.RadGrid_MetroTouch td.rgPagerCell {
+    border: 0 !important;
+}
+
+.RadGrid_MetroTouch .rgWrap {
+    line-height: 26px !important;
+}
+
+.RadGrid .rgNumPart {
+    padding: 0 2px !important;
+}
+
+.active-question {
+    background: Red !important;
+}
+
+/***
+Tiles(new in v1.1.1)
+***/
+.tiles {
+    margin-right: -10px;
+}
+
+    .tiles:before, .tiles:after {
+        display: table;
+        content: " ";
+    }
+
+    .tiles:after {
+        clear: both;
+    }
+
+    .tiles .tile {
+        display: block;
+        letter-spacing: 0.02em;
+        float: left;
+        height: 135px;
+        width: 135px !important;
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffffff;
+        position: relative;
+        font-weight: 300;
+        font-size: 12px;
+        letter-spacing: 0.02em;
+        line-height: 20px;
+        overflow: hidden;
+        border: 4px solid transparent;
+        margin: 0 10px 10px 0;
+    }
+
+        .tiles .tile:after, .tiles .tile:before {
+            content: "";
+            float: left;
+        }
+
+        .tiles .tile.double {
+            width: 275px !important; /*calc(25% - 10px) !important;*/
+        }
+
+        .tiles .tile.double-down {
+            height: 280px !important;
+        }
+
+            .tiles .tile.double-down i {
+                margin-top: 95px;
+            }
+
+        .tiles .tile:hover {
+            border-color: #aaa !important;
+        }
+
+        .tiles .tile:active, .tiles .tile.selected {
+            border-color: #ccc !important;
+        }
+
+            .tiles .tile.selected .corner:after {
+                content: "";
+                display: inline-block;
+                border-left: 40px solid transparent;
+                border-bottom: 40px solid transparent;
+                border-right: 40px solid #ccc;
+                position: absolute;
+                top: -3px;
+                right: -3px;
+            }
+
+            .tiles .tile.selected .check:after {
+                content: "";
+                font-family: FontAwesome;
+                font-size: 13px;
+                content: "\f00c";
+                display: inline-block;
+                position: absolute;
+                top: 2px;
+                right: 2px;
+            }
+
+        .tiles .tile.icon {
+            padding: 0;
+        }
+
+        .tiles .tile.image .tile-body {
+            padding: 0 !important;
+        }
+
+            .tiles .tile.image .tile-body > img {
+                width: 100%;
+                height: auto;
+                min-height: 100%;
+                max-width: 100%;
+            }
+
+            .tiles .tile.image .tile-body h3 {
+                display: inline-block;
+            }
+
+        .tiles .tile .tile-body {
+            height: 100%;
+            vertical-align: top;
+            padding: 10px 10px;
+            overflow: hidden;
+            position: relative;
+            font-weight: 400;
+            font-size: 12px;
+            color: #000000;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+            .tiles .tile .tile-body p {
+                font-weight: 400;
+                font-size: 13px;
+                color: #000000;
+                color: #ffffff;
+                line-height: 20px;
+                overflow: hidden;
+            }
+
+                .tiles .tile .tile-body p:hover {
+                    color: rgba(0, 0, 0, 0.8);
+                }
+
+                .tiles .tile .tile-body p:active {
+                    color: rgba(0, 0, 0, 0.4);
+                }
+
+                .tiles .tile .tile-body p:hover {
+                    color: #ffffff;
+                }
+
+            .tiles .tile .tile-body img {
+                float: left;
+                margin-right: 10px;
+            }
+
+                .tiles .tile .tile-body img.pull-right {
+                    float: right !important;
+                    margin-left: 10px;
+                    margin-right: 0px;
+                }
+
+            .tiles .tile .tile-body > .content {
+                display: inline-block;
+            }
+
+            .tiles .tile .tile-body > i {
+                margin-top: 17px;
+                display: block;
+                font-size: 56px;
+                line-height: 56px;
+                text-align: center;
+            }
+
+            .tiles .tile .tile-body h1,
+            .tiles .tile .tile-body h2,
+            .tiles .tile .tile-body h3,
+            .tiles .tile .tile-body h4,
+            .tiles .tile .tile-body h5,
+            .tiles .tile .tile-body h6,
+            .tiles .tile .tile-body p {
+                padding: 0;
+                margin: 0;
+                line-height: 14px;
+            }
+
+                .tiles .tile .tile-body h1:hover,
+                .tiles .tile .tile-body h2:hover,
+                .tiles .tile .tile-body h3:hover,
+                .tiles .tile .tile-body h4:hover,
+                .tiles .tile .tile-body h5:hover,
+                .tiles .tile .tile-body h6:hover,
+                .tiles .tile .tile-body p:hover {
+                    color: #ffffff;
+                }
+
+            .tiles .tile .tile-body h3,
+            .tiles .tile .tile-body h4 {
+                margin-bottom: 5px;
+            }
+
+        .tiles .tile .tile-object {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            min-height: 30px;
+            background-color: transparent;
+            *zoom: 1;
+        }
+
+            .tiles .tile .tile-object:before, .tiles .tile .tile-object:after {
+                display: table;
+                content: "";
+            }
+
+            .tiles .tile .tile-object:after {
+                clear: both;
+            }
+
+            .tiles .tile .tile-object > .name {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                margin-bottom: 5px;
+                margin-left: 10px;
+                margin-right: 15px;
+                font-weight: 400;
+                font-size: 13px;
+                color: #ffffff;
+            }
+
+                .tiles .tile .tile-object > .name > i {
+                    vertical-align: middle;
+                    display: block;
+                    font-size: 24px;
+                    height: 18px;
+                    width: 24px;
+                }
+
+            .tiles .tile .tile-object > .number {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin-bottom: 0;
+                color: #ffffff;
+                text-align: center;
+                font-weight: 600;
+                font-size: 14px;
+                letter-spacing: 0.01em;
+                line-height: 14px;
+                margin-bottom: 8px;
+                margin-right: 10px;
+            }
+
+.bg-red-intense {
+    border-color: #e35b5a !important;
+    background-image: none !important;
+    background-color: #e35b5a !important;
+    color: #FFFFFF !important;
+}
+
+.bg-yellow-gold {
+    border-color: #e87e04 !important;
+    background-image: none !important;
+    background-color: #e87e04 !important;
+    color: #fff !important;
+}
+
+.bg-blue {
+    background-image: none !important;
+    background-color: #3598dc !important;
+    color: #fff !important;
+}
+
+.bg-blue-hoki {
+    border-color: #67809f !important;
+    background-image: none !important;
+    background-color: #67809f !important;
+    color: #fff !important;
+}
+
+.bg-green {
+    border-color: #36d7b7 !important;
+    background-image: none !important;
+    background-color: #36d7b7 !important;
+    color: #fff !important;
+}
+
+.bg-orange {
+    border-color: #36d7b7 !important;
+    background-image: none !important;
+    background-color: orange !important;
+    color: #fff !important;
+    padding: 5px 10px;
+}
+
+.bg-blue-madison {
+    border-color: #578ebe !important;
+    background-image: none !important;
+    background-color: #578ebe !important;
+    color: #fff !important;
+}
+
+.bg-red-thunderbird {
+    border-color: #d91e18 !important;
+    background-image: none !important;
+    background-color: #d91e18 !important;
+    color: #fff !important;
+}
+
+.bg-red {
+    background: red;
+    color: #fff;
+    /*width: 100%;*/
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.bg-black {
+    background: black;
+    color: #fff;
+    width: 100%;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.bg-bronze {
+    background: rgb(230, 200, 127);
+    color: #4a4a4a;
+    width: 100%;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.bg-green {
+    background: rgba(53,154,34,1);
+    color: #fff;
+    width: 100%;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.bg-yellow {
+    background: yellow;
+    color: #4a4a4a;
+    width: 100%;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.bg-blue {
+    background: blue;
+    color: #fff;
+    width: 100%;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+/*Bill CSS*/
+.print-bill {
+    float: left;
+    width: 100%;
+    font-family: 'Times New Roman';
+    margin-bottom: 50px;
+}
+
+    .print-bill .top {
+        float: left;
+        width: 100%;
+    }
+
+        .print-bill .top .left {
+            float: left;
+            width: 25%;
+        }
+
+        .print-bill .top .right {
+            float: right;
+            width: 25%;
+            text-align: center;
+        }
+
+        .print-bill .top .left .company-info {
+            float: left;
+            font-size: 11px;
+            font-weight: bold;
+            clear: both;
+            margin-bottom: 5px;
+        }
+
+        .print-bill .top .left .company-info {
+            float: left;
+            font-size: 11px;
+            font-weight: bold;
+            clear: both;
+        }
+
+        .print-bill .top .right .bill-num {
+            float: left;
+            width: 100%;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 10px;
+        }
+
+        .print-bill .top .right .bill-promulgate-date {
+            float: left;
+            width: 100%;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 10px;
+        }
+
+    .print-bill .bill-title {
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+
+        .print-bill .bill-title h1 {
+            font-size: 24px;
+            font-weight: bold;
+            float: left;
+            width: 100%;
+            margin: 0 0 10px 0;
+        }
+
+        .print-bill .bill-title .bill-date {
+            font-size: 14px;
+            float: left;
+            width: 100%;
+        }
+
+    .print-bill .bill-content {
+        float: left;
+        width: 100%;
+        clear: both;
+        margin-top: 20px;
+    }
+
+        .print-bill .bill-content .bill-row {
+            float: left;
+            width: 100%;
+            clear: both;
+            margin-bottom: 10px;
+            border-bottom: dotted 1px #ccc;
+            font-size: 14px;
+            display : block !important;
+        }
+
+            .print-bill .bill-content .bill-row .row-name {
+                float: left;
+                margin-right: 5px;
+            }
+
+            .print-bill .bill-content .bill-row .row-info {
+                float: left;
+                /*border-bottom: dotted 1px #ccc;*/
+            }
+
+            .print-bill .bill-content .bill-row .row-col {
+                float: left;
+                width: 50%;
+            }
+
+    .print-bill .bill-footer {
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+        .print-bill .bill-footer .bill-row-one {
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+
+            .print-bill .bill-footer .bill-row-one strong {
+                float: left;
+                width: 100%;
+            }
+
+            .print-bill .bill-footer .bill-row-one span.note {
+                float: left;
+                width: 100%;
+            }
+
+        .print-bill .bill-footer .bill-row-all.right {
+            float: right;
+        }
+/*End Bill CSS*/
+#main-col-wrap {
+    width: 100%;
+}
+
+.margin-top20 {
+    margin-top: 20px;
+}
+
+.form-row {
+    clear: both;
+}
+
+.col-md-25 {
+    width: 20%;
+    float: left;
+    margin-right: 25px;
+}
+.label-title {
+    float: left;
+    width: 75%;
+    font-weight: bold;
+}
+
+.label-infor {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+    text-align: right;
+}
+.border-bottom
+{
+    border-bottom:dotted 1px #ccc;
+    padding-bottom:10px;
+}

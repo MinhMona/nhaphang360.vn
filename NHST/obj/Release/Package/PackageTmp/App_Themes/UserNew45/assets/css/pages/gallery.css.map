@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKA,cAAe,CACd,KAAK,CAAE,GAAG,CAEX,iBAAkB,CACjB,KAAK,CAAE,GAAG,CAEX,mBAAoB,CACnB,OAAO,CAAE,IAAI",
+"sources": ["../../sass/pages/gallery.scss"],
+"names": [],
+"file": "gallery.css"
+}

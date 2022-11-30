@@ -1,0 +1,903 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ClientMasterNew.master.cs" Inherits="NHST.ClientMasterNew" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <title>Quản trị</title>
+    <link rel="canonical" href="https://namninhexpress.vn" />
+    <link rel="stylesheet" href="/App_Themes/UserNew/css/bootstrap.css" media="all">
+    <link href="/App_Themes/NewUI/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/App_Themes/UserNew/css/style.css" media="all">
+    <link rel="stylesheet" href="/App_Themes/UserNew/css/style-p.css" media="all">
+    <link href="/App_Themes/NewUI/js/sweet/sweet-alert.css" rel="stylesheet" type="text/css" />
+    <script src="/App_Themes/UserNew/js/jquery-1.9.1.min.js"></script>
+    <link href="/App_Themes/UserNew/css/component.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/UserNew/css/modern.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/UserNew/css/custom.css" rel="stylesheet" type="text/css" />
+    <style>
+        .rgSortAsc, .rgSortDesc {
+            display: none;
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            .form-horizontal .form-group label.control-label {
+                padding-left: 15px !important;
+            }
+        }
+
+        .form-horizontal .form-group label.control-label {
+            text-align: right !important;
+        }
+
+        .semi-text {
+            color: #e84545;
+        }
+
+        .RadForm_MetroTouch.rfdCheckbox label, .RadForm_MetroTouch.rfdRadio label {
+            vertical-align: bottom !important;
+        }
+
+        .require {
+            color: red !important;
+        }
+
+        /*.rgHeader a, .rgHeader a:hover, .rgHeader a:active {
+            color: black !important;
+        }*/
+
+        .r-1 {
+            color: red !important;
+            font-weight: bold;
+        }
+
+        .r-2 {
+            color: #3e67e0 !important;
+            font-weight: bold;
+        }
+
+        .ab {
+            height: 150px;
+        }
+
+        .show-stat-s {
+            color: #8ABDE9 !important;
+            font-weight: bold;
+        }
+
+        .show-stat-w {
+            color: #ff0000 !important;
+            font-weight: bold;
+        }
+
+        .RadUpload {
+            width: 100% !important;
+        }
+
+            .RadUpload .ruInputs li {
+                width: 23% !important;
+                float: left !important;
+                margin-bottom: 20px !important;
+                margin-right: 2% !important;
+            }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="menuin">
+    <form id="form1" runat="server" enctype="multipart/form-data">
+        <asp:ScriptManager runat="server" ID="scr">
+        </asp:ScriptManager>
+        <asp:Literal ID="ltrHotlineCall" runat="server"></asp:Literal>
+        <div id="fb-root"></div>
+        <script>
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1916689885307106&autoLogAppEvents=1';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div id="cfacebook">
+            <a href="javascript:;" class="chat_fb" onclick="return:false;"><i class="fa fa-facebook-square"></i> Phản hồi của bạn</a>
+            <div class="fchat">
+                <div class="fb-page" data-tabs="messages" data-href="https://m.facebook.com/V%E1%BA%ADn-t%E1%BA%A3i-Hoa-Ki%E1%BB%81u-398069500742691/" data-width="250" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"></div>
+            </div>
+        </div>
+        <style>
+            #cfacebook {
+                position: fixed;
+                bottom: 0px;
+                right: 20px;
+                z-index: 999999999999999;
+                width: 250px;
+                height: auto;
+                box-shadow: 6px 6px 6px 10px rgba(0,0,0,0.2);
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                overflow: hidden;
+            }
+
+                #cfacebook .fchat {
+                    float: left;
+                    width: 100%;
+                    height: 270px;
+                    overflow: hidden;
+                    display: none;
+                    background-color: #fff;
+                }
+
+                    #cfacebook .fchat .fb-page {
+                        margin-top: -130px;
+                        float: left;
+                    }
+
+                #cfacebook a.chat_fb {
+                    float: left;
+                    padding: 0 25px;
+                    width: 250px;
+                    color: #fff;
+                    text-decoration: none;
+                    height: 40px;
+                    line-height: 40px;
+                    text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+                    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAMAAABFoMFOAAAAWlBMV…8/UxBxQDQuFwlpqgBZBq6+P+unVY1GnDgwqbD2zGz5e1lBdwvGGPE6OgAAAABJRU5ErkJggg==);
+                    background-repeat: repeat-x;
+                    background-size: auto;
+                    background-position: 0 0;
+                    background-color: #3a5795;
+                    border: 0;
+                    border-bottom: 1px solid #133783;
+                    z-index: 9999999;
+                    margin-right: 12px;
+                    font-size: 18px;
+                }
+
+                    #cfacebook a.chat_fb:hover {
+                        color: yellow;
+                        text-decoration: none;
+                    }
+
+            .zalo-icon {
+                width: auto !important;
+                height: auto !important;
+            }
+        </style>
+        <script>
+            jQuery(document).ready(function () {
+                jQuery(".chat_fb").click(function () {
+                    jQuery('.fchat').toggle('slow');
+                });
+            });
+        </script>
+        <header id="header">
+            <div class="logo">
+                <a href="/">
+                    <img src="/App_Themes/UserNew/images/logo.png" alt=""></a>
+            </div>
+            <a href="javascript:;" class="nav-toggle open"><i class="fa fa-bars"></i></a>
+            <div class="" id="main-nav" style="background: #384d55">
+                <asp:Literal ID="ltrMenu" runat="server" Visible="false"></asp:Literal>
+                <asp:Literal ID="ltrUserInfo" runat="server"></asp:Literal>
+                <style>
+                    .inside-user-info {
+                        text-align: center;
+                        width: 100%;
+                        clear: both;
+                        margin: 20px 0;
+                        float: left;
+                        border-bottom: dotted 1px #fff;
+                    }
+
+                        .inside-user-info img {
+                            width: 30%;
+                            border-radius: 50%;
+                        }
+
+                        .inside-user-info .uname {
+                            float: left;
+                            width: 100%;
+                            clear: both;
+                            color: #fff;
+                        }
+
+                        .inside-user-info .process-user {
+                            background: none;
+                            height: auto;
+                            margin: 10px 0;
+                            float: left;
+                            width: 100%;
+                            clear: both;
+                        }
+
+                        .inside-user-info .u-wallet-money {
+                            float: left;
+                            width: 100%;
+                            margin: 10px 0;
+                            color: #fff;
+                        }
+                </style>
+
+                <ul class="nav-ul" style="float: left; width: 100%; clear: both">
+                    <li><a href="/gio-hang"><span class="fa fa-shopping-cart"></span>Giỏ hàng
+                        <asp:Literal ID="ltrCountCart" runat="server"></asp:Literal></a></li>
+                    <li>
+                        <a href="/danh-sach-don-hang" class="sub-toggle"><span class="fa fa-clipboard"></span>Mua hàng hộ<i class="caret"></i></a>
+                        <ul class="side-sub">
+                            <li><a href="/danh-sach-don-hang?t=1">Đơn hàng</a></li>
+                            <%--<li><a href="/tao-don-hang-khac">Tạo đơn các web TMĐT khác</a></li>
+                            <li><a href="/danh-sach-don-hang?t=3">Đơn hàng TMĐT khác</a></li>--%>
+
+                        </ul>
+                    </li>
+                    <%--<li>
+                        <a href="/danh-sach-don-van-chuyen-ho" class="sub-toggle"><span class="fa fa-clipboard"></span>Vận chuyển ký gửi<i class="caret"></i></a>
+                        <ul class="side-sub">
+                            <li><a href="/tao-don-hang-van-chuyen">Tạo đơn hàng ký gửi</a></li>
+                            <li><a href="/danh-sach-don-van-chuyen-ho">Danh sách đơn ký gửi</a></li>
+                        </ul>
+                    </li>--%>
+                    <li><a href="/tracking-mvd"><span class="fa fa-clipboard"></span>Tracking MVĐ</a></li>
+                    <%-- <li><a href="/thanh-toan-ho"><span class="fa fa-jpy"></span>Thanh toán hộ</a></li>
+                    <li>
+                        <a href="/thanh-toan-ho" class="sub-toggle"><span class="fa fa-clipboard"></span>Thanh toán hộ<i class="caret"></i></a>
+                        <ul class="side-sub">
+                            <li><a href="/thanh-toan-ho">Tạo đơn thanh toán hộ</a></li>
+                            <li><a href="/thanh-toan-ho">Danh sách đơn thanh toán hộ</a></li>
+                        </ul>
+                    </li>--%>
+                    <li>
+                        <a href="/lich-su-giao-dich" class="sub-toggle"><span class="fa fa-money"></span>Quản lý tài chính<i class="caret"></i></a>
+                        <ul class="side-sub">
+                            <li><a href="/lich-su-giao-dich">Lịch sử giao dịch</a></li>
+                            <%--<li><a href="/lich-su-giao-dich-tien-te">Lịch sử GD tiền tệ</a></li>--%>
+                            <li><a href="/nap-tien">Nạp tiền</a></li>
+                            <%--<li><a href="/nap-tien-te">Nạp tiền tệ</a></li>--%>
+                            <li><a href="/rut-tien">Rút tiền</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/khieu-nai"><span class="fa fa-th"></span>Khiếu nại</a></li>
+
+                    <li><a href="/thong-tin-nguoi-dung"><span class="fa fa-address-card"></span>Quản lý TK</a></li>
+                    <li><a href="/dang-xuat"><span class="fa fa-sign-out"></span>Sign out</a></li>
+                </ul>
+                <div class="version" style="color:#fff;display:block;">
+                    Hệ thống đặt hàng Trung Quốc<br>
+                    Gói: Chuyên Nghiệp<br>
+                    Version: 3.5<br>
+                    Dự án: NHẬP HÀNG 360<br>
+                    Ngày phát hành: 12/03/2019<br>
+                    &copy; CopyRights: Mona Media
+                </div>
+            </div>
+            <div class="hd-left">
+            </div>
+            <div class="hd-right">
+                <asp:Literal ID="ltrinfo" runat="server"></asp:Literal>
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <footer id="footer">
+        </footer>
+        <a href="javascript:;" class="scroll-top-link" id="scroll-top"><i class="fa fa-angle-up"></i></a>
+        <script src="/App_Themes/NewUI/js/select2/select2.min.js"></script>
+        <script src="/App_Themes/UserNew/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="/App_Themes/UserNew/js/jquery.counterup.min.js"></script>
+        <script src="/App_Themes/UserNew/js/master.js"></script>
+        <script src="/App_Themes/NewUI/js/sweet/sweet-alert.js" type="text/javascript"></script>
+        <script>
+            jQuery(document).ready(function () {
+
+                $('#filter-form-toggle').on('click', function () {
+                    $('#filter-form').stop().slideToggle();
+                });
+                $('#toggleAdvance').on('click', function () {
+                    $('#advance-search').stop().slideToggle();
+                });
+                $('.gallery-it').magnificPopup({
+                    type: 'image',
+                    tLoading: 'Loading image #%curr%...',
+                    gallery: {
+                        enabled: true
+                    }
+
+                });
+                $(document).on('click', '.toggle-detail-row', function () {
+                    $(this).closest('tr').toggleClass('info-in');
+                });
+                var lastScrollTop = 0;
+                $(window).scroll(function (event) {
+                    var st = $(this).scrollTop();
+                    if (st > lastScrollTop) {
+                        // downscroll code
+
+                    } else {
+                        // upscroll code
+
+                    }
+                    lastScrollTop = st;
+                    stickySide('#right-col-wrap .waypoint-trigger', '#main-col-wrap', 85);
+                });
+                stickySide('#right-col-wrap .waypoint-trigger', '#main-col-wrap', 85);
+
+                function stickySide(idString, closest, offset) {
+                    if (!$(idString).length)
+                        return;
+                    if (!$(closest).length)
+                        return;
+                    if (!$(offset))
+                        offset = 0;
+                    var fw = $(idString).width();
+                    var winTop = $(window).scrollTop();
+                    var mainHeight = $(closest).height();
+                    var mainHeightOff = $(closest).offset().top;
+                    if (winTop + offset >= mainHeightOff && winTop + offset + $(idString).height() <= mainHeightOff + mainHeight) {
+
+                        $(idString).css({
+                            position: 'fixed',
+                            width: fw + 'px',
+                            top: offset + 'px',
+                            //                top : offset+winTop-mainHeightOff+'px'
+                        });
+                    } else {
+                        if (winTop + offset < mainHeightOff) {
+                            $(idString).attr('style', '');
+                        }
+                        if (winTop + offset + $(idString).height() > mainHeightOff + mainHeight) {
+                            if (mainHeight > $(idString).height()) {
+                                $(idString).css({
+                                    top: mainHeight - $(idString).height() + 'px',
+                                    position: 'relative',
+                                });
+                            } else {
+                                $(idString).attr('style', '')
+                            }
+
+                        }
+                        // $(idString).attr('style','');
+                    }
+
+                }
+
+            });
+
+            (function ($) {
+                $.fn.goTo = function () {
+                    $('html, body').animate({
+                        scrollTop: $(this).offset().top + 'px'
+                    }, 'slow');
+                    return this;
+                }
+            })(jQuery);
+            function GotoEdit() {
+                $('#editP').goTo();
+            }
+            function Cancel() {
+                $('#topPage').goTo();
+
+            }
+            $(function () {
+
+                $('ul.menu-ui').removeClass("active open");
+                setActive(window.location.pathname);
+
+            });
+            $(document).ready(function () {
+                LoadSelect();
+            });
+            function LoadSelect() {
+                $(".select2").select2({
+                    templateResult: formatState,
+                    templateSelection: formatState
+                });
+                function formatState(opt) {
+                    if (!opt.id) {
+                        return opt.text;
+                    }
+                    var optimage = $(opt.element).data('image');
+                    if (!optimage) {
+                        return opt.text;
+                    } else {
+                        var $opt = $(
+                            '<span>' + opt.text + '</span>'
+                        );
+                        return $opt;
+                    }
+
+                };
+            }
+
+            function showContent(id, that) {
+                $('.a-question a').removeClass('active-question');
+                $(that).addClass('active-question');
+                $('.q-conent-test .form-group').addClass('hidden');
+                $('.q-conent-test #q-' + id).removeClass('hidden');
+            }
+            function setActive(path) {
+                if (path.toLowerCase().indexOf('/ehome') != -1) {
+                    $('.menu-ui li#home').addClass("active");
+                }
+                else if (path.toLowerCase().indexOf('/eregion') != -1) {
+                    $('.menu-ui li#region').addClass("active");
+                }
+                else if (path.toLowerCase().indexOf('/esubject') != -1 ||
+                    path.toLowerCase().indexOf('/esubjectchapter') != -1) {
+                    $('.menu-ui li#subject').addClass("active open");
+                }
+                else if (path.toLowerCase().indexOf('/erole') != -1 ||
+                    path.toLowerCase().indexOf('/erolelevel') != -1) {
+                    $('.menu-ui li#role').addClass("active open");
+                }
+                else if (path.toLowerCase().indexOf('/erequestexam') != -1 ||
+                    path.toLowerCase().indexOf('/eexams') != -1 ||
+                    path.toLowerCase().indexOf('/emyexam') != -1) {
+                    $('.menu-ui li#exam').addClass("active open");
+                }
+                else if (path.toLowerCase().indexOf('/estudent') != -1 ||
+                    path.toLowerCase().indexOf('/eappuser') != -1) {
+                    $('.menu-ui li#appuser').addClass("active open");
+                }
+            }
+
+
+            function OnClientFileSelected(sender, args) {
+                if ($telerik.isIE) return;
+                else {
+                    truncateName(args);
+                    //var file = args.get_fileInputField().files.item(args.get_rowIndex());
+                    var file = args.get_fileInputField().files.item(0);
+                    showThumbnail(file, args);
+                }
+            }
+
+
+            function truncateName(args) {
+                var $span = $(".ruUploadProgress", args.get_row());
+                var text = $span.text();
+                if (text.length > 23) {
+                    var newString = text.substring(0, 23) + '...';
+                    $span.text(newString);
+                }
+            }
+
+            function showThumbnail(file, args) {
+
+                var image = document.createElement("img");
+
+                image.file = file;
+                image.className = "ab img-responsive";
+
+                var $row = $(args.get_row());
+                $row.parent().className = "row ruInputs list-unstyled";
+                $row.append(image);
+
+
+                var reader = new FileReader();
+                reader.onload = (function (aImg) {
+                    return function (e) {
+                        aImg.src = e.target.result;
+                    };
+                }(image));
+                var ret = reader.readAsDataURL(file);
+                var canvas = document.createElement("canvas");
+
+                ctx = canvas.getContext("2d");
+                image.onload = function () {
+                    ctx.drawImage(image, 100, 100);
+                };
+
+            }
+            function acceptdaxem(id, ordershopcode, type) {
+                $.ajax({
+                    type: "POST",
+                    url: "/admin/home.aspx/checkisread",
+                    data: "{ID:'" + id + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        var data = msg.d;
+                        if (data == "ok") {
+                            if (type == "1")
+                                window.location.href = "/manager/OrderDetail.aspx?id=" + ordershopcode;
+                            else if (type == "2")
+                                window.location.href = "/manager/HistorySendWallet.aspx";
+                            else if (type == "3")
+                                window.location.href = "/manager/Withdraw-List.aspx";
+                            else if (type == "4")
+                                window.location.href = "/manager/OrderDetail.aspx?id=" + ordershopcode;
+                            else if (type == "5")
+                                window.location.href = "/manager/ComplainList.aspx";
+                            else if (type == "6")
+                                window.location.href = "/manager/UserList.aspx";
+                            else
+                                window.location.href = "/manager/OrderDetail.aspx?id=" + ordershopcode;
+                        }
+                    },
+                    error: function (xmlhttprequest, textstatus, errorthrow) {
+                        alert('lỗi checkend');
+                    }
+                });
+            }
+
+            function isEmpty(str) {
+                return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
+            }
+
+        </script>
+        <style>
+            .panel .panel-body {
+                display: block;
+            }
+
+            .rgMasterTable {
+                table-layout: fixed;
+            }
+
+            .rgFilterBox {
+                width: 100% !important;
+            }
+        </style>
+        <script src="/scripts/jquery.signalR-2.2.3.min.js"></script>
+        <script src="/signalr/hubs"></script>
+        <script>
+            $(function () {
+                var chat = $.connection.chatHub;
+                chat.client.addNewMessageToPage = function (name, message) {
+                    var count = parseFloat($("#notis-count").html());
+                    var total = 0;
+                    if (count == 0) {
+                        //$("#notis-count").html(1);
+                        total = 1;
+
+                    }
+                    else {
+                        total = count + 1;
+                        //$("#notis-count").html(total);
+                    }
+                    $.ajax({
+                        type: "POST",
+                        url: "/manager/home.aspx/gettotal",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (msg) {
+                            var data = JSON.parse(msg.d);
+                            if (data != "0") {
+                                var count1 = data["count"];
+                                var liststring = data["listNotification"];
+                                $("#no-notis").remove();
+                                $("#notis-count").html(count1);
+                                $(".notification-total").addClass("c-button--blink");
+                                setTimeout(function () { $(".notification-total").removeClass("c-button--blink") }, 1000);
+                                $(".notifi").empty().append(liststring);
+                            }
+                        },
+                        error: function (xmlhttprequest, textstatus, errorthrow) {
+                            //alert('lỗi post comment');
+                        }
+                    });
+
+
+                };
+
+                $.connection.hub.start().done(function () {
+                });
+            });
+            jQuery(document).ready(function () {
+                $(document).on('click', '.toggle-detail-row', function () {
+                    $(this).closest('tr').addClass('info-in');
+                });
+                $(document).on('click', '.info-in .toggle-detail-row ', function () {
+                    $(this).closest('tr').removeClass('info-in');
+                });
+                var lastScrollTop = $(window).scrollTop();
+                $(window).scroll(function (event) {
+                    var st = $(this).scrollTop();
+                    if (st > lastScrollTop) {
+                        // downscroll code
+
+                    } else {
+                        // upscroll code
+
+                    }
+                    lastScrollTop = st;
+                    stickySide('#right-col-wrap .waypoint-trigger', '#main-col-wrap', 85);
+                });
+                stickySide('#right-col-wrap .waypoint-trigger', '#main-col-wrap', 85);
+
+                function stickySide(idString, closest, offset) {
+                    if (!$(idString).length)
+                        return;
+                    if (!$(closest).length)
+                        return;
+                    if (!$(offset))
+                        offset = 0;
+                    var fw = $(idString).width();
+                    var winTop = $(window).scrollTop();
+                    var mainHeight = $(closest).height();
+                    var mainHeightOff = $(closest).offset().top;
+                    if (winTop + offset >= mainHeightOff && winTop + offset + $(idString).height() <= mainHeightOff + mainHeight) {
+
+                        $(idString).css({
+                            position: 'fixed',
+                            width: fw + 'px',
+                            top: offset + 'px',
+                            //                top : offset+winTop-mainHeightOff+'px'
+                        });
+                    } else {
+                        if (winTop + offset < mainHeightOff) {
+                            $(idString).attr('style', '');
+                        }
+                        if (winTop + offset + $(idString).height() > mainHeightOff + mainHeight) {
+                            if (mainHeight > $(idString).height()) {
+                                $(idString).css({
+                                    top: mainHeight - $(idString).height() + 'px',
+                                    position: 'relative',
+                                });
+                            } else {
+                                $(idString).attr('style', '')
+                            }
+
+                        }
+                        // $(idString).attr('style','');
+                    }
+
+                }
+
+            });
+        </script>
+        <style>
+            .c-button--blink {
+                animation: blink .2s infinite;
+                animation-timing-function: ease-in-out;
+                color: #fff;
+            }
+
+            @keyframes blink {
+                0% {
+                    background-color: red;
+                    color: #fff;
+                }
+
+                30% {
+                    background-color: red;
+                    color: #fff;
+                }
+
+                100% {
+                    background-secondary: #600C90;
+                }
+            }
+
+            .status-wrap .status header::before {
+                content: '';
+                bottom: 0;
+                left: 0;
+                background-image: url("/App_Themes/UserNew/images/hover-acc_03.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                width: 100%;
+                height: calc(100% + 23px);
+            }
+
+            .dropdown:hover .status-wrap,
+            .dropdown:focus .status-wrap {
+                display: block;
+            }
+
+            .status-wrap {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                z-index: 9;
+            }
+
+                .status-wrap:hover,
+                .status-wrap:focus {
+                    display: block;
+                }
+
+                .status-wrap .status {
+                    position: relative;
+                    left: 0;
+                    top: 30px;
+                    width: 300px;
+                    font-size: 14px;
+                    line-height: 30px;
+                    font-weight: 500;
+                    color: black;
+                    background-color: white;
+                }
+
+                    .status-wrap .status header {
+                        height: 48px;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        position: relative;
+                    }
+
+                        .status-wrap .status header h4 {
+                            color: white;
+                            font-size: 24px;
+                            z-index: 1;
+                        }
+
+                        .status-wrap .status header::before {
+                            content: '';
+                            bottom: 0;
+                            left: 0;
+                            background-image: url("/App_Themes/UserNew/images/hover-acc_03.png");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                            position: absolute;
+                            width: 100%;
+                            height: calc(100% + 23px);
+                        }
+
+                    .status-wrap .status main > *:not(.links) {
+                        padding: 10px 20px;
+                    }
+
+                    .status-wrap .status main section:nth-child(odd) {
+                        background-color: #f8f8f8;
+                    }
+
+                    .status-wrap .status main .level .level__info {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: row;
+                        -ms-flex-pack: row;
+                        justify-content: row;
+                        -webkit-box-align: space-between;
+                        -ms-flex-align: space-between;
+                        align-items: space-between;
+                    }
+
+                        .status-wrap .status main .level .level__info .rank {
+                            font-weight: bold;
+                        }
+
+                    .status-wrap .status main .level .process {
+                        background: #ebebeb;
+                        border-radius: 12px;
+                        height: 20px;
+                        width: 100%;
+                        padding: 2px;
+                        margin: 5px 0;
+                        overflow: hidden;
+                    }
+
+                        .status-wrap .status main .level .process > span {
+                            display: block;
+                            height: 100%;
+                            max-width: 100%;
+                            border-radius: 9px;
+                            background-color: #3ab1c8;
+                            background-image: -webkit-repeating-linear-gradient(135deg, transparent 0px, transparent 7px, rgba(0, 0, 0, 0.1) 7px, rgba(0, 0, 0, 0.1) 9px);
+                            background-image: -o-repeating-linear-gradient(135deg, transparent 0px, transparent 7px, rgba(0, 0, 0, 0.1) 7px, rgba(0, 0, 0, 0.1) 9px);
+                            background-image: repeating-linear-gradient(-45deg, transparent 0px, transparent 7px, rgba(0, 0, 0, 0.1) 7px, rgba(0, 0, 0, 0.1) 9px);
+                            background-size: 50px 50px;
+                            background-position: 0 0;
+                            overflow: hidden;
+                            -webkit-animation: move 4s linear infinite;
+                            animation: move 4s linear infinite;
+                        }
+
+            @-webkit-keyframes move {
+                0% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: 50px 50px;
+                }
+            }
+
+            @keyframes move {
+                0% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: 50px 50px;
+                }
+            }
+
+            .status-wrap .status main .balance {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: row;
+                -ms-flex-pack: row;
+                justify-content: row;
+                -webkit-box-align: normal;
+                -ms-flex-align: normal;
+                align-items: normal;
+            }
+
+                .status-wrap .status main .balance .balance__number {
+                    margin-left: 10px;
+                    font-weight: bold;
+                }
+
+                    .status-wrap .status main .balance .balance__number .vnd {
+                        color: #2772db;
+                    }
+
+                    .status-wrap .status main .balance .balance__number .cny {
+                        color: #3ab1c8;
+                    }
+
+            .status-wrap .status main .links > a {
+                padding: 10px 20px;
+                display: block;
+                text-align: start;
+            }
+
+                .status-wrap .status main .links > a i {
+                    float: right;
+                    line-height: 2;
+                    color: #2772db;
+                }
+
+                .status-wrap .status main .links > a:hover {
+                    background-color: #2772db;
+                    color: white;
+                }
+
+                    .status-wrap .status main .links > a:hover > i {
+                        color: white;
+                    }
+
+            .status-wrap .status footer .btn {
+                width: 100%;
+                height: 40px;
+                border-radius: unset;
+                background-color: #ec4126;
+                color: white;
+            }
+
+                .status-wrap .status footer .btn:hover {
+                    background-color: #cd2b12;
+                }
+
+            @media screen and (max-width: 650px) {
+                .status-wrap {
+                    right: unset;
+                    left: -50%;
+                }
+
+                    .status-wrap .status header {
+                        overflow: hidden;
+                    }
+            }
+        </style>
+    </form>
+</body>
+</html>

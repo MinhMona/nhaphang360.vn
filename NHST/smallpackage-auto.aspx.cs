@@ -1,0 +1,90 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Script.Serialization;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using NHST.Controllers;
+
+namespace NHST
+{
+    public partial class smallpackage_auto : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            //string t = "%7B%22ad%22:null,%22amount%22:%7B%22count%22:%5B%5B%7B%22content%22:%5B%7B%22data%22:%7B%22money%22:%7B%22css%22:%7B%22width%22:%22120px%22%7D,%22text%22:%22%EF%BF%A539.80%22,%22type%22:%22label%22%7D,%22colon%22:%7B%22text%22:%22%EF%BC%9A%22,%22type%22:%22label%22%7D,%22titleLink%22:%7B%22text%22:%22%E5%95%86%E5%93%81%E6%80%BB%E4%BB%B7%22,%22type%22:%22label%22%7D%7D,%22layout%22:%7B%22row1%22:%7B%22children%22:%5B%22titleLink%22,%22colon%22,%22money%22%5D%7D,%22root%22:%7B%22children%22:%5B%22row1%22%5D%7D%7D,%22root%22:%22root%22,%22type%22:%22mixture%22%7D%5D,%22key%22:%22%22%7D,%7B%22content%22:%5B%7B%22data%22:%7B%22money%22:%7B%22css%22:%7B%22width%22:%22120px%22%7D,%22text%22:%22-%EF%BF%A51.00%22,%22type%22:%22label%22%7D,%22colon%22:%7B%22text%22:%22%EF%BC%9A%22,%22type%22:%22label%22%7D,%22titleLink%22:%7B%22text%22:%22%E5%BA%97%E9%93%BA%E4%BC%98%E6%83%A0%22,%22type%22:%22label%22%7D%7D,%22layout%22:%7B%22row1%22:%7B%22children%22:%5B%22titleLink%22,%22colon%22,%22money%22%5D%7D,%22root%22:%7B%22children%22:%5B%22row1%22%5D%7D%7D,%22root%22:%22root%22,%22type%22:%22mixture%22%7D%5D,%22key%22:%22%22%7D,%7B%22content%22:%5B%7B%22data%22:%7B%22money%22:%7B%22css%22:%7B%22width%22:%22120px%22%7D,%22text%22:%22%EF%BF%A50.00%22,%22type%22:%22label%22%7D,%22colon%22:%7B%22text%22:%22%EF%BC%9A%22,%22type%22:%22label%22%7D,%22titleLink%22:%7B%22text%22:%22%E8%BF%90%E8%B4%B9(%E5%BF%AB%E9%80%92)%22,%22type%22:%22label%22%7D%7D,%22layout%22:%7B%22row1%22:%7B%22children%22:%5B%22titleLink%22,%22colon%22,%22money%22%5D%7D,%22root%22:%7B%22children%22:%5B%22row1%22%5D%7D%7D,%22root%22:%22root%22,%22type%22:%22mixture%22%7D%5D,%22key%22:%22%22%7D,%7B%22content%22:%5B%7B%22data%22:%7B%22money%22:%7B%22css%22:%7B%22color%22:%22#333333%22,%22fontSize%22:%2214px%22,%22fontWeight%22:%22600%22,%22width%22:%22120px%22%7D,%22text%22:%22%EF%BF%A538.80%22,%22type%22:%22label%22%7D,%22colon%22:%7B%22text%22:%22%EF%BC%9A%22,%22type%22:%22label%22%7D,%22titleLink%22:%7B%22css%22:%7B%22color%22:%22#333333%22,%22fontSize%22:%2214px%22,%22fontWeight%22:%22600%22%7D,%22text%22:%22%E8%AE%A2%E5%8D%95%E6%80%BB%E4%BB%B7%22,%22type%22:%22label%22%7D%7D,%22layout%22:%7B%22row1%22:%7B%22children%22:%5B%22titleLink%22,%22colon%22,%22money%22%5D%7D,%22root%22:%7B%22children%22:%5B%22row1%22%5D%7D%7D,%22root%22:%22root%22,%22type%22:%22mixture%22%7D%5D,%22key%22:%22%22%7D%5D,%5B%7B%22content%22:%5B%7B%22data%22:%7B%22rmb%22:%7B%22css%22:%7B%22color%22:%22#DD2727%22,%22fontSize%22:%2214px%22,%22fontWeight%22:%22600%22,%22width%22:%2275px%22%7D,%22text%22:%22%EF%BF%A5%22,%22type%22:%22label%22%7D,%22colon%22:%7B%22text%22:%22%EF%BC%9A%22,%22type%22:%22label%22%7D,%22titleLink%22:%7B%22css%22:%7B%22color%22:%22#333333%22,%22fontSize%22:%2214px%22,%22fontWeight%22:%22600%22%7D,%22text%22:%22%E5%AE%9E%E4%BB%98%E6%AC%BE%22,%22type%22:%22label%22%7D,%22dotPrefixMoney%22:%7B%22css%22:%7B%22color%22:%22#DD2727%22,%22fontSize%22:%2218px%22,%22fontWeight%22:%22600%22%7D,%22text%22:%2238%22,%22type%22:%22label%22%7D,%22dotSufixMoney%22:%7B%22css%22:%7B%22color%22:%22#DD2727%22,%22fontSize%22:%2214px%22,%22fontWeight%22:%22600%22%7D,%22text%22:%22.80%22,%22type%22:%22label%22%7D%7D,%22layout%22:%7B%22row1%22:%7B%22children%22:%5B%22titleLink%22,%22colon%22,%22rmb%22,%22dotPrefixMoney%22,%22dotSufixMoney%22%5D%7D,%22root%22:%7B%22children%22:%5B%22row1%22%5D%7D%7D,%22root%22:%22root%22,%22type%22:%22mixture%22%7D%5D,%22key%22:%22%22%7D%5D%5D,%22promotion%22:%5B%7B%22content%22:%5B%7B%22data%22:%7B%22money%22:%7B%22css%22:%7B%22width%22:%22120px%22%7D,%22text%22:%22%E8%BF%94%E7%A7%AF%E5%88%8618%E7%82%B9%22,%22type%22:%22label%22%7D%7D,%22layout%22:%7B%22row1%22:%7B%22children%22:%5B%22money%22%5D%7D,%22root%22:%7B%22children%22:%5B%22row1%22%5D%7D%7D,%22root%22:%22root%22,%22type%22:%22mixture%22%7D%5D,%22key%22:%22%22%7D%5D%7D,%22basic%22:%7B%22lists%22:%5B%7B%22content%22:%5B%7B%22text%22:%22HN-ID23659,86-13060999201,%E5%B9%BF%E4%B8%9C%E7%9C%81%20%E5%B9%BF%E5%B7%9E%E5%B8%82%20%E8%8D%94%E6%B9%BE%E5%8C%BA%20%E7%9F%B3%E5%9B%B4%E5%A1%98%E8%A1%97%E9%81%93%20%E6%BB%98%E5%8F%A3%E5%A4%A7%E8%A1%9712%E5%8F%B7%E5%A4%A7%E9%99%A2%E4%BB%93%E5%BA%932%E5%8F%B7%E4%BB%93%E4%B9%8B%E4%BA%8C(%E8%B4%A7%E7%89%A9%E5%8C%85%E8%A3%85%E7%AE%B1%E5%AD%90%E5%A4%96%E9%9D%A2%E5%BF%85%E9%A1%BB%E5%86%99%E6%98%8E:HN-ID23659-naw.304)%20,510000%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E6%94%B6%E8%B4%A7%E5%9C%B0%E5%9D%80%22%7D,%7B%22content%22:%5B%7B%22text%22:%22%E8%AF%B7%E5%8F%91%E5%AF%B9%E6%AC%BE%E5%BC%8F%E3%80%81%E9%A2%9C%E8%89%B2%E3%80%81%E5%B0%BA%E5%AF%B8%20%EF%BC%8C%E5%95%86%E5%93%81%E5%AE%8C%E5%A5%BD%E6%97%A0%E6%8D%9F%EF%BC%8C%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E3%80%82%E5%8C%85%E8%A3%85%E6%89%8E%E5%AE%9E%EF%BC%8C%E5%8A%A0%E6%80%A5%E4%BB%B6%EF%BC%8C%E5%8F%91%E5%BF%AB%E9%80%92%EF%BC%8C%E8%B0%A2%E8%B0%A2%EF%BC%81(%E5%8B%BF%E5%8F%91%E9%82%AE%E6%94%BF%E3%80%81EMS)%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E4%B9%B0%E5%AE%B6%E7%95%99%E8%A8%80%22%7D,%7B%22content%22:%5B%7B%22text%22:%22640973312819988881%22,%22type%22:%22label%22%7D,%7B%22direction%22:%22left%22,%22moreList%22:%5B%7B%22content%22:%5B%7B%22text%22:%222019092722001195470561659088%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E6%94%AF%E4%BB%98%E5%AE%9D%E4%BA%A4%E6%98%93%E5%8F%B7%22%7D,%7B%22content%22:%5B%7B%22text%22:%222019-09-27%2013:29:51%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E6%88%90%E4%BA%A4%E6%97%B6%E9%97%B4%22%7D,%7B%22content%22:%5B%7B%22text%22:%222019-09-27%2013:32:16%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E4%BB%98%E6%AC%BE%E6%97%B6%E9%97%B4%22%7D,%7B%22content%22:%5B%7B%22text%22:%222019-09-27%2015:05:46%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E5%8F%91%E8%B4%A7%E6%97%B6%E9%97%B4%22%7D,%7B%22content%22:%5B%7B%22text%22:%222019-10-07%2015:05:54%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E5%AE%8C%E7%BB%93%E6%97%B6%E9%97%B4%22%7D%5D,%22noHover%22:false,%22text%22:%22%E6%9B%B4%E5%A4%9A%22,%22type%22:%22more%22%7D%5D,%22key%22:%22%E8%AE%A2%E5%8D%95%E7%BC%96%E5%8F%B7%22%7D,%7B%22content%22:%5B%7B%22text%22:%22%3Cspan%20class='short-dd-nick'%20title='%E7%A7%8B%E8%92%82%E4%BF%9D%E7%BD%97%E6%9C%8D%E9%A5%B0%E6%97%97%E8%88%B0%E5%BA%97'%3E%E7%A7%8B%E8%92%82%E4%BF%9D%E7%BD%97%E6%9C%8D%E9%A5%B0%E6%97%97%E8%88%B0%E5%BA%97%3Cspan%20class='J_WangWang'%20data-nick='%E7%A7%8B%E8%92%82%E4%BF%9D%E7%BD%97%E6%9C%8D%E9%A5%B0%E6%97%97%E8%88%B0%E5%BA%97'%20data-icon='small'%20data-item='0:640973312819988881'%20data-encode='true'%20data-display='inline'%3E%3C/span%3E%3C/span%3E%22,%22type%22:%22html%22%7D,%7B%22direction%22:%22left%22,%22moreList%22:%5B%7B%22content%22:%5B%7B%22text%22:%22%E6%B7%B1%E5%9C%B3%E5%B8%82%E6%83%85%E7%BE%8E%E4%B8%9D%E6%9C%8D%E8%A3%85%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E7%9C%9F%E5%AE%9E%E5%A7%93%E5%90%8D%22%7D,%7B%22content%22:%5B%7B%22type%22:%22label%22%7D%5D,%22key%22:%22%E5%9F%8E%E5%B8%82%22%7D,%7B%22content%22:%5B%7B%22text%22:%2215992525577%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E8%81%94%E7%B3%BB%E7%94%B5%E8%AF%9D%22%7D%5D,%22noHover%22:false,%22text%22:%22%E6%9B%B4%E5%A4%9A%22,%22type%22:%22more%22%7D%5D,%22key%22:%22%E5%95%86%E5%AE%B6%22%7D%5D,%22log%22:%7B%7D,%22title%22:%22%E8%AE%A2%E5%8D%95%E4%BF%A1%E6%81%AF%22%7D,%22orders%22:%7B%22id%22:640973312819988900,%22list%22:%5B%7B%22logistic%22:%7B%22content%22:%5B%7B%22companyName%22:%22%E4%B8%AD%E9%80%9A%E5%BF%AB%E9%80%92%22,%22mailNo%22:%2275300420192317%22,%22text%22:%22%E5%8C%85%E8%A3%B91%22,%22type%22:%22logistic%22,%22url%22:%22//detail.i56.taobao.com/call/query_trace_un_login.do?tradeId=640973312819988881&dimension=TRADE_ID&appName=TMALL_BUY&digest=BqjEIr0HGa67uymkKk536A%253D%253D&data-mail-no=75300420192317&data-company-name=%E4%B8%AD%E9%80%9A%E5%BF%AB%E9%80%92%22%7D%5D,%22key%22:%22%22%7D,%22status%22:%5B%7B%22statusInfo%22:%5B%7B%22text%22:%22%E4%BA%A4%E6%98%93%E6%88%90%E5%8A%9F%22,%22type%22:%22label%22%7D%5D,%22subOrders%22:%5B%7B%22itemInfo%22:%7B%22itemUrl%22:%22//trade.taobao.com/trade/detail/tradeSnap.htm?tradeID=640973312820988881%22,%22pic%22:%22//img.alicdn.com/imgextra/TB1UXcYxh1YBuNjy1zcL6TNcXXa%22,%22serviceIcons%22:%5B%7B%22linkTitle%22:%22%E4%B8%83%E5%A4%A9%E9%80%80%E6%8D%A2%22,%22linkUrl%22:%22//pages.tmall.com/wow/seller/act/seven-day%22,%22name%22:%22%E4%B8%83%E5%A4%A9%E9%80%80%E6%8D%A2%22,%22title%22:%22%E4%B8%83%E5%A4%A9%E9%80%80%E6%8D%A2%22,%22type%22:3,%22url%22:%22//img.alicdn.com/tps/i3/T1Vyl6FCBlXXaSQP_X-16-16.png%22%7D,%7B%22linkTitle%22:%22%E5%A6%82%E5%AE%9E%E6%8F%8F%E8%BF%B0%22,%22linkUrl%22:%22//www.taobao.com/go/act/315/xfzbz_rsms.php?ad_id=&am_id=130011830696bce9eda3&cm_id=&pm_id=%22,%22name%22:%22%E5%A6%82%E5%AE%9E%E6%8F%8F%E8%BF%B0%22,%22title%22:%22%E5%A6%82%E5%AE%9E%E6%8F%8F%E8%BF%B0%22,%22type%22:3,%22url%22:%22//img.alicdn.com/tps/TB1PDB6IVXXXXaVaXXXXXXXXXXX.png%22%7D,%7B%22linkTitle%22:%22%E6%AD%A3%E5%93%81%E4%BF%9D%E8%AF%81%22,%22linkUrl%22:%22//rule.tmall.com/tdetail-4400.htm%22,%22name%22:%22%E6%AD%A3%E5%93%81%E4%BF%9D%E8%AF%81%22,%22title%22:%22%E6%AD%A3%E5%93%81%E4%BF%9D%E8%AF%81%22,%22type%22:3,%22url%22:%22//img.alicdn.com/tps/i2/T1SyeXFpliXXaSQP_X-16-16.png%22%7D%5D,%22skuText%22:%5B%7B%22content%22:%5B%7B%22text%22:%22L%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E5%B0%BA%E7%A0%81%22%7D,%7B%22content%22:%5B%7B%22text%22:%22%E9%BB%91%E8%89%B2%E3%80%908801%E6%AC%BE%E3%80%91%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E4%B8%BB%E8%A6%81%E9%A2%9C%E8%89%B2%22%7D%5D,%22snapUrl%22:%22//trade.taobao.com/trade/detail/tradeSnap.htm?tradeID=640973312820988881%22,%22title%22:%22chic%E6%97%A9%E7%A7%8B%E8%A3%85%E9%9F%A9%E7%89%88%E5%8E%9F%E5%AE%BF%E4%B8%AD%E9%95%BF%E6%AC%BE%E9%95%BF%E8%A2%96T%E6%81%A4%E5%AE%BD%E6%9D%BE%E7%99%BE%E6%90%AD%E6%89%93%E5%BA%95%E8%A1%AB%E5%A5%B3%E4%B8%8A%E8%A1%A3%E6%83%85%E4%BE%A3%E6%85%B5%E6%87%92%22%7D,%22priceInfo%22:%5B%7B%22text%22:%2219.90%22,%22type%22:%22label%22%7D%5D,%22quantity%22:%221%22%7D%5D%7D,%7B%22statusInfo%22:%5B%7B%22text%22:%22%E4%BA%A4%E6%98%93%E6%88%90%E5%8A%9F%22,%22type%22:%22label%22%7D%5D,%22subOrders%22:%5B%7B%22itemInfo%22:%7B%22itemUrl%22:%22//trade.taobao.com/trade/detail/tradeSnap.htm?tradeID=640973312821988881%22,%22pic%22:%22//img.alicdn.com/imgextra/TB19fkCxXOWBuNjy0FiL6RFxVXa%22,%22serviceIcons%22:%5B%7B%22linkTitle%22:%22%E4%B8%83%E5%A4%A9%E9%80%80%E6%8D%A2%22,%22linkUrl%22:%22//pages.tmall.com/wow/seller/act/seven-day%22,%22name%22:%22%E4%B8%83%E5%A4%A9%E9%80%80%E6%8D%A2%22,%22title%22:%22%E4%B8%83%E5%A4%A9%E9%80%80%E6%8D%A2%22,%22type%22:3,%22url%22:%22//img.alicdn.com/tps/i3/T1Vyl6FCBlXXaSQP_X-16-16.png%22%7D,%7B%22linkTitle%22:%22%E5%A6%82%E5%AE%9E%E6%8F%8F%E8%BF%B0%22,%22linkUrl%22:%22//www.taobao.com/go/act/315/xfzbz_rsms.php?ad_id=&am_id=130011830696bce9eda3&cm_id=&pm_id=%22,%22name%22:%22%E5%A6%82%E5%AE%9E%E6%8F%8F%E8%BF%B0%22,%22title%22:%22%E5%A6%82%E5%AE%9E%E6%8F%8F%E8%BF%B0%22,%22type%22:3,%22url%22:%22//img.alicdn.com/tps/TB1PDB6IVXXXXaVaXXXXXXXXXXX.png%22%7D,%7B%22linkTitle%22:%22%E6%AD%A3%E5%93%81%E4%BF%9D%E8%AF%81%22,%22linkUrl%22:%22//rule.tmall.com/tdetail-4400.htm%22,%22name%22:%22%E6%AD%A3%E5%93%81%E4%BF%9D%E8%AF%81%22,%22title%22:%22%E6%AD%A3%E5%93%81%E4%BF%9D%E8%AF%81%22,%22type%22:3,%22url%22:%22//img.alicdn.com/tps/i2/T1SyeXFpliXXaSQP_X-16-16.png%22%7D%5D,%22skuText%22:%5B%7B%22content%22:%5B%7B%22text%22:%22L%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E5%B0%BA%E7%A0%81%22%7D,%7B%22content%22:%5B%7B%22text%22:%22%E7%99%BD%E8%89%B2%E3%80%908801%E6%AC%BE%E3%80%91%22,%22type%22:%22label%22%7D%5D,%22key%22:%22%E4%B8%BB%E8%A6%81%E9%A2%9C%E8%89%B2%22%7D%5D,%22snapUrl%22:%22//trade.taobao.com/trade/detail/tradeSnap.htm?tradeID=640973312821988881%22,%22title%22:%22chic%E6%97%A9%E7%A7%8B%E8%A3%85%E9%9F%A9%E7%89%88%E5%8E%9F%E5%AE%BF%E4%B8%AD%E9%95%BF%E6%AC%BE%E9%95%BF%E8%A2%96T%E6%81%A4%E5%AE%BD%E6%9D%BE%E7%99%BE%E6%90%AD%E6%89%93%E5%BA%95%E8%A1%AB%E5%A5%B3%E4%B8%8A%E8%A1%A3%E6%83%85%E4%BE%A3%E6%85%B5%E6%87%92%22%7D,%22priceInfo%22:%5B%7B%22text%22:%2219.90%22,%22type%22:%22label%22%7D%5D,%22quantity%22:%221%22%7D%5D%7D%5D%7D%5D%7D,%22other%22:%7B%22content%22:%5B%5D%7D,%22overStatus%22:%7B%22explain%22:%5B%5D,%22operate%22:%5B%7B%22content%22:%5B%7B%22action%22:%22b5%22,%22id%22:%22RATE%22,%22pointUrl%22:%22//go.mmstat.com/jsclick?logtyp=2&orderdetail=feedback%22,%22text%22:%22%E8%AF%84%E4%BB%B7%22,%22type%22:%22operation%22,%22url%22:%22//rate.taobao.com/remark_seller.jhtml?trade_id=640973312819988881&return_url=%252F%252Ftrade.tmall.com%252Fdetail%252ForderDetail.htm%253Fbiz_order_id%253D640973312819988881%22%7D,%7B%22action%22:%22b4%22,%22id%22:%22ADD_BUYER_MEMO%22,%22pointUrl%22:%22//go.mmstat.com/jsclick?logtyp=2&orderdetail=viewdetail%22,%22text%22:%22%E5%A4%87%E5%BF%98%22,%22type%22:%22operation%22,%22url%22:%22//trade.taobao.com/trade/memo/update_buy_memo.htm?biz_order_id=640973312819988881&buyer_id=3459988188&return_url=%252F%252Ftrade.tmall.com%252Fdetail%252ForderDetail.htm%253Fbiz_order_id%253D640973312819988881%22%7D%5D,%22key%22:%22%E6%82%A8%E5%8F%AF%E4%BB%A5%22%7D%5D,%22prompt%22:%5B%7B%22content%22:%5B%7B%22companyName%22:%22%E4%B8%AD%E9%80%9A%E5%BF%AB%E9%80%92%22,%22mailNo%22:%2275300420192317%22,%22type%22:%22logistic%22,%22url%22:%22//detail.i56.taobao.com/call/query_trace_un_login.do?tradeId=640973312819988881&dimension=TRADE_ID&appName=TMALL_BUY&digest=BqjEIr0HGa67uymkKk536A%253D%253D%22%7D%5D,%22key%22:%22%E7%89%A9%E6%B5%81%22%7D%5D,%22status%22:%7B%22content%22:%5B%7B%22text%22:%22%3Ch3%3E%E8%AE%A2%E5%8D%95%E7%8A%B6%E6%80%81:%20%E4%BA%A4%E6%98%93%E6%88%90%E5%8A%9F%3C/h3%3E%22,%22type%22:%22html%22%7D%5D,%22iconUrl%22:%22//img.alicdn.com/tps/i1/T1e.aoXuXdXXa94Hfd-32-32.png%22%7D%7D,%22stepbar%22:%7B%22current%22:3,%22options%22:%5B%7B%22content%22:%22%E6%8B%8D%E4%B8%8B%E5%95%86%E5%93%81%22,%22time%22:%222019-09-27%2013:29:51%22%7D,%7B%22content%22:%22%E4%BB%98%E6%AC%BE%E5%88%B0%E6%94%AF%E4%BB%98%E5%AE%9D%22,%22time%22:%222019-09-27%2013:32:16%22%7D,%7B%22content%22:%22%E5%8D%96%E5%AE%B6%E5%8F%91%E8%B4%A7%22,%22time%22:%222019-09-27%2015:05:46%22%7D,%7B%22content%22:%22%E7%A1%AE%E8%AE%A4%E6%94%B6%E8%B4%A7%22,%22time%22:%222019-10-07%2015:05:54%22%7D,%7B%22content%22:%22%E8%AF%84%E4%BB%B7%22%7D%5D%7D,%22top%22:null,%22logicticsFlow%22:%22%C2%A0%E7%89%A9%E6%B5%81%EF%BC%9A%E4%B8%AD%E9%80%9A%E5%BF%AB%E9%80%92%E8%BF%90%E5%8D%95%E5%8F%B7:753004201923172019-09-28%2019:50:54%20%5B%E5%B9%BF%E5%B7%9E%E5%B8%82%5D%E5%BF%AB%E4%BB%B6%E5%B7%B2%E5%9C%A8%E5%B9%BF%E5%B7%9E%E6%96%B0%E8%8A%B3%E6%9D%91%E7%AD%BE%E6%94%B6%20%E7%AD%BE%E6%94%B6%E4%BA%BA%EF%BC%9A%E4%BB%93%E5%BA%93%E7%AD%BE%E6%94%B6,%E5%A6%82%E6%9C%89%E7%96%91%E9%97%AE%E8%AF%B7%E7%94%B5%E8%81%94%EF%BC%9A18122121507%20/%20020-80500209,%20%E6%82%A8%E7%9A%84%E5%BF%AB%E9%80%92%E5%B7%B2%E7%BB%8F%E5%A6%A5%E6%8A%95%E3%80%82%E9%A3%8E%E9%87%8C%E6%9D%A5%E9%9B%A8%E9%87%8C%E5%8E%BB,%20%E5%8F%AA%E4%B8%BA%E5%AE%A2%E5%AE%98%E6%82%A8%E6%BB%A1%E6%84%8F%E3%80%82%E4%B8%8A%E6%9C%89%E8%80%81%E4%B8%8B%E6%9C%89%E5%B0%8F,%20%E8%B5%8F%E4%B8%AA%E5%A5%BD%E8%AF%84%E5%A5%BD%E4%B8%8D%E5%A5%BD%EF%BC%9F%E3%80%90%E8%AF%B7%E5%9C%A8%E8%AF%84%E4%BB%B7%E5%BF%AB%E9%80%92%E5%91%98%E5%A4%84%E5%B8%AE%E5%BF%99%E7%82%B9%E4%BA%AE%E4%BA%94%E9%A2%97%E6%98%9F%E6%98%9F%E5%93%A6~%E3%80%91%EF%BC%8C%E5%A6%82%E6%9C%89%E7%96%91%E9%97%AE%E8%AF%B7%E8%81%94%E7%B3%BB%E5%BF%AB%E9%80%92%E5%91%98%22%7D";
+
+            //var dec = HttpUtility.UrlDecode(t);
+            //Response.Write(dec);
+            //LoadData();
+
+            var t = loadprefix();
+            Response.Write(t);
+        }
+
+        public void LoadData()
+        {
+            var la = SmallPackageAutoController.GetAll();
+            if (la.Count > 0)
+            {
+                foreach (var item in la)
+                {
+                    JObject mJS = JsonConvert.DeserializeObject<JObject>(item.Value);
+                    //JArray myObj = (JArray)JsonConvert.DeserializeObject(item.Value);
+                    var t = mJS;
+                    string value = (string)mJS.SelectToken("deliveryInfo");
+                    Response.Write(mJS);
+                }
+            }
+
+        }
+
+        public static List<Site1688> loadprefix()
+        {
+
+            //deserialize JSON from file  
+            //string Json = System.IO.File.ReadAllText(file);
+            List<Site1688> cs = new List<Site1688>();
+            string Json = "";
+            JavaScriptSerializer ser = new JavaScriptSerializer();
+
+            var small = SmallPackageAutoController.GetAll();
+            if (small.Count > 0)
+            {
+                foreach (var temp in small)
+                {
+                    var personlist = ser.Deserialize<Site1688>(temp.Value);
+
+                    Site1688 c = new Site1688();
+                    c.deliveryInfo = personlist.deliveryInfo;
+                    cs.Add(c);
+                }
+            }
+            return cs;
+        }
+
+        public class Site1688
+        {
+            public deliveryInfo deliveryInfo { get; set; }
+
+        }
+
+        public class deliveryInfo
+        {
+            public string logisticsName { get; set; }
+            public string sellerNick { get; set; }
+            public string address { get; set; }
+            public string showLogistics { get; set; }
+            public string shipType { get; set; }
+            public string logisticsNum { get; set; }
+            public string showTSP { get; set; }
+            public string asyncLogisticsUrl { get; set; }
+            public string newAddress { get; set; }
+        }
+
+
+    }
+}

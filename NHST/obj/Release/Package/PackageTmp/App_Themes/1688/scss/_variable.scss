@@ -1,0 +1,201 @@
+@charset "utf-8";
+//
+//VARIABLE :: BEGIN
+//
+$main-w : 1170;
+$sp-w : 700;
+
+$color-btn1: #00f500;
+$color-btn2: #bb0029;
+$color-btn3: #00a651;
+
+$color-main: #f9a828;
+$color2: #2178bf;
+
+$header-bg: white;
+$nav-item: black;
+$nav-bg__hover: $color2;
+$nav-item__hover: white;
+$drop-bg: #f8f8f8;
+$drop-item-bg__hover: rgba($color2, 0.8);
+$icon-bar: black;
+
+$tog-header-bg: #f8f8f8;
+$tog-nav-item: black;
+$tog-nav-bg__hover: $color2;
+$tog-nav-item__hover: white;
+$tog-border-drop: $color2;
+$tog-drop-item-bg__hover: lighten($color2, 20%);
+$tog-drop-item__hover: white;
+
+$primary-txt-color: #6c6c6c;
+
+// $font-p: "PoppinsVN", sans-serif;
+// $font-h: "Oswald VNF", sans-serif;
+//
+//VARIABLE :: END
+//
+
+
+//
+//MIXIN :: BEGIN
+//
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+          box-shadow: $shadow;
+}
+@mixin coverbg() {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@mixin transition($s){
+    -webkit-transition: all $s ease-in-out;
+    -moz-transition: all $s ease-in-out;
+    -o-transition: all $s ease-in-out;
+    -ms-transition: all $s ease-in-out;
+    transition: all $s ease-in-out;
+}
+
+@mixin btn-color($color) {
+  background-color: $color;
+  color: white;
+  &:hover{
+      color: white;
+      background-color: darken($color, 10%);
+  }
+}
+
+@mixin abso($t, $l) {
+  position: absolute;
+  top: $t;
+  left: $l;
+}
+
+@mixin flex($jc: center, $al:center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $al;
+} 
+
+// @mixin slider() {
+//   .slick-prev:before, .slick-next:before {
+//     content: none;
+//   }
+
+//   .slick-slide {
+//     outline: none;
+//   }
+
+//   .slick-prev, .slick-next {
+//     width: 40px;
+//     height: 40px;
+//     z-index: 99;
+//     &:hover {
+//       .slick-icon {
+//         background-color: $color-main;
+//       }
+//     }
+//   }
+
+//   // .slick-next {
+//   //   right: 20px;
+//   // }
+//   // .slick-prev {
+//   //   left: unset;
+//   //   right: 62px; 
+//   // }
+  
+//   .slick-icon {
+//     display: inline-block;
+//     border-radius: 2px;
+//     background-color: rgba($color: #000000, $alpha: 0.3);
+//     > a {
+//       font-size: 20px;
+//       width: 40px;
+//       height: 40px;
+//       text-align: center;
+//       color: white;
+//       display: flex;
+//       flex-flow: row wrap;
+//       justify-content: center;
+//       align-items: center;
+//     }  
+//   }
+
+// }
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+  
+  @media screen and (min-width: $min-vw) {
+    
+    @each $property in $properties {
+      $value-prop: null;
+      @for $i from 1 through length($min-value) {
+        @if (strip-unit(nth($min-value, $i)) == 0 and strip-unit(nth($max-value, $i)) == 0) {
+          $value-prop: append($value-prop, 0);
+        }
+
+        @else if (unit(nth($min-value, $i)) == 'rem') {
+          $value: calc(#{nth($min-value, $i)} + #{strip-unit(nth($max-value, $i) - nth($min-value, $i)) * 10 } * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+          $value-prop: append($value-prop, $value);
+        }
+        @else {
+          $value: calc(#{nth($min-value, $i)} + #{strip-unit(nth($max-value, $i) - nth($min-value, $i))} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+          $value-prop: append($value-prop, $value);
+        }   
+      }
+      #{$property}: $value-prop;
+    }  
+  }
+
+  @media screen and (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin br($point) {
+  @media screen and (max-width: $point)  { @content; }
+}  
+
+  
+//
+//MIXIN :: END
+//
+
+//media template
+// @include media(1199px){
+//    width: 970px;   
+//}
+//@include media(1199px){
+//    width: 970px;   
+//}
+//@include media(991px){
+//    width: 750px;   
+//}
+//@include media(767px){
+//    width: 100%;   
+//}
+%clear {
+    &:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+    &:before{
+        display: table;
+        content: " ";
+    }
+}
+
+
+

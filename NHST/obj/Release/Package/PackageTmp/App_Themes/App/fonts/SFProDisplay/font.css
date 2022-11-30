@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('SFProDisplay-RegularItalic.eot');
+    src: url('SFProDisplay-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('SFProDisplay-RegularItalic.woff2') format('woff2'),
+        url('SFProDisplay-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('SFProDisplay-Regular.eot');
+    src: url('SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SFProDisplay-Regular.woff2') format('woff2'),
+        url('SFProDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('SFProDisplay-Bold.eot');
+    src: url('SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SFProDisplay-Bold.woff2') format('woff2'),
+        url('SFProDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('SFProDisplay-BoldItalic.eot');
+    src: url('SFProDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('SFProDisplay-BoldItalic.woff2') format('woff2'),
+        url('SFProDisplay-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('SFProDisplay-Semibold.eot');
+    src: url('SFProDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('SFProDisplay-Semibold.woff2') format('woff2'),
+        url('SFProDisplay-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+

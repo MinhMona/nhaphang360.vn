@@ -1,0 +1,2299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NHSTModelStoreContainer" CdmEntityContainer="NHSTEntities">
+    <EntitySetMapping Name="tbl_Account">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Account">
+        <MappingFragment StoreEntitySet="tbl_Account">
+          <ScalarProperty Name="TienTichLuy" ColumnName="TienTichLuy" />
+          <ScalarProperty Name="FeeTQVNPerVolume" ColumnName="FeeTQVNPerVolume" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="WareHouseVN" ColumnName="WareHouseVN" />
+          <ScalarProperty Name="WareHouseTQ" ColumnName="WareHouseTQ" />
+          <ScalarProperty Name="LoginStatus" ColumnName="LoginStatus" />
+          <ScalarProperty Name="ShippingType" ColumnName="ShippingType" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="FeeTQVNPerWeight" ColumnName="FeeTQVNPerWeight" />
+          <ScalarProperty Name="FeeBuyPro" ColumnName="FeeBuyPro" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="WarehouseTo" ColumnName="WarehouseTo" />
+          <ScalarProperty Name="WarehouseFrom" ColumnName="WarehouseFrom" />
+          <ScalarProperty Name="WalletCYN" ColumnName="WalletCYN" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="VIPLevel" ColumnName="VIPLevel" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="SaleID" ColumnName="SaleID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Wallet" ColumnName="Wallet" />
+          <ScalarProperty Name="LevelID" ColumnName="LevelID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AccountantOutStockPayment">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_AccountantOutStockPayment">
+        <MappingFragment StoreEntitySet="tbl_AccountantOutStockPayment">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="OutStockSessionID" ColumnName="OutStockSessionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AccountInfo">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_AccountInfo">
+        <MappingFragment StoreEntitySet="tbl_AccountInfo">
+          <ScalarProperty Name="IMGUser" ColumnName="IMGUser" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="MobilePhonePrefix" ColumnName="MobilePhonePrefix" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AdminSendUserWallet">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_AdminSendUserWallet">
+        <MappingFragment StoreEntitySet="tbl_AdminSendUserWallet">
+          <ScalarProperty Name="IsPayLoan" ColumnName="IsPayLoan" />
+          <ScalarProperty Name="IsLoan" ColumnName="IsLoan" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TradeContent" ColumnName="TradeContent" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="BankID" ColumnName="BankID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AppPushNoti">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_AppPushNoti">
+        <MappingFragment StoreEntitySet="tbl_AppPushNoti">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="IsPush" ColumnName="IsPush" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="AppNotiMessage" ColumnName="AppNotiMessage" />
+          <ScalarProperty Name="AppNotiTitle" ColumnName="AppNotiTitle" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Bank">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Bank">
+        <MappingFragment StoreEntitySet="tbl_Bank">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="IMG" ColumnName="IMG" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="BankNumber" ColumnName="BankNumber" />
+          <ScalarProperty Name="AccountHolder" ColumnName="AccountHolder" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Banner">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Banner">
+        <MappingFragment StoreEntitySet="tbl_Banner">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="BannerLink" ColumnName="BannerLink" />
+          <ScalarProperty Name="BannerIMG" ColumnName="BannerIMG" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Benefits">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Benefits">
+        <MappingFragment StoreEntitySet="tbl_Benefits">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="BenefitSide" ColumnName="BenefitSide" />
+          <ScalarProperty Name="BenefitIndex" ColumnName="BenefitIndex" />
+          <ScalarProperty Name="BenefitDescription" ColumnName="BenefitDescription" />
+          <ScalarProperty Name="BenefitName" ColumnName="BenefitName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_BigPackage">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_BigPackage">
+        <MappingFragment StoreEntitySet="tbl_BigPackage">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="PackageCode" ColumnName="PackageCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_BigPackage1">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_BigPackage1">
+        <MappingFragment StoreEntitySet="tbl_BigPackage1">
+          <ScalarProperty Name="AdditionFee" ColumnName="AdditionFee" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsSlow" ColumnName="IsSlow" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PackageCode" ColumnName="PackageCode" />
+          <ScalarProperty Name="ArrivedDate" ColumnName="ArrivedDate" />
+          <ScalarProperty Name="SendDate" ColumnName="SendDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_BigPackageHistory">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_BigPackageHistory">
+        <MappingFragment StoreEntitySet="tbl_BigPackageHistory">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ToValue" ColumnName="ToValue" />
+          <ScalarProperty Name="FromValue" ColumnName="FromValue" />
+          <ScalarProperty Name="ColumnChange" ColumnName="ColumnChange" />
+          <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ChinaSite">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_ChinaSite">
+        <MappingFragment StoreEntitySet="tbl_ChinaSite">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="SiteLogo" ColumnName="SiteLogo" />
+          <ScalarProperty Name="Sitename" ColumnName="Sitename" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Commitment">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Commitment">
+        <MappingFragment StoreEntitySet="tbl_Commitment">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CommitmentIndex" ColumnName="CommitmentIndex" />
+          <ScalarProperty Name="CommitmentDescription" ColumnName="CommitmentDescription" />
+          <ScalarProperty Name="CommitmentName" ColumnName="CommitmentName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Complain">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Complain">
+        <MappingFragment StoreEntitySet="tbl_Complain">
+          <ScalarProperty Name="OrderShopCode" ColumnName="OrderShopCode" />
+          <ScalarProperty Name="OrderCode" ColumnName="OrderCode" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ComplainText" ColumnName="ComplainText" />
+          <ScalarProperty Name="IMG" ColumnName="IMG" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Configuration">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Configuration">
+        <MappingFragment StoreEntitySet="tbl_Configuration">
+          <ScalarProperty Name="CurrencyReal" ColumnName="CurrencyReal" />
+          <ScalarProperty Name="ZaloLink5" ColumnName="ZaloLink5" />
+          <ScalarProperty Name="ZaloLink4" ColumnName="ZaloLink4" />
+          <ScalarProperty Name="ZaloLink3" ColumnName="ZaloLink3" />
+          <ScalarProperty Name="ZaloLink2" ColumnName="ZaloLink2" />
+          <ScalarProperty Name="PriceCheckOutWareDefault" ColumnName="PriceCheckOutWareDefault" />
+          <ScalarProperty Name="AgentCurrency" ColumnName="AgentCurrency" />
+          <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyLongName" ColumnName="CompanyLongName" />
+          <ScalarProperty Name="CompanyShortName" ColumnName="CompanyShortName" />
+          <ScalarProperty Name="FooterScriptCode" ColumnName="FooterScriptCode" />
+          <ScalarProperty Name="HeaderScriptCode" ColumnName="HeaderScriptCode" />
+          <ScalarProperty Name="InsurancePercent" ColumnName="InsurancePercent" />
+          <ScalarProperty Name="ChietKhauPercent" ColumnName="ChietKhauPercent" />
+          <ScalarProperty Name="NumberLinkOfOrder" ColumnName="NumberLinkOfOrder" />
+          <ScalarProperty Name="WebmasterTools" ColumnName="WebmasterTools" />
+          <ScalarProperty Name="GoogleAnalytics" ColumnName="GoogleAnalytics" />
+          <ScalarProperty Name="OGTwitterImage" ColumnName="OGTwitterImage" />
+          <ScalarProperty Name="OGTwitterDescription" ColumnName="OGTwitterDescription" />
+          <ScalarProperty Name="OGTwitterTitle" ColumnName="OGTwitterTitle" />
+          <ScalarProperty Name="OGFBImage" ColumnName="OGFBImage" />
+          <ScalarProperty Name="OGFBDescription" ColumnName="OGFBDescription" />
+          <ScalarProperty Name="OGFBTitle" ColumnName="OGFBTitle" />
+          <ScalarProperty Name="OGImage" ColumnName="OGImage" />
+          <ScalarProperty Name="OGDescription" ColumnName="OGDescription" />
+          <ScalarProperty Name="OGTitle" ColumnName="OGTitle" />
+          <ScalarProperty Name="OGUrl" ColumnName="OGUrl" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="MetaKeyword" ColumnName="MetaKeyword" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="WechatLink" ColumnName="WechatLink" />
+          <ScalarProperty Name="ZaloLink" ColumnName="ZaloLink" />
+          <ScalarProperty Name="YoutubeLink" ColumnName="YoutubeLink" />
+          <ScalarProperty Name="LinkedIn" ColumnName="LinkedIn" />
+          <ScalarProperty Name="NotiPopupEmail" ColumnName="NotiPopupEmail" />
+          <ScalarProperty Name="NotiPopupTitle" ColumnName="NotiPopupTitle" />
+          <ScalarProperty Name="NotiPopup" ColumnName="NotiPopup" />
+          <ScalarProperty Name="Pinterest" ColumnName="Pinterest" />
+          <ScalarProperty Name="HotlineFeedback" ColumnName="HotlineFeedback" />
+          <ScalarProperty Name="HotlineSupport" ColumnName="HotlineSupport" />
+          <ScalarProperty Name="DathangPercent" ColumnName="DathangPercent" />
+          <ScalarProperty Name="SalePercentAfter3Month" ColumnName="SalePercentAfter3Month" />
+          <ScalarProperty Name="SalePercent" ColumnName="SalePercent" />
+          <ScalarProperty Name="CurrencyIncome" ColumnName="CurrencyIncome" />
+          <ScalarProperty Name="PriceSendDefaultSG" ColumnName="PriceSendDefaultSG" />
+          <ScalarProperty Name="PriceSendDefaultHN" ColumnName="PriceSendDefaultHN" />
+          <ScalarProperty Name="PricePayHelpDefault" ColumnName="PricePayHelpDefault" />
+          <ScalarProperty Name="PercentOrder" ColumnName="PercentOrder" />
+          <ScalarProperty Name="WeightPrice" ColumnName="WeightPrice" />
+          <ScalarProperty Name="FooterRight" ColumnName="FooterRight" />
+          <ScalarProperty Name="FooterLeft" ColumnName="FooterLeft" />
+          <ScalarProperty Name="InfoContent" ColumnName="InfoContent" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="TimeWork" ColumnName="TimeWork" />
+          <ScalarProperty Name="Skype" ColumnName="Skype" />
+          <ScalarProperty Name="Instagram" ColumnName="Instagram" />
+          <ScalarProperty Name="GooglePlus" ColumnName="GooglePlus" />
+          <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+          <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Hotline" ColumnName="Hotline" />
+          <ScalarProperty Name="EmailContact" ColumnName="EmailContact" />
+          <ScalarProperty Name="EmailSupport" ColumnName="EmailSupport" />
+          <ScalarProperty Name="AboutText" ColumnName="AboutText" />
+          <ScalarProperty Name="CocCocExtensionLink" ColumnName="CocCocExtensionLink" />
+          <ScalarProperty Name="ChromeExtensionLink" ColumnName="ChromeExtensionLink" />
+          <ScalarProperty Name="BannerText" ColumnName="BannerText" />
+          <ScalarProperty Name="BannerIMG" ColumnName="BannerIMG" />
+          <ScalarProperty Name="LogoIMG" ColumnName="LogoIMG" />
+          <ScalarProperty Name="Websitename" ColumnName="Websitename" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Contact">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Contact">
+        <MappingFragment StoreEntitySet="tbl_Contact">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="ContactContent" ColumnName="ContactContent" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_CustomerBenefits">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_CustomerBenefits">
+        <MappingFragment StoreEntitySet="tbl_CustomerBenefits">
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="CustomerBenefitLink" ColumnName="CustomerBenefitLink" />
+          <ScalarProperty Name="CustomerBenefitDescription" ColumnName="CustomerBenefitDescription" />
+          <ScalarProperty Name="CustomerBenefitName" ColumnName="CustomerBenefitName" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_DeviceBrowser">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_DeviceBrowser">
+        <MappingFragment StoreEntitySet="tbl_DeviceBrowser">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="isHide" ColumnName="isHide" />
+          <ScalarProperty Name="PushAuth" ColumnName="PushAuth" />
+          <ScalarProperty Name="PushP256DH" ColumnName="PushP256DH" />
+          <ScalarProperty Name="PushEndpoint" ColumnName="PushEndpoint" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_DeviceToken">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_DeviceToken">
+        <MappingFragment StoreEntitySet="tbl_DeviceToken">
+          <ScalarProperty Name="UserToken" ColumnName="UserToken" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="isHide" ColumnName="isHide" />
+          <ScalarProperty Name="Device" ColumnName="Device" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ExportRequestTurn">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_ExportRequestTurn">
+        <MappingFragment StoreEntitySet="tbl_ExportRequestTurn">
+          <ScalarProperty Name="FeeVolume" ColumnName="FeeVolume" />
+          <ScalarProperty Name="TotalVolume" ColumnName="TotalVolume" />
+          <ScalarProperty Name="OutStockDate" ColumnName="OutStockDate" />
+          <ScalarProperty Name="StatusExport" ColumnName="StatusExport" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StaffNote" ColumnName="StaffNote" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ShippingTypeInVNID" ColumnName="ShippingTypeInVNID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="TotalPackage" ColumnName="TotalPackage" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="TotalPriceCYN" ColumnName="TotalPriceCYN" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="DateExport" ColumnName="DateExport" />
+          <ScalarProperty Name="TransportationOrderNewID" ColumnName="TransportationOrderNewID" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_FeeBuyPro">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_FeeBuyPro">
+        <MappingFragment StoreEntitySet="tbl_FeeBuyPro">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="FeeMoney" ColumnName="FeeMoney" />
+          <ScalarProperty Name="FeePercent" ColumnName="FeePercent" />
+          <ScalarProperty Name="AmountTo" ColumnName="AmountTo" />
+          <ScalarProperty Name="AmountFrom" ColumnName="AmountFrom" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_FeeCheckProduct">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_FeeCheckProduct">
+        <MappingFragment StoreEntitySet="tbl_FeeCheckProduct">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="AmountTo" ColumnName="AmountTo" />
+          <ScalarProperty Name="AmountFrom" ColumnName="AmountFrom" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Feedback">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Feedback">
+        <MappingFragment StoreEntitySet="tbl_Feedback">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="FeedbackContent" ColumnName="FeedbackContent" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_FeePackaged">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_FeePackaged">
+        <MappingFragment StoreEntitySet="tbl_FeePackaged">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="NextKg" ColumnName="NextKg" />
+          <ScalarProperty Name="FirstKg" ColumnName="FirstKg" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_FeeSupport">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_FeeSupport">
+        <MappingFragment StoreEntitySet="tbl_FeeSupport">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHide" ColumnName="IsHide" />
+          <ScalarProperty Name="SupportInfoCYN" ColumnName="SupportInfoCYN" />
+          <ScalarProperty Name="SupportInfoVND" ColumnName="SupportInfoVND" />
+          <ScalarProperty Name="SupportName" ColumnName="SupportName" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_FeeWeightTQVN">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_FeeWeightTQVN">
+        <MappingFragment StoreEntitySet="tbl_FeeWeightTQVN">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="WeightTo" ColumnName="WeightTo" />
+          <ScalarProperty Name="WeightFrom" ColumnName="WeightFrom" />
+          <ScalarProperty Name="ReceivePlace" ColumnName="ReceivePlace" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Footer">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Footer">
+        <MappingFragment StoreEntitySet="tbl_Footer">
+          <ScalarProperty Name="LinkFanpage" ColumnName="LinkFanpage" />
+          <ScalarProperty Name="FooterHTML" ColumnName="FooterHTML" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_HistoryAutoBanking">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_HistoryAutoBanking">
+        <MappingFragment StoreEntitySet="tbl_HistoryAutoBanking">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHide" ColumnName="IsHide" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_HistoryOrderChange">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_HistoryOrderChange">
+        <MappingFragment StoreEntitySet="tbl_HistoryOrderChange">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="HistoryContent" ColumnName="HistoryContent" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_HistoryPayWallet">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_HistoryPayWallet">
+        <MappingFragment StoreEntitySet="tbl_HistoryPayWallet">
+          <ScalarProperty Name="TransportationOrderID" ColumnName="TransportationOrderID" />
+          <ScalarProperty Name="DateSend" ColumnName="DateSend" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="MoneyLeft" ColumnName="MoneyLeft" />
+          <ScalarProperty Name="HContent" ColumnName="HContent" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_HistoryPayWalletCYN">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_HistoryPayWalletCYN">
+        <MappingFragment StoreEntitySet="tbl_HistoryPayWalletCYN">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="DateSend" ColumnName="DateSend" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="MoneyLeft" ColumnName="MoneyLeft" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_HistoryScanPackage">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_HistoryScanPackage">
+        <MappingFragment StoreEntitySet="tbl_HistoryScanPackage">
+          <ScalarProperty Name="WareHouseName" ColumnName="WareHouseName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="SmallPackageID" ColumnName="SmallPackageID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_HistoryServices">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_HistoryServices">
+        <MappingFragment StoreEntitySet="tbl_HistoryServices">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="NewStatusText" ColumnName="NewStatusText" />
+          <ScalarProperty Name="NewStatus" ColumnName="NewStatus" />
+          <ScalarProperty Name="OldeStatusText" ColumnName="OldeStatusText" />
+          <ScalarProperty Name="OldStatus" ColumnName="OldStatus" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_InWareHousePrice">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_InWareHousePrice">
+        <MappingFragment StoreEntitySet="tbl_InWareHousePrice">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="PricePay" ColumnName="PricePay" />
+          <ScalarProperty Name="MaxDay" ColumnName="MaxDay" />
+          <ScalarProperty Name="WeightTo" ColumnName="WeightTo" />
+          <ScalarProperty Name="WeightFrom" ColumnName="WeightFrom" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_LinkMarquee">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_LinkMarquee">
+        <MappingFragment StoreEntitySet="tbl_LinkMarquee">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="LinkURL" ColumnName="LinkURL" />
+          <ScalarProperty Name="LinkName" ColumnName="LinkName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_MainOder">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_MainOder">
+        <MappingFragment StoreEntitySet="tbl_MainOder">
+          <ScalarProperty Name="CurrencyReal" ColumnName="CurrencyReal" />
+          <ScalarProperty Name="DateSite" ColumnName="DateSite" />
+          <ScalarProperty Name="FeeBuyProUser" ColumnName="FeeBuyProUser" />
+          <ScalarProperty Name="QuantityMDH" ColumnName="QuantityMDH" />
+          <ScalarProperty Name="QuantityMVD" ColumnName="QuantityMVD" />
+          <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+          <ScalarProperty Name="TQVNVolume" ColumnName="TQVNVolume" />
+          <ScalarProperty Name="OrderVolume" ColumnName="OrderVolume" />
+          <ScalarProperty Name="FeeVolumeCK" ColumnName="FeeVolumeCK" />
+          <ScalarProperty Name="FeeVolume" ColumnName="FeeVolume" />
+          <ScalarProperty Name="TimeLine" ColumnName="TimeLine" />
+          <ScalarProperty Name="StatusPackage" ColumnName="StatusPackage" />
+          <ScalarProperty Name="IsFlow" ColumnName="IsFlow" />
+          <ScalarProperty Name="ExpectedDate" ColumnName="ExpectedDate" />
+          <ScalarProperty Name="InsurancePercent" ColumnName="InsurancePercent" />
+          <ScalarProperty Name="InsuranceMoney" ColumnName="InsuranceMoney" />
+          <ScalarProperty Name="IsInsurrance" ColumnName="IsInsurrance" />
+          <ScalarProperty Name="CompleteDate" ColumnName="CompleteDate" />
+          <ScalarProperty Name="DateTQ" ColumnName="DateTQ" />
+          <ScalarProperty Name="DateVN" ColumnName="DateVN" />
+          <ScalarProperty Name="DateBuy" ColumnName="DateBuy" />
+          <ScalarProperty Name="TotalFeeSupport" ColumnName="TotalFeeSupport" />
+          <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+          <ScalarProperty Name="IsUpdatePrice" ColumnName="IsUpdatePrice" />
+          <ScalarProperty Name="IsDoneSmallPackage" ColumnName="IsDoneSmallPackage" />
+          <ScalarProperty Name="FeeInWareHouse" ColumnName="FeeInWareHouse" />
+          <ScalarProperty Name="FromPlace" ColumnName="FromPlace" />
+          <ScalarProperty Name="IsCheckNotiPrice" ColumnName="IsCheckNotiPrice" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="ShippingType" ColumnName="ShippingType" />
+          <ScalarProperty Name="AdditionFeeForFuel" ColumnName="AdditionFeeForFuel" />
+          <ScalarProperty Name="AdditionFeeForSensorProduct" ColumnName="AdditionFeeForSensorProduct" />
+          <ScalarProperty Name="MainOrderCode" ColumnName="MainOrderCode" />
+          <ScalarProperty Name="TotalPriceRealCYN" ColumnName="TotalPriceRealCYN" />
+          <ScalarProperty Name="TotalPriceReal" ColumnName="TotalPriceReal" />
+          <ScalarProperty Name="IsGiaohang" ColumnName="IsGiaohang" />
+          <ScalarProperty Name="TQVNWeight" ColumnName="TQVNWeight" />
+          <ScalarProperty Name="ReceivePlace" ColumnName="ReceivePlace" />
+          <ScalarProperty Name="OrderTransactionCodeWeight5" ColumnName="OrderTransactionCodeWeight5" />
+          <ScalarProperty Name="OrderTransactionCodeWeight4" ColumnName="OrderTransactionCodeWeight4" />
+          <ScalarProperty Name="OrderTransactionCodeWeight3" ColumnName="OrderTransactionCodeWeight3" />
+          <ScalarProperty Name="OrderTransactionCodeWeight2" ColumnName="OrderTransactionCodeWeight2" />
+          <ScalarProperty Name="OrderTransactionCodeWeight" ColumnName="OrderTransactionCodeWeight" />
+          <ScalarProperty Name="OrderWeight" ColumnName="OrderWeight" />
+          <ScalarProperty Name="FeeShipCNToVN" ColumnName="FeeShipCNToVN" />
+          <ScalarProperty Name="OrderTransactionCode5" ColumnName="OrderTransactionCode5" />
+          <ScalarProperty Name="OrderTransactionCode4" ColumnName="OrderTransactionCode4" />
+          <ScalarProperty Name="OrderTransactionCode3" ColumnName="OrderTransactionCode3" />
+          <ScalarProperty Name="OrderTransactionCode2" ColumnName="OrderTransactionCode2" />
+          <ScalarProperty Name="OrderTransactionCode" ColumnName="OrderTransactionCode" />
+          <ScalarProperty Name="AmountDeposit" ColumnName="AmountDeposit" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="DepostiDate" ColumnName="DepostiDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="KhoVNID" ColumnName="KhoVNID" />
+          <ScalarProperty Name="KhoTQID" ColumnName="KhoTQID" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="SalerID" ColumnName="SalerID" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="CurrentCNYVN" ColumnName="CurrentCNYVN" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="FeeWeightCK" ColumnName="FeeWeightCK" />
+          <ScalarProperty Name="FeeWeight" ColumnName="FeeWeight" />
+          <ScalarProperty Name="FeeBuyProCK" ColumnName="FeeBuyProCK" />
+          <ScalarProperty Name="FeeBuyPro" ColumnName="FeeBuyPro" />
+          <ScalarProperty Name="FeeShipCN" ColumnName="FeeShipCN" />
+          <ScalarProperty Name="PriceCNY" ColumnName="PriceCNY" />
+          <ScalarProperty Name="PriceVND" ColumnName="PriceVND" />
+          <ScalarProperty Name="IsFastPrice" ColumnName="IsFastPrice" />
+          <ScalarProperty Name="IsFast" ColumnName="IsFast" />
+          <ScalarProperty Name="IsPackedPrice" ColumnName="IsPackedPrice" />
+          <ScalarProperty Name="IsPacked" ColumnName="IsPacked" />
+          <ScalarProperty Name="IsCheckProductPrice" ColumnName="IsCheckProductPrice" />
+          <ScalarProperty Name="IsCheckProduct" ColumnName="IsCheckProduct" />
+          <ScalarProperty Name="IsFastDeliveryPrice" ColumnName="IsFastDeliveryPrice" />
+          <ScalarProperty Name="IsFastDelivery" ColumnName="IsFastDelivery" />
+          <ScalarProperty Name="IsForwardPrice" ColumnName="IsForwardPrice" />
+          <ScalarProperty Name="IsForward" ColumnName="IsForward" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+          <ScalarProperty Name="ShopID" ColumnName="ShopID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_MainOrderCode">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_MainOrderCode">
+        <MappingFragment StoreEntitySet="tbl_MainOrderCode">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="MainOrderCode" ColumnName="MainOrderCode" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Menu">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Menu">
+        <MappingFragment StoreEntitySet="tbl_Menu">
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="MenuClass" ColumnName="MenuClass" />
+          <ScalarProperty Name="MenuLink" ColumnName="MenuLink" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Message">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Message">
+        <MappingFragment StoreEntitySet="tbl_Message">
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Node">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Node">
+        <MappingFragment StoreEntitySet="tbl_Node">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ParentNodeID" ColumnName="ParentNodeID" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="NodeAliasPath" ColumnName="NodeAliasPath" />
+          <ScalarProperty Name="NodeName" ColumnName="NodeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Notification">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Notification">
+        <MappingFragment StoreEntitySet="tbl_Notification">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PushNotiApp" ColumnName="PushNotiApp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="NotifType" ColumnName="NotifType" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ReceivedUsername" ColumnName="ReceivedUsername" />
+          <ScalarProperty Name="ReceivedID" ColumnName="ReceivedID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Notifications">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Notifications">
+        <MappingFragment StoreEntitySet="tbl_Notifications">
+          <ScalarProperty Name="PushNotiApp" ColumnName="PushNotiApp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="NotifType" ColumnName="NotifType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ReceivedUsername" ColumnName="ReceivedUsername" />
+          <ScalarProperty Name="ReceivedID" ColumnName="ReceivedID" />
+          <ScalarProperty Name="SenderUsername" ColumnName="SenderUsername" />
+          <ScalarProperty Name="SenderID" ColumnName="SenderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Order">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Order">
+        <MappingFragment StoreEntitySet="tbl_Order">
+          <ScalarProperty Name="IsBuy" ColumnName="IsBuy" />
+          <ScalarProperty Name="OrderShopCode" ColumnName="OrderShopCode" />
+          <ScalarProperty Name="stepprice" ColumnName="stepprice" />
+          <ScalarProperty Name="ProductStatus" ColumnName="ProductStatus" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ProductNote" ColumnName="ProductNote" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="RealPrice" ColumnName="RealPrice" />
+          <ScalarProperty Name="PriceChange" ColumnName="PriceChange" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="CurrentCNYVN" ColumnName="CurrentCNYVN" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="FeeWeight" ColumnName="FeeWeight" />
+          <ScalarProperty Name="FeeBuyPro" ColumnName="FeeBuyPro" />
+          <ScalarProperty Name="FeeShipCN" ColumnName="FeeShipCN" />
+          <ScalarProperty Name="PriceCNY" ColumnName="PriceCNY" />
+          <ScalarProperty Name="PriceVND" ColumnName="PriceVND" />
+          <ScalarProperty Name="IsFastPrice" ColumnName="IsFastPrice" />
+          <ScalarProperty Name="IsFast" ColumnName="IsFast" />
+          <ScalarProperty Name="IsPackedPrice" ColumnName="IsPackedPrice" />
+          <ScalarProperty Name="IsPacked" ColumnName="IsPacked" />
+          <ScalarProperty Name="IsCheckProductPrice" ColumnName="IsCheckProductPrice" />
+          <ScalarProperty Name="IsCheckProduct" ColumnName="IsCheckProduct" />
+          <ScalarProperty Name="IsFastDeliveryPrice" ColumnName="IsFastDeliveryPrice" />
+          <ScalarProperty Name="IsFastDelivery" ColumnName="IsFastDelivery" />
+          <ScalarProperty Name="IsForwardPrice" ColumnName="IsForwardPrice" />
+          <ScalarProperty Name="IsForward" ColumnName="IsForward" />
+          <ScalarProperty Name="is_translate" ColumnName="is_translate" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="tool" ColumnName="tool" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="category_name" ColumnName="category_name" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="step" ColumnName="step" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="error" ColumnName="error" />
+          <ScalarProperty Name="outer_id" ColumnName="outer_id" />
+          <ScalarProperty Name="link_origin" ColumnName="link_origin" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="site" ColumnName="site" />
+          <ScalarProperty Name="location_sale" ColumnName="location_sale" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="wangwang" ColumnName="wangwang" />
+          <ScalarProperty Name="seller_id" ColumnName="seller_id" />
+          <ScalarProperty Name="shop_name" ColumnName="shop_name" />
+          <ScalarProperty Name="shop_id" ColumnName="shop_id" />
+          <ScalarProperty Name="image_origin" ColumnName="image_origin" />
+          <ScalarProperty Name="image_model" ColumnName="image_model" />
+          <ScalarProperty Name="data_value" ColumnName="data_value" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="property_translated" ColumnName="property_translated" />
+          <ScalarProperty Name="price_promotion" ColumnName="price_promotion" />
+          <ScalarProperty Name="price_origin" ColumnName="price_origin" />
+          <ScalarProperty Name="title_translated" ColumnName="title_translated" />
+          <ScalarProperty Name="title_origin" ColumnName="title_origin" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OrderComment">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_OrderComment">
+        <MappingFragment StoreEntitySet="tbl_OrderComment">
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="TypeContent" ColumnName="TypeContent" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OrderShopTemp">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_OrderShopTemp">
+        <MappingFragment StoreEntitySet="tbl_OrderShopTemp">
+          <ScalarProperty Name="IsInsurrance" ColumnName="IsInsurrance" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="CurrentCNYVN" ColumnName="CurrentCNYVN" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="FeeWeight" ColumnName="FeeWeight" />
+          <ScalarProperty Name="FeeBuyPro" ColumnName="FeeBuyPro" />
+          <ScalarProperty Name="FeeShipCN" ColumnName="FeeShipCN" />
+          <ScalarProperty Name="PriceCNY" ColumnName="PriceCNY" />
+          <ScalarProperty Name="PriceVND" ColumnName="PriceVND" />
+          <ScalarProperty Name="IsFastPrice" ColumnName="IsFastPrice" />
+          <ScalarProperty Name="IsFast" ColumnName="IsFast" />
+          <ScalarProperty Name="IsPackedPrice" ColumnName="IsPackedPrice" />
+          <ScalarProperty Name="IsPacked" ColumnName="IsPacked" />
+          <ScalarProperty Name="IsCheckProductPrice" ColumnName="IsCheckProductPrice" />
+          <ScalarProperty Name="IsCheckProduct" ColumnName="IsCheckProduct" />
+          <ScalarProperty Name="IsFastDeliveryPrice" ColumnName="IsFastDeliveryPrice" />
+          <ScalarProperty Name="IsFastDelivery" ColumnName="IsFastDelivery" />
+          <ScalarProperty Name="IsForwardPrice" ColumnName="IsForwardPrice" />
+          <ScalarProperty Name="IsForward" ColumnName="IsForward" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+          <ScalarProperty Name="ShopID" ColumnName="ShopID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OrderTemp">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_OrderTemp">
+        <MappingFragment StoreEntitySet="tbl_OrderTemp">
+          <ScalarProperty Name="stepprice" ColumnName="stepprice" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsFast" ColumnName="IsFast" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="IsPacked" ColumnName="IsPacked" />
+          <ScalarProperty Name="IsCheckProduct" ColumnName="IsCheckProduct" />
+          <ScalarProperty Name="IsFastDelivery" ColumnName="IsFastDelivery" />
+          <ScalarProperty Name="IsForward" ColumnName="IsForward" />
+          <ScalarProperty Name="is_translate" ColumnName="is_translate" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="tool" ColumnName="tool" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="category_name" ColumnName="category_name" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="step" ColumnName="step" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="error" ColumnName="error" />
+          <ScalarProperty Name="outer_id" ColumnName="outer_id" />
+          <ScalarProperty Name="link_origin" ColumnName="link_origin" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="site" ColumnName="site" />
+          <ScalarProperty Name="location_sale" ColumnName="location_sale" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="wangwang" ColumnName="wangwang" />
+          <ScalarProperty Name="seller_id" ColumnName="seller_id" />
+          <ScalarProperty Name="shop_name" ColumnName="shop_name" />
+          <ScalarProperty Name="shop_id" ColumnName="shop_id" />
+          <ScalarProperty Name="image_origin" ColumnName="image_origin" />
+          <ScalarProperty Name="image_model" ColumnName="image_model" />
+          <ScalarProperty Name="data_value" ColumnName="data_value" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="property_translated" ColumnName="property_translated" />
+          <ScalarProperty Name="price_promotion" ColumnName="price_promotion" />
+          <ScalarProperty Name="price_origin" ColumnName="price_origin" />
+          <ScalarProperty Name="title_translated" ColumnName="title_translated" />
+          <ScalarProperty Name="title_origin" ColumnName="title_origin" />
+          <ScalarProperty Name="OrderShopTempID" ColumnName="OrderShopTempID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OTP">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_OTP">
+        <MappingFragment StoreEntitySet="tbl_OTP">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="UserPhone" ColumnName="UserPhone" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OutStockSession">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_OutStockSession">
+        <MappingFragment StoreEntitySet="tbl_OutStockSession">
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="TotalPay" ColumnName="TotalPay" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OutStockSessionPackage">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_OutStockSessionPackage">
+        <MappingFragment StoreEntitySet="tbl_OutStockSessionPackage">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="FeeWarehouse" ColumnName="FeeWarehouse" />
+          <ScalarProperty Name="DayInWarehouse" ColumnName="DayInWarehouse" />
+          <ScalarProperty Name="DateOutStock" ColumnName="DateOutStock" />
+          <ScalarProperty Name="TransportationID" ColumnName="TransportationID" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="OrderTransactionCode" ColumnName="OrderTransactionCode" />
+          <ScalarProperty Name="SmallPackageID" ColumnName="SmallPackageID" />
+          <ScalarProperty Name="OutStockSessionID" ColumnName="OutStockSessionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Page">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Page">
+        <MappingFragment StoreEntitySet="tbl_Page">
+          <ScalarProperty Name="SideBar" ColumnName="SideBar" />
+          <ScalarProperty Name="OGTwitterIMG" ColumnName="OGTwitterIMG" />
+          <ScalarProperty Name="OGTwitterDescription" ColumnName="OGTwitterDescription" />
+          <ScalarProperty Name="OGTwitterTitle" ColumnName="OGTwitterTitle" />
+          <ScalarProperty Name="OGFacebookIMG" ColumnName="OGFacebookIMG" />
+          <ScalarProperty Name="OGFacebookDescription" ColumnName="OGFacebookDescription" />
+          <ScalarProperty Name="OGFacebookTitle" ColumnName="OGFacebookTitle" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="metakeyword" ColumnName="metakeyword" />
+          <ScalarProperty Name="metadescription" ColumnName="metadescription" />
+          <ScalarProperty Name="metatitle" ColumnName="metatitle" />
+          <ScalarProperty Name="ogimage" ColumnName="ogimage" />
+          <ScalarProperty Name="ogdescription" ColumnName="ogdescription" />
+          <ScalarProperty Name="ogtitle" ColumnName="ogtitle" />
+          <ScalarProperty Name="ogurl" ColumnName="ogurl" />
+          <ScalarProperty Name="NodeAliasPath" ColumnName="NodeAliasPath" />
+          <ScalarProperty Name="NodeID" ColumnName="NodeID" />
+          <ScalarProperty Name="IMG" ColumnName="IMG" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="PageTypeID" ColumnName="PageTypeID" />
+          <ScalarProperty Name="PageContent" ColumnName="PageContent" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PageSEO">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_PageSEO">
+        <MappingFragment StoreEntitySet="tbl_PageSEO">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="metakeyword" ColumnName="metakeyword" />
+          <ScalarProperty Name="metadescription" ColumnName="metadescription" />
+          <ScalarProperty Name="metatitle" ColumnName="metatitle" />
+          <ScalarProperty Name="ogimage" ColumnName="ogimage" />
+          <ScalarProperty Name="ogdescription" ColumnName="ogdescription" />
+          <ScalarProperty Name="ogtitle" ColumnName="ogtitle" />
+          <ScalarProperty Name="ogurl" ColumnName="ogurl" />
+          <ScalarProperty Name="Pagename" ColumnName="Pagename" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PageType">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_PageType">
+        <MappingFragment StoreEntitySet="tbl_PageType">
+          <ScalarProperty Name="SideBar" ColumnName="SideBar" />
+          <ScalarProperty Name="OGTwitterIMG" ColumnName="OGTwitterIMG" />
+          <ScalarProperty Name="OGTwitterDescription" ColumnName="OGTwitterDescription" />
+          <ScalarProperty Name="OGTwitterTitle" ColumnName="OGTwitterTitle" />
+          <ScalarProperty Name="OGFacebookIMG" ColumnName="OGFacebookIMG" />
+          <ScalarProperty Name="OGFacebookDescription" ColumnName="OGFacebookDescription" />
+          <ScalarProperty Name="OGFacebookTitle" ColumnName="OGFacebookTitle" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="metakeyword" ColumnName="metakeyword" />
+          <ScalarProperty Name="metadescription" ColumnName="metadescription" />
+          <ScalarProperty Name="metatitle" ColumnName="metatitle" />
+          <ScalarProperty Name="ogimage" ColumnName="ogimage" />
+          <ScalarProperty Name="ogdescription" ColumnName="ogdescription" />
+          <ScalarProperty Name="ogtitle" ColumnName="ogtitle" />
+          <ScalarProperty Name="ogurl" ColumnName="ogurl" />
+          <ScalarProperty Name="NodeAliasPath" ColumnName="NodeAliasPath" />
+          <ScalarProperty Name="NodeID" ColumnName="NodeID" />
+          <ScalarProperty Name="IndexPos" ColumnName="IndexPos" />
+          <ScalarProperty Name="PageTypeDescription" ColumnName="PageTypeDescription" />
+          <ScalarProperty Name="PageTypeName" ColumnName="PageTypeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Partners">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Partners">
+        <MappingFragment StoreEntitySet="tbl_Partners">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="PartnerIndex" ColumnName="PartnerIndex" />
+          <ScalarProperty Name="PartnerLink" ColumnName="PartnerLink" />
+          <ScalarProperty Name="PartnerIMG" ColumnName="PartnerIMG" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PayAllOrderHistory">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_PayAllOrderHistory">
+        <MappingFragment StoreEntitySet="tbl_PayAllOrderHistory">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PayHelp">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_PayHelp">
+        <MappingFragment StoreEntitySet="tbl_PayHelp">
+          <ScalarProperty Name="FinalPayPrice" ColumnName="FinalPayPrice" />
+          <ScalarProperty Name="RealTotalPrice" ColumnName="RealTotalPrice" />
+          <ScalarProperty Name="realCurrency" ColumnName="realCurrency" />
+          <ScalarProperty Name="realPriceCYN" ColumnName="realPriceCYN" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsNotComplete" ColumnName="IsNotComplete" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TotalPriceVNDGiagoc" ColumnName="TotalPriceVNDGiagoc" />
+          <ScalarProperty Name="CurrencyGiagoc" ColumnName="CurrencyGiagoc" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PayhelpDetail">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_PayhelpDetail">
+        <MappingFragment StoreEntitySet="tbl_PayhelpDetail">
+          <ScalarProperty Name="FriendsAccount" ColumnName="FriendsAccount" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Desc2" ColumnName="Desc2" />
+          <ScalarProperty Name="Desc1" ColumnName="Desc1" />
+          <ScalarProperty Name="PayhelpID" ColumnName="PayhelpID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PayHelpTemp">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_PayHelpTemp">
+        <MappingFragment StoreEntitySet="tbl_PayHelpTemp">
+          <ScalarProperty Name="FriendsAccount" ColumnName="FriendsAccount" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Desc2" ColumnName="Desc2" />
+          <ScalarProperty Name="Desc1" ColumnName="Desc1" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PayOrderHistory">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_PayOrderHistory">
+        <MappingFragment StoreEntitySet="tbl_PayOrderHistory">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Present">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Present">
+        <MappingFragment StoreEntitySet="tbl_Present">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="QuantityOrder" ColumnName="QuantityOrder" />
+          <ScalarProperty Name="QuantityCustomer" ColumnName="QuantityCustomer" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PriceChange">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_PriceChange">
+        <MappingFragment StoreEntitySet="tbl_PriceChange">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Vip8" ColumnName="Vip8" />
+          <ScalarProperty Name="Vip7" ColumnName="Vip7" />
+          <ScalarProperty Name="Vip6" ColumnName="Vip6" />
+          <ScalarProperty Name="Vip5" ColumnName="Vip5" />
+          <ScalarProperty Name="Vip4" ColumnName="Vip4" />
+          <ScalarProperty Name="Vip3" ColumnName="Vip3" />
+          <ScalarProperty Name="Vip2" ColumnName="Vip2" />
+          <ScalarProperty Name="Vip1" ColumnName="Vip1" />
+          <ScalarProperty Name="Vip0" ColumnName="Vip0" />
+          <ScalarProperty Name="PriveVND" ColumnName="PriveVND" />
+          <ScalarProperty Name="PriceToCYN" ColumnName="PriceToCYN" />
+          <ScalarProperty Name="PriceFromCYN" ColumnName="PriceFromCYN" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ProductCategory">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_ProductCategory">
+        <MappingFragment StoreEntitySet="tbl_ProductCategory">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="CategoryIMG" ColumnName="CategoryIMG" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="ChinasiteID" ColumnName="ChinasiteID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ProductLink">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_ProductLink">
+        <MappingFragment StoreEntitySet="tbl_ProductLink">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="ProductLink" ColumnName="ProductLink" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Products">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Products">
+        <MappingFragment StoreEntitySet="tbl_Products">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="IsHot" ColumnName="IsHot" />
+          <ScalarProperty Name="WebLink" ColumnName="WebLink" />
+          <ScalarProperty Name="Productname" ColumnName="Productname" />
+          <ScalarProperty Name="ProductIMG" ColumnName="ProductIMG" />
+          <ScalarProperty Name="WebName" ColumnName="WebName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Refund">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Refund">
+        <MappingFragment StoreEntitySet="tbl_Refund">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_RequestOutStock">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_RequestOutStock">
+        <MappingFragment StoreEntitySet="tbl_RequestOutStock">
+          <ScalarProperty Name="ExportRequestTurnID" ColumnName="ExportRequestTurnID" />
+          <ScalarProperty Name="TransportationID" ColumnName="TransportationID" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MainOrderCode" ColumnName="MainOrderCode" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="SmallPackageCode" ColumnName="SmallPackageCode" />
+          <ScalarProperty Name="SmallPackageID" ColumnName="SmallPackageID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_RequestShip">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_RequestShip">
+        <MappingFragment StoreEntitySet="tbl_RequestShip">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ListOrderCode" ColumnName="ListOrderCode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Role">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Role">
+        <MappingFragment StoreEntitySet="tbl_Role">
+          <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SendNotiEmail">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_SendNotiEmail">
+        <MappingFragment StoreEntitySet="tbl_SendNotiEmail">
+          <ScalarProperty Name="IsSendEmailUser" ColumnName="IsSendEmailUser" />
+          <ScalarProperty Name="IsSentEmailAdmin" ColumnName="IsSentEmailAdmin" />
+          <ScalarProperty Name="IsSentNotiUser" ColumnName="IsSentNotiUser" />
+          <ScalarProperty Name="IsSentNotiAdmin" ColumnName="IsSentNotiAdmin" />
+          <ScalarProperty Name="NotiName" ColumnName="NotiName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Service">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Service">
+        <MappingFragment StoreEntitySet="tbl_Service">
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="ServiceIMG" ColumnName="ServiceIMG" />
+          <ScalarProperty Name="ServiceLink" ColumnName="ServiceLink" />
+          <ScalarProperty Name="ServiceContent" ColumnName="ServiceContent" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ShippingTypeToWareHouse">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_ShippingTypeToWareHouse">
+        <MappingFragment StoreEntitySet="tbl_ShippingTypeToWareHouse">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="ShippintTypeDescription" ColumnName="ShippintTypeDescription" />
+          <ScalarProperty Name="ShippingTypeName" ColumnName="ShippingTypeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ShippingTypeVN">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_ShippingTypeVN">
+        <MappingFragment StoreEntitySet="tbl_ShippingTypeVN">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="ShippingTypeVNDescription" ColumnName="ShippingTypeVNDescription" />
+          <ScalarProperty Name="ShippingTypeVNName" ColumnName="ShippingTypeVNName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SmallPackage">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_SmallPackage">
+        <MappingFragment StoreEntitySet="tbl_SmallPackage">
+          <ScalarProperty Name="Flow" ColumnName="Flow" />
+          <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+          <ScalarProperty Name="IsPackage" ColumnName="IsPackage" />
+          <ScalarProperty Name="IsCheck" ColumnName="IsCheck" />
+          <ScalarProperty Name="StatusReceivePackage" ColumnName="StatusReceivePackage" />
+          <ScalarProperty Name="StatusPayment" ColumnName="StatusPayment" />
+          <ScalarProperty Name="ShippingTypeID" ColumnName="ShippingTypeID" />
+          <ScalarProperty Name="WareHouseID" ColumnName="WareHouseID" />
+          <ScalarProperty Name="WareHouseFromID" ColumnName="WareHouseFromID" />
+          <ScalarProperty Name="MainOrderCode" ColumnName="MainOrderCode" />
+          <ScalarProperty Name="IsUser" ColumnName="IsUser" />
+          <ScalarProperty Name="UserPhone" ColumnName="UserPhone" />
+          <ScalarProperty Name="SendDate" ColumnName="SendDate" />
+          <ScalarProperty Name="MainOrderCodeID" ColumnName="MainOrderCodeID" />
+          <ScalarProperty Name="CurrentPlaceID" ColumnName="CurrentPlaceID" />
+          <ScalarProperty Name="CurrentPlace" ColumnName="CurrentPlace" />
+          <ScalarProperty Name="CancelDate" ColumnName="CancelDate" />
+          <ScalarProperty Name="StaffCancel" ColumnName="StaffCancel" />
+          <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+          <ScalarProperty Name="StaffNoteCheck" ColumnName="StaffNoteCheck" />
+          <ScalarProperty Name="UserNote" ColumnName="UserNote" />
+          <ScalarProperty Name="CODTQVND" ColumnName="CODTQVND" />
+          <ScalarProperty Name="CODTQCYN" ColumnName="CODTQCYN" />
+          <ScalarProperty Name="IsInsurrance" ColumnName="IsInsurrance" />
+          <ScalarProperty Name="IsPackaged" ColumnName="IsPackaged" />
+          <ScalarProperty Name="IsCheckProduct" ColumnName="IsCheckProduct" />
+          <ScalarProperty Name="StaffVNOutWarehouse" ColumnName="StaffVNOutWarehouse" />
+          <ScalarProperty Name="StaffVNWarehouse" ColumnName="StaffVNWarehouse" />
+          <ScalarProperty Name="StaffTQWarehouse" ColumnName="StaffTQWarehouse" />
+          <ScalarProperty Name="DateInTQWarehouse" ColumnName="DateInTQWarehouse" />
+          <ScalarProperty Name="ListIMG" ColumnName="ListIMG" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="DateOutWarehouse" ColumnName="DateOutWarehouse" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IMGPackage" ColumnName="IMGPackage" />
+          <ScalarProperty Name="WarehouseFee" ColumnName="WarehouseFee" />
+          <ScalarProperty Name="TransportationOrderID" ColumnName="TransportationOrderID" />
+          <ScalarProperty Name="IsHelpMoving" ColumnName="IsHelpMoving" />
+          <ScalarProperty Name="PackageCodeTemp" ColumnName="PackageCodeTemp" />
+          <ScalarProperty Name="IsLost" ColumnName="IsLost" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="DateInLasteWareHouse" ColumnName="DateInLasteWareHouse" />
+          <ScalarProperty Name="IsTemp" ColumnName="IsTemp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="FeeShip" ColumnName="FeeShip" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="OrderTransactionCode" ColumnName="OrderTransactionCode" />
+          <ScalarProperty Name="BigPackageID" ColumnName="BigPackageID" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SmallPackage1">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_SmallPackage1">
+        <MappingFragment StoreEntitySet="tbl_SmallPackage1">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsPayCash" ColumnName="IsPayCash" />
+          <ScalarProperty Name="NoteCustomer" ColumnName="NoteCustomer" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="StatusPayment" ColumnName="StatusPayment" />
+          <ScalarProperty Name="StatusReceivePackage" ColumnName="StatusReceivePackage" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="UserPhone" ColumnName="UserPhone" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="BarcodeURL" ColumnName="BarcodeURL" />
+          <ScalarProperty Name="PackageCode" ColumnName="PackageCode" />
+          <ScalarProperty Name="SendDate" ColumnName="SendDate" />
+          <ScalarProperty Name="BigPackageID" ColumnName="BigPackageID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SmallPackageAuto">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_SmallPackageAuto">
+        <MappingFragment StoreEntitySet="tbl_SmallPackageAuto">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="MainOrderCode" ColumnName="MainOrderCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SocialSupport">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_SocialSupport">
+        <MappingFragment StoreEntitySet="tbl_SocialSupport">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="SocialIndex" ColumnName="SocialIndex" />
+          <ScalarProperty Name="SocialPlace" ColumnName="SocialPlace" />
+          <ScalarProperty Name="SocialIMG" ColumnName="SocialIMG" />
+          <ScalarProperty Name="SocialLink" ColumnName="SocialLink" />
+          <ScalarProperty Name="SocialName" ColumnName="SocialName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_StaffIncome">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_StaffIncome">
+        <MappingFragment StoreEntitySet="tbl_StaffIncome">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="OrderCreatedDate" ColumnName="OrderCreatedDate" />
+          <ScalarProperty Name="TotalPriceReceive" ColumnName="TotalPriceReceive" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="PercentReceive" ColumnName="PercentReceive" />
+          <ScalarProperty Name="OrderTotalPrice" ColumnName="OrderTotalPrice" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Step">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Step">
+        <MappingFragment StoreEntitySet="tbl_Step">
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="ClassIcon" ColumnName="ClassIcon" />
+          <ScalarProperty Name="StepContent" ColumnName="StepContent" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="StepLink" ColumnName="StepLink" />
+          <ScalarProperty Name="StepIndex" ColumnName="StepIndex" />
+          <ScalarProperty Name="StepIMG" ColumnName="StepIMG" />
+          <ScalarProperty Name="StepName" ColumnName="StepName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Support">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Support">
+        <MappingFragment StoreEntitySet="tbl_Support">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="FileIMG" ColumnName="FileIMG" />
+          <ScalarProperty Name="HContent" ColumnName="HContent" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SupportBuyProduct">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_SupportBuyProduct">
+        <MappingFragment StoreEntitySet="tbl_SupportBuyProduct">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="SupportIndex" ColumnName="SupportIndex" />
+          <ScalarProperty Name="SupportPlace" ColumnName="SupportPlace" />
+          <ScalarProperty Name="SupportEmail" ColumnName="SupportEmail" />
+          <ScalarProperty Name="SupportPhone" ColumnName="SupportPhone" />
+          <ScalarProperty Name="SupportName" ColumnName="SupportName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_TokenForgotPass">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_TokenForgotPass">
+        <MappingFragment StoreEntitySet="tbl_TokenForgotPass">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_TransportaionOrderDetail">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_TransportaionOrderDetail">
+        <MappingFragment StoreEntitySet="tbl_TransportaionOrderDetail">
+          <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+          <ScalarProperty Name="StaffNoteCheck" ColumnName="StaffNoteCheck" />
+          <ScalarProperty Name="UserNote" ColumnName="UserNote" />
+          <ScalarProperty Name="CODTQVND" ColumnName="CODTQVND" />
+          <ScalarProperty Name="CODTQCYN" ColumnName="CODTQCYN" />
+          <ScalarProperty Name="IsInsurrance" ColumnName="IsInsurrance" />
+          <ScalarProperty Name="IsPackaged" ColumnName="IsPackaged" />
+          <ScalarProperty Name="IsCheckProduct" ColumnName="IsCheckProduct" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="TransportationOrderCode" ColumnName="TransportationOrderCode" />
+          <ScalarProperty Name="TransportationOrderID" ColumnName="TransportationOrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_TransportationOrder">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_TransportationOrder">
+        <MappingFragment StoreEntitySet="tbl_TransportationOrder">
+          <ScalarProperty Name="TotalVolume" ColumnName="TotalVolume" />
+          <ScalarProperty Name="InsurranceFee" ColumnName="InsurranceFee" />
+          <ScalarProperty Name="TotalCODTQVND" ColumnName="TotalCODTQVND" />
+          <ScalarProperty Name="TotalCODTQCYN" ColumnName="TotalCODTQCYN" />
+          <ScalarProperty Name="PackagedFee" ColumnName="PackagedFee" />
+          <ScalarProperty Name="CheckProductFee" ColumnName="CheckProductFee" />
+          <ScalarProperty Name="WarehouseFee" ColumnName="WarehouseFee" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Deposited" ColumnName="Deposited" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ShippingTypeID" ColumnName="ShippingTypeID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="WarehouseFromID" ColumnName="WarehouseFromID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_TransportationOrderNew">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_TransportationOrderNew">
+        <MappingFragment StoreEntitySet="tbl_TransportationOrderNew">
+          <ScalarProperty Name="FeeWeightPerKg" ColumnName="FeeWeightPerKg" />
+          <ScalarProperty Name="FeeVolumeCYN" ColumnName="FeeVolumeCYN" />
+          <ScalarProperty Name="FeeVolumeVND" ColumnName="FeeVolumeVND" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="MainOrderCode" ColumnName="MainOrderCode" />
+          <ScalarProperty Name="IsExportRequest" ColumnName="IsExportRequest" />
+          <ScalarProperty Name="ShippingTypeID" ColumnName="ShippingTypeID" />
+          <ScalarProperty Name="WareHouseID" ColumnName="WareHouseID" />
+          <ScalarProperty Name="WareHouseFromID" ColumnName="WareHouseFromID" />
+          <ScalarProperty Name="DateInVNWareHouse" ColumnName="DateInVNWareHouse" />
+          <ScalarProperty Name="CancelReason" ColumnName="CancelReason" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ShippingTypeVN" ColumnName="ShippingTypeVN" />
+          <ScalarProperty Name="DateExport" ColumnName="DateExport" />
+          <ScalarProperty Name="DateExportRequest" ColumnName="DateExportRequest" />
+          <ScalarProperty Name="ExportRequestNote" ColumnName="ExportRequestNote" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="TotalPriceCYN" ColumnName="TotalPriceCYN" />
+          <ScalarProperty Name="StaffNote" ColumnName="StaffNote" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+          <ScalarProperty Name="SmallPackageID" ColumnName="SmallPackageID" />
+          <ScalarProperty Name="SensorFeeeVND" ColumnName="SensorFeeeVND" />
+          <ScalarProperty Name="SensorFeeCYN" ColumnName="SensorFeeCYN" />
+          <ScalarProperty Name="FeeWarehouseWeightVND" ColumnName="FeeWarehouseWeightVND" />
+          <ScalarProperty Name="FeeWarehouseWeightCYN" ColumnName="FeeWarehouseWeightCYN" />
+          <ScalarProperty Name="FeeWarehouseOutVND" ColumnName="FeeWarehouseOutVND" />
+          <ScalarProperty Name="FeeWarehouseOutCYN" ColumnName="FeeWarehouseOutCYN" />
+          <ScalarProperty Name="AdditionFeeVND" ColumnName="AdditionFeeVND" />
+          <ScalarProperty Name="AdditionFeeCYN" ColumnName="AdditionFeeCYN" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_UserLevel">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_UserLevel">
+        <MappingFragment StoreEntitySet="tbl_UserLevel">
+          <ScalarProperty Name="FeeVolume" ColumnName="FeeVolume" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LessDeposit" ColumnName="LessDeposit" />
+          <ScalarProperty Name="FeeWeight" ColumnName="FeeWeight" />
+          <ScalarProperty Name="FeeBuyPro" ColumnName="FeeBuyPro" />
+          <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Volume">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Volume">
+        <MappingFragment StoreEntitySet="tbl_Volume">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHelpMoving" ColumnName="IsHelpMoving" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="ShippingType" ColumnName="ShippingType" />
+          <ScalarProperty Name="ShippingTypeToWareHouseID" ColumnName="ShippingTypeToWareHouseID" />
+          <ScalarProperty Name="ValueVolume" ColumnName="ValueVolume" />
+          <ScalarProperty Name="VolumeTo" ColumnName="VolumeTo" />
+          <ScalarProperty Name="VolumeFrom" ColumnName="VolumeFrom" />
+          <ScalarProperty Name="WarehouseToID" ColumnName="WarehouseToID" />
+          <ScalarProperty Name="WarehouseFromID" ColumnName="WarehouseFromID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Warehouse">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Warehouse">
+        <MappingFragment StoreEntitySet="tbl_Warehouse">
+          <ScalarProperty Name="ExpectedDate" ColumnName="ExpectedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="AdditionFee" ColumnName="AdditionFee" />
+          <ScalarProperty Name="WareHouseName" ColumnName="WareHouseName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_WarehouseFee">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_WarehouseFee">
+        <MappingFragment StoreEntitySet="tbl_WarehouseFee">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHelpMoving" ColumnName="IsHelpMoving" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="ShippingType" ColumnName="ShippingType" />
+          <ScalarProperty Name="ShippingTypeToWareHouseID" ColumnName="ShippingTypeToWareHouseID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="WeightTo" ColumnName="WeightTo" />
+          <ScalarProperty Name="WeightFrom" ColumnName="WeightFrom" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="WarehouseFromID" ColumnName="WarehouseFromID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_WarehouseFrom">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_WarehouseFrom">
+        <MappingFragment StoreEntitySet="tbl_WarehouseFrom">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="AdditionFee" ColumnName="AdditionFee" />
+          <ScalarProperty Name="WareHouseName" ColumnName="WareHouseName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_WebChina">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_WebChina">
+        <MappingFragment StoreEntitySet="tbl_WebChina">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="WebLink" ColumnName="WebLink" />
+          <ScalarProperty Name="IndexPosition" ColumnName="IndexPosition" />
+          <ScalarProperty Name="WebDescript" ColumnName="WebDescript" />
+          <ScalarProperty Name="WebName" ColumnName="WebName" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Weight">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Weight">
+        <MappingFragment StoreEntitySet="tbl_Weight">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Vip6" ColumnName="Vip6" />
+          <ScalarProperty Name="Vip5" ColumnName="Vip5" />
+          <ScalarProperty Name="Vip4" ColumnName="Vip4" />
+          <ScalarProperty Name="Vip3" ColumnName="Vip3" />
+          <ScalarProperty Name="Vip2" ColumnName="Vip2" />
+          <ScalarProperty Name="Vip1" ColumnName="Vip1" />
+          <ScalarProperty Name="TypeFastSlow" ColumnName="TypeFastSlow" />
+          <ScalarProperty Name="PricePerWeight" ColumnName="PricePerWeight" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="WeightTo" ColumnName="WeightTo" />
+          <ScalarProperty Name="WeightFrom" ColumnName="WeightFrom" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Withdraw">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_Withdraw">
+        <MappingFragment StoreEntitySet="tbl_Withdraw">
+          <ScalarProperty Name="Beneficiary" ColumnName="Beneficiary" />
+          <ScalarProperty Name="BankNumber" ColumnName="BankNumber" />
+          <ScalarProperty Name="BankAddress" ColumnName="BankAddress" />
+          <ScalarProperty Name="CancelDate" ColumnName="CancelDate" />
+          <ScalarProperty Name="CancelBy" ColumnName="CancelBy" />
+          <ScalarProperty Name="AcceptDate" ColumnName="AcceptDate" />
+          <ScalarProperty Name="AcceptBy" ColumnName="AcceptBy" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_YCG">
+      <EntityTypeMapping TypeName="NHSTModel.tbl_YCG">
+        <MappingFragment StoreEntitySet="tbl_YCG">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="MainOrderID" ColumnName="MainOrderID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_OrderList">
+      <EntityTypeMapping TypeName="NHSTModel.View_OrderList">
+        <MappingFragment StoreEntitySet="View_OrderList">
+          <ScalarProperty Name="khoVN" ColumnName="khoVN" />
+          <ScalarProperty Name="khotq" ColumnName="khotq" />
+          <ScalarProperty Name="dathang" ColumnName="dathang" />
+          <ScalarProperty Name="saler" ColumnName="saler" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="TQVNWeight" ColumnName="TQVNWeight" />
+          <ScalarProperty Name="ReceivePlace" ColumnName="ReceivePlace" />
+          <ScalarProperty Name="OrderTransactionCodeWeight5" ColumnName="OrderTransactionCodeWeight5" />
+          <ScalarProperty Name="OrderTransactionCodeWeight4" ColumnName="OrderTransactionCodeWeight4" />
+          <ScalarProperty Name="OrderTransactionCodeWeight3" ColumnName="OrderTransactionCodeWeight3" />
+          <ScalarProperty Name="OrderTransactionCodeWeight2" ColumnName="OrderTransactionCodeWeight2" />
+          <ScalarProperty Name="OrderTransactionCodeWeight" ColumnName="OrderTransactionCodeWeight" />
+          <ScalarProperty Name="OrderWeight" ColumnName="OrderWeight" />
+          <ScalarProperty Name="FeeShipCNToVN" ColumnName="FeeShipCNToVN" />
+          <ScalarProperty Name="OrderTransactionCode5" ColumnName="OrderTransactionCode5" />
+          <ScalarProperty Name="OrderTransactionCode4" ColumnName="OrderTransactionCode4" />
+          <ScalarProperty Name="OrderTransactionCode3" ColumnName="OrderTransactionCode3" />
+          <ScalarProperty Name="OrderTransactionCode2" ColumnName="OrderTransactionCode2" />
+          <ScalarProperty Name="OrderTransactionCode" ColumnName="OrderTransactionCode" />
+          <ScalarProperty Name="AmountDeposit" ColumnName="AmountDeposit" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          <ScalarProperty Name="DepostiDate" ColumnName="DepostiDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="KhoVNID" ColumnName="KhoVNID" />
+          <ScalarProperty Name="KhoTQID" ColumnName="KhoTQID" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="SalerID" ColumnName="SalerID" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="CurrentCNYVN" ColumnName="CurrentCNYVN" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="FeeWeightCK" ColumnName="FeeWeightCK" />
+          <ScalarProperty Name="FeeWeight" ColumnName="FeeWeight" />
+          <ScalarProperty Name="FeeBuyProCK" ColumnName="FeeBuyProCK" />
+          <ScalarProperty Name="FeeBuyPro" ColumnName="FeeBuyPro" />
+          <ScalarProperty Name="FeeShipCN" ColumnName="FeeShipCN" />
+          <ScalarProperty Name="PriceCNY" ColumnName="PriceCNY" />
+          <ScalarProperty Name="PriceVND" ColumnName="PriceVND" />
+          <ScalarProperty Name="IsFastPrice" ColumnName="IsFastPrice" />
+          <ScalarProperty Name="IsFast" ColumnName="IsFast" />
+          <ScalarProperty Name="IsPackedPrice" ColumnName="IsPackedPrice" />
+          <ScalarProperty Name="IsPacked" ColumnName="IsPacked" />
+          <ScalarProperty Name="IsCheckProductPrice" ColumnName="IsCheckProductPrice" />
+          <ScalarProperty Name="IsCheckProduct" ColumnName="IsCheckProduct" />
+          <ScalarProperty Name="IsFastDeliveryPrice" ColumnName="IsFastDeliveryPrice" />
+          <ScalarProperty Name="IsFastDelivery" ColumnName="IsFastDelivery" />
+          <ScalarProperty Name="IsForwardPrice" ColumnName="IsForwardPrice" />
+          <ScalarProperty Name="IsForward" ColumnName="IsForward" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+          <ScalarProperty Name="ShopID" ColumnName="ShopID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_OrderListDamuahang">
+      <EntityTypeMapping TypeName="NHSTModel.View_OrderListDamuahang">
+        <MappingFragment StoreEntitySet="View_OrderListDamuahang">
+          <ScalarProperty Name="anhsanpham" ColumnName="anhsanpham" />
+          <ScalarProperty Name="dathang" ColumnName="dathang" />
+          <ScalarProperty Name="saler" ColumnName="saler" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="OrderTransactionCode5" ColumnName="OrderTransactionCode5" />
+          <ScalarProperty Name="OrderTransactionCode4" ColumnName="OrderTransactionCode4" />
+          <ScalarProperty Name="OrderTransactionCode3" ColumnName="OrderTransactionCode3" />
+          <ScalarProperty Name="OrderTransactionCode2" ColumnName="OrderTransactionCode2" />
+          <ScalarProperty Name="OrderTransactionCode" ColumnName="OrderTransactionCode" />
+          <ScalarProperty Name="SalerID" ColumnName="SalerID" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_OrderListFilter">
+      <EntityTypeMapping TypeName="NHSTModel.View_OrderListFilter">
+        <MappingFragment StoreEntitySet="View_OrderListFilter">
+          <ScalarProperty Name="MainOrderCode" ColumnName="MainOrderCode" />
+          <ScalarProperty Name="FeeBuyPro" ColumnName="FeeBuyPro" />
+          <ScalarProperty Name="CurrentCNYVN" ColumnName="CurrentCNYVN" />
+          <ScalarProperty Name="TotalPriceReal" ColumnName="TotalPriceReal" />
+          <ScalarProperty Name="anhsanpham" ColumnName="anhsanpham" />
+          <ScalarProperty Name="dathang" ColumnName="dathang" />
+          <ScalarProperty Name="saler" ColumnName="saler" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="OrderTransactionCode5" ColumnName="OrderTransactionCode5" />
+          <ScalarProperty Name="OrderTransactionCode4" ColumnName="OrderTransactionCode4" />
+          <ScalarProperty Name="OrderTransactionCode3" ColumnName="OrderTransactionCode3" />
+          <ScalarProperty Name="OrderTransactionCode2" ColumnName="OrderTransactionCode2" />
+          <ScalarProperty Name="OrderTransactionCode" ColumnName="OrderTransactionCode" />
+          <ScalarProperty Name="SalerID" ColumnName="SalerID" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_OrderListFilterWithStatusString">
+      <EntityTypeMapping TypeName="NHSTModel.View_OrderListFilterWithStatusString">
+        <MappingFragment StoreEntitySet="View_OrderListFilterWithStatusString">
+          <ScalarProperty Name="hasSmallpackage" ColumnName="hasSmallpackage" />
+          <ScalarProperty Name="countrow" ColumnName="countrow" />
+          <ScalarProperty Name="anhsanpham" ColumnName="anhsanpham" />
+          <ScalarProperty Name="dathang" ColumnName="dathang" />
+          <ScalarProperty Name="saler" ColumnName="saler" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="OrderTransactionCode5" ColumnName="OrderTransactionCode5" />
+          <ScalarProperty Name="OrderTransactionCode4" ColumnName="OrderTransactionCode4" />
+          <ScalarProperty Name="OrderTransactionCode3" ColumnName="OrderTransactionCode3" />
+          <ScalarProperty Name="OrderTransactionCode2" ColumnName="OrderTransactionCode2" />
+          <ScalarProperty Name="OrderTransactionCode" ColumnName="OrderTransactionCode" />
+          <ScalarProperty Name="SalerID" ColumnName="SalerID" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="statusstring" ColumnName="statusstring" />
+          <ScalarProperty Name="MainOrderCode" ColumnName="MainOrderCode" />
+          <ScalarProperty Name="IsCheckNotiPrice" ColumnName="IsCheckNotiPrice" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_OrderListFilterYCGiao">
+      <EntityTypeMapping TypeName="NHSTModel.View_OrderListFilterYCGiao">
+        <MappingFragment StoreEntitySet="View_OrderListFilterYCGiao">
+          <ScalarProperty Name="anhsanpham" ColumnName="anhsanpham" />
+          <ScalarProperty Name="dathang" ColumnName="dathang" />
+          <ScalarProperty Name="saler" ColumnName="saler" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="OrderTransactionCode5" ColumnName="OrderTransactionCode5" />
+          <ScalarProperty Name="OrderTransactionCode4" ColumnName="OrderTransactionCode4" />
+          <ScalarProperty Name="OrderTransactionCode3" ColumnName="OrderTransactionCode3" />
+          <ScalarProperty Name="OrderTransactionCode2" ColumnName="OrderTransactionCode2" />
+          <ScalarProperty Name="OrderTransactionCode" ColumnName="OrderTransactionCode" />
+          <ScalarProperty Name="SalerID" ColumnName="SalerID" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_OrderListKhoTQ">
+      <EntityTypeMapping TypeName="NHSTModel.View_OrderListKhoTQ">
+        <MappingFragment StoreEntitySet="View_OrderListKhoTQ">
+          <ScalarProperty Name="anhsanpham" ColumnName="anhsanpham" />
+          <ScalarProperty Name="dathang" ColumnName="dathang" />
+          <ScalarProperty Name="saler" ColumnName="saler" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="OrderTransactionCode5" ColumnName="OrderTransactionCode5" />
+          <ScalarProperty Name="OrderTransactionCode4" ColumnName="OrderTransactionCode4" />
+          <ScalarProperty Name="OrderTransactionCode3" ColumnName="OrderTransactionCode3" />
+          <ScalarProperty Name="OrderTransactionCode2" ColumnName="OrderTransactionCode2" />
+          <ScalarProperty Name="OrderTransactionCode" ColumnName="OrderTransactionCode" />
+          <ScalarProperty Name="SalerID" ColumnName="SalerID" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_OrderListKhoVN">
+      <EntityTypeMapping TypeName="NHSTModel.View_OrderListKhoVN">
+        <MappingFragment StoreEntitySet="View_OrderListKhoVN">
+          <ScalarProperty Name="anhsanpham" ColumnName="anhsanpham" />
+          <ScalarProperty Name="dathang" ColumnName="dathang" />
+          <ScalarProperty Name="saler" ColumnName="saler" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="OrderTransactionCode5" ColumnName="OrderTransactionCode5" />
+          <ScalarProperty Name="OrderTransactionCode4" ColumnName="OrderTransactionCode4" />
+          <ScalarProperty Name="OrderTransactionCode3" ColumnName="OrderTransactionCode3" />
+          <ScalarProperty Name="OrderTransactionCode2" ColumnName="OrderTransactionCode2" />
+          <ScalarProperty Name="OrderTransactionCode" ColumnName="OrderTransactionCode" />
+          <ScalarProperty Name="SalerID" ColumnName="SalerID" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Orderlistwithstatus">
+      <EntityTypeMapping TypeName="NHSTModel.View_Orderlistwithstatus">
+        <MappingFragment StoreEntitySet="View_Orderlistwithstatus">
+          <ScalarProperty Name="anhsanpham" ColumnName="anhsanpham" />
+          <ScalarProperty Name="dathang" ColumnName="dathang" />
+          <ScalarProperty Name="saler" ColumnName="saler" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="OrderTransactionCode5" ColumnName="OrderTransactionCode5" />
+          <ScalarProperty Name="OrderTransactionCode4" ColumnName="OrderTransactionCode4" />
+          <ScalarProperty Name="OrderTransactionCode3" ColumnName="OrderTransactionCode3" />
+          <ScalarProperty Name="OrderTransactionCode2" ColumnName="OrderTransactionCode2" />
+          <ScalarProperty Name="OrderTransactionCode" ColumnName="OrderTransactionCode" />
+          <ScalarProperty Name="SalerID" ColumnName="SalerID" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_UserList">
+      <EntityTypeMapping TypeName="NHSTModel.View_UserList">
+        <MappingFragment StoreEntitySet="View_UserList">
+          <ScalarProperty Name="WalletCYN" ColumnName="WalletCYN" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="SaleID" ColumnName="SaleID" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="dathang" ColumnName="dathang" />
+          <ScalarProperty Name="saler" ColumnName="saler" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="MobilePhonePrefix" ColumnName="MobilePhonePrefix" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Wallet" ColumnName="Wallet" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_UserListExcel">
+      <EntityTypeMapping TypeName="NHSTModel.View_UserListExcel">
+        <MappingFragment StoreEntitySet="View_UserListExcel">
+          <ScalarProperty Name="dathang" ColumnName="dathang" />
+          <ScalarProperty Name="saler" ColumnName="saler" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="MobilePhonePrefix" ColumnName="MobilePhonePrefix" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Wallet" ColumnName="Wallet" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_UserListWithWallet">
+      <EntityTypeMapping TypeName="NHSTModel.View_UserListWithWallet">
+        <MappingFragment StoreEntitySet="View_UserListWithWallet">
+          <ScalarProperty Name="dathang" ColumnName="dathang" />
+          <ScalarProperty Name="saler" ColumnName="saler" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="MobilePhonePrefix" ColumnName="MobilePhonePrefix" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Wallet" ColumnName="Wallet" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ReportOrder" FunctionName="NHSTModel.Store.ReportOrder">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NHSTModel.ReportOrder_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="AmountDeposit" ColumnName="AmountDeposit" />
+          <ScalarProperty Name="FeeBuyPro" ColumnName="FeeBuyPro" />
+          <ScalarProperty Name="FeeWeight" ColumnName="FeeWeight" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="SalerID" ColumnName="SalerID" />
+          <ScalarProperty Name="IsFastDeliveryPrice" ColumnName="IsFastDeliveryPrice" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="FeeShipCN" ColumnName="FeeShipCN" />
+          <ScalarProperty Name="TotalFeeSupport" ColumnName="TotalFeeSupport" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsPackedPrice" ColumnName="IsPackedPrice" />
+          <ScalarProperty Name="InsuranceMoney" ColumnName="InsuranceMoney" />
+          <ScalarProperty Name="TotalPriceReal" ColumnName="TotalPriceReal" />
+          <ScalarProperty Name="IsCheckProductPrice" ColumnName="IsCheckProductPrice" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="PriceVND" ColumnName="PriceVND" />
+          <ScalarProperty Name="SalerName" ColumnName="SalerName" />
+          <ScalarProperty Name="DathangName" ColumnName="DathangName" />
+          <ScalarProperty Name="TotalRow" ColumnName="TotalRow" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ReportOrderExcel" FunctionName="NHSTModel.Store.ReportOrderExcel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NHSTModel.ReportOrderExcel_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TotalPriceVND" ColumnName="TotalPriceVND" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="AmountDeposit" ColumnName="AmountDeposit" />
+          <ScalarProperty Name="FeeBuyPro" ColumnName="FeeBuyPro" />
+          <ScalarProperty Name="FeeWeight" ColumnName="FeeWeight" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="SalerID" ColumnName="SalerID" />
+          <ScalarProperty Name="IsFastDeliveryPrice" ColumnName="IsFastDeliveryPrice" />
+          <ScalarProperty Name="DathangID" ColumnName="DathangID" />
+          <ScalarProperty Name="FeeShipCN" ColumnName="FeeShipCN" />
+          <ScalarProperty Name="TotalFeeSupport" ColumnName="TotalFeeSupport" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsPackedPrice" ColumnName="IsPackedPrice" />
+          <ScalarProperty Name="InsuranceMoney" ColumnName="InsuranceMoney" />
+          <ScalarProperty Name="TotalPriceReal" ColumnName="TotalPriceReal" />
+          <ScalarProperty Name="IsCheckProductPrice" ColumnName="IsCheckProductPrice" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="PriceVND" ColumnName="PriceVND" />
+          <ScalarProperty Name="SalerName" ColumnName="SalerName" />
+          <ScalarProperty Name="DathangName" ColumnName="DathangName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

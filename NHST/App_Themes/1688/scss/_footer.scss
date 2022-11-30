@@ -1,0 +1,108 @@
+#footer {
+  background-color: #f8f8f8;
+  background-image: url('../images/footer-bg-img.jpg');
+  @include coverbg();
+  .ft-infos {
+    padding: 70px 10px;
+    
+    .footer-logo {
+      display: inline-block;
+      padding-bottom: 20px;
+    }
+
+    .ft-title {
+      color: white;
+    }
+
+    .col-3 {
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+
+      .col__child {
+        width: 33%;
+        &:not(:last-child) {
+          padding-right: 30px;
+        }
+      }
+
+      .info {
+        .local {
+          > * {
+            padding-bottom: 5px;
+          }
+
+          .fz-14 {
+            text-transform: uppercase;
+          }
+
+          padding-bottom: 30px;
+        }
+      }
+
+      .form {
+        .form-input {
+          padding: 10px 0;
+
+          .form-control {
+            margin-bottom: 5px;
+          }
+
+          .btn {
+            margin-top: 5px;
+            width: 170px;
+            height: 45px;
+          }
+        }
+      }
+
+      .subscribe {
+        .content {
+          padding: 10px 0;
+
+          > * {
+            margin-bottom: 10px;
+          }
+
+        }
+        .form-subs {
+          position: relative;
+
+          .form-control {
+            padding-right: 40px;
+          }
+
+          .icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            font-size: 20px;
+            color: $color-main;
+
+            > a {
+              height: 100%;
+              width: 40px;
+              @include flex();
+
+            }
+          }
+        }
+      }
+    }
+
+    
+
+  }
+
+  .ft-sys {
+    color: #c2c2c2;
+    background-color: #111111;
+    line-height: 20px;
+    padding: 10px 0;
+
+    a img {
+      display: initial;
+    }
+  }
+}
