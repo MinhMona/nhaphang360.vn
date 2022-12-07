@@ -351,7 +351,7 @@ namespace NHST
                         ltrChat.Text = "Hỗ trợ đơn hàng #" + o.ID + "";
                         //var config = ConfigurationController.GetByTop1();
                         double currency = 0;
-                        double currency1 = 0;                      
+                        double currency1 = 0;
                         if (!string.IsNullOrEmpty(obj_user.Currency.ToString()))
                         {
                             if (Convert.ToDouble(obj_user.Currency) > 0)
@@ -367,7 +367,7 @@ namespace NHST
                         currency1 = currency;
                         ViewState["OID"] = id;
 
-                        if(!string.IsNullOrEmpty(o.ExpectedDate.ToString()))
+                        if (!string.IsNullOrEmpty(o.ExpectedDate.ToString()))
                         {
                             ltrExpectedDate.Text += "<div class=\"arrival-info\">";
                             ltrExpectedDate.Text += "<div class=\"arrival-note\"><p>Dự kiến tới nơi</p></div>";
@@ -514,7 +514,7 @@ namespace NHST
                         hdfLoadMap.Value = serializer.Serialize(lwh);
 
                         #endregion
-                        
+
                         #region Lịch sử thay đổi
                         //var OrderChange = HistoryOrderChangeController.GetByMainOrderID(o.ID);
                         //if (OrderChange.Count > 0)
@@ -1111,8 +1111,8 @@ namespace NHST
                                 wallet = wallet + Convert.ToDouble(o.Deposit);
                                 AccountController.updateWallet(obj_user.ID, wallet, currentDate, obj_user.Username);
                                 MainOrderController.UpdateDeposit(o.ID, obj_user.ID, "0");
-                            }      
-                          
+                            }
+
                             HistoryOrderChangeController.Insert(o.ID, uid, username, username +
                             " đã đổi trạng thái của đơn hàng ID là: " + o.ID + ", từ: Chờ đặt cọc, sang: Hủy đơn hàng.", 1, currentDate);
 
@@ -1245,7 +1245,7 @@ namespace NHST
                                             {
                                                 try
                                                 {
-                                                    PJUtils.SendMailGmail_new( admin.Email,
+                                                    PJUtils.SendMailGmail_new(admin.Email,
                                                         "Thông báo tại NHẬP HÀNG 360.", "Đơn hàng " + o.ID + " đã được thanh toán.", "");
                                                 }
                                                 catch { }
@@ -1259,7 +1259,7 @@ namespace NHST
                                             {
                                                 try
                                                 {
-                                                    PJUtils.SendMailGmail_new( manager.Email,
+                                                    PJUtils.SendMailGmail_new(manager.Email,
                                                         "Thông báo tại NHẬP HÀNG 360.", "Đơn hàng " + o.ID + " đã được thanh toán.", "");
                                                 }
                                                 catch { }
@@ -1312,121 +1312,121 @@ namespace NHST
                             double custDeposit = amountdeposit - orderdeposited;
                             //if (userwallet > 0)
                             //{
-                                if (userwallet >= custDeposit)
+                            if (userwallet >= custDeposit)
+                            {
+                                var setNoti = SendNotiEmailController.GetByID(6);
+
+                                double wallet = userwallet - custDeposit;
+                                wallet = Math.Round(wallet, 0);
+
+                                #region cập nhật ví khách hàng và đơn hàng
+                                //AccountController.updateWallet(obj_user.ID, wallet, currentDate, obj_user.Username);
+                                ////Cập nhật lại MainOrder                                
+                                //MainOrderController.UpdateStatus(o.ID, obj_user.ID, 2);
+                                //int statusOOld = Convert.ToInt32(o.Status);
+                                //int statusONew = 2;
+                                ////if (statusONew != statusOOld)
+                                ////{
+                                ////    StatusChangeHistoryController.Insert(o.ID, statusOOld, statusONew, currentDate, obj_user.Username);
+                                ////}
+                                //MainOrderController.UpdateDeposit(o.ID, obj_user.ID, amountdeposit.ToString());
+                                //MainOrderController.UpdateDepositDate(o.ID, currentDate);
+                                //HistoryOrderChangeController.Insert(o.ID, obj_user.ID, obj_user.Username, obj_user.Username +
+                                //   " đã đổi trạng thái của đơn hàng ID là: " + o.ID + ", từ: Chờ đặt cọc, sang: Đã đặt cọc.", 1, currentDate);
+                                //HistoryPayWalletController.Insert(obj_user.ID, obj_user.Username, o.ID, custDeposit,
+                                //    obj_user.Username + " đã đặt cọc đơn hàng: " + o.ID + ".", wallet, 1, 1, currentDate,
+                                //    obj_user.Username);
+                                //PayOrderHistoryController.Insert(o.ID, obj_user.ID, 2, custDeposit, 2, currentDate, obj_user.Username);
+                                #endregion
+
+                                int st = TransactionController.DepositAll(obj_user.ID, wallet, currentDate, obj_user.Username, o.ID, 2, o.Status.Value, amountdeposit.ToString(), custDeposit, obj_user.Username + " đã đặt cọc đơn hàng: " + o.ID, 1, 1, 2);
+                                if (st == 1)
                                 {
-                                    var setNoti = SendNotiEmailController.GetByID(6);
-
-                                    double wallet = userwallet - custDeposit;
-                                    wallet = Math.Round(wallet, 0);
-
-                                    #region cập nhật ví khách hàng và đơn hàng
-                                    //AccountController.updateWallet(obj_user.ID, wallet, currentDate, obj_user.Username);
-                                    ////Cập nhật lại MainOrder                                
-                                    //MainOrderController.UpdateStatus(o.ID, obj_user.ID, 2);
-                                    //int statusOOld = Convert.ToInt32(o.Status);
-                                    //int statusONew = 2;
-                                    ////if (statusONew != statusOOld)
-                                    ////{
-                                    ////    StatusChangeHistoryController.Insert(o.ID, statusOOld, statusONew, currentDate, obj_user.Username);
-                                    ////}
-                                    //MainOrderController.UpdateDeposit(o.ID, obj_user.ID, amountdeposit.ToString());
-                                    //MainOrderController.UpdateDepositDate(o.ID, currentDate);
-                                    //HistoryOrderChangeController.Insert(o.ID, obj_user.ID, obj_user.Username, obj_user.Username +
-                                    //   " đã đổi trạng thái của đơn hàng ID là: " + o.ID + ", từ: Chờ đặt cọc, sang: Đã đặt cọc.", 1, currentDate);
-                                    //HistoryPayWalletController.Insert(obj_user.ID, obj_user.Username, o.ID, custDeposit,
-                                    //    obj_user.Username + " đã đặt cọc đơn hàng: " + o.ID + ".", wallet, 1, 1, currentDate,
-                                    //    obj_user.Username);
-                                    //PayOrderHistoryController.Insert(o.ID, obj_user.ID, 2, custDeposit, 2, currentDate, obj_user.Username);
-                                    #endregion
-
-                                    int st = TransactionController.DepositAll(obj_user.ID, wallet, currentDate, obj_user.Username, o.ID, 2, o.Status.Value, amountdeposit.ToString(), custDeposit, obj_user.Username + " đã đặt cọc đơn hàng: " + o.ID, 1, 1, 2);
-                                    if (st == 1)
+                                    var wh = WarehouseController.GetByID(Convert.ToInt32(o.ReceivePlace));
+                                    if (wh != null)
                                     {
-                                        var wh = WarehouseController.GetByID(Convert.ToInt32(o.ReceivePlace));
-                                        if(wh != null)
+                                        var ExpectedDate = currentDate.AddDays(Convert.ToInt32(wh.ExpectedDate));
+                                        MainOrderController.UpdateExpectedDate(o.ID, ExpectedDate);
+                                    }
+                                    if (setNoti != null)
+                                    {
+                                        if (setNoti.IsSentNotiAdmin == true)
                                         {
-                                            var ExpectedDate = currentDate.AddDays(Convert.ToInt32(wh.ExpectedDate));
-                                            MainOrderController.UpdateExpectedDate(o.ID, ExpectedDate);
-                                        }
-                                        if (setNoti != null)
-                                        {
-                                            if (setNoti.IsSentNotiAdmin == true)
+
+                                            var admins = AccountController.GetAllByRoleID(0);
+                                            if (admins.Count > 0)
                                             {
-
-                                                var admins = AccountController.GetAllByRoleID(0);
-                                                if (admins.Count > 0)
+                                                foreach (var admin in admins)
                                                 {
-                                                    foreach (var admin in admins)
-                                                    {
-                                                        NotificationsController.Inser(admin.ID, admin.Username, o.ID, "Đơn hàng " + o.ID + " đã được đặt cọc.", 1, currentDate, obj_user.Username, false);
-                                                        string strPathAndQuery = Request.Url.PathAndQuery;
-                                                        string strUrl = Request.Url.AbsoluteUri.Replace(strPathAndQuery, "/");
-                                                        string datalink = "" + strUrl + "manager/OrderDetail/" + o.ID;
-                                                        PJUtils.PushNotiDesktop(admin.ID, "Đơn hàng " + o.ID + " đã được đặt cọc.", datalink);
-                                                    }
-                                                }
-
-                                                var managers = AccountController.GetAllByRoleID(2);
-                                                if (managers.Count > 0)
-                                                {
-                                                    foreach (var manager in managers)
-                                                    {
-
-
-                                                        NotificationsController.Inser(manager.ID, manager.Username, o.ID, "Đơn hàng " + o.ID + " đã được đặt cọc.",
-                                                        1, currentDate, obj_user.Username, false);
-                                                        string strPathAndQuery = Request.Url.PathAndQuery;
-                                                        string strUrl = Request.Url.AbsoluteUri.Replace(strPathAndQuery, "/");
-                                                        string datalink = "" + strUrl + "manager/OrderDetail/" + o.ID;
-                                                        PJUtils.PushNotiDesktop(manager.ID, "Đơn hàng " + o.ID + " đã được được đặt cọc.", datalink);
-                                                    }
+                                                    NotificationsController.Inser(admin.ID, admin.Username, o.ID, "Đơn hàng " + o.ID + " đã được đặt cọc.", 1, currentDate, obj_user.Username, false);
+                                                    string strPathAndQuery = Request.Url.PathAndQuery;
+                                                    string strUrl = Request.Url.AbsoluteUri.Replace(strPathAndQuery, "/");
+                                                    string datalink = "" + strUrl + "manager/OrderDetail/" + o.ID;
+                                                    PJUtils.PushNotiDesktop(admin.ID, "Đơn hàng " + o.ID + " đã được đặt cọc.", datalink);
                                                 }
                                             }
 
-                                            if (setNoti.IsSentEmailAdmin == true)
+                                            var managers = AccountController.GetAllByRoleID(2);
+                                            if (managers.Count > 0)
                                             {
-                                                var admins = AccountController.GetAllByRoleID(0);
-                                                if (admins.Count > 0)
+                                                foreach (var manager in managers)
                                                 {
-                                                    foreach (var admin in admins)
-                                                    {
-                                                        try
-                                                        {
-                                                            PJUtils.SendMailGmail_new( admin.Email,
-                                                                "Thông báo tại NHẬP HÀNG 360.", "Đơn hàng " + o.ID + " đã được đặt cọc.", "");
-                                                        }
-                                                        catch { }
-                                                    }
-                                                }
 
-                                                var managers = AccountController.GetAllByRoleID(2);
-                                                if (managers.Count > 0)
-                                                {
-                                                    foreach (var manager in managers)
-                                                    {
-                                                        try
-                                                        {
-                                                            PJUtils.SendMailGmail_new( manager.Email,
-                                                                "Thông báo tại NHẬP HÀNG 360.", "Đơn hàng " + o.ID + " đã được đặt cọc.", "");
-                                                        }
-                                                        catch { }
-                                                    }
-                                                }
 
+                                                    NotificationsController.Inser(manager.ID, manager.Username, o.ID, "Đơn hàng " + o.ID + " đã được đặt cọc.",
+                                                    1, currentDate, obj_user.Username, false);
+                                                    string strPathAndQuery = Request.Url.PathAndQuery;
+                                                    string strUrl = Request.Url.AbsoluteUri.Replace(strPathAndQuery, "/");
+                                                    string datalink = "" + strUrl + "manager/OrderDetail/" + o.ID;
+                                                    PJUtils.PushNotiDesktop(manager.ID, "Đơn hàng " + o.ID + " đã được được đặt cọc.", datalink);
+                                                }
                                             }
                                         }
-                                        PJUtils.ShowMessageBoxSwAlert("Đặt cọc đơn hàng thành công.", "s", true, Page);
+
+                                        if (setNoti.IsSentEmailAdmin == true)
+                                        {
+                                            var admins = AccountController.GetAllByRoleID(0);
+                                            if (admins.Count > 0)
+                                            {
+                                                foreach (var admin in admins)
+                                                {
+                                                    try
+                                                    {
+                                                        PJUtils.SendMailGmail_new(admin.Email,
+                                                            "Thông báo tại NHẬP HÀNG 360.", "Đơn hàng " + o.ID + " đã được đặt cọc.", "");
+                                                    }
+                                                    catch { }
+                                                }
+                                            }
+
+                                            var managers = AccountController.GetAllByRoleID(2);
+                                            if (managers.Count > 0)
+                                            {
+                                                foreach (var manager in managers)
+                                                {
+                                                    try
+                                                    {
+                                                        PJUtils.SendMailGmail_new(manager.Email,
+                                                            "Thông báo tại NHẬP HÀNG 360.", "Đơn hàng " + o.ID + " đã được đặt cọc.", "");
+                                                    }
+                                                    catch { }
+                                                }
+                                            }
+
+                                        }
                                     }
-                                    else
-                                    {
-                                        PJUtils.ShowMessageBoxSwAlert("Có lỗi trong quá trình xử lý.", "e", true, Page);
-                                    }
+                                    PJUtils.ShowMessageBoxSwAlert("Đặt cọc đơn hàng thành công.", "s", true, Page);
                                 }
                                 else
                                 {
-                                    PJUtils.ShowMessageBoxSwAlertBackToLink("Số dư trong tài khoản của quý khách không đủ để đặt cọc đơn hàng này. Quý khách vui lòng nạp thêm tiền để tiến hành đặt cọc.", "e", true, "/chuyen-muc/huong-dan/nap-tien", Page);
+                                    PJUtils.ShowMessageBoxSwAlert("Có lỗi trong quá trình xử lý.", "e", true, Page);
                                 }
-                                //Page.Response.Redirect(Page.Request.Url.ToString(), true);
+                            }
+                            else
+                            {
+                                PJUtils.ShowMessageBoxSwAlertBackToLink("Số dư trong tài khoản của quý khách không đủ để đặt cọc đơn hàng này. Quý khách vui lòng nạp thêm tiền để tiến hành đặt cọc.", "e", true, "/chuyen-muc/huong-dan/nap-tien", Page);
+                            }
+                            //Page.Response.Redirect(Page.Request.Url.ToString(), true);
                             //}
                             //else
                             //{
@@ -1441,6 +1441,8 @@ namespace NHST
                 }
             }
         }
+
+
         [WebMethod]
         public static string PostComment(string commentext, string shopid, string urlIMG, string real)
         {
@@ -1888,7 +1890,7 @@ namespace NHST
                                             {
                                                 try
                                                 {
-                                                    PJUtils.SendMailGmail_new( admin.Email,
+                                                    PJUtils.SendMailGmail_new(admin.Email,
                                                         "Thông báo tại NHẬP HÀNG 360.", "Đơn hàng " + o.ID + " đã yêu cầu giao hàng.", "");
                                                 }
                                                 catch { }
@@ -1902,7 +1904,7 @@ namespace NHST
                                             {
                                                 try
                                                 {
-                                                    PJUtils.SendMailGmail_new( manager.Email,
+                                                    PJUtils.SendMailGmail_new(manager.Email,
                                                         "Thông báo tại NHẬP HÀNG 360.", "Đơn hàng " + o.ID + " đã yêu cầu giao hàng.", "");
                                                 }
                                                 catch { }
@@ -1918,6 +1920,119 @@ namespace NHST
                     }
                 }
             }
+        }
+
+        protected void btnExcel_Click(object sender, EventArgs e)
+        {
+            string username_current = Session["userLoginSystem"].ToString();
+            var obj_user = AccountController.GetByUsername(username_current);
+            int uid = obj_user.ID;
+            hdfID.Value = obj_user.ID.ToString();
+            var id = RouteData.Values["id"].ToString().ToInt(0);
+            if (id > 0)
+            {
+                var o = MainOrderController.GetAllByUIDAndID(uid, id);
+                if (o != null)
+                {
+                    StringBuilder StrExport = new StringBuilder();
+                    StrExport.Append(@"<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:excel' xmlns='http://www.w3.org/TR/REC-html40'><head><title>Time</title>");
+                    StrExport.Append(@"<body lang=EN-US style='mso-element:header' id=h1><span style='mso--code:DATE'></span><div class=Section1>");
+                    StrExport.Append("<div  style='font-size:12px;'>");
+                    StrExport.Append("<table border=\"1\">");
+                    StrExport.Append("  <tr>");
+                    StrExport.Append("      <th><strong>ID</strong></th>");
+                    StrExport.Append("      <th style=\"mso-number-format:'\\@'\" ><strong>Username</strong></th>");
+                    StrExport.Append("      <th><strong>Tên sản phẩm</strong></th>");
+                    StrExport.Append("      <th><strong>Link sản phẩm</strong></th>");
+                    StrExport.Append("      <th><strong>Thuộc tính</strong></th>");
+                    StrExport.Append("      <th><strong>Số lượng</strong></th>");
+                    StrExport.Append("      <th><strong>Đơn giá VNĐ</strong></th>");
+                    StrExport.Append("      <th><strong>Đơn giá ¥</strong></th>");
+                    StrExport.Append("      <th><strong>Tổng tiền VNĐ</strong></th>");
+                    StrExport.Append("      <th><strong>Tổng tiền ¥</strong></th>");
+                    StrExport.Append("      <th><strong>Trạng thái</strong></th>");
+                    StrExport.Append("      <th><strong>Ghi chú</strong></th>");
+                    StrExport.Append("      <th><strong>Ngày tạo</strong></th>");
+                    StrExport.Append("  </tr>");
+                    List<tbl_Order> lo = new List<tbl_Order>();
+                    lo = OrderController.GetByMainOrderID(o.ID);
+                    foreach (var item in lo)
+                    {
+                        double currentcyt = 0;
+                        if (item.CurrentCNYVN.ToFloat(0) > 0)
+                            currentcyt = Convert.ToDouble(item.CurrentCNYVN);
+
+                        double price = 0;
+                        double pricepromotion = 0;
+                        if (item.price_promotion.ToFloat(0) > 0)
+                            pricepromotion = Convert.ToDouble(item.price_promotion);
+
+                        double priceorigin = 0;
+                        if (item.price_origin.ToFloat(0) > 0)
+                            priceorigin = Convert.ToDouble(item.price_origin);
+
+                        if (pricepromotion > 0)
+                        {
+                            if (priceorigin > pricepromotion)
+                            {
+                                price = pricepromotion;
+                            }
+                            else
+                            {
+                                price = priceorigin;
+                            }
+                        }
+                        else
+                        {
+                            price = priceorigin;
+                        }
+                        double vndprice = price * currentcyt;
+
+                        StrExport.Append("  <tr>");
+                        StrExport.Append("      <td>" + item.ID + "</td>");
+                        StrExport.Append("      <td>" + obj_user.Username + "</td>");
+                        StrExport.Append("      <td>" + item.title_origin + "</td>");
+                        StrExport.Append("      <td>" + $"<a href=\"{item.link_origin}\">Xem</a>" + "</td>");
+                        StrExport.Append("      <td>" + item.property + "</td>");
+                        StrExport.Append("      <td>" + item.quantity + "</td>");
+
+                        StrExport.Append("      <td>" + string.Format("{0:N0}", vndprice) + "</td>");
+                        StrExport.Append("      <td>" + string.Format("{0:0.##}", price) + "</td>");
+                        StrExport.Append("      <td>" + string.Format("{0:N0}", vndprice * Convert.ToDouble(item.quantity)) + "</td>");
+                        StrExport.Append("      <td>" + string.Format("{0:0.##}", price * Convert.ToDouble(item.quantity)) + "</td>");
+
+                        if (!string.IsNullOrEmpty(item.ProductStatus.ToString()))
+                        {
+                            if (item.ProductStatus == 1)
+                                StrExport.Append("      <td>Còn hàng</td>");
+
+                            else
+                                StrExport.Append("      <td>Hết hàng</td>");
+                        }
+                        else
+                        {
+                            StrExport.Append("      <td>Còn hàng</td>");
+                        }
+                        StrExport.Append("      <td>" + string.Format("{0:dd/MM/yyyy HH:mm}", item.Note) + "</td>");
+                        StrExport.Append("      <td>" + string.Format("{0:dd/MM/yyyy HH:mm}", item.CreatedDate) + "</td>");
+                        StrExport.Append("  </tr>");
+                    }
+                    StrExport.Append("</table>");
+                    StrExport.Append("</div></body></html>");
+                    string strFile = "Danhsachsanpham.xls";
+                    string strcontentType = "application/vnd.ms-excel";
+                    Response.ClearContent();
+                    Response.ClearHeaders();
+                    Response.BufferOutput = true;
+                    Response.ContentType = strcontentType;
+                    Response.AddHeader("Content-Disposition", "attachment; filename=" + strFile);
+                    Response.Write(StrExport.ToString());
+                    Response.Flush();
+                    //Response.Close();
+                    Response.End();
+                }
+            }
+
         }
     }
 }

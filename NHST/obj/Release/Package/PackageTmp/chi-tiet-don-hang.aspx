@@ -442,7 +442,10 @@
                                             <div class="card-panel">
                                                 <div id="order-list" class="section scrollspy order-list account-site">
                                                     <div class="title-header bg-dark-gradient">
-                                                        <h6 class="white-text ">Danh sách sản phẩm</h6>
+                                                        <h6 class="white-text ">Danh sách sản phẩm 
+                                                            <span><a href="javascript:;" class="btn btnExcel" style="margin-left: 20px; background-color:green">Xuất Excel</a>
+                                                            </span>
+                                                        </h6>
                                                     </div>
                                                     <div class="order-item">
                                                         <div class="left-info">
@@ -452,8 +455,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </div>
+                                            <asp:Button runat="server" ID="btnExcel" UseSubmitBehavior="false" Style="display: none" OnClick="btnExcel_Click" />
 
 
                                             <div class="card-panel">
@@ -636,6 +639,10 @@
     <script src="/App_Themes/UserNew45/assets/js/markerwithlabel_packed.js"></script>
     <script src="/App_Themes/UserNew45/assets/js/custom/chat.js"></script>
     <script>
+
+        $('.btnExcel').click(function () {
+            $('#<%=btnExcel.ClientID%>').click();
+        });
 
         var array2 = $('#<%=hdfLoadMap.ClientID%>').val();
         console.log(array2);
@@ -991,12 +998,12 @@
             }
             else {
             }
-          }
+        }
 
-          function YCGSelected() {
-              var c = confirm('Bạn muốn yêu cầu giao hàng tất cả đơn hàng đã chọn?');
-              if (c == true) {
-                  var fname = $("#<%=txtFullName.ClientID%>").val();
+        function YCGSelected() {
+            var c = confirm('Bạn muốn yêu cầu giao hàng tất cả đơn hàng đã chọn?');
+            if (c == true) {
+                var fname = $("#<%=txtFullName.ClientID%>").val();
                 var phone = $("#<%=txtPhone.ClientID%>").val();
                 var address = $("#<%=txtAddress.ClientID%>").val();
                 if (!isEmpty(fname) && !isEmpty(phone) && !isEmpty(address)) {

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NHST {
-    
-    
-    public partial class chi_tiet_don_hang {
-        
+namespace NHST
+{
+
+
+    public partial class chi_tiet_don_hang
+    {
+
         /// <summary>
         /// ltrMainOrderID control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrMainOrderID;
-        
+
         /// <summary>
         /// ltrstep control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrstep;
-        
+
         /// <summary>
         /// ltrOrderFee control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrOrderFee;
-        
+
         /// <summary>
         /// ltrSmallInfo control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrSmallInfo;
-        
+
         /// <summary>
         /// ltrTQ control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrTQ;
-        
+
         /// <summary>
         /// ltrVN control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrVN;
-        
+
         /// <summary>
         /// ltrExpectedDate control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrExpectedDate;
-        
+
         /// <summary>
         /// ltrOverView control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrOverView;
-        
+
         /// <summary>
         /// ltrbtndeposit control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrbtndeposit;
-        
+
         /// <summary>
         /// btnDeposit control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDeposit;
-        
+
         /// <summary>
         /// pnthanhtoan control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnthanhtoan;
-        
+
         /// <summary>
         /// ltrYCG control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrYCG;
-        
+
         /// <summary>
         /// btnPayAll control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnPayAll;
-        
+
         /// <summary>
         /// ltrCancel control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrCancel;
-        
+
         /// <summary>
         /// btn_cancel control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_cancel;
-        
+
         /// <summary>
         /// ltrSmallPackages control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrSmallPackages;
-        
+
         /// <summary>
         /// ltrService control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrService;
-        
+
         /// <summary>
         /// ltrTotal control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrTotal;
-        
+
         /// <summary>
         /// ltrBuyerInfo control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrBuyerInfo;
-        
+
         /// <summary>
         /// ltrProducts control.
         /// </summary>
@@ -191,7 +193,16 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrProducts;
-        
+
+        /// <summary>
+        /// btnExcel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExcel;
+
         /// <summary>
         /// rptPayment control.
         /// </summary>
@@ -200,7 +211,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptPayment;
-        
+
         /// <summary>
         /// ltrHistoryPay control.
         /// </summary>
@@ -209,7 +220,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrHistoryPay;
-        
+
         /// <summary>
         /// rptHistoryOrderChange control.
         /// </summary>
@@ -218,7 +229,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptHistoryOrderChange;
-        
+
         /// <summary>
         /// ltrHistory control.
         /// </summary>
@@ -227,7 +238,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrHistory;
-        
+
         /// <summary>
         /// ltrChat control.
         /// </summary>
@@ -236,7 +247,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrChat;
-        
+
         /// <summary>
         /// ltrComment control.
         /// </summary>
@@ -245,7 +256,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrComment;
-        
+
         /// <summary>
         /// IMGUpLoadToUS control.
         /// </summary>
@@ -254,7 +265,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload IMGUpLoadToUS;
-        
+
         /// <summary>
         /// txtFullName control.
         /// </summary>
@@ -263,7 +274,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFullName;
-        
+
         /// <summary>
         /// txtPhone control.
         /// </summary>
@@ -272,7 +283,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
-        
+
         /// <summary>
         /// txtAddress control.
         /// </summary>
@@ -281,7 +292,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
-        
+
         /// <summary>
         /// txtNote control.
         /// </summary>
@@ -290,7 +301,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNote;
-        
+
         /// <summary>
         /// btnYCG control.
         /// </summary>
@@ -299,7 +310,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnYCG;
-        
+
         /// <summary>
         /// hdfCommentText control.
         /// </summary>
@@ -308,7 +319,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdfCommentText;
-        
+
         /// <summary>
         /// hdfShopID control.
         /// </summary>
@@ -317,7 +328,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdfShopID;
-        
+
         /// <summary>
         /// hdfOrderID control.
         /// </summary>
@@ -326,7 +337,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdfOrderID;
-        
+
         /// <summary>
         /// hdfID control.
         /// </summary>
@@ -335,7 +346,7 @@ namespace NHST {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdfID;
-        
+
         /// <summary>
         /// hdfLoadMap control.
         /// </summary>

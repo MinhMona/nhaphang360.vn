@@ -99,7 +99,7 @@ namespace NHST
 
         public void PushMail(object ob)
         {
-            ObjectSendMail dt = (ObjectSendMail)ob;           
+            ObjectSendMail dt = (ObjectSendMail)ob;
             PushSendMail(dt.Email, dt.Title, dt.Noti);
         }
 
@@ -165,7 +165,7 @@ namespace NHST
 
         public void Push(object ob)
         {
-            Data dt = (Data)ob;          
+            Data dt = (Data)ob;
             PushOneSignalUser(dt.Device, dt.AppNotiTitle, dt.AppNotiMessage, dt.link);
         }
 
@@ -275,7 +275,7 @@ namespace NHST
                     }
                 }
             }
-        }          
+        }
 
 
         protected void PushAutoMainOrder()
@@ -393,7 +393,10 @@ namespace NHST
                         }
 
                         double subfeebp = feebpnotdc * UL_CKFeeBuyPro / 100;
-                        double feebp = feebpnotdc - subfeebp;
+                        double feebp = Math.Round(feebpnotdc - subfeebp, 0);
+
+                        if (feebp < 10000)
+                            feebp = 10000;
 
                         double feecheck = 0;
                         feecheck = Convert.ToDouble(item.IsCheckProductPrice);
