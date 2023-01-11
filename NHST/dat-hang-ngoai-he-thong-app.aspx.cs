@@ -203,8 +203,8 @@ namespace NHST
                 if (feebp < 10000)
                     feebp = 10000;
 
-                double TotalPriceVND = (priceCYN * currency) + feebp;
-                string AmountDeposit = (TotalPriceVND * LessDeposit / 100).ToString();
+                double TotalPriceVND = Math.Round(priceVND + feebp, 0);
+                string AmountDeposit = Math.Round((priceVND * LessDeposit / 100), 0).ToString();
 
                 string Deposit = "0";
 

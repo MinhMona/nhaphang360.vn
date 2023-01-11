@@ -407,9 +407,8 @@ namespace NHST
                             feeinsurrance = pricepro * insurrance / 100;
                         }
 
-                        double TongTienHang = pricepro + feebp;
-                        double TotalPriceVND = TongTienHang + feecheck + feeinsurrance;
-                        double AmountDeposit = TongTienHang * LessDeposit / 100;
+                        double TotalPriceVND = Math.Round(feecheck + feeinsurrance + feebp + pricepro, 0);
+                        double AmountDeposit = Math.Round(pricepro * LessDeposit / 100, 0);
 
                         MainOrderController.UpdateAutoCurrency(Convert.ToInt32(item.ID), current.ToString(), feebp.ToString(), AmountDeposit.ToString(), TotalPriceVND.ToString(),
                                                                priceproCYN.ToString(), pricepro.ToString(), insurrance.ToString(), feeinsurrance.ToString(), FeeBuyProUser);

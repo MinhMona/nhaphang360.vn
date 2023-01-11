@@ -2783,7 +2783,7 @@ namespace NHST
                         string Deposit = "0";
                         string CurrentCNYVN = current.ToString();
                         string TotalPriceVND = Math.Round(total, 0).ToString();
-                        string AmountDeposit = Math.Round((total * LessDeposit / 100)).ToString();
+                        string AmountDeposit = Math.Round((pricepro * LessDeposit / 100)).ToString();
                         DateTime CreatedDate = DateTime.Now;
                         string kq = MainOrderController.Insert(UID, ShopID, ShopName, Site, IsForward, IsForwardPrice, IsFastDelivery, IsFastDeliveryPrice, IsCheckProduct, IsCheckProductPrice,
                             IsPacked, IsPackedPrice, IsFast, IsFastPrice, PriceVND, PriceCNY, FeeShipCN, FeeBuyPro, FeeWeight, Note, FullName, Address, Email, Phone, Status, Deposit, CurrentCNYVN,
@@ -3897,7 +3897,7 @@ namespace NHST
                                     string Deposit = "0";
                                     string CurrentCNYVN = current.ToString();
                                     string TotalPriceVND = Math.Round(total, 0).ToString();
-                                    string AmountDeposit = Math.Round((total * LessDeposit / 100)).ToString();
+                                    string AmountDeposit = Math.Round((pricepro * LessDeposit / 100)).ToString();
                                     DateTime CreatedDate = DateTime.Now;
                                     string kq = MainOrderController.Insert(UID, ShopID, ShopName, Site, IsForward, IsForwardPrice, IsFastDelivery, IsFastDeliveryPrice, IsCheckProduct, IsCheckProductPrice,
                                         IsPacked, IsPackedPrice, IsFast, IsFastPrice, PriceVND, PriceCNY, FeeShipCN, FeeBuyPro, FeeWeight, Note, FullName, Address, Email, Phone, Status, Deposit, CurrentCNYVN,

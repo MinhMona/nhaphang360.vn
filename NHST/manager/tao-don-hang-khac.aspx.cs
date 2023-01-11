@@ -224,7 +224,7 @@ namespace NHST.manager
                     feebp = 10000;
 
                 double TotalPriceVND = priceVND + feebp;
-                string AmountDeposit = Math.Round((TotalPriceVND * LessDeposit / 100), 0).ToString();
+                string AmountDeposit = Math.Round((priceVND * LessDeposit / 100), 0).ToString();
 
                 string Deposit = "0";
 

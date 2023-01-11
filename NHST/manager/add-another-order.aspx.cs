@@ -201,10 +201,12 @@ namespace NHST.manager
                 double subfeebp = feebpnotdc * UL_CKFeeBuyPro / 100;
                 double feebp = feebpnotdc - subfeebp;
                 feebp = Math.Round(feebp, 0);
+                if (feebp < 10000)
+                    feebp = 10000;
 
                 double TotalPriceVND = priceVND + feebp;
                 TotalPriceVND = Math.Round(TotalPriceVND, 0);
-                string AmountDeposit = Math.Round((TotalPriceVND * LessDeposit / 100), 0).ToString();
+                string AmountDeposit = Math.Round((priceVND * LessDeposit / 100), 0).ToString();
 
                 string Deposit = "0";
 

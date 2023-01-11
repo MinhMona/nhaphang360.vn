@@ -411,7 +411,7 @@ namespace NHST.manager
                         double TotalPriceVND = pricevnd + FeeBuyPro + FeeShipCN + FeeWeight + InsuranceMoney + TotalFeeSupport + IsFastDeliveryPrice + IsPackedPrice + IsCheckProductPrice;
                         TotalPriceVND = Math.Round(TotalPriceVND, 0);
 
-                        double AmountDeposit = Math.Round((TotalPriceVND * LessDeposito) / 100, 0);
+                        double AmountDeposit = Math.Round((pricevnd * LessDeposito) / 100, 0);
 
                         if (Deposit > 0)
                         {
