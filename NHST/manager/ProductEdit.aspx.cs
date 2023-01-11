@@ -199,8 +199,8 @@ namespace NHST.manager
                         if (o.quantity != pQuanity.Text.ToString())
                         {
                             HistoryOrderChangeController.Insert(MainOrderID, obj_user.ID, obj_user.Username, obj_user.Username +
-                                            " đã đổi số lượng sản phẩm của Sản phẩm ID là: " + o.ID + ", của đơn hàng ID là: " + MainOrderID + ", từ: " + string.Format("{0:N0}", o.price_origin) + ", sang: "
-                                            + string.Format("{0:N0}", Convert.ToDouble(pProductPriceOriginal.Text)) + "", 1, currentDate);
+                                            " đã đổi số lượng sản phẩm của Sản phẩm ID là: " + o.ID + ", của đơn hàng ID là: " + MainOrderID + ", từ: " + string.Format("{0:N0}", o.quantity) + ", sang: "
+                                            + string.Format("{0:N0}", Convert.ToInt32(pQuanity.Text)) + "", 1, currentDate);
                         }
                         OrderController.UpdateQuantity(id, quantity.ToString());
                         OrderController.UpdateProductStatus(id, status);
@@ -219,8 +219,8 @@ namespace NHST.manager
                         if (o.quantity != pQuanity.Text.ToString())
                         {
                             HistoryOrderChangeController.Insert(MainOrderID, obj_user.ID, obj_user.Username, obj_user.Username +
-                                            " đã đổi số lượng sản phẩm của Sản phẩm ID là: " + o.ID + ", của đơn hàng ID là: " + MainOrderID + ", từ: " + string.Format("{0:N0}", o.price_origin) + ", sang: "
-                                            + string.Format("{0:N0}", Convert.ToDouble(pProductPriceOriginal.Text)) + "", 1, currentDate);
+                                            " đã đổi số lượng sản phẩm của Sản phẩm ID là: " + o.ID + ", của đơn hàng ID là: " + MainOrderID + ", từ: " + string.Format("{0:N0}", o.quantity) + ", sang: "
+                                            + string.Format("{0:N0}", Convert.ToInt32(pQuanity.Text)) + "", 1, currentDate);
                         }
                         OrderController.UpdateQuantity(id, quantity.ToString());
                         OrderController.UpdateProductStatus(id, status);
